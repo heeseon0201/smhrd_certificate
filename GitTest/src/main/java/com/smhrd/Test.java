@@ -6,7 +6,6 @@ public class Test {
 		System.out.println("Add Code!");
 		System.out.println("Hello");
 		
-		System.out.println("수정만 되는건가??");
 	}
 
 }
