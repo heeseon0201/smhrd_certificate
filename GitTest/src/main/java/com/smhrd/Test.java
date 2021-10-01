@@ -6,6 +6,7 @@ public class Test {
 		System.out.println("Add Code!");
 		System.out.println("Hello");
 		System.out.println("¿”«—º∫");
+		System.out.println();
 	}
 
 }
