@@ -17,6 +17,12 @@ public class memberVO {//(memberValueObject)
 		this.tel=tel;
 		this.address=address;
 	}
+	//아이디와 비밀번호만 받는 생성자
+	public memberVO(String id, String pw) {
+		this.id=id;
+		this.pw=pw;
+	}
+	
 	
 	//getter
 	public String getEmail() {

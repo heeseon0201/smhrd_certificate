@@ -22,9 +22,9 @@ public class memberDAO {
 			//해결방법1.
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user = "hr";
-			String password = "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String user = "campus_k2_1006";
+			String password = "smhrd2";
 			//2. 데이터베이스 연결 객체(Connection) 생성
 			conn = DriverManager.getConnection(url, user, password);
 		}catch(Exception e) {
@@ -58,11 +58,18 @@ public class memberDAO {
 			System.out.println("접속");
 			
 			//3. SQL 준비/실행 객체(PreparedStatement) 생성
-			pst = conn.prepareStatement("insert into project_member values(?,?)");
+			pst = conn.prepareStatement("insert into member values(?,?,?,?,?,?,?)");
 			
 			//4. 바인드 변수 채우기(바인드변수 순서는 1부터 시작, 채워줄 값)
-			pst.setString(1, id);
-			pst.setString(2, pw);
+			//pst.setString(1, );//회원번호 시퀀스넣기
+			pst.setString(2, id);
+/*			pst.setString(3, name);
+*			pst.setString(4, tel);
+*			pst.setString(5, address);
+*			pst.setString(6, interest);
+*			pst.setString(7, job);
+			*/ //실제 테이블 보고 변수 정하기. 테이블에 비밀번호 컬럼이 없음
+			
 			System.out.println("변수넣음");
 
 			
@@ -84,31 +91,37 @@ public class memberDAO {
 		}
 		return cnt;
 	}
-	public memberVO login(String email, String pw) {
+	public memberVO login(String id, String pw) {
 
 		//받아온 값이 테이블상에 존재하는지 확인(DB) JDBC
 		memberVO vo = null;// 미리 선언한다
 		try {
 			getConnection();
 			//3. SQL 준비/실행 객체(PreparedStatement) 생성
-			String sql = "select * from web_member where email=? and pw=?";
+			String sql = "select * from member where id=? and pw=?";
+			///////////////////////////////////////////
+			//sql문 수정하기 web_member를 실제 컬럼이름으로////
+			///////////////////////////////////////////
 			pst = conn.prepareStatement(sql);
 			
 			//4. 바인드 변수 채우기(바인드변수 순서는 1부터 시작, 채워줄 값)
-			pst.setString(1, email);
+			pst.setString(1, id);
 			pst.setString(2, pw);
 			
 			//5. sql문 실행 
 			rs = pst.executeQuery();
 			
 			//6.결과처리
+			/////////////////////////////
+			//필요할경우 if문 안의 내용 살릴것//
+			////////////////////////////
 			if(rs.next()) {
 				System.out.println("로그인성공");
-				String get_email = rs.getString(1);//rs.getString("email"); //인덱스번호 컬럼이름 둘다 상관없다.
-				String get_tel = rs.getString("tel");
-				String get_address = rs.getString("address");
+
+				String get_id = rs.getString("id");//데이터베이스의 아이디
+				String get_pw = rs.getString("pw");//데이터베이스의 비번
 				
-				vo = new memberVO(get_email, get_tel, get_address);//객체로 묶어줌
+				vo = new memberVO(get_id, get_pw);//객체로 묶어줌
 
 			}
 			
