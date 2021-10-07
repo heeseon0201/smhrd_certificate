@@ -13,6 +13,7 @@
 </style>
 <body>
     <div id= "total">
+    
         <center>
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>

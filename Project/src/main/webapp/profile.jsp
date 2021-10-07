@@ -72,7 +72,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_pass" id="pswd1Img">
-                                                        <input type="password" id="password" name="pswd" class="int" title="PASSWORD" maxlength="20" value="333" style="height:20px; width:200px; font-size: 16px;" " readonly>
+                                                        <input type="password" id="password" name="pswd" class="int" title="PASSWORD" maxlength="20" value="333" style="height:20px; width:200px; font-size: 16px;" readonly>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -85,7 +85,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_tel" id="telImg">
-                                                        <input type="text" id="tel" name="tel" class="int" title="TEL" maxlength="20" value="111-2222-3333" style="height:20px; width:200px; font-size: 16px;" " readonly>
+                                                        <input type="text" id="tel" name="tel" class="int" title="TEL" maxlength="20" value="111-2222-3333" style="height:20px; width:200px; font-size: 16px;" readonly>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -98,7 +98,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_addr" id="addrImg">
-                                                        <input type="text" id="address" name="address" class="int" title="ADDRESS" maxlength="20" value="333" style="height:20px; width:200px; font-size: 16px;" " readonly>
+                                                        <input type="text" id="address" name="address" class="int" title="ADDRESS" maxlength="20" value="333" style="height:20px; width:200px; font-size: 16px;" readonly>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -111,7 +111,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_field" id="fieldImg">
-                                                        <input type="text" id="field" name="field" class="int" title="FEILD" maxlength="20" value="IT" style="height:20px; width:200px; font-size: 16px;" " readonly>
+                                                        <input type="text" id="field" name="field" class="int" title="FEILD" maxlength="20" value="IT" style="height:20px; width:200px; font-size: 16px;" readonly>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -124,7 +124,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_job" id="jobImg">
-                                                        <input type="text" id="job" name="job" class="int" title="JOB" maxlength="20" value="公流" style="height:20px; width:200px; font-size: 16px;" " readonly>
+                                                        <input type="text" id="job" name="job" class="int" title="JOB" maxlength="20" value="公流" style="height:20px; width:200px; font-size: 16px;" readonly>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -144,6 +144,6 @@
             </form>    
         </center>
         </div>
-    </div>
+	</div>
 </body>
 </html>
