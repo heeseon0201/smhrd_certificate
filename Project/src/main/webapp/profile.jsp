@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>»∏ø¯¡§∫∏</title>
+    <title>ÌöåÏõêÏ†ïÎ≥¥</title>
 </head>
 <style>
 
@@ -16,7 +14,7 @@
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
-                    <span> ªÁ¿Ã∆Æ ¿Ã∏ß </span>
+                    <span> ÏÇ¨Ïù¥Ìä∏ Ïù¥Î¶Ñ </span>
                 </a>
             </h1>
 
@@ -24,8 +22,8 @@
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
-                            <h2>»∏ø¯¡§∫∏∫∏±‚</h2>
-                            <p class="contxt">»∏ø¯¡§∫∏∏¶ «•Ω√«’¥œ¥Ÿ.</p>
+                            <h2>ÌöåÏõêÏ†ïÎ≥¥Î≥¥Í∏∞</h2>
+                            <p class="contxt">ÌöåÏõêÏ†ïÎ≥¥Î•º ÌëúÏãúÌï©ÎãàÎã§.</p>
                         </div>
                         <div class="Profile_content"> 
                             <div class="row_group">
@@ -35,14 +33,14 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="id">æ∆¿Ãµ</label>
+                                                        <label for="id">ÏïÑÏù¥Îîî</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_id">
-                                                        <!-- value∏¶ »∏ø¯¡§∫∏≈◊¿Ã∫Ìø°º≠ πﬁæ∆øÕæﬂ«‘, «ˆ¿Á¥¬ ∆≤¿‚¥¬¥‹∞Ë∂Û ¿”¿«¿« ∞™¿ª ¡˝æÓ≥ı¿Ω -->
+                                                        <!-- valueÎ•º ÌöåÏõêÏ†ïÎ≥¥ÌÖåÏù¥Î∏îÏóêÏÑú Î∞õÏïÑÏôÄÏïºÌï®, ÌòÑÏû¨Îäî ÌãÄÏû°ÎäîÎã®Í≥ÑÎùº ÏûÑÏùòÏùò Í∞íÏùÑ ÏßëÏñ¥ÎÜìÏùå -->
                                                         <div type="text" id="id" name="id" class="int" title="ID" maxlength="20" style="height:20px; width:200px; font-size: 16px;">
-                                                            æ∆¿Ãµ1
+                                                            ÏïÑÏù¥Îîî1
                                                         </div>
                                                             <!-- <span class="step_url"></span> -->
                                                     </span>
@@ -52,13 +50,13 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="name">¿Ã∏ß</label>
+                                                        <label for="name">Ïù¥Î¶Ñ</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_name">
                                                         <div type="text" id="name" name="name" class="int" title="NAME" maxlength="20" style="height:20px; width:200px; font-size: 16px;" readonly>
-                                                            ¿Ã∏ß1
+                                                            Ïù¥Î¶Ñ1
                                                         </div>
                                                     </span>
                                                 </td>
@@ -67,7 +65,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="pswd">∫Òπ–π¯»£</label>
+                                                        <label for="pswd">ÎπÑÎ∞ÄÎ≤àÌò∏</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -80,7 +78,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="tel">¿¸»≠π¯»£</label>
+                                                        <label for="tel">Ï†ÑÌôîÎ≤àÌò∏</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -93,7 +91,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="address">¡÷º“</label>
+                                                        <label for="address">Ï£ºÏÜå</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -106,7 +104,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="field">∞¸Ω…∫–æﬂ</label>
+                                                        <label for="field">Í¥ÄÏã¨Î∂ÑÏïº</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -119,12 +117,12 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Profile_title">
-                                                        <label for="job">¡˜æ˜</label>
+                                                        <label for="job">ÏßÅÏóÖ</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_job" id="jobImg">
-                                                        <input type="text" id="job" name="job" class="int" title="JOB" maxlength="20" value="π´¡˜" style="height:20px; width:200px; font-size: 16px;" readonly>
+                                                        <input type="text" id="job" name="job" class="int" title="JOB" maxlength="20" value="Î¨¥ÏßÅ" style="height:20px; width:200px; font-size: 16px;" readonly>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -134,9 +132,9 @@
 
                                 <div>&nbsp;</div>
 
-                                <!-- «ˆ¿Á ±‚¥… πÃ±∏«ˆ -->
-                                <button style="height:50px; width:150px; font-size: 16px;">ºˆ¡§</button>
-                                <button style="height:50px; width:150px; font-size: 16px;">µπæ∆∞°±‚</button>
+                                <!-- ÌòÑÏû¨ Í∏∞Îä• ÎØ∏Íµ¨ÌòÑ -->
+                                <button style="height:50px; width:150px; font-size: 16px;">ÏàòÏ†ï</button>
+                                <button style="height:50px; width:150px; font-size: 16px;">ÎèåÏïÑÍ∞ÄÍ∏∞</button>
                             </div>
                         </div>
                     </div>
@@ -144,6 +142,6 @@
             </form>    
         </center>
         </div>
-	</div>
+    </div>
 </body>
 </html>

@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>»∏ø¯∞°¿‘</title>
+    <title>ÌöåÏõêÍ∞ÄÏûÖ</title>
 </head>
 </head>
 <style>
@@ -13,12 +11,11 @@
 </style>
 <body>
     <div id= "total">
-    
         <center>
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
-                    <span> ªÁ¿Ã∆Æ ¿Ã∏ß </span>
+                    <span> ÏÇ¨Ïù¥Ìä∏ Ïù¥Î¶Ñ </span>
                 </a>
             </h1>
 
@@ -26,8 +23,8 @@
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
-                            <h2>»∏ø¯∞°¿‘</h2>
-                            <p class="contxt">æ∆∑°¿« ±‚¿ÁªÁ«◊¿ª ¿‘∑¬«ÿ¡÷ººø‰.</p>
+                            <h2>ÌöåÏõêÍ∞ÄÏûÖ</h2>
+                            <p class="contxt">ÏïÑÎûòÏùò Í∏∞Ïû¨ÏÇ¨Ìï≠ÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî.</p>
                         </div>
 
                         <div class="Profile_content"> 
@@ -38,7 +35,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_id">
-                                                        <label for="id">*æ∆¿Ãµ</label>
+                                                        <label for="id">*ÏïÑÏù¥Îîî</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -49,15 +46,15 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2">
-                                                    <!-- ¡¶¥Î∑Œ ¿‘∑¬Ω√ ±€¿⁄ªˆ∞˙ ≥ªøÎπŸ≤Ó∞‘ º≥∞Ë«ÿ∫∏¿⁄ -->
-                                                    <span class="step_url" style="color: red;">8¿⁄~12¿⁄¿« øµπÆ, º˝¿⁄ ¡∂«’¿∏∑Œ ¿€º∫«œººø‰.</span>
+                                                    <!-- Ï†úÎåÄÎ°ú ÏûÖÎ†•Ïãú Í∏ÄÏûêÏÉâÍ≥º ÎÇ¥Ïö©Î∞îÎÄåÍ≤å ÏÑ§Í≥ÑÌï¥Î≥¥Ïûê -->
+                                                    <span class="step_url" style="color: red;">8Ïûê~12ÏûêÏùò ÏòÅÎ¨∏, Ïà´Ïûê Ï°∞Ìï©ÏúºÎ°ú ÏûëÏÑ±ÌïòÏÑ∏Ïöî.</span>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_pwd">
-                                                        <label for="pwd">*∫Òπ–π¯»£</label>
+                                                        <label for="pwd">*ÎπÑÎ∞ÄÎ≤àÌò∏</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -69,15 +66,15 @@
 
                                             <tr>
                                                 <td colspan="2">
-                                                    <!-- ¡¶¥Î∑Œ ¿‘∑¬Ω√ ±€¿⁄ªˆ∞˙ ≥ªøÎπŸ≤Ó∞‘ º≥∞Ë«ÿ∫∏¿⁄ -->
-                                                    <span class="step_url" style="color: red;">8¿⁄~15¿⁄¿« øµπÆ, º˝¿⁄, ∆ØºˆπÆ¿⁄ ¡∂«’¿∏∑Œ ¿€º∫«œººø‰.</span>
+                                                    <!-- Ï†úÎåÄÎ°ú ÏûÖÎ†•Ïãú Í∏ÄÏûêÏÉâÍ≥º ÎÇ¥Ïö©Î∞îÎÄåÍ≤å ÏÑ§Í≥ÑÌï¥Î≥¥Ïûê -->
+                                                    <span class="step_url" style="color: red;">8Ïûê~15ÏûêÏùò ÏòÅÎ¨∏, Ïà´Ïûê, ÌäπÏàòÎ¨∏Ïûê Ï°∞Ìï©ÏúºÎ°ú ÏûëÏÑ±ÌïòÏÑ∏Ïöî.</span>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_repwd">
-                                                        <label for="repwd">*∫Òπ–π¯»£ ¿Á»Æ¿Œ</label>
+                                                        <label for="repwd">*ÎπÑÎ∞ÄÎ≤àÌò∏ Ïû¨ÌôïÏù∏</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -89,15 +86,15 @@
 
                                             <tr>
                                                 <td colspan="2">
-                                                    <!-- ¡¶¥Î∑Œ ¿‘∑¬Ω√ ±€¿⁄ªˆ∞˙ ≥ªøÎπŸ≤Ó∞‘ º≥∞Ë«ÿ∫∏¿⁄ -->
-                                                    <span class="step_url" style="color: red;">∫Òπ–π¯»£∏¶ ¿Á¿‘∑¬«ÿ¡÷ººø‰.</span>
+                                                    <!-- Ï†úÎåÄÎ°ú ÏûÖÎ†•Ïãú Í∏ÄÏûêÏÉâÍ≥º ÎÇ¥Ïö©Î∞îÎÄåÍ≤å ÏÑ§Í≥ÑÌï¥Î≥¥Ïûê -->
+                                                    <span class="step_url" style="color: red;">ÎπÑÎ∞ÄÎ≤àÌò∏Î•º Ïû¨ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî.</span>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_name">
-                                                        <label for="name">*¿Ã∏ß</label>
+                                                        <label for="name">*Ïù¥Î¶Ñ</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -110,16 +107,16 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_YMD">
-                                                        <label for="YMD">ª˝≥‚ø˘¿œ</label>
+                                                        <label for="YMD">ÏÉùÎÖÑÏõîÏùº</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_yy">
-                                                        <input type="text" id="yy" placeholder="≥‚(4¿⁄)" aria-label="≥‚" name="yy" class="int" title="YEAR" maxlength="4" style="height:20px; width:50px; font-size: 16px;">
+                                                        <input type="text" id="yy" placeholder="ÎÖÑ(4Ïûê)" aria-label="ÎÖÑ" name="yy" class="int" title="YEAR" maxlength="4" style="height:20px; width:50px; font-size: 16px;">
                                                     </span>
                                                     <span class="ps_box int_mm">
-                                                        <select id="mm" class="sel" aria-label="ø˘" style="height:25px; width:50px; font-size: 16px;">
-                                                            <option value>ø˘</option>
+                                                        <select id="mm" class="sel" aria-label="Ïõî" style="height:25px; width:50px; font-size: 16px;">
+                                                            <option value>Ïõî</option>
                                                             <option value="01">1</option>
                                                             <option value="02">2</option>
                                                             <option value="03">3</option>
@@ -135,7 +132,7 @@
                                                         </select>
                                                     </span>
                                                     <span class="ps_box int_dd">
-                                                        <input type="text" id="dd" placeholder="¿œ" aria-label="¿œ" name="dd" class="int" title="DAY" maxlength="2" style="height:20px; width:50px; font-size: 16px;">
+                                                        <input type="text" id="dd" placeholder="Ïùº" aria-label="Ïùº" name="dd" class="int" title="DAY" maxlength="2" style="height:20px; width:50px; font-size: 16px;">
                                                     </span>
                                                 </td>
                                             </tr>
@@ -143,15 +140,15 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_sex">
-                                                        <label for="sex">º∫∫∞</label>
+                                                        <label for="sex">ÏÑ±Î≥Ñ</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_sex">
-                                                        <select id="sex" class="sel" aria-label="º∫∫∞" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value>º∫∫∞</option>
-                                                            <option value="≥≤">≥≤</option>
-                                                            <option value="ø©">ø©</option>
+                                                        <select id="sex" class="sel" aria-label="ÏÑ±Î≥Ñ" style="height:30px; width:200px; font-size: 16px;">
+                                                            <option value>ÏÑ±Î≥Ñ</option>
+                                                            <option value="ÎÇ®">ÎÇ®</option>
+                                                            <option value="Ïó¨">Ïó¨</option>
                                                         </select>
                                                     </span>
                                                 </td>
@@ -160,7 +157,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_tel">
-                                                        <label for="tel">¿¸»≠π¯»£</label>
+                                                        <label for="tel">Ï†ÑÌôîÎ≤àÌò∏</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -173,7 +170,7 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_address">
-                                                        <label for="address">¡÷º“</label>
+                                                        <label for="address">Ï£ºÏÜå</label>
                                                     </h3>
                                                 </td>
                                                 <td>
@@ -186,23 +183,23 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_interest">
-                                                        <label for="interest">∞¸Ω…∫–æﬂ</label>
+                                                        <label for="interest">Í¥ÄÏã¨Î∂ÑÏïº</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_interest">
-                                                        <select id="interest" class="sel" aria-label="∞¸Ω…∫–æﬂ" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value>∞¸Ω…∫–æﬂ∏¶ º±≈√«œººø‰</option>
-                                                            <option value="01">∞¸Ω…∫–æﬂ1</option>
-                                                            <option value="02">∞¸Ω…∫–æﬂ2</option>
-                                                            <option value="03">∞¸Ω…∫–æﬂ3</option>
-                                                            <option value="04">∞¸Ω…∫–æﬂ4</option>
-                                                            <option value="05">∞¸Ω…∫–æﬂ5</option>
-                                                            <option value="06">∞¸Ω…∫–æﬂ6</option>
-                                                            <option value="07">∞¸Ω…∫–æﬂ7</option>
-                                                            <option value="08">∞¸Ω…∫–æﬂ8</option>
-                                                            <option value="09">∞¸Ω…∫–æﬂ9</option>
-                                                            <option value="10">∞¸Ω…∫–æﬂ10</option>
+                                                        <select id="interest" class="sel" aria-label="Í¥ÄÏã¨Î∂ÑÏïº" style="height:30px; width:200px; font-size: 16px;">
+                                                            <option value>Í¥ÄÏã¨Î∂ÑÏïºÎ•º ÏÑ†ÌÉùÌïòÏÑ∏Ïöî</option>
+                                                            <option value="01">Í¥ÄÏã¨Î∂ÑÏïº1</option>
+                                                            <option value="02">Í¥ÄÏã¨Î∂ÑÏïº2</option>
+                                                            <option value="03">Í¥ÄÏã¨Î∂ÑÏïº3</option>
+                                                            <option value="04">Í¥ÄÏã¨Î∂ÑÏïº4</option>
+                                                            <option value="05">Í¥ÄÏã¨Î∂ÑÏïº5</option>
+                                                            <option value="06">Í¥ÄÏã¨Î∂ÑÏïº6</option>
+                                                            <option value="07">Í¥ÄÏã¨Î∂ÑÏïº7</option>
+                                                            <option value="08">Í¥ÄÏã¨Î∂ÑÏïº8</option>
+                                                            <option value="09">Í¥ÄÏã¨Î∂ÑÏïº9</option>
+                                                            <option value="10">Í¥ÄÏã¨Î∂ÑÏïº10</option>
                                                         </select>
                                                     </span>
                                                 </td>
@@ -211,23 +208,23 @@
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "Join_job">
-                                                        <label for="job">¡˜æ˜</label>
+                                                        <label for="job">ÏßÅÏóÖ</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_job">
-                                                        <select id="job" class="sel" aria-label="¡˜æ˜" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value>¡˜æ˜∏¶ º±≈√«œººø‰</option>
-                                                            <option value="01">¡˜æ˜1</option>
-                                                            <option value="02">¡˜æ˜2</option>
-                                                            <option value="03">¡˜æ˜3</option>
-                                                            <option value="04">¡˜æ˜4</option>
-                                                            <option value="05">¡˜æ˜5</option>
-                                                            <option value="06">¡˜æ˜6</option>
-                                                            <option value="07">¡˜æ˜7</option>
-                                                            <option value="08">¡˜æ˜8</option>
-                                                            <option value="09">¡˜æ˜9</option>
-                                                            <option value="10">¡˜æ˜10</option>
+                                                        <select id="job" class="sel" aria-label="ÏßÅÏóÖ" style="height:30px; width:200px; font-size: 16px;">
+                                                            <option value>ÏßÅÏóÖÎ•º ÏÑ†ÌÉùÌïòÏÑ∏Ïöî</option>
+                                                            <option value="01">ÏßÅÏóÖ1</option>
+                                                            <option value="02">ÏßÅÏóÖ2</option>
+                                                            <option value="03">ÏßÅÏóÖ3</option>
+                                                            <option value="04">ÏßÅÏóÖ4</option>
+                                                            <option value="05">ÏßÅÏóÖ5</option>
+                                                            <option value="06">ÏßÅÏóÖ6</option>
+                                                            <option value="07">ÏßÅÏóÖ7</option>
+                                                            <option value="08">ÏßÅÏóÖ8</option>
+                                                            <option value="09">ÏßÅÏóÖ9</option>
+                                                            <option value="10">ÏßÅÏóÖ10</option>
                                                         </select>
                                                     </span>
                                                 </td>
@@ -238,13 +235,14 @@
 
                                 <div>&nbsp;</div>
 
-                                <!-- «ˆ¿Á ±‚¥… πÃ±∏«ˆ -->
-                                <button style="height:50px; width:300px; font-size: 24px;">∞°¿‘«œ±‚</button>
+                                <!-- ÌòÑÏû¨ Í∏∞Îä• ÎØ∏Íµ¨ÌòÑ -->
+                                <button style="height:50px; width:300px; font-size: 24px;">Í∞ÄÏûÖÌïòÍ∏∞</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
+           
         </center> 
         </div>
     </div>  
