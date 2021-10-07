@@ -58,7 +58,14 @@ CREATE table Lecture (
 ALTER TABLE Course ADD course_no NUMBER;
 
 ALTER TABLE Course ADD CONSTRAINT course_pk primary key(course_no);
-
+    
+CREATE SEQUENCE Course_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
+	
 /* ## 테스트 */
 	INSERT into Lecture
 	values (Lecture_seq.nextval, '가나쌤과 함께 배우는 정처기 실습', 40, 'www.lec.com', 2, 7000, '1987-01-17', '방송통신 위원회');
@@ -143,6 +150,13 @@ CREATE table StudyMember (
 ALTER TABLE StudyMember ADD SM_no NUMBER;
 
 ALTER TABLE StudyMember ADD CONSTRAINT study_pk primary key(SM_no);
+	
+CREATE SEQUENCE StudyMember_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
 	
 /* ## 테스트 */
 	INSERT into StudyMember
