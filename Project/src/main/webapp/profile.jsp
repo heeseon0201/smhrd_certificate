@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
 </head>
+<style>
+
+</style>
 <body>
     <div id= "total">
         <div id = "header" class="View_membership" role = "banner">
             <h1>
-                <a href = "#" class = "h_logo">
+                <a href = "main.html" class = "h_logo">
                     <span> 사이트 이름 </span>
                 </a>
             </h1>
@@ -44,13 +47,7 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
 
-                                <div class="View_row">
-                                    <table>
-                                        <tbody>
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "View_title">
@@ -65,13 +62,7 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table> 
-                                </div>
 
-                                <div class="View_row">
-                                    <table>
-                                        <tbody>
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "View_title">
@@ -84,13 +75,7 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>   
-                                </div>
 
-                                <div class="View_row">
-                                    <table>
-                                        <tbody>
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "View_title">
@@ -103,13 +88,7 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>   
-                                </div>
 
-                                <div class="View_row">
-                                    <table>
-                                        <tbody>
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "View_title">
@@ -122,13 +101,7 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>        
-                                </div>
 
-                                <div class="View_row">
-                                    <table>
-                                        <tbody>
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "View_title">
@@ -141,13 +114,7 @@
                                                     </span>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>     
-                                </div>
 
-                                <div class="View_row">
-                                    <table>
-                                        <tbody>
                                             <tr>
                                                 <td width="100px">
                                                     <h3 class = "View_title">
