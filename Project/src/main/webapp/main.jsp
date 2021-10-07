@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="login2.jsp">로그인</a>
-	<a href="logout2.jsp">로그아웃</a>
-	<a href="join2.jsp">회원가입</a>
+	<a href="login.jsp">로그인</a>
+	<a href="logout.jsp">로그아웃</a>
+	<a href="join.jsp">회원가입</a>
 
 </body>
 </html>
