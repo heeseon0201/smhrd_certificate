@@ -24,6 +24,9 @@
 <body>
 	<form action="LoginService" method="post">
 		<div>
+			<h2>로그인</h2>
+		</div>
+		<div>
 			<p>아이디</p>
 		</div>
 		<div>

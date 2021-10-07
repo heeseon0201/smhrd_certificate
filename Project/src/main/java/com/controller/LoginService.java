@@ -37,7 +37,7 @@ public class LoginService extends HttpServlet {
 			response.sendRedirect("main.jsp");//세션이 기억하고있기 때문에 리다이렉트로 이동해도 무방
 		}else {
 			response.sendRedirect("login.jsp");//세션이 기억하고있기 때문에 리다이렉트로 이동해도 무방
-		}////일단 실패해도 메인으로 이동하게 해놨음
+		}//
 		
 		//테이블상에 존재하면 -> 콘솔창에 로그인성공!
 		//존재하지않으면 -> 콘솔창에 로그인실패!

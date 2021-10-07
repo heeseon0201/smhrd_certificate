@@ -21,12 +21,14 @@ public class memberDAO {
 			//ClassNotFoundException 오류가 뜨는경우
 			//해결방법1.
 			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("드라이버로딩");
 			
 			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 			String user = "campus_k2_1006";
 			String password = "smhrd2";
 			//2. 데이터베이스 연결 객체(Connection) 생성
 			conn = DriverManager.getConnection(url, user, password);
+			System.out.println("db연결");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -98,7 +100,7 @@ public class memberDAO {
 		try {
 			getConnection();
 			//3. SQL 준비/실행 객체(PreparedStatement) 생성
-			String sql = "select * from member where id=? and pw=?";
+			String sql = "select * from member where member_id=? and member_pw=?";
 			///////////////////////////////////////////
 			//sql문 수정하기 web_member를 실제 컬럼이름으로////
 			///////////////////////////////////////////
