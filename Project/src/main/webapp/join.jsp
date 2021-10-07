@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,18 @@
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
 </head>
-</head>
-<style>
 
+<style>
+	div{
+	text-align:center;
+	}
+	table{
+	margin:auto;
+	}
 </style>
 <body>
     <div id= "total">
-        <center>
+        
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
@@ -243,8 +250,8 @@
                 </div>
             </form>
            
-        </center> 
         </div>
-    </div>  
+        </div>
+  
 </body>
 </html>
