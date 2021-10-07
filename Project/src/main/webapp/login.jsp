@@ -7,42 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    	.in {
-				margin: auto;
-    			width:50%;
-    		}
-    	div{
-    	text-align: center;
-    		margin:auto;
-    		width:50%;
-    		padding:5px;
-    	}
-   		
-    </style>
+
+	<link rel="stylesheet" href="1cha.css">
 </head>
 <body>
 	<form action="LoginService" method="post">
-		<div>
+		<div class="loginDiv">
 			<h2>로그인</h2>
 		</div>
-		<div>
+		<div class="loginDiv">
 			<p>아이디</p>
 		</div>
-		<div>
+		<div class="loginDiv">
 			<input type="text" class="in" name="id">
 		</div>
-		<div>
+		<div class="loginDiv">
 			<p>비밀번호</p>
 		</div>
-		<div>
+		<div class="loginDiv">
 			<input type="password" class="in" name="pw">
 		</div>
 		<div></div>
-		<div>
+		<div class="loginDiv">
 			<input type="submit" class="in" value="로그인">
 		</div>
-		<div>
+		<div class="loginDiv">
 			<a href="#">아이디찾기</a>
 			<a href="#">비밀번호찾기</a>
 		</div>
