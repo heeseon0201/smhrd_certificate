@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
 </head>
 <style>
@@ -12,28 +12,28 @@
 </style>
 <body>
     <div id= "total">
-        <div id = "header" class="View_membership" role = "banner">
+        <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
                     <span> 사이트 이름 </span>
                 </a>
             </h1>
 
-            <form id = "View_form" method="post" action="">
+            <form id = "Profile_form" method="post" action="">
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
                             <h2>회원정보보기</h2>
                             <p class="contxt">회원정보를 표시합니다.</p>
                         </div>
-                        <div class="View_content"> 
+                        <div class="Profile_content"> 
                             <div class="row_group">
-                                <div class="View_row">
+                                <div class="Profile_row">
                                     <table>
                                         <tbody>
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="id">아이디</label>
                                                     </h3>
                                                 </td>
@@ -50,7 +50,7 @@
 
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="name">이름</label>
                                                     </h3>
                                                 </td>
@@ -65,7 +65,7 @@
 
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="pswd">비밀번호</label>
                                                     </h3>
                                                 </td>
@@ -78,7 +78,7 @@
 
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="tel">전화번호</label>
                                                     </h3>
                                                 </td>
@@ -91,7 +91,7 @@
 
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="address">주소</label>
                                                     </h3>
                                                 </td>
@@ -104,7 +104,7 @@
 
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="field">관심분야</label>
                                                     </h3>
                                                 </td>
@@ -117,7 +117,7 @@
 
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "View_title">
+                                                    <h3 class = "Profile_title">
                                                         <label for="job">직업</label>
                                                     </h3>
                                                 </td>
