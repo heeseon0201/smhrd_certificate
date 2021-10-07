@@ -75,8 +75,6 @@ body, html {
 
 
 
-
-
 /* 로그인페이지 가운데정렬 적용 */
     	.loginDiv{
     	text-align: center;
@@ -84,4 +82,10 @@ body, html {
     		width:50%;
     		padding:5px;
     	}
+    	
+/* study 페이지 테이블 css */
+th {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #454d55; }
    		
