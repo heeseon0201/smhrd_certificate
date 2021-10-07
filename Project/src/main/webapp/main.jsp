@@ -1,3 +1,4 @@
+<%@page import="com.model.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -14,9 +15,11 @@
     <link rel="stylesheet" href="1cha.css">
 </head>
 <body>
+<%memberVO vo = (memberVO)session.getAttribute("member");%>
     <header>
         <h3></h3>
         <nav>
+
           <span><a href="#">회원가입</a></span>
           <span><a href="login.jsp">로그인</a></span>
         </nav>
