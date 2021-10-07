@@ -7,27 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    	.in {
+				margin: auto;
+    			width:50%;
+    		}
+    	div{
+    	text-align: center;
+    		margin:auto;
+    		width:50%;
+    		padding:5px;
+    	}
+   		
+    </style>
 </head>
 <body>
-    <form action="LoginService" method="post">
-        <table>
-            <tr>
-                <h2>아이디</h2>
-            </tr>
-            <tr>
-                <input type="text" name="id">
-            </tr>
-            <tr>
-                <h2>비밀번호</h2>
-            </tr>
-            <tr>
-                <input type="password" name="pw">
-            </tr>
-            <tr><h2></h2></tr>
-            <tr>
-              <input type="submit" value="로그인">
-            </tr>
-        </table>
-    </form>
+	<form action="LoginService" method="post">
+		<div>
+		<p>아이디</p>
+		</div>
+		<div>
+		<input type="text" class="in" name="id">
+		</div>
+		<div>
+		<p>비밀번호</p>
+		</div>
+		<div>
+		<input type="password" class="in" name="pw">
+		</div>
+		<div>
+		</div>
+		<div>
+		<input type="submit" class="in" value="로그인">
+		</div>
+	</form>
 </body>
 </html>
