@@ -2,6 +2,15 @@
 
 h1 {
 	text-align: center;
+	font-family: Sansita Swashed;
+	font-size: 100px;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+    color: transparent;
+    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
+    -webkit-background-clip: text;
+}
+body {
+	background: #EEE;
 }
 
 .certificate {
