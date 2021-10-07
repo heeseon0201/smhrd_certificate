@@ -28,50 +28,47 @@
         border-top: 1px solid black;
         border-bottom: 1px solid black;
     }
-    td{
-        border-left: 1px solid black;        
-        border-right: 1px solid black;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-    }
-    th{
-        height: 20px;
-        border-left: 1px solid black;        
-        border-right: 1px solid black;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-    }
+td {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	color: #495057;
+	background-color: #e9ecef;
+	border-color: #dee2e6;
+}
+
+th {
+	height: 20px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	color: #fff;
+	background-color: #343a40;
+	border-color: #454d55;
+}
     </style>
 </head>
 <body>
     <h1><b>Lecture</b></h1>
     <table class="certificate" style="margin-top: 10px; margin-bottom: 30px;">
         <tr>
-            <td>
-                <input type="radio" value="" name="certificate">자격증1<br>
-                <input type="radio" value="" name="certificate">자격증2<br>
-                <input type="radio" value="" name="certificate">자격증3<br>
-            </td>
-            <td>
-                <input type="radio" value="" name="certificate">자격증4<br>
-                <input type="radio" value="" name="certificate">자격증5<br>
-                <input type="radio" value="" name="certificate">자격증6<br>
-            </td>
-            <td>
-                <input type="radio" value="" name="certificate">자격증7<br>
-                <input type="radio" value="" name="certificate">자격증8<br>
-                <input type="radio" value="" name="certificate">자격증9<br>
-            </td>
-            <td>
-                <input type="radio" value="" name="certificate">자격증10<br>
-                <input type="radio" value="" name="certificate">자격증11<br>
-                <input type="radio" value="" name="certificate">자격증12<br>
-            </td>
+            <%for(int i =0, k = 0 ; i<4;i++){ %>
+            
+            	<td>
+            		<%for(int j = 0; j<3; j++){ %>
+            			<input type="radio" value="" name="certificate">자격증<%=k+1 %><br>
+            			<%k++; %>
+            		<%} %>
+            	</td>
+            <%} %>
+           
         </tr>
     </table>
     <div>
-        <table>
-            <tr>
+               <table><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
+
                 <th>강의명</th>
                 <th>누적수강인원</th>
                 <th>컨텐츠제공사이트</th>
@@ -79,79 +76,18 @@
                 <th>총시간</th>
                 <th>수강기간</th>
                 <th>취업정보</th>
-            </tr>
+        <%for(int i = 0; i<12;i++){ %>
             <tr>
-                <td>강의명1</td>
-                <td>누적수강인원1</td>
-                <td>컨텐츠제공사이트1</td>
-                <td>총강의수1</td>
-                <td>총시간1</td>
-                <td>수강기간1</td>
-                <td>취업정보1</td>
+                <td>강의명<%=i+1 %></td>
+                <td>누적수강인원</td>
+                <td>컨텐츠제공사이트</td>
+                <td>총강의수</td>
+                <td>총시간</td>
+                <td>수강기간</td>
+                <td>취업정보</td>
             </tr>
-            <tr>
-                <td>강의명2</td>
-                <td>누적수강인원2</td>
-                <td>컨텐츠제공사이트2</td>
-                <td>총강의수2</td>
-                <td>총시간2</td>
-                <td>수강기간2</td>
-                <td>취업정보2</td>
-            </tr>
-            <tr>
-                <td>강의명3</td>
-                <td>누적수강인원3</td>
-                <td>컨텐츠제공사이트3</td>
-                <td>총강의수3</td>
-                <td>총시간3</td>
-                <td>수강기간3</td>
-                <td>취업정보3</td>
-            </tr>
-            <tr>
-                <td>강의명4</td>
-                <td>누적수강인원4</td>
-                <td>컨텐츠제공사이트4</td>
-                <td>총강의수4</td>
-                <td>총시간4</td>
-                <td>수강기간4</td>
-                <td>취업정보4</td>
-            </tr>
-            <tr>
-                <td>강의명5</td>
-                <td>누적수강인원5</td>
-                <td>컨텐츠제공사이트5</td>
-                <td>총강의수5</td>
-                <td>총시간5</td>
-                <td>수강기간5</td>
-                <td>취업정보5</td>
-            </tr>
-            <tr>
-                <td>강의명6</td>
-                <td>누적수강인원6</td>
-                <td>컨텐츠제공사이트6</td>
-                <td>총강의수6</td>
-                <td>총시간6</td>
-                <td>수강기간6</td>
-                <td>취업정보6</td>
-            </tr>
-            <tr>
-                <td>강의명7</td>
-                <td>누적수강인원7</td>
-                <td>컨텐츠제공사이트7</td>
-                <td>총강의수7</td>
-                <td>총시간7</td>
-                <td>수강기간7</td>
-                <td>취업정보7</td>
-            </tr>
-            <tr>
-                <td>강의명8</td>
-                <td>누적수강인원8</td>
-                <td>컨텐츠제공사이트8</td>
-                <td>총강의수8</td>
-                <td>총시간8</td>
-                <td>수강기간8</td>
-                <td>취업정보8</td>
-            </tr>
+            <%} %>
+           
         </table>
     </div>
 </body>
