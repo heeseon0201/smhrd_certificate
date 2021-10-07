@@ -113,7 +113,7 @@ table {
 	max-width: 100%;
 }
 
-
+/* 로그인페이지 가운데정렬 적용 */
     	.loginDiv{
     	text-align: center;
     		margin:auto;
