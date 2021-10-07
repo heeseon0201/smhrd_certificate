@@ -24,21 +24,24 @@
 <body>
 	<form action="LoginService" method="post">
 		<div>
-		<p>아이디</p>
+			<p>아이디</p>
 		</div>
 		<div>
-		<input type="text" class="in" name="id">
+			<input type="text" class="in" name="id">
 		</div>
 		<div>
-		<p>비밀번호</p>
+			<p>비밀번호</p>
 		</div>
 		<div>
-		<input type="password" class="in" name="pw">
+			<input type="password" class="in" name="pw">
+		</div>
+		<div></div>
+		<div>
+			<input type="submit" class="in" value="로그인">
 		</div>
 		<div>
-		</div>
-		<div>
-		<input type="submit" class="in" value="로그인">
+			<a href="#">아이디찾기</a>
+			<a href="#">비밀번호찾기</a>
 		</div>
 	</form>
 </body>
