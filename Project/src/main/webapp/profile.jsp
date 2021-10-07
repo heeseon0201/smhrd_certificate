@@ -12,6 +12,7 @@
 </style>
 <body>
     <div id= "total">
+        <center>
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
@@ -134,18 +135,17 @@
                                 <div>&nbsp;</div>
 
                                 <!-- 현재 기능 미구현 -->
-                                <button>수정</button>
-                                <button>돌아가기</button>
+                                <button style="height:50px; width:150px; font-size: 16px;">수정</button>
+                                <button style="height:50px; width:150px; font-size: 16px;">돌아가기</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-            </form>
+            </form>    
+        </center>
         </div>
-
-
     </div>
 </body>
 </html>
