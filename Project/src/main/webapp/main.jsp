@@ -107,7 +107,7 @@ table{
         <h3></h3>
         <nav>
           <span><a href="#">회원가입</a></span>
-          <span><a href="#">로그인</a></span>
+          <span><a href="login.jsp">로그인</a></span>
         </nav>
     </header>
       
