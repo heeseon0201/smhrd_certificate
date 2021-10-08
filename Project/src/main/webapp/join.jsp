@@ -6,17 +6,22 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
-    <link rel="stylesheet" href="table.css">
 </head>
-
-    
+<style>
+	div{
+	text-align:center;
+	}
+	table{
+	margin:auto;
+	}
+</style>
 <body>
     <div id= "total">
         
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
-                <a href = "main.jsp">
-                    <span class="h_logo"> StudyNet </span>
+                <a href = "main.html" class = "h_logo">
+                    <span> 사이트 이름 </span>
                 </a>
             </h1>
 
@@ -24,7 +29,7 @@
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
-                            <h2 class="h_subject">회원가입</h2>
+                            <h2>회원가입</h2>
                             <p class="contxt">아래의 기재사항을 입력해주세요.</p>
                         </div>
 
@@ -117,7 +122,7 @@
                                                     </span>
                                                     <span class="ps_box int_mm">
                                                         <select id="mm" class="sel" aria-label="월" style="height:25px; width:50px; font-size: 16px;">
-                                                            <option value>월</option>
+                                                            <option value="">월</option>
                                                             <option value="01">1</option>
                                                             <option value="02">2</option>
                                                             <option value="03">3</option>
@@ -147,7 +152,7 @@
                                                 <td>
                                                     <span class="ps_box int_sex">
                                                         <select id="sex" class="sel" aria-label="성별" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value>성별</option>
+                                                            <option value="">성별</option>
                                                             <option value="남">남</option>
                                                             <option value="여">여</option>
                                                         </select>
@@ -190,7 +195,7 @@
                                                 <td>
                                                     <span class="ps_box int_interest">
                                                         <select id="interest" class="sel" aria-label="관심분야" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value>관심분야를 선택하세요</option>
+                                                            <option value="">관심분야를 선택하세요</option>
                                                             <option value="01">관심분야1</option>
                                                             <option value="02">관심분야2</option>
                                                             <option value="03">관심분야3</option>
@@ -215,7 +220,7 @@
                                                 <td>
                                                     <span class="ps_box int_job">
                                                         <select id="job" class="sel" aria-label="직업" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value>직업를 선택하세요</option>
+                                                            <option value="">직업를 선택하세요</option>
                                                             <option value="01">직업1</option>
                                                             <option value="02">직업2</option>
                                                             <option value="03">직업3</option>
