@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div style="text-align : left;" class="title">
+    <!--페이지 사진-->
+    <div style="text-align : left; margin:0%" class="title">
+    <!--로고, 회원가입, 로그인-->
     <header>
         <h3>Studynet</h3>
         <nav>
@@ -20,75 +22,67 @@
         </nav>
     </header>
     <main>
-        <p>인터넷 강의 사이트입니다.<br>안녕하세요. 지금 인터넷 강의를 뭐 긁어올지 모르겠네여 하하</p>
-        <!--왼쪽 테이블을 옆으로 살짝 옮기고 싶어서 margin--->
-        <!--인강정보와 스터디를 보여주는 div-->
-
+        <!--로고, 회원가입, 로그인-->
+        <div id="main">
+            <h1>언택트 시대, 최고의 선택</h1><br>
+            <p>블라블라</p>
+        </div>
     </div>
-        <div class="info" style="margin-left: 100px;">
-            <div style="width:50%;float:left;">
-            <!-- table 두개를 서로 나란히 위치시키기 위해 
-            div태그(style="width:50%;float:left;")를 만들고(왼쪽 div는 float left, 오른쪽-right)
-            그 안에 table태그를 넣음
-            -->
-                <table>
+        <div class="info">
+            <div>
+                <table  style="margin: auto;">
                     <tr>
-                        <th colspan="2">Lecture
+                        <th colspan="4">Lecture
                         </th>
                     </tr>
                     <tr>
                         <td>
-                            <!--버튼으로 할 것인가 아니면 a태그로 할 것인가-->
-                            <a href="#">
+                            <a href="#" class="info">
                                 인강정보1
                             </a>
                         </td>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 인강정보2
                             </a>
                         </td>
-                    </tr>
-                    <tr>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 인강정보3
                             </a>
                         </td>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 인강정보4
                             </a>
                         </td>
                     </tr>
                 </table>
             </div>
-            <div style="width:50%;float:right;">
-                <table>
+            <div>
+                <table style="margin: auto;">
                     <tr>
-                        <th colspan="2">GroupStudy
+                        <th colspan="4">GroupStudy
                         </th>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 스터디정보1
                             </a>
                         </td>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 스터디정보2
                             </a>
                         </td>
-                    </tr>
-                    <tr>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 스터디정보3
                             </a>
                         </td>
                         <td>
-                            <a href="#">
+                            <a href="#" class="info">
                                 스터디정보4
                             </a>
                         </td>
