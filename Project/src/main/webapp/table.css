@@ -1,17 +1,51 @@
 @charset "utf-8";
+/*타이틀의 폰트 변동*/
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+/*lecture, course의 폰트 변동*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-h1 {
-	text-align: center;
+.h_logo{
 	font-family: Sansita Swashed;
 	font-size: 100px;
     background: linear-gradient(to right top, #861657, #ffa69e);
     color: transparent;
     /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
     -webkit-background-clip: text;
+    text-decoration-line:none;/* 밑줄지우는 코드인데 작동이 안됨 */
+    text-align:center;
+    
 }
+.h_subject{
+	font-family: Sansita Swashed;
+	font-size: 50px;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+    color: transparent;
+    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
+    -webkit-background-clip: text;
+    text-decoration-line:none;
+    text-align:center;
+    
+}
+.c_header{
+	text-align:center;
+}
+h1 {
+	text-align: center;
+	font-family: Sansita Swashed;
+	font-size: 100px;
+	
+        text-decoration-line:none;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
+    -webkit-background-clip: text;
+}
+
 body {
 	background: #EEE;
 }
+	div{
+	text-align:center;
+	}
 
 .certificate {
     width : 80%;
