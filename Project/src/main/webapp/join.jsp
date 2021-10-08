@@ -6,23 +6,17 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
+    <link rel="stylesheet" href="table.css">
 </head>
 
-<style>
-	div{
-	text-align:center;
-	}
-	table{
-	margin:auto;
-	}
-</style>
+    
 <body>
     <div id= "total">
         
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
-                <a href = "main.html" class = "h_logo">
-                    <span> 사이트 이름 </span>
+                <a href = "main.jsp">
+                    <span class="h_logo"> StudyNet </span>
                 </a>
             </h1>
 
@@ -30,7 +24,7 @@
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
-                            <h2>회원가입</h2>
+                            <h2 class="h_subject">회원가입</h2>
                             <p class="contxt">아래의 기재사항을 입력해주세요.</p>
                         </div>
 
