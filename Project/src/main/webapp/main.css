@@ -1,8 +1,9 @@
-@charset "utf-8";
+/*¸ŞÀÎÆäÀÌÁöÀÇ css*/
+@charset "euc-kr";
 
-/*íƒ€ì´í‹€ì˜ í°íŠ¸ ë³€ë™*/
+/*Å¸ÀÌÆ²ÀÇ ÆùÆ® º¯µ¿*/
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
-/*lecture, courseì˜ í°íŠ¸ ë³€ë™*/
+/*lecture, courseÀÇ ÆùÆ® º¯µ¿*/
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 header {
@@ -14,14 +15,13 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	margin: 0;
-	border-bottom: 1px solid black;
 }
 h1 {
+	margin: 0;
 	font-family: Sansita Swashed;
 	font-size: 100px;
-    background: linear-gradient(to right top, #861657, #ffa69e);
-    color: transparent;
-    /*-webkit-ì˜ ê²½ìš° ë¸Œë¼ìš°ì €ê°€ í¬ë¡¬ì¼ ë•Œë¥¼ ê³ ë ¤*/
+    color: black;
+    /*-webkit-ÀÇ °æ¿ì ºê¶ó¿ìÀú°¡ Å©·ÒÀÏ ¶§¸¦ °í·Á*/
     -webkit-background-clip: text;
 }
 
@@ -31,17 +31,18 @@ table {
 	border: 1px solid black;
 	max-width: 100%;
 }
-
+/*¸ŞÀÎ·Î°í*/
 .title {
-    
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	line-height: 170px;
-	/*studyë¥¼ ì¤‘ì•™ìœ¼ë¡œ ë³´ë‚´ê¸°ìœ„í•œ ë»˜ì§“*/
+	/*study¸¦ Áß¾ÓÀ¸·Î º¸³»±âÀ§ÇÑ »¹Áş*/
 	vertical-align: middle;
 	text-align: center;
 	display: table-col;
-    margin-top: 6%;
+	background: url("https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4PYj/image/9kZEQ5jYef7BxRXLCPvgzsp9DNU.jpg");
+	background-size: 100% ;
+	height: 100vh;
 }
 
 h1, p {
@@ -53,13 +54,10 @@ main {
 	height: 100%;
 }
 
-body {
-	background: #EEE;
-}
 
 a {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 body, html {
@@ -73,19 +71,19 @@ body, html {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-/* ë¡œê·¸ì¸í˜ì´ì§€ ê°€ìš´ë°ì •ë ¬ ì ìš© */
+/* ·Î±×ÀÎÆäÀÌÁö °¡¿îµ¥Á¤·Ä Àû¿ë */
 .loginDiv{
     text-align: center;
 	margin:auto;
 	width:50%;
 	padding:5px;
 }
-/*Lecture, courseì˜ í°íŠ¸ ì¡°ì •*/
+/*Lecture, courseÀÇ ÆùÆ® Á¶Á¤*/
 th{
     font-size: 50px;
     background: linear-gradient(to right top, #861657, #ffa69e);
     color: transparent;
-    /*-webkit-ì˜ ê²½ìš° ë¸Œë¼ìš°ì €ê°€ í¬ë¡¬ì¼ ë•Œë¥¼ ê³ ë ¤*/
+    /*-webkit-ÀÇ °æ¿ì ºê¶ó¿ìÀú°¡ Å©·ÒÀÏ ¶§¸¦ °í·Á*/
     -webkit-background-clip: text;
     font-family: Courgette;
     height: 80px;
@@ -93,3 +91,30 @@ th{
 td{
     text-align: center;
 }
+
+/*·Î±×ÀÎÆäÀÌÁö*/
+
+
+/*·Î±×ÀÎ·Î°í*/
+.loginlogo{
+	font-family: Sansita Swashed;
+	font-size: 50px;
+    background: linear-gradient(to right top, #861657, #ffa69e);
+    color: transparent;
+    /*-webkit-ÀÇ °æ¿ì ºê¶ó¿ìÀú°¡ Å©·ÒÀÏ ¶§¸¦ °í·Á*/
+    -webkit-background-clip: text;
+}
+/*·Î±×ÀÎÆäÀÌÁöÀÇ ¾È¿¡ Å×ÀÌºí*/
+#logintable{
+	width: 30%;
+	margin: auto;
+	height: 30px;
+	border-right:none;
+	border-left:none;
+	border-top:none;
+	border-bottom:none;
+}
+.findid{
+	margin-top: 100px;
+}
+
