@@ -11,22 +11,20 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<%memberVO vo = (memberVO)session.getAttribute("member");%>
-     <header>
-        <h3></h3>
+    <div style="text-align : left;" class="title">
+    <header>
+        <h3>Studynet</h3>
         <nav>
-          <span><a href="join.jsp">회원가입</a></span>
-          <span><a href="login.jsp">로그인</a></span>
+          <span><a href="#">회원가입</a></span>
+          <span><a href="#">로그인</a></span>
         </nav>
     </header>
-      
     <main>
-        <!-- -->
-        <div class="title">
-            <h1>STUDYNET</h1>
-        </div>
+        <p>인터넷 강의 사이트입니다.<br>안녕하세요. 지금 인터넷 강의를 뭐 긁어올지 모르겠네여 하하</p>
         <!--왼쪽 테이블을 옆으로 살짝 옮기고 싶어서 margin--->
         <!--인강정보와 스터디를 보여주는 div-->
+
+    </div>
         <div class="info" style="margin-left: 100px;">
             <div style="width:50%;float:left;">
             <!-- table 두개를 서로 나란히 위치시키기 위해 
@@ -34,8 +32,8 @@
             그 안에 table태그를 넣음
             -->
                 <table>
-                    <tr >
-                        <th colspan="2"><a href="lecture.jsp">Lecture</a>
+                    <tr>
+                        <th colspan="2">Lecture
                         </th>
                     </tr>
                     <tr>
@@ -68,7 +66,7 @@
             <div style="width:50%;float:right;">
                 <table>
                     <tr>
-                        <th colspan="2"><a href="study.jsp">GroupStudy</a>
+                        <th colspan="2">GroupStudy
                         </th>
                     </tr>
                     <tr>
