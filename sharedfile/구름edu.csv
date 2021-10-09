@@ -1,0 +1,393 @@
+﻿,제목,가격,강사,평점,URL
+0,HTML5 & CSS3 기초 문법 올인원,무료,개발자 이도해,5.0,https://edu.goorm.io/lecture/28488/html5-css3-기초-문법-올인원
+1,컴퓨터 GUI 앱을 만들면서 tkinter 배우기,무료,행보칸코딩,5.0,https://edu.goorm.io/lecture/28428/컴퓨터-gui-앱을-만들면서-tkinter-배우기
+2,[하루10분|Web-App] 생애최초 웹프레임워크 Ruby on Rails,무료,판다코딩,5.0,https://edu.goorm.io/lecture/28494/하루10분-web-app-생애최초-웹프레임워크-ruby-on-rails
+3,실전!웹사이트제작 Step By Step! (Basic 강좌 : 쌩초보 코스),"₩10,000",J.young,0.0,https://edu.goorm.io/lecture/28099/실전-웹사이트제작-step-by-step-basic-강좌-쌩초보-코스
+4,실전!웹사이트제작 Step By Step! (클론코딩 : 포메인사이트제작 - 풀페이지),"₩28,000",J.young,0.0,https://edu.goorm.io/lecture/28100/실전-웹사이트제작-step-by-step-클론코딩-포메인사이트제작-풀페이지
+5,실전!웹사이트제작 Step By Step! (클론코딩 : crew a la Mode 사이트제작 - 반응형웹),"₩28,000",J.young,0.0,https://edu.goorm.io/lecture/28057/실전-웹사이트제작-step-by-step-클론코딩-crew-a-la-mode-사이트제작-반응형웹
+6,퇴근후 텐서플로: Basic,무료,퇴근후딴짓,5.0,https://edu.goorm.io/lecture/28058/퇴근후-텐서플로-basic
+7,입문자를 위한 CSS 기초 강의,무료,유노코딩,5.0,https://edu.goorm.io/lecture/27976/입문자를-위한-css-기초-강의
+8,입문자를 위한 HTML 기초 강의,무료,유노코딩,5.0,https://edu.goorm.io/lecture/27971/입문자를-위한-html-기초-강의
+9,Vuetify Admin Template 만들기 - 실전편,무료,짐코딩 GYM CODING,0.0,https://edu.goorm.io/lecture/27961/vuetify-admin-template-만들기-실전편
+10,Vuetify Admin Template 만들기 - 기본편,무료,짐코딩 GYM CODING,0.0,https://edu.goorm.io/lecture/27955/vuetify-admin-template-만들기-기본편
+11,[애플 공식 교재] iOS 앱 만들기 Part2,"₩38,500",코더스하이,5.0,https://edu.goorm.io/lecture/26757/애플-공식-교재-ios-앱-만들기-part2
+12,Jupyter Notebook으로 시작하는 Python,무료,박범진,5.0,https://edu.goorm.io/lecture/26535/jupyter-notebook으로-시작하는-python
+13,[저자 직강] Do it! HTML/CSS/JS 웹 표준의 정석,무료,이지스퍼블리싱,4.9,https://edu.goorm.io/lecture/26571/저자-직강-do-it-html-css-js-웹-표준의-정석
+14,넘파이 마스터 클래스,"₩35,640",Shin's Lab,0.0,https://edu.goorm.io/lecture/26505/넘파이-마스터-클래스
+15,김버그의 UI 개발 부트캠프 - 경력같은 신입으로 레벨업,"₩50,000",김버그,5.0,https://edu.goorm.io/lecture/25681/김버그의-ui-개발-부트캠프-경력같은-신입으로-레벨업
+16,"가볍게 시작하는 C언어, 라이트 C",무료,범고래의 SW 공작소,4.6,https://edu.goorm.io/lecture/25515/가볍게-시작하는-c언어-라이트-c
+17,빅데이터분석기사 필기 2021,"₩160,000",핵집,0.0,https://edu.goorm.io/lecture/26125/빅데이터분석기사-필기-2021
+18,ESXi 가상 인프라 구축과 보안 솔루션을 활용한 이상징후 탐지 모니터링,"₩198,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/26302/esxi-가상-인프라-구축과-보안-솔루션을-활용한-이상징후-탐지-모니터링
+19,누구나 블로그 개발 할 수 있다! React 기반 Gatsby로 기술 블로그 개발하기,무료,주현도,5.0,https://edu.goorm.io/lecture/25881/누구나-블로그-개발-할-수-있다-react-기반-gatsby로-기술-블로그-개발하기
+20,실전! 웹사이트 제작 Step by Step - 호텔 라한 Application Course,"₩27,500",J.young,3.0,https://edu.goorm.io/lecture/26324/실전-웹사이트-제작-step-by-step-호텔-라한-application-course
+21,딥러닝 네트워크의 연산,"₩39,000",Shin's Lab,0.0,https://edu.goorm.io/lecture/26039/딥러닝-네트워크의-연산
+22,데이터 시각화를 위한 파이썬,"₩39,000",Shin's Lab,0.0,https://edu.goorm.io/lecture/24603/데이터-시각화를-위한-파이썬
+23,딥러닝을 위한 파이썬 레벨2,"₩39,000",Shin's Lab,0.0,https://edu.goorm.io/lecture/26038/딥러닝을-위한-파이썬-레벨2
+24,딥러닝을 위한 파이썬 레벨1,"₩35,100",Shin's Lab,0.0,https://edu.goorm.io/lecture/26037/딥러닝을-위한-파이썬-레벨1
+25,모의해킹 취업 준비하는데 알아두면 좋은 것,무료,보안프로젝트,0.0,https://edu.goorm.io/lecture/25879/모의해킹-취업-준비하는데-알아두면-좋은-것
+26,파이썬 개발자를 위한 go언어 기초,무료,행보칸코딩,4.5,https://edu.goorm.io/lecture/25552/파이썬-개발자를-위한-go언어-기초
+27,[하루 10분|Web Project] HTML/JS/CSS로 나만의 MBTI 사이트 만들기,무료,판다코딩,4.9,https://edu.goorm.io/lecture/25652/하루-10분-web-project-html-js-css로-나만의-mbti-사이트-만들기
+28,React & TypeScript & GraphQL 로 버그없이 빠르게 개발하기!,"₩25,000",Alucard,2.5,https://edu.goorm.io/lecture/25571/react-typescript-graphql-로-버그없이-빠르게-개발하기
+29,파이썬으로 구현하는 CF 알고리즘,"₩35,100",최욱진,4.8,https://edu.goorm.io/lecture/25544/파이썬으로-구현하는-cf-알고리즘
+30,[하루 10분|C++] 누구나 쉽게 배우는 C++ 프로그래밍 입문,무료,판다코딩,5.0,https://edu.goorm.io/lecture/25274/하루-10분-c-누구나-쉽게-배우는-c-프로그래밍-입문
+31,[2021 개정] IT 웹 개발자 취준 백서,"₩10,000",컴공돌이,3.0,https://edu.goorm.io/lecture/25207/2021-개정-it-웹-개발자-취준-백서
+32,"HAL, CubeMX, TrueSTUDIO를 이용한 STM32F4 따라하기 무료 강좌",무료,박원엽,0.0,https://edu.goorm.io/lecture/25454/hal-cubemx-truestudio를-이용한-stm32f4-따라하기-무료-강좌
+33,작정하고 django! 핀터레스트 만들기,"₩77,000",박형석,5.0,https://edu.goorm.io/lecture/25441/작정하고-django-핀터레스트-만들기
+34,CentOS 7 설치부터 웹서버 구축까지,무료,zzstudio-dev,5.0,https://edu.goorm.io/lecture/25119/centos-7-설치부터-웹서버-구축까지
+35,문법책 졸업하자! 만들면서 복습하는 JavaScript,"₩49,000",강태공,5.0,https://edu.goorm.io/lecture/25046/문법책-졸업하자-만들면서-복습하는-javascript
+36,"파이썬 웹 스크래핑, 제가 가진 모든 비법을 알려드리겠습니다.",무료,나도코딩,5.0,https://edu.goorm.io/lecture/24961/파이썬-웹-스크래핑-제가-가진-모든-비법을-알려드리겠습니다
+37,코딩 입문 - 하다 보니 알게 되는 자바스크립트,무료,월리,5.0,https://edu.goorm.io/lecture/24963/코딩-입문-하다-보니-알게-되는-자바스크립트
+38,2021 온라인 코딩 파티 시즌1 - 블록 코딩 용사가 되자!!!,무료,구름,4.7,https://edu.goorm.io/lecture/24788/2021-온라인-코딩-파티-시즌1-블록-코딩-용사가-되자
+39,2021 온라인 코딩 파티 시즌1 - 텍스트 코딩 용사가 되자!!!,무료,구름,4.8,https://edu.goorm.io/lecture/24789/2021-온라인-코딩-파티-시즌1-텍스트-코딩-용사가-되자
+40,2021 온라인 코딩 파티 시즌1 - 파이썬 데이터 분석 및 시각화!!!,무료,구름,5.0,https://edu.goorm.io/lecture/24790/2021-온라인-코딩-파티-시즌1-파이썬-데이터-분석-및-시각화
+41,"2021 온라인 코딩 파티 시즌1 - 둘이서 코딩, 거북선과 척후선!!!",무료,구름,4.6,https://edu.goorm.io/lecture/24791/2021-온라인-코딩-파티-시즌1-둘이서-코딩-거북선과-척후선
+42,2021 온라인 코딩 파티 시즌1 - 코딩랜드를 구하라!!!,무료,구름,5.0,https://edu.goorm.io/lecture/24792/2021-온라인-코딩-파티-시즌1-코딩랜드를-구하라
+43,2021 온라인 코딩 파티 시즌1 - 도전 틱택토!!!,무료,구름,5.0,https://edu.goorm.io/lecture/24793/2021-온라인-코딩-파티-시즌1-도전-틱택토
+44,[애플 공식 교재] 스위프트 퍼즐 2 - AD free,"₩11,000",코더스하이,0.0,https://edu.goorm.io/lecture/24597/애플-공식-교재-스위프트-퍼즐-2-ad-free
+45,[애플 공식 교재] 스위프트 퍼즐 1 - AD free,"₩11,000",코더스하이,0.0,https://edu.goorm.io/lecture/24579/애플-공식-교재-스위프트-퍼즐-1-ad-free
+46,스프링부트 개념정리,무료,데어 프로그래밍,4.8,https://edu.goorm.io/lecture/24604/스프링부트-개념정리
+47,스프링부트 나만의 블로그 만들기,무료,데어 프로그래밍,5.0,https://edu.goorm.io/lecture/24605/스프링부트-나만의-블로그-만들기
+48,스프링부트 시큐리티 특강,무료,데어 프로그래밍,5.0,https://edu.goorm.io/lecture/24606/스프링부트-시큐리티-특강
+49,[따라하며 배우는 리액트&파이어베이스] 채팅 애플리케이션 만들기,"₩31,900",John Ahn,4.2,https://edu.goorm.io/lecture/24672/따라하며-배우는-리액트-파이어베이스-채팅-애플리케이션-만들기
+50,실전! 웹사이트 제작 Step by Step Basic Course - 한국소비자원,"₩11,000",J.young,5.0,https://edu.goorm.io/lecture/24580/실전-웹사이트-제작-step-by-step-basic-course-한국소비자원
+51,실전! 웹사이트 제작 Step by Step Basic Course - '돕다' 웹사이트,"₩22,000",J.young,5.0,https://edu.goorm.io/lecture/24581/실전-웹사이트-제작-step-by-step-basic-course-돕다-웹사이트
+52,생산성 UP! R과 파이썬으로 하는 문서 자동화,무료,Issac Lee,0.0,https://edu.goorm.io/lecture/24475/생산성-up-r과-파이썬으로-하는-문서-자동화
+53,가위바위보 게임을 만들며 맛보는 파이썬3,무료,구름,4.9,https://edu.goorm.io/lecture/24499/가위바위보-게임을-만들며-맛보는-파이썬3
+54,실전 유형 코딩 테스트 모의고사 3000 Part2,"₩50,000",구름,3.0,https://edu.goorm.io/lecture/24058/실전-유형-코딩-테스트-모의고사-3000-part2
+55,SQL과 구글시트로 시작하는 데이터분석,"₩19,800",박범진,5.0,https://edu.goorm.io/lecture/24342/sql과-구글시트로-시작하는-데이터분석
+56,실전 유형 코딩 테스트 모의고사 3000 Part1,"₩50,000",구름,5.0,https://edu.goorm.io/lecture/24057/실전-유형-코딩-테스트-모의고사-3000-part1
+57,신입 개발자로 살아남기 Lv1. 나만의 기술 블로그로 관리하는 개발자 커리어,"₩39,000",원혜린,4.6,https://edu.goorm.io/lecture/23072/신입-개발자로-살아남기-lv1-나만의-기술-블로그로-관리하는-개발자-커리어
+58,리눅스 쉘 스크립트 마스터,"₩99,000",홍영기,0.0,https://edu.goorm.io/lecture/24102/리눅스-쉘-스크립트-마스터
+59,[애플 공식 교재] iOS 앱 만들기 Part1,"₩38,500",코더스하이,5.0,https://edu.goorm.io/lecture/24101/애플-공식-교재-ios-앱-만들기-part1
+60,[애플 공식 교재] iOS 앱 만들기 입문,"₩38,500",코더스하이,5.0,https://edu.goorm.io/lecture/23901/애플-공식-교재-ios-앱-만들기-입문
+61,파이썬으로 하는 데이터 분석 - Pandas 제대로 배우기,"₩36,000",아이티고,0.0,https://edu.goorm.io/lecture/23732/파이썬으로-하는-데이터-분석-pandas-제대로-배우기
+62,[2020 NEW] 코틀린 기반 안드로이드 앱 개발 Part3 - 데이터 관리와 네트워크,"₩66,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/23730/2020-new-코틀린-기반-안드로이드-앱-개발-part3-데이터-관리와-네트워크
+63,[2020 NEW] 코틀린 기반 안드로이드 앱 개발 Part2 - 메뉴와 4대 구성요소,"₩66,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/23729/2020-new-코틀린-기반-안드로이드-앱-개발-part2-메뉴와-4대-구성요소
+64,파이썬 기반 판다스(Pandas)를 활용한 데이터 분석,"₩66,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/23731/파이썬-기반-판다스-pandas-를-활용한-데이터-분석
+65,한 눈에 끝내는 CSS/JS 애니메이션,"₩59,000",구름,5.0,https://edu.goorm.io/lecture/17509/한-눈에-끝내는-css-js-애니메이션
+66,현직 개발자가 알려주는 안드로이드 코틀린 앱 제작,무료,홍드로이드,4.8,https://edu.goorm.io/lecture/23399/현직-개발자가-알려주는-안드로이드-코틀린-앱-제작
+67,현직 개발자가 알려주는 자바 기초 문법,무료,홍드로이드,5.0,https://edu.goorm.io/lecture/23398/현직-개발자가-알려주는-자바-기초-문법
+68,실전 유형 코딩 테스트 모의고사 3000,"₩100,000",구름,0.0,https://edu.goorm.io/lecture/23503/실전-유형-코딩-테스트-모의고사-3000
+69,파이썬으로 하는 데이터 분석 - 시각화 제대로 배우기,"₩40,000",아이티고,0.0,https://edu.goorm.io/lecture/23405/파이썬으로-하는-데이터-분석-시각화-제대로-배우기
+70,[온라인 SW 아카데미] 너도 할 수 있어! AI 만들기,무료,세명컴퓨터고등학교장,5.0,https://edu.goorm.io/lecture/22325/온라인-sw-아카데미-너도-할-수-있어-ai-만들기
+71,[온라인 SW 아카데미] 컴린이도 화이트해커가 될 수 있다?!,무료,세명컴퓨터고등학교장,5.0,https://edu.goorm.io/lecture/22341/온라인-sw-아카데미-컴린이도-화이트해커가-될-수-있다
+72,[온라인 SW 아카데미] 유니티로 배우는 게임 프로그래밍 기초,무료,세명컴퓨터고등학교장,5.0,https://edu.goorm.io/lecture/22342/온라인-sw-아카데미-유니티로-배우는-게임-프로그래밍-기초
+73,[온라인 SW 아카데미] 스마트폰 센서 제어를 위한 앱(app) 개발,무료,세명컴퓨터고등학교장,5.0,https://edu.goorm.io/lecture/22344/온라인-sw-아카데미-스마트폰-센서-제어를-위한-앱-app-개발
+74,파이썬으로 배우는 알고리즘 기초,무료,주니온,5.0,https://edu.goorm.io/lecture/22654/파이썬으로-배우는-알고리즘-기초
+75,"그림으로 배우는 HTML-CSS, 입문!","₩19,800",홍팍,5.0,https://edu.goorm.io/lecture/22109/그림으로-배우는-html-css-입문
+76,비타알고와 정보올림피아드 준비하기 with 모의고사,"₩80,000",구름,0.0,https://edu.goorm.io/lecture/22442/비타알고와-정보올림피아드-준비하기-with-모의고사
+77,따라하며 배우는 도커와 CI환경,"₩24,200",John Ahn,5.0,https://edu.goorm.io/lecture/22383/따라하며-배우는-도커와-ci환경
+78,"그림으로 배우는 자바, 객체지향!","₩19,800",홍팍,4.9,https://edu.goorm.io/lecture/22108/그림으로-배우는-자바-객체지향
+79,"그림으로 배우는 자바, 입문!","₩19,800",홍팍,4.8,https://edu.goorm.io/lecture/22087/그림으로-배우는-자바-입문
+80,한 눈에 보는 타입스크립트,무료,영웅박,5.0,https://edu.goorm.io/lecture/22106/한-눈에-보는-타입스크립트
+81,[애플 공식 교재] 스위프트 퍼즐 2,무료,코더스하이,0.0,https://edu.goorm.io/lecture/22013/애플-공식-교재-스위프트-퍼즐-2
+82,[애플 공식 교재] 스위프트 퍼즐 1,무료,코더스하이,0.0,https://edu.goorm.io/lecture/21987/애플-공식-교재-스위프트-퍼즐-1
+83,"코린아, 코딩하자! with 파이썬",무료,주니온,4.5,https://edu.goorm.io/lecture/21975/코린아-코딩하자-with-파이썬
+84,무료 파이썬 활용편2 - GUI 프로그래밍,무료,나도코딩,5.0,https://edu.goorm.io/lecture/21780/무료-파이썬-활용편2-gui-프로그래밍
+85,아두이노 시뮬레이터  - 팅커캐드 서킷,무료,메이커멘토,5.0,https://edu.goorm.io/lecture/21770/아두이노-시뮬레이터-팅커캐드-서킷
+86,안드로이드 앱 개발로 배우는 자바 코딩 기초,"₩19,000",Denis Jung,5.0,https://edu.goorm.io/lecture/21383/안드로이드-앱-개발로-배우는-자바-코딩-기초
+87,한 눈에 읽는 루비 온 레일즈,무료,구름,4.9,https://edu.goorm.io/lecture/16335/한-눈에-읽는-루비-온-레일즈
+88,코돈의 7주 완성 기초 프로그래밍,"₩20,000",codon knumed,5.0,https://edu.goorm.io/lecture/16902/코돈의-7주-완성-기초-프로그래밍
+89,동시에 배우는 C와 C++,무료,두들낙서,5.0,https://edu.goorm.io/lecture/21611/동시에-배우는-c와-c
+90,이부일의 R릴레오 기초편,무료,이 부일,0.0,https://edu.goorm.io/lecture/21022/이부일의-r릴레오-기초편
+91,[R] 머신러닝을 위한 통계학 기초,"₩44,550",코코,0.0,https://edu.goorm.io/lecture/21244/r-머신러닝을-위한-통계학-기초
+92,한큐에 끝내는 해커톤 입문_아두이노와 웹,"₩3,300",밍밍이와 맹맹이,5.0,https://edu.goorm.io/lecture/21118/한큐에-끝내는-해커톤-입문_아두이노와-웹
+93,코딩셰프의 Flutter 순한맛,무료,코딩셰프,5.0,https://edu.goorm.io/lecture/21167/코딩셰프의-flutter-순한맛
+94,안드로이드를 위한 자바 프로그래밍,"₩10,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/21052/안드로이드를-위한-자바-프로그래밍
+95,컴퓨터 일반론,무료,MN만능아카데미,3.0,https://edu.goorm.io/lecture/13426/컴퓨터-일반론
+96,[저자 직강] Do it! 딥러닝 입문,무료,이지스퍼블리싱,5.0,https://edu.goorm.io/lecture/21177/저자-직강-do-it-딥러닝-입문
+97,무료 파이썬 활용편1 - 추억의 오락실 게임 만들기,무료,나도코딩,4.9,https://edu.goorm.io/lecture/21001/무료-파이썬-활용편1-추억의-오락실-게임-만들기
+98,디스코드 자바스크립트 튜토리얼 - 이전버전,무료,제스퍼,4.9,https://edu.goorm.io/lecture/20853/디스코드-자바스크립트-튜토리얼-이전버전
+99,[2020 NEW] 코틀린 기반 안드로이드 앱 개발 Part1 - Kotlin UI Programming,"₩66,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/20669/2020-new-코틀린-기반-안드로이드-앱-개발-part1-kotlin-ui-programming
+100,모두를 위한 클라우드 컴퓨팅 입문,"₩28,000",김유경,5.0,https://edu.goorm.io/lecture/18575/모두를-위한-클라우드-컴퓨팅-입문
+101,Google 공식 언어 Kotlin 프로그래밍 시작하기,"₩44,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/20670/google-공식-언어-kotlin-프로그래밍-시작하기
+102,김버그의 HTML&CSS는 재밌다,"₩90,000",김버그,4.9,https://edu.goorm.io/lecture/20583/김버그의-html-css는-재밌다
+103,따라하며 배우는 데노(DENO),무료,John Ahn,4.9,https://edu.goorm.io/lecture/20663/따라하며-배우는-데노-deno
+104,텐서플로2로 배우는 딥러닝,무료,Minsuk Heo,4.6,https://edu.goorm.io/lecture/20687/텐서플로2로-배우는-딥러닝
+105,딥러닝 이론 및 파이썬 실습,무료,Minsuk Heo,4.6,https://edu.goorm.io/lecture/20671/딥러닝-이론-및-파이썬-실습
+106,일본어로 배우는 Java 입문,"₩30,000",崔智恵,0.0,https://edu.goorm.io/lecture/20397/일본어로-배우는-java-입문
+107,[번역판] CLEAN CODE JAVASCRIPT,무료,박명호,5.0,https://edu.goorm.io/lecture/20119/번역판-clean-code-javascript
+108,한 눈에 끝내는 SQL,"₩99,000",구름,5.0,https://edu.goorm.io/lecture/15413/한-눈에-끝내는-sql
+109,[30분 요약 시리즈 시즌2] Python 활용편,무료,제주코딩베이스캠프,5.0,https://edu.goorm.io/lecture/20254/30분-요약-시리즈-시즌2-python-활용편
+110,COS PRO 1급 기출문제 - Python,무료,두잉창의코딩,4.9,https://edu.goorm.io/lecture/17299/cos-pro-1급-기출문제-python
+111,COS PRO 1급 기출문제 - C++,무료,두잉창의코딩,4.7,https://edu.goorm.io/lecture/17300/cos-pro-1급-기출문제-c
+112,COS PRO 1급 기출문제 - Java,무료,두잉창의코딩,4.5,https://edu.goorm.io/lecture/17301/cos-pro-1급-기출문제-java
+113,COS PRO 1급 기출문제 - C언어,무료,두잉창의코딩,4.6,https://edu.goorm.io/lecture/17298/cos-pro-1급-기출문제-c언어
+114,프레임워크를 위한 JavaScript ES6,"₩49,000",강태공,4.9,https://edu.goorm.io/lecture/19879/프레임워크를-위한-javascript-es6
+115,5일 만에 200만원 버는 웹과 앱 만들기,무료,조코딩,4.9,https://edu.goorm.io/lecture/20213/5일-만에-200만원-버는-웹과-앱-만들기
+116,[따라하며 배우는 노드&리액트] 챗봇 사이트 만들기,무료,John Ahn,3.5,https://edu.goorm.io/lecture/20020/따라하며-배우는-노드-리액트-챗봇-사이트-만들기
+117,친절한 통계학 feat. R,무료,Issac Lee,5.0,https://edu.goorm.io/lecture/20108/친절한-통계학-feat-r
+118,[따라하며 배우는 노드&리액트] 영화 사이트 만들기,무료,John Ahn,5.0,https://edu.goorm.io/lecture/20019/따라하며-배우는-노드-리액트-영화-사이트-만들기
+119,파닥파닥 Flutter (빠르고 가볍게 Flutter 흔들기),무료,padak padak,4.8,https://edu.goorm.io/lecture/17450/파닥파닥-flutter-빠르고-가볍게-flutter-흔들기
+120,무료 파이썬 기본편 - 6시간 뒤면 나도 개발자,무료,나도코딩,5.0,https://edu.goorm.io/lecture/19917/무료-파이썬-기본편-6시간-뒤면-나도-개발자
+121,[무작정 풀스택] 플러터와 장고로 1시간 만에 퀴즈앱/서버 만들기,무료,권태형,3.9,https://edu.goorm.io/lecture/20021/무작정-풀스택-플러터와-장고로-1시간-만에-퀴즈앱-서버-만들기
+122,쉽게 만드는 라라벨 뷰 채팅,무료,코지 코더,5.0,https://edu.goorm.io/lecture/18959/쉽게-만드는-라라벨-뷰-채팅
+123,Azure 가상 컴퓨터 - 초급,"₩10,000",클라우드메이트,0.0,https://edu.goorm.io/lecture/19762/azure-가상-컴퓨터-초급
+124,한 눈에 읽는 자바 기초,무료,구름,4.9,https://edu.goorm.io/lecture/19448/한-눈에-읽는-자바-기초
+125,[Pytorch] 쉽고 빠르게 배우는 NLP,"₩55,000",코코,0.0,https://edu.goorm.io/lecture/19637/pytorch-쉽고-빠르게-배우는-nlp
+126,"딥러닝 강좌할껀데, 실습만 합니다",무료,Yoseob Han,5.0,https://edu.goorm.io/lecture/19373/딥러닝-강좌할껀데-실습만-합니다
+127,[무작정 플러터] Flutter + Firebase 넷플릭스UI 클론 코딩,무료,권태형,4.7,https://edu.goorm.io/lecture/19172/무작정-플러터-flutter-firebase-넷플릭스ui-클론-코딩
+128,[스프링 시리즈2] 만들면서 배우는 Spring MVC 5,"₩88,000",소프트캠퍼스,5.0,https://edu.goorm.io/lecture/19341/스프링-시리즈2-만들면서-배우는-spring-mvc-5
+129,쉽게 배우는 Vue.js 2 기초,무료,코지 코더,4.9,https://edu.goorm.io/lecture/18958/쉽게-배우는-vue-js-2-기초
+130,홍드로이드의 수익창출 앱 개발,"₩55,000",홍드로이드,4.8,https://edu.goorm.io/lecture/18156/홍드로이드의-수익창출-앱-개발
+131,따라하면서 배우는 리눅스 고급,무료,_따라學IT따라하면서 배우는 IT,5.0,https://edu.goorm.io/lecture/18950/따라하면서-배우는-리눅스-고급
+132,따라하면서 배우는 리눅스 기초,무료,_따라學IT따라하면서 배우는 IT,5.0,https://edu.goorm.io/lecture/18808/따라하면서-배우는-리눅스-기초
+133,[R] KOSPI/KOSDAQ 전 종목 데이터 수집 및 관리,"₩55,000",코코,3.0,https://edu.goorm.io/lecture/19043/r-kospi-kosdaq-전-종목-데이터-수집-및-관리
+134,MATLAB처럼 쓰는 PYTHON,무료,박범진,0.0,https://edu.goorm.io/lecture/19064/matlab처럼-쓰는-python
+135,쉽게 배우는 라라벨 기초,무료,코지 코더,4.9,https://edu.goorm.io/lecture/18957/쉽게-배우는-라라벨-기초
+136,[Pytorch] 쉽고 빠르게 배우는 GAN,"₩49,500",코코,0.0,https://edu.goorm.io/lecture/19030/pytorch-쉽고-빠르게-배우는-gan
+137,SELECT ALL FROM SQL,무료,박범진,4.7,https://edu.goorm.io/lecture/18815/select-all-from-sql
+138,시선을 사로잡는 웹 - 초급,"₩69,300",DevelUP,5.0,https://edu.goorm.io/lecture/18923/시선을-사로잡는-웹-초급
+139,시선을 사로잡는 웹 - 중급,"₩69,300",DevelUP,0.0,https://edu.goorm.io/lecture/17901/시선을-사로잡는-웹-중급
+140,[AZ-900 Certificate] Azure Basic,"₩30,000",클라우드메이트,5.0,https://edu.goorm.io/lecture/18531/az-900-certificate-azure-basic
+141,DataScience와 AI의 개념,"₩29,700",코코,4.9,https://edu.goorm.io/lecture/18477/datascience와-ai의-개념
+142,위클리 비타알고 시즌3 코딩테스트 체력 키우기,"₩200,000",안홍자,4.9,https://edu.goorm.io/lecture/18444/위클리-비타알고-시즌3-코딩테스트-체력-키우기
+143,한 눈에 읽는 파이썬3 기초,무료,구름,4.9,https://edu.goorm.io/lecture/17902/한-눈에-읽는-파이썬3-기초
+144,김버그의 CSS는 재밌다 - 기초부터 실무 레벨까지,"₩50,000",김버그,4.9,https://edu.goorm.io/lecture/17829/김버그의-css는-재밌다-기초부터-실무-레벨까지
+145,[따라하며 배우는 노드&리액트] 유튜브 사이트 만들기,무료,John Ahn,4.4,https://edu.goorm.io/lecture/17853/따라하며-배우는-노드-리액트-유튜브-사이트-만들기
+146,[Pytorch] 쉽고 빠르게 배우는 딥러닝,"₩82,500",코코,0.0,https://edu.goorm.io/lecture/17903/pytorch-쉽고-빠르게-배우는-딥러닝
+147,[백문이불여일타] 데이터 분석을 위한 중급 SQL,"₩44,000",YE H,4.0,https://edu.goorm.io/lecture/17832/백문이불여일타-데이터-분석을-위한-중급-sql
+148,[따라하며 배우는 노드&리액트] Boiler-Plate 만들기,무료,John Ahn,5.0,https://edu.goorm.io/lecture/17855/따라하며-배우는-노드-리액트-boiler-plate-만들기
+149,[백문이불여일타] 데이터 분석을 위한 기초 SQL,"₩22,000",leebomin,5.0,https://edu.goorm.io/lecture/17831/백문이불여일타-데이터-분석을-위한-기초-sql
+150,R프로그래밍 기초 다지기,무료,코코,4.2,https://edu.goorm.io/lecture/17848/r프로그래밍-기초-다지기
+151,나도 AWS에 서버 구축해보자🐶,무료,월리,5.0,https://edu.goorm.io/lecture/17834/나도-aws에-서버-구축해보자
+152,COS PRO 2급 기출문제 - Python,무료,두잉창의코딩,4.8,https://edu.goorm.io/lecture/17033/cos-pro-2급-기출문제-python
+153,COS PRO 2급 기출문제 - Java,무료,두잉창의코딩,3.7,https://edu.goorm.io/lecture/17167/cos-pro-2급-기출문제-java
+154,COS PRO 2급 기출문제 - C++,무료,두잉창의코딩,2.6,https://edu.goorm.io/lecture/17165/cos-pro-2급-기출문제-c
+155,COS PRO 2급 기출문제 - C언어,무료,두잉창의코딩,5.0,https://edu.goorm.io/lecture/16921/cos-pro-2급-기출문제-c언어
+156,[바로실습] 생활코딩 - JAVA 객체 지향 프로그래밍,무료,생활코딩,5.0,https://edu.goorm.io/lecture/16910/바로실습-생활코딩-java-객체-지향-프로그래밍
+157,"가장 핫한 FE 라이브러리🔥, React 가지고 놀아보기",무료,주현도,4.9,https://edu.goorm.io/lecture/16422/가장-핫한-fe-라이브러리-react-가지고-놀아보기
+158,영화 예매 사이트 만들기: 코딩편,무료,webstoryboy,5.0,https://edu.goorm.io/lecture/16943/영화-예매-사이트-만들기-코딩편
+159,영화 예매 사이트 만들기: 디자인편,무료,webstoryboy,4.5,https://edu.goorm.io/lecture/16948/영화-예매-사이트-만들기-디자인편
+160,빅데이터 제대로 배우기 - R 기초 문법과 데이터 전처리,"₩50,000",아이티고,0.0,https://edu.goorm.io/lecture/17133/빅데이터-제대로-배우기-r-기초-문법과-데이터-전처리
+161,센치한 개발자의 swift: ios app 만들기,무료,센치한개발자,5.0,https://edu.goorm.io/lecture/15173/센치한-개발자의-swift-ios-app-만들기
+162,[바로실습] 생활코딩 - JAVA method,무료,생활코딩,5.0,https://edu.goorm.io/lecture/16909/바로실습-생활코딩-java-method
+163,[바로실습] 생활코딩 - JAVA 제어문,무료,생활코딩,4.9,https://edu.goorm.io/lecture/16908/바로실습-생활코딩-java-제어문
+164,[웹퍼블리싱 실습] 반응형 사이트 만들기,무료,webstoryboy,5.0,https://edu.goorm.io/lecture/16942/웹퍼블리싱-실습-반응형-사이트-만들기
+165,[웹퍼블리싱 실습] 웹 표준 사이트 만들기,무료,webstoryboy,4.9,https://edu.goorm.io/lecture/16941/웹퍼블리싱-실습-웹-표준-사이트-만들기
+166,김버그의 HTML은 재밌다 - 기초부터 실무 레벨까지,"₩50,000",김버그,4.9,https://edu.goorm.io/lecture/16396/김버그의-html은-재밌다-기초부터-실무-레벨까지
+167,시선을 사로잡는 웹 - 초급 + 중급,"₩158,000",DevelUP,5.0,https://edu.goorm.io/lecture/16783/시선을-사로잡는-웹-초급-중급
+168,한 눈에 끝내는 HTML5/CSS3,"₩99,000",구름,4.9,https://edu.goorm.io/lecture/16322/한-눈에-끝내는-html5-css3
+169,초보자를 위한 장고 Django 뿌시기🔥,"₩49,000",장 성원,4.9,https://edu.goorm.io/lecture/16377/초보자를-위한-장고-django-뿌시기
+170,Bootstrap을 활용한 반응형 웹페이지 만들기,"₩46,000",아이티고,0.0,https://edu.goorm.io/lecture/16303/bootstrap을-활용한-반응형-웹페이지-만들기
+171,[바로실습] 생활코딩 - JAVA1,무료,생활코딩,5.0,https://edu.goorm.io/lecture/16448/바로실습-생활코딩-java1
+172,[스프링 시리즈1] Spring Framework5 입문자를 위한 실습 지침서,"₩22,000",소프트캠퍼스,4.0,https://edu.goorm.io/lecture/16406/스프링-시리즈1-spring-framework5-입문자를-위한-실습-지침서
+173,"2022 30분 요약 강좌 시즌 1 HTML, CSS, JS, Python, Bootstrap, Linux",무료,제주코딩베이스캠프,5.0,https://edu.goorm.io/lecture/16385/2022-30분-요약-강좌-시즌-1-html-css-js-python-bootstrap-linux
+174,"React로 가기 위한 첫 걸음, Vanilla JS 기초","₩36,000",아이티고,0.0,https://edu.goorm.io/lecture/16304/react로-가기-위한-첫-걸음-vanilla-js-기초
+175,하울의 안드로이드 인스타그램 앱 만들기,무료,하울의 코딩 채널,4.9,https://edu.goorm.io/lecture/16116/하울의-안드로이드-인스타그램-앱-만들기
+176,에센스만 담은 하울의 코틀린 안드로이드,"₩27,500",하울의 코딩 채널,0.0,https://edu.goorm.io/lecture/15335/에센스만-담은-하울의-코틀린-안드로이드
+177,코틀린으로 만드는 스프링부트,무료,최광성,3.0,https://edu.goorm.io/lecture/15881/코틀린으로-만드는-스프링부트
+178,현직개발자가 알려주는 안드로이드 앱 개발,무료,홍드로이드,5.0,https://edu.goorm.io/lecture/15564/현직개발자가-알려주는-안드로이드-앱-개발
+179,위클리 비타알고 시즌2 처음 시작하는 코딩테스트,"₩200,000",안홍자,5.0,https://edu.goorm.io/lecture/15551/위클리-비타알고-시즌2-처음-시작하는-코딩테스트
+180,웹 서비스 해킹을 위한 버프스위트 완벽 활용 가이드,무료,보안프로젝트,5.0,https://edu.goorm.io/lecture/15535/웹-서비스-해킹을-위한-버프스위트-완벽-활용-가이드
+181,Shiny 그리고 시각화 R Go! 하자!,무료,이수화,4.7,https://edu.goorm.io/lecture/15875/shiny-그리고-시각화-r-go-하자
+182,파이썬을 이용한 데이터분석과 IT보안,"₩132,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/15574/파이썬을-이용한-데이터분석과-it보안
+183,생활코딩 - Oracle Database,무료,생활코딩,5.0,https://edu.goorm.io/lecture/15550/생활코딩-oracle-database
+184,데이터 시각화와 차트분석 기법,무료,노마드 크리에이터 Nomad Creator,4.6,https://edu.goorm.io/lecture/15563/데이터-시각화와-차트분석-기법
+185,웹 게임을 만들며 배우는 Vue,무료,조현영,5.0,https://edu.goorm.io/lecture/15523/웹-게임을-만들며-배우는-vue
+186,파이썬 100분 핵심강의,"₩22,000",노마드 크리에이터 Nomad Creator,0.0,https://edu.goorm.io/lecture/15402/파이썬-100분-핵심강의
+187,SwiftUI 개념 익히기,무료,Hohyeon Moon,5.0,https://edu.goorm.io/lecture/15378/swiftui-개념-익히기
+188,프리다(Frida)를 이용한 안드로이드 앱 모의해킹,"₩77,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/15377/프리다-frida-를-이용한-안드로이드-앱-모의해킹
+189,누구나 쉽게 배우는 코딩 기초와 웹/앱 프로그래밍,무료,조코딩,5.0,https://edu.goorm.io/lecture/15287/누구나-쉽게-배우는-코딩-기초와-웹-앱-프로그래밍
+190,[디지털 포렌식 시리즈1] 디지털 포렌식 (Digital Forensic) 전문가 과정,"₩198,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/15341/디지털-포렌식-시리즈1-디지털-포렌식-digital-forensic-전문가-과정
+191,[디지털 포렌식 시리즈5] 챌린지로 알아보는 디지털포렌식(심화),"₩99,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/15261/디지털-포렌식-시리즈5-챌린지로-알아보는-디지털포렌식-심화
+192,[디지털 포렌식 시리즈4] 챌린지로 알아보는 디지털포렌식(기초),"₩99,000",보안프로젝트,5.0,https://edu.goorm.io/lecture/15260/디지털-포렌식-시리즈4-챌린지로-알아보는-디지털포렌식-기초
+193,내 손으로 한땀한땀 만드는 풀스택 인스타클론 강의,"₩110,000",제주코딩베이스캠프,4.6,https://edu.goorm.io/lecture/13869/내-손으로-한땀한땀-만드는-풀스택-인스타클론-강의
+194,파이썬 스쿨 - 파이썬 프로그래밍을 이용한 업무 자동화,"₩121,000",보안프로젝트,5.0,https://edu.goorm.io/lecture/15257/파이썬-스쿨-파이썬-프로그래밍을-이용한-업무-자동화
+195,센치한 개발자의 안드로이드 스튜디오 기초,무료,센치한개발자,5.0,https://edu.goorm.io/lecture/15171/센치한-개발자의-안드로이드-스튜디오-기초
+196,센치한 개발자의 자바 기초,무료,센치한개발자,5.0,https://edu.goorm.io/lecture/15170/센치한-개발자의-자바-기초
+197,파이썬으로 만드는 라즈베리 파이 사물인터넷(IoT)프로젝트 - 기본편,"₩33,000",노마드 크리에이터 Nomad Creator,5.0,https://edu.goorm.io/lecture/15186/파이썬으로-만드는-라즈베리-파이-사물인터넷-iot-프로젝트-기본편
+198,파이썬을 이용한 IT 해킹과 보안,"₩110,000",보안프로젝트,5.0,https://edu.goorm.io/lecture/15149/파이썬을-이용한-it-해킹과-보안
+199,IT보안을 위한 와이어샤크 패킷 분석,무료,보안프로젝트,5.0,https://edu.goorm.io/lecture/15125/it보안을-위한-와이어샤크-패킷-분석
+200,해킹 대회를 위한 시스템 해킹 프로토스타 완벽 풀이집,"₩99,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/15126/해킹-대회를-위한-시스템-해킹-프로토스타-완벽-풀이집
+201,2019 온라인 코딩 파티 시즌1 - 텍스트 코딩 용사가 되자!!!,무료,구름,4.8,https://edu.goorm.io/lecture/15047/2019-온라인-코딩-파티-시즌1-텍스트-코딩-용사가-되자
+202,SVG 마스터,"₩27,500",1분코딩,0.0,https://edu.goorm.io/lecture/14971/svg-마스터
+203,"부담 없이 쉽고 편하게, 자바스크립트 기초 정리!",무료,1분코딩,5.0,https://edu.goorm.io/lecture/14938/부담-없이-쉽고-편하게-자바스크립트-기초-정리
+204,보안 전문가를 위한 파워쉘,"₩110,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/14982/보안-전문가를-위한-파워쉘
+205,생활코딩 - WEB7: Login with Facebook On Passport(Facebook Login),무료,생활코딩,0.0,https://edu.goorm.io/lecture/14674/생활코딩-web7-login-with-facebook-on-passport-facebook-login
+206,생활코딩 - WEB7: Login with Google On Passport (Google Login),무료,생활코딩,0.0,https://edu.goorm.io/lecture/14675/생활코딩-web7-login-with-google-on-passport-google-login
+207,처음 시작하는 Vue.js 웹프로그래밍,"₩27,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/14816/처음-시작하는-vue-js-웹프로그래밍
+208,생활코딩 - WEB6: Multi User on Passport (다중 사용자),무료,생활코딩,0.0,https://edu.goorm.io/lecture/14644/생활코딩-web6-multi-user-on-passport-다중-사용자
+209,생활코딩 - WEB5: Express Passport.js,무료,생활코딩,0.0,https://edu.goorm.io/lecture/14643/생활코딩-web5-express-passport-js
+210,생활코딩 - WEB4: Express Session & Auth (세션과 인증),무료,생활코딩,5.0,https://edu.goorm.io/lecture/14642/생활코딩-web4-express-session-and-auth-세션과-인증
+211,인공지능 R GO! 하자!,무료,이수화,5.0,https://edu.goorm.io/lecture/14631/인공지능-r-go-하자
+212,생활코딩 - Node.js: 쿠키와 인증,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14641/생활코딩-node-js-쿠키와-인증
+213,생활코딩 - WEB3: Google Login,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14634/생활코딩-web3-google-login
+214,생활코딩 - WEB3: Facebook Login,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14633/생활코딩-web3-facebook-login
+215,생활코딩 - WEB3: Ajax,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14632/생활코딩-web3-ajax
+216,마인크래프트 게임을 활용한 파이썬 프로그래밍 완벽 이해,"₩55,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13439/마인크래프트-게임을-활용한-파이썬-프로그래밍-완벽-이해
+217,웹 게임을 만들며 배우는 React(리액트),무료,조현영,4.7,https://edu.goorm.io/lecture/14562/웹-게임을-만들며-배우는-react-리액트
+218,프로젝트를 통해 배우는 파이썬 프로그래밍,무료,노마드 크리에이터 Nomad Creator,4.9,https://edu.goorm.io/lecture/14588/프로젝트를-통해-배우는-파이썬-프로그래밍
+219,악성코드분석 중급과정 (유형별분석),"₩132,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/14297/악성코드분석-중급과정-유형별분석
+220,윈도우 악성코드(malware) 분석 입문 과정,"₩143,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/14068/윈도우-악성코드-malware-분석-입문-과정
+221,메타스플로잇 활용 및 취약점 분석(고급과정),"₩110,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13437/메타스플로잇-활용-및-취약점-분석-고급과정
+222,생활코딩 - 관계형 데이터 모델링,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14442/생활코딩-관계형-데이터-모델링
+223,메타스플로잇 활용 및 분석 완벽 가이드 (초중급),"₩88,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/14369/메타스플로잇-활용-및-분석-완벽-가이드-초중급
+224,생활코딩 - SQL JOIN,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14441/생활코딩-sql-join
+225,악성코드 분석을 위한 메모리 포렌식 (Memory Forensic),"₩88,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/14550/악성코드-분석을-위한-메모리-포렌식-memory-forensic
+226,[바로실습] 생활코딩 - JavaScript Immutability,무료,생활코딩,0.0,https://edu.goorm.io/lecture/14439/바로실습-생활코딩-javascript-immutability
+227,생활코딩 - Redux,무료,생활코딩,5.0,https://edu.goorm.io/lecture/14440/생활코딩-redux
+228,처음 만난 AWS,무료,소플,5.0,https://edu.goorm.io/lecture/12945/처음-만난-aws
+229,처음 만난 React(리액트),무료,소플,4.9,https://edu.goorm.io/lecture/12976/처음-만난-react-리액트
+230,안드로이드 모바일 앱 모의해킹과 시큐어코딩,"₩132,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13435/안드로이드-모바일-앱-모의해킹과-시큐어코딩
+231,Node.js 서버 프로그래밍 과정,"₩22,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13564/node-js-서버-프로그래밍-과정
+232,Oracle Database 11g PL/SQL Developer,"₩16,500",소프트캠퍼스,5.0,https://edu.goorm.io/lecture/13563/oracle-database-11g-pl-sql-developer
+233,윈도우즈 애플리케이션 취약점 분석 입문부터 활용까지,"₩132,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13436/윈도우즈-애플리케이션-취약점-분석-입문부터-활용까지
+234,Mobile App UI/UX/GUI Design Tutorials (모바일 앱 UX/UI/GUI 디자인 실무),"₩22,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13429/mobile-app-ui-ux-gui-design-tutorials-모바일-앱-ux-ui-gui-디자인-실무
+235,네트워크 패킷 분석 입문 및 악성코드 샘플 분석,"₩132,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13438/네트워크-패킷-분석-입문-및-악성코드-샘플-분석
+236,안드로이드 + 파이어베이스 SNS앱 만들기,무료,Bored Developer,4.5,https://edu.goorm.io/lecture/13523/안드로이드-파이어베이스-sns앱-만들기
+237,HTML5와 웹표준 제대로 배우기,"₩30,000",아이티고,0.0,https://edu.goorm.io/lecture/13350/html5와-웹표준-제대로-배우기
+238,실무 웹 제작 강의노트,"₩52,000",아이티고,0.0,https://edu.goorm.io/lecture/13343/실무-웹-제작-강의노트
+239,비박스를 활용한 웹 모의해킹 완벽 실습,"₩132,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13272/비박스를-활용한-웹-모의해킹-완벽-실습
+240,HTML5 Canvas 2D 제대로 배우기,"₩20,000",아이티고,0.0,https://edu.goorm.io/lecture/13337/html5-canvas-2d-제대로-배우기
+241,Wix(윅스)로 간단하게 홈페이지 만들기,"₩18,000",아이티고,0.0,https://edu.goorm.io/lecture/13342/wix-윅스-로-간단하게-홈페이지-만들기
+242,오픈 소스 도구를 활용한 웹 해킹 및 스노트 분석 - 침해대응,"₩99,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13273/오픈-소스-도구를-활용한-웹-해킹-및-스노트-분석-침해대응
+243,유니티3D 실전 게임 개발 프로젝트 - 디펜스게임,"₩36,300",소프트캠퍼스,5.0,https://edu.goorm.io/lecture/13356/유니티3d-실전-게임-개발-프로젝트-디펜스게임
+244,유니티3D 실전 게임 개발 프로젝트 - 클리커게임,"₩16,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13355/유니티3d-실전-게임-개발-프로젝트-클리커게임
+245,처음 시작하는 HTML&HTML5 Tutorial,"₩16,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13354/처음-시작하는-html-html5-tutorial
+246,처음 시작하는 jQuery Programming,"₩16,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13363/처음-시작하는-jquery-programming
+247,처음 시작하는 파이썬,"₩16,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13351/처음-시작하는-파이썬
+248,처음 시작하는 MySQL DataBase,"₩16,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13353/처음-시작하는-mysql-database
+249,처음 시작하는 C언어,무료,소프트캠퍼스,4.7,https://edu.goorm.io/lecture/13352/처음-시작하는-c언어
+250,처음 시작하는 JavaScript Programming,"₩16,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13334/처음-시작하는-javascript-programming
+251,겜팔이의 안드로이드 세뇌교실: 인★그램 개발부터 배포까지,무료,겜팔이,0.0,https://edu.goorm.io/lecture/13313/겜팔이의-안드로이드-세뇌교실-인-그램-개발부터-배포까지
+252,2019 겜팔이의 노릇노릇 파이어베이스,무료,겜팔이,0.0,https://edu.goorm.io/lecture/13306/2019-겜팔이의-노릇노릇-파이어베이스
+253,완벽 파이썬 크롤링 A to Z 풀패키지 부트캠프,"₩99,000",잔재미코딩(Dave Lee),5.0,https://edu.goorm.io/lecture/13243/완벽-파이썬-크롤링-a-to-z-풀패키지-부트캠프
+254,초보자를 위한 jQuery UI Pattern 제대로 배우기,"₩106,000",아이티고,5.0,https://edu.goorm.io/lecture/13256/초보자를-위한-jquery-ui-pattern-제대로-배우기
+255,xlsxwriter 튜토리얼로 배우는 Python 엑셀 프로그래밍,"₩55,000",제주코딩베이스캠프,0.0,https://edu.goorm.io/lecture/13038/xlsxwriter-튜토리얼로-배우는-python-엑셀-프로그래밍
+256,생활코딩 - WEB2: Python,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13091/생활코딩-web2-python
+257,생활코딩 - WEB3: PHP & MySQL,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13086/생활코딩-web3-php-and-mysql
+258,생활코딩 - WEB2: Node.js - MySQL,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13087/생활코딩-web2-node-js-mysql
+259,생활코딩 - WEB2: Home Server,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13090/생활코딩-web2-home-server
+260,생활코딩 - WEB2: DNS & HTTP,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13089/생활코딩-web2-dns-and-http
+261,생활코딩 - Source Tree로 Git 활용하기,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13062/생활코딩-source-tree로-git-활용하기
+262,생활코딩 - CodeIgniter,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13064/생활코딩-codeigniter
+263,제코베 Code Festival: Python 100제,"₩55,000",제주코딩베이스캠프,3.0,https://edu.goorm.io/lecture/12206/제코베-code-festival-python-100제
+264,Java 기반 Android 9.0 Pie App 개발 고급,"₩27,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13200/java-기반-android-9-0-pie-app-개발-고급
+265,처음 시작하는 CSS&CSS3 Tutorial,"₩11,000",소프트캠퍼스,5.0,https://edu.goorm.io/lecture/13207/처음-시작하는-css-css3-tutorial
+266,[바로실습] 생활코딩 - WEB2: PHP,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13048/바로실습-생활코딩-web2-php
+267,생활코딩 - WEB2: OAuth 2.0,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13047/생활코딩-web2-oauth-2-0
+268,[바로실습] 생활코딩 - WEB2: CSS,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13045/바로실습-생활코딩-web2-css
+269,한 눈에 끝내는 자바 기초,"₩99,000",구름,4.9,https://edu.goorm.io/lecture/12243/한-눈에-끝내는-자바-기초
+270,Java 기반 Android 9.0 Pie App 개발 심화,"₩27,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13112/java-기반-android-9-0-pie-app-개발-심화
+271,Java 기반 Android 9.0 Pie App 개발 기본,"₩27,500",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13082/java-기반-android-9-0-pie-app-개발-기본
+272,다시 풀어보는 2019 정보올림피아드 1차 대회 기출문제,무료,구름,4.3,https://edu.goorm.io/lecture/13095/다시-풀어보는-2019-정보올림피아드-1차-대회-기출문제
+273,생활코딩 - Atom Editor,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13044/생활코딩-atom-editor
+274,생활코딩 - WEB2: Node.js,무료,생활코딩,5.0,https://edu.goorm.io/lecture/13049/생활코딩-web2-node-js
+275,생활코딩 - WEB1: HTML & Internet,무료,생활코딩,5.0,https://edu.goorm.io/lecture/12959/생활코딩-web1-html-and-internet
+276,생활코딩 - WEB2: JavaScript,무료,생활코딩,5.0,https://edu.goorm.io/lecture/12906/생활코딩-web2-javascript
+277,Bootstrap 4 & 3 Framework Tutorial,"₩22,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13039/bootstrap-4-3-framework-tutorial
+278,Vue.js로 시작하는 SPA 개발,무료,계성혁,4.9,https://edu.goorm.io/lecture/13020/vue-js로-시작하는-spa-개발
+279,대회 문제 풀이로 이해하는 디스크 포렌식 분석,"₩77,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/13018/대회-문제-풀이로-이해하는-디스크-포렌식-분석
+280,Start Google Angular.js,"₩22,000",소프트캠퍼스,0.0,https://edu.goorm.io/lecture/13019/start-google-angular-js
+281,생활코딩 - 리액트 (React),무료,생활코딩,5.0,https://edu.goorm.io/lecture/12949/생활코딩-리액트-react
+282,생활코딩 - 리눅스(Linux),무료,생활코딩,4.9,https://edu.goorm.io/lecture/12984/생활코딩-리눅스-linux
+283,생활코딩 - 크롬 개발자도구,무료,생활코딩,5.0,https://edu.goorm.io/lecture/12983/생활코딩-크롬-개발자도구
+284,"생활코딩 - 네트워크 개념 잡기 (도메인, 네임서버, HTTPS)",무료,생활코딩,5.0,https://edu.goorm.io/lecture/12973/생활코딩-네트워크-개념-잡기-도메인-네임서버-https
+285,생활코딩 - 정규표현식,무료,생활코딩,5.0,https://edu.goorm.io/lecture/12972/생활코딩-정규표현식
+286,생활코딩 - 지옥에서 온 Git,무료,생활코딩,5.0,https://edu.goorm.io/lecture/12948/생활코딩-지옥에서-온-git
+287,MongoDB(몽고) 기초 다지기,"₩20,000",아이티고,0.0,https://edu.goorm.io/lecture/12879/mongodb-몽고-기초-다지기
+288,생활코딩 - 아마존 웹 서비스 (AWS),무료,생활코딩,4.2,https://edu.goorm.io/lecture/12947/생활코딩-아마존-웹-서비스-aws
+289,[저자 직강 바로 실행] Do it! 웹 프로그래밍을 위한 자바스크립트 기본 편,무료,이지스퍼블리싱,4.8,https://edu.goorm.io/lecture/12915/저자-직강-바로-실행-do-it-웹-프로그래밍을-위한-자바스크립트-기본-편
+290,[디지털 포렌식 시리즈3] 디지털 포렌식 전문가 2급 실기 과정 (Digital Forensic 자격증 최신 과정),"₩99,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/12923/디지털-포렌식-시리즈3-디지털-포렌식-전문가-2급-실기-과정-digital-forensic-자격증-최신-과정
+291,[디지털 포렌식 시리즈2] 디지털 포렌식 분석 자격증 2급 필기 대비,"₩110,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/12922/디지털-포렌식-시리즈2-디지털-포렌식-분석-자격증-2급-필기-대비
+292,레나(Lena)를 활용한 윈도우 리버싱 완벽 이해,"₩165,000",보안프로젝트,0.0,https://edu.goorm.io/lecture/12847/레나-lena-를-활용한-윈도우-리버싱-완벽-이해
+293,[저자 직강] Do it! Node.js 프로그래밍,무료,이지스퍼블리싱,4.9,https://edu.goorm.io/lecture/12534/저자-직강-do-it-node-js-프로그래밍
+294,[저자 직강 바로 실행] Do it! 자바스크립트 + 제이쿼리 입문,무료,이지스퍼블리싱,5.0,https://edu.goorm.io/lecture/12563/저자-직강-바로-실행-do-it-자바스크립트-제이쿼리-입문
+295,[저자 직강 바로 실행] Do it! HTML5 + CSS3 웹 표준의 정석,무료,이지스퍼블리싱,4.4,https://edu.goorm.io/lecture/12565/저자-직강-바로-실행-do-it-html5-css3-웹-표준의-정석
+296,[저자 직강 바로 실행] Do it! 프런트엔드 웹 디자인 입문,무료,이지스퍼블리싱,5.0,https://edu.goorm.io/lecture/12583/저자-직강-바로-실행-do-it-프런트엔드-웹-디자인-입문
+297,[연재] 스크래치 3.0 완전정복,무료,박동호,3.0,https://edu.goorm.io/lecture/12178/연재-스크래치-3-0-완전정복
+298,게임으로 배우는 JavaScript,무료,노마드 크리에이터 Nomad Creator,5.0,https://edu.goorm.io/lecture/12256/게임으로-배우는-javascript
+299,스크래치 코딩으로 배우는 수학의 개념과 원리,무료,노마드 크리에이터 Nomad Creator,0.0,https://edu.goorm.io/lecture/12267/스크래치-코딩으로-배우는-수학의-개념과-원리
+300,무작정 시작하는 안드로이드 개발,무료,노마드 크리에이터 Nomad Creator,0.0,https://edu.goorm.io/lecture/12250/무작정-시작하는-안드로이드-개발
+301,아두이노를 이용한 기상정보 수집과 빅데이터 분석,무료,노마드 크리에이터 Nomad Creator,0.0,https://edu.goorm.io/lecture/12249/아두이노를-이용한-기상정보-수집과-빅데이터-분석
+302,React와 Node.js를 활용한 고객 관리 시스템 개발,무료,나동빈,4.9,https://edu.goorm.io/lecture/11817/react와-node-js를-활용한-고객-관리-시스템-개발
+303,"Flutter 입문 - 안드로이드, iOS 개발을 한 번에","₩33,000",오준석,3.5,https://edu.goorm.io/lecture/11572/flutter-입문-안드로이드-ios-개발을-한-번에
+304,위클리 비타알고 시즌1 코딩테스트 초급부터 중급까지,"₩200,000",구름,5.0,https://edu.goorm.io/lecture/11220/위클리-비타알고-시즌1-코딩테스트-초급부터-중급까지
+305,레트로의 유니티 C# 프로그래밍 에센스,"₩88,000",I_Jemin,5.0,https://edu.goorm.io/lecture/11204/레트로의-유니티-c-프로그래밍-에센스
+306,Git으로 시작하는 협업 및 오픈소스 프로젝트,무료,나동빈,4.9,https://edu.goorm.io/lecture/11528/git으로-시작하는-협업-및-오픈소스-프로젝트
+307,자바로 이해하는 블록체인 이론과 실습,무료,나동빈,5.0,https://edu.goorm.io/lecture/11527/자바로-이해하는-블록체인-이론과-실습
+308,모의 해킹으로 배우는 ARP 스푸핑 해킹 기법,무료,나동빈,5.0,https://edu.goorm.io/lecture/11409/모의-해킹으로-배우는-arp-스푸핑-해킹-기법
+309,안경잡이개발자가 알려주는 텐서플로우&머신러닝,무료,나동빈,5.0,https://edu.goorm.io/lecture/11408/안경잡이개발자가-알려주는-텐서플로우and머신러닝
+310,김왼손의 파이썬 예제 뽀개기,무료,김왼손의 왼손코딩,5.0,https://edu.goorm.io/lecture/11205/김왼손의-파이썬-예제-뽀개기
+311,이것이 PL/SQL 이다!,"₩13,200",David Justin,3.0,https://edu.goorm.io/lecture/11000/이것이-pl-sql-이다
+312,[2018 디지털스쿨백팩] SW 아이디어 콘서트 수상작/출품작 갤러리,무료,구름,0.0,https://edu.goorm.io/lecture/10682/2018-디지털스쿨백팩-sw-아이디어-콘서트-수상작-출품작-갤러리
+313,코알못에서 웹서비스 런칭까지: 온라인 제주 코딩 베이스캠프,"₩99,000",제주코딩베이스캠프,4.9,https://edu.goorm.io/lecture/10983/코알못에서-웹서비스-런칭까지-온라인-제주-코딩-베이스캠프
+314,안경잡이개발자가 알려주는 자바 기초 프로그래밍,무료,나동빈,4.9,https://edu.goorm.io/lecture/10727/안경잡이개발자가-알려주는-자바-기초-프로그래밍
+315,웹 게임을 만들며 배우는 JavaScript(자바스크립트),무료,조현영,4.9,https://edu.goorm.io/lecture/10954/웹-게임을-만들며-배우는-javascript-자바스크립트
+316,생활코딩 - DATABASE2: lowdb,무료,생활코딩,0.0,https://edu.goorm.io/lecture/10846/생활코딩-database2-lowdb
+317,생활코딩 - DATABASE2: MySQL,무료,생활코딩,5.0,https://edu.goorm.io/lecture/10845/생활코딩-database2-mysql
+318,[2018 우수활용사례 수상작] 교과서와 함께 배우는 컴퓨팅 사고력,무료,김규섭,0.0,https://edu.goorm.io/lecture/10681/2018-우수활용사례-수상작-교과서와-함께-배우는-컴퓨팅-사고력
+319,생활코딩 - DATABASE1,무료,생활코딩,5.0,https://edu.goorm.io/lecture/10844/생활코딩-database1
+320,슬기로운 학교생활(코딩편),무료,윤남호,5.0,https://edu.goorm.io/lecture/10672/슬기로운-학교생활-코딩편
+321,SW로 달리는 미래 자동차 만들기,무료,KIM KM,4.6,https://edu.goorm.io/lecture/10671/sw로-달리는-미래-자동차-만들기
+322,안경잡이개발자가 알려주는 실전 알고리즘 강좌,무료,나동빈,5.0,https://edu.goorm.io/lecture/10710/안경잡이개발자가-알려주는-실전-알고리즘-강좌
+323,코딩으로 한. 수. 배우다!,무료,이대혁,5.0,https://edu.goorm.io/lecture/10673/코딩으로-한-수-배우다
+324,안경잡이개발자가 알려주는 C언어 기초 프로그래밍,무료,나동빈,5.0,https://edu.goorm.io/lecture/10719/안경잡이개발자가-알려주는-c언어-기초-프로그래밍
+325,실전 게임 개발로 배우는 언리얼 엔진 강의,무료,윤인성,5.0,https://edu.goorm.io/lecture/4484/실전-게임-개발로-배우는-언리얼-엔진-강의
+326,[절대강좌! 유니티 2018] Zerodeg과 함께 공부해보기,무료,Zerodeg J,5.0,https://edu.goorm.io/lecture/10107/절대강좌-유니티-2018-zerodeg과-함께-공부해보기
+327,[3D 유니티] 생존게임 만들기! - Advanced,"₩11,000",김으뜸,4.7,https://edu.goorm.io/lecture/9970/3d-유니티-생존게임-만들기-advanced
+328,2018 온라인 코딩 파티 시즌2 - 텍스트 코딩 용사가 되자!!!,무료,구름,4.9,https://edu.goorm.io/lecture/6443/2018-온라인-코딩-파티-시즌2-텍스트-코딩-용사가-되자
+329,[스낵코딩] 코딩술사,무료,ALUX,5.0,https://edu.goorm.io/lecture/6198/스낵코딩-코딩술사
+330,[스낵코딩] 코딩더테이블,무료,ALUX,0.0,https://edu.goorm.io/lecture/5999/스낵코딩-코딩더테이블
+331,한 눈에 끝내는 Node.js,무료,구름,4.9,https://edu.goorm.io/lecture/557/한-눈에-끝내는-node-js
+332,한 눈에 끝내는 고랭 기초,무료,구름,4.9,https://edu.goorm.io/lecture/2010/한-눈에-끝내는-고랭-기초
+333,[3D Unity] 생존게임 만들기! - Basic,무료,김으뜸,4.9,https://edu.goorm.io/lecture/5026/3d-unity-생존게임-만들기-basic
+334,화이트해커가 되기 위한 8가지 웹 해킹 기술,무료,secuacademy,5.0,https://edu.goorm.io/lecture/4953/화이트해커가-되기-위한-8가지-웹-해킹-기술
+335,머신러닝 이론 및 파이썬 실습,무료,Minsuk Heo,4.9,https://edu.goorm.io/lecture/4012/머신러닝-이론-및-파이썬-실습
+336,"[2017 NIA SW교안 공유 공모전] C언어, 스크래치를 통해 알아보자",무료,윤제성,4.7,https://edu.goorm.io/lecture/1647/2017-nia-sw교안-공유-공모전-c언어-스크래치를-통해-알아보자
+337,Git & GitHub 입문 by 코드스쿼드,무료,코드스쿼드,4.9,https://edu.goorm.io/lecture/4661/git-github-입문-by-코드스쿼드
+338,헬로 코딩 쌩초보의 처음 프로그래밍 파이썬,무료,윤인성,5.0,https://edu.goorm.io/lecture/4112/헬로-코딩-쌩초보의-처음-프로그래밍-파이썬
+339,구름IDE를 이용하여 초고속으로 개인 웹 사이트 만들기,무료,나동빈,5.0,https://edu.goorm.io/lecture/4543/구름ide를-이용하여-초고속으로-개인-웹-사이트-만들기
+340,모던 자바스크립트 개발자를 위한 리액트 프로그래밍,무료,윤인성,4.9,https://edu.goorm.io/lecture/4113/모던-자바스크립트-개발자를-위한-리액트-프로그래밍
+341,파이콘 2018 영코더 with 바울랩,무료,이호준,5.0,https://edu.goorm.io/lecture/3990/파이콘-2018-영코더-with-바울랩
+342,모던 웹을 위한 JavaScript + jQuery 입문,무료,윤인성,5.0,https://edu.goorm.io/lecture/4110/모던-웹을-위한-javascript-jquery-입문
+343,개발자가 알려주는 코딩 인터뷰 정복하기,무료,Minsuk Heo,0.0,https://edu.goorm.io/lecture/4014/개발자가-알려주는-코딩-인터뷰-정복하기
+344,"ELK 스택(ElasticSearch, Logstash, Kibana)으로 데이터 분석",무료,Minsuk Heo,4.9,https://edu.goorm.io/lecture/4013/elk-스택-elasticsearch-logstash-kibana-으로-데이터-분석
+345,[바로실습] 생활코딩 - WEB3: 익스프레스(Express),무료,생활코딩,5.0,https://edu.goorm.io/lecture/3846/바로실습-생활코딩-web3-익스프레스-express
+346,머신러닝/딥러닝 실전 입문,무료,윤인성,4.5,https://edu.goorm.io/lecture/4111/머신러닝-딥러닝-실전-입문
+347,[Pandas] 팬더스 데이터분석 기초 실습,무료,Minsuk Heo,4.8,https://edu.goorm.io/lecture/3999/pandas-팬더스-데이터분석-기초-실습
+348,한 눈에 끝내는 루비 기초,"₩39,000",구름,4.9,https://edu.goorm.io/lecture/2011/한-눈에-끝내는-루비-기초
+349,유니티 강좌 [쯔꾸르풍 게임 제작하기],무료,김으뜸,5.0,https://edu.goorm.io/lecture/3991/유니티-강좌-쯔꾸르풍-게임-제작하기
+350,모두를 위한 딥러닝 - Deep Reinforcement Learning,무료,Sung Kim,5.0,https://edu.goorm.io/lecture/3980/모두를-위한-딥러닝-deep-reinforcement-learning
+351,MATLAB으로 시작하는 프로그래밍,무료,박범진,5.0,https://edu.goorm.io/lecture/3977/matlab으로-시작하는-프로그래밍
+352,모두를 위한 딥러닝 - 기본적인 머신러닝과 딥러닝,무료,Sung Kim,5.0,https://edu.goorm.io/lecture/3979/모두를-위한-딥러닝-기본적인-머신러닝과-딥러닝
+353,[ Ruby Coin ] Rails로 쉽고 빠른 웹사이트 만들기,무료,Karoid,4.7,https://edu.goorm.io/lecture/1928/ruby-coin-rails로-쉽고-빠른-웹사이트-만들기
+354,[저자직강] Hello Coding 한입에 쏙 파이썬: 크리에이터 김왼손의 쉽고 빠른 파이썬 강의,무료,김왼손의 왼손코딩,5.0,https://edu.goorm.io/lecture/3856/저자직강-hello-coding-한입에-쏙-파이썬-크리에이터-김왼손의-쉽고-빠른-파이썬-강의
+355,정보처리산업기사 기출문제,무료,구름,5.0,https://edu.goorm.io/lecture/3755/정보처리산업기사-기출문제
+356,다시 풀어보는 2016/2017 정보올림피아드 지역 대회 초등부 기출 문제,무료,구름,5.0,https://edu.goorm.io/lecture/3746/다시-풀어보는-2016-2017-정보올림피아드-지역-대회-초등부-기출-문제
+357,다시 풀어보는 2016/2017 정보올림피아드 지역 대회 중등부 기출 문제,무료,구름,0.0,https://edu.goorm.io/lecture/3745/다시-풀어보는-2016-2017-정보올림피아드-지역-대회-중등부-기출-문제
+358,다시 풀어보는 2016/2017 정보올림피아드 지역 대회 고등부 기출 문제,무료,구름,0.0,https://edu.goorm.io/lecture/3744/다시-풀어보는-2016-2017-정보올림피아드-지역-대회-고등부-기출-문제
+359,IOS Firebase 강의,무료,하울의 코딩 채널,5.0,https://edu.goorm.io/lecture/3530/ios-firebase-강의
+360,안드로이드 Firebase 강의,무료,하울의 코딩 채널,0.0,https://edu.goorm.io/lecture/3528/안드로이드-firebase-강의
+361,Node.js Firebase - Function,무료,하울의 코딩 채널,5.0,https://edu.goorm.io/lecture/3570/node-js-firebase-function
+362,[바로실습] 생활코딩 - 자바스크립트(Javascript),무료,생활코딩,5.0,https://edu.goorm.io/lecture/2229/바로실습-생활코딩-자바스크립트-javascript
+363,김왼손의 유기농냠냠파이썬,무료,김왼손의 왼손코딩,5.0,https://edu.goorm.io/lecture/3524/김왼손의-유기농냠냠파이썬
+364,HowlTalk - Android (Firebase),무료,하울의 코딩 채널,5.0,https://edu.goorm.io/lecture/3533/howltalk-android-firebase
+365,HowlTalk - IOS(Firebase),무료,하울의 코딩 채널,0.0,https://edu.goorm.io/lecture/3532/howltalk-ios-firebase
+366,Node.js 서버 개발,무료,하울의 코딩 채널,4.8,https://edu.goorm.io/lecture/3534/node-js-서버-개발
+367,안드로이드 앱 개발 강의 - 기초편,무료,하울의 코딩 채널,4.6,https://edu.goorm.io/lecture/3523/안드로이드-앱-개발-강의-기초편
+368,Swift3 아이폰 앱 강의-초보,무료,하울의 코딩 채널,4.3,https://edu.goorm.io/lecture/3527/swift3-아이폰-앱-강의-초보
+369,C 프로그래밍 - 입문에서 게임 개발까지,무료,나도코딩,5.0,https://edu.goorm.io/lecture/1972/c-프로그래밍-입문에서-게임-개발까지
+370,스크래치3 프로그래밍 - 기초부터 게임 만들기까지!,무료,구름,4.8,https://edu.goorm.io/lecture/1478/스크래치3-프로그래밍-기초부터-게임-만들기까지
+371,한 눈에 끝내는 파이썬3 기초,"₩99,000",구름,4.9,https://edu.goorm.io/lecture/3493/한-눈에-끝내는-파이썬3-기초
+372,엔트리 기초부터 활용까지 정글코딩!,무료,정글코딩,5.0,https://edu.goorm.io/lecture/2164/엔트리-기초부터-활용까지-정글코딩
+373,[PYCON2017 시리즈] 머신러닝을 위한 기초 수학 살펴보기,무료,MinJae Kwon,4.0,https://edu.goorm.io/lecture/1489/pycon2017-시리즈-머신러닝을-위한-기초-수학-살펴보기
+374,[PYCON2017 시리즈] 파이썬에서 보다 정확한 숫자 계산하기,무료,leehosung,5.0,https://edu.goorm.io/lecture/1488/pycon2017-시리즈-파이썬에서-보다-정확한-숫자-계산하기
+375,[PYCON2017 시리즈] 처음부터 알아보는 웹 크롤러,무료,Lee Junbum,5.0,https://edu.goorm.io/lecture/1487/pycon2017-시리즈-처음부터-알아보는-웹-크롤러
+376,실리콘밸리의 개발자,무료,구름,4.5,https://edu.goorm.io/lecture/1490/실리콘밸리의-개발자
+377,김왼손의 미운코딩새끼: 4시간만에 끝내는 파이썬 기초,무료,김왼손의 왼손코딩,4.9,https://edu.goorm.io/lecture/1461/김왼손의-미운코딩새끼-4시간만에-끝내는-파이썬-기초
+378,엔트리 프로그래밍 - 기초부터 게임 만들기까지!,무료,구름,4.8,https://edu.goorm.io/lecture/1361/엔트리-프로그래밍-기초부터-게임-만들기까지
+379,실전 유형 코딩 테스트 모의고사 - 시즌3,"₩80,000",구름,4.0,https://edu.goorm.io/lecture/1271/실전-유형-코딩-테스트-모의고사-시즌3
+380,실전 유형 코딩 테스트 모의고사 - 시즌2,"₩100,000",구름,3.7,https://edu.goorm.io/lecture/1239/실전-유형-코딩-테스트-모의고사-시즌2
+381,실전 유형 코딩 테스트 모의고사 - 시즌4,"₩100,000",구름,4.7,https://edu.goorm.io/lecture/1193/실전-유형-코딩-테스트-모의고사-시즌4
+382,야곰의 스위프트 프로그래밍,무료,야곰,5.0,https://edu.goorm.io/lecture/1141/야곰의-스위프트-프로그래밍
+383,실전 유형 코딩 테스트 모의고사 - 시즌1,"₩100,000",구름,3.8,https://edu.goorm.io/lecture/970/실전-유형-코딩-테스트-모의고사-시즌1
+384,[바로실습] 생활코딩 - 자바(JAVA),무료,생활코딩,4.8,https://edu.goorm.io/lecture/41/바로실습-생활코딩-자바-java
+385,TODO 앱을 직접 만들면서 배우는 node.js / express / bootstrap / jquery,무료,구름,4.9,https://edu.goorm.io/lecture/332/todo-앱을-직접-만들면서-배우는-node-js-express-bootstrap-jquery
+386,PYCON 2017 영코더,무료,구름,3.5,https://edu.goorm.io/lecture/787/pycon-2017-영코더
+387,제1회 구름코드챌린지(GCC) 기출 문제,무료,구름,3.0,https://edu.goorm.io/lecture/790/제1회-구름코드챌린지-gcc-기출-문제
+388,[바로실습] 생활코딩 - 파이썬(Python),무료,생활코딩,4.8,https://edu.goorm.io/lecture/44/바로실습-생활코딩-파이썬-python
+389,한 눈에 끝내는 아두이노 기초,무료,구름,4.5,https://edu.goorm.io/lecture/203/한-눈에-끝내는-아두이노-기초
+390,10주 완성 알고리즘 코딩테스트,"₩200,000",코딩몬스터,4.5,https://edu.goorm.io/lecture/554/10주-완성-알고리즘-코딩테스트
+391,한 눈에 끝내는 C언어 기초,무료,구름,4.9,https://edu.goorm.io/lecture/201/한-눈에-끝내는-c언어-기초
