@@ -1,91 +1,86 @@
 @charset "utf-8";
 /*타이틀의 폰트 변동*/
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
 /*lecture, course의 폰트 변동*/
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-.h_logo{
+.h_logo {
 	font-family: Sansita Swashed;
 	font-size: 100px;
-    background: linear-gradient(to right top, #861657, #ffa69e);
-    color: transparent;
-    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
-    -webkit-background-clip: text;
-    text-decoration-line:none;/* 밑줄지우는 코드인데 작동이 안됨 */
-    text-align:center;
-    
+	background: linear-gradient(to right top, #861657, #ffa69e);
+	color: transparent;
+	/*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
+	-webkit-background-clip: text;
+	text-decoration-line: none; /* 밑줄지우는 코드인데 작동이 안됨 */
+	text-align: center;
 }
-.h_subject{
+
+.h_subject {
 	font-family: Sansita Swashed;
 	font-size: 50px;
-    background: linear-gradient(to right top, #861657, #ffa69e);
-    color: transparent;
-    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
-    -webkit-background-clip: text;
-    text-decoration-line:none;
-    text-align:center;
-    
+	background: linear-gradient(to right top, #861657, #ffa69e);
+	color: transparent;
+	/*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
+	-webkit-background-clip: text;
+	text-decoration-line: none;
+	text-align: center;
 }
-.c_header{
-	text-align:center;
+
+.c_header {
+	text-align: center;
 }
+
 h1 {
 	text-align: center;
 	font-family: Sansita Swashed;
 	font-size: 100px;
-	
-        text-decoration-line:none;
-    background: linear-gradient(to right top, #861657, #ffa69e);
-    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
-    -webkit-background-clip: text;
+	text-decoration-line: none;
+	background: linear-gradient(to right top, #861657, #ffa69e);
+	/*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
+	-webkit-background-clip: text;
 }
 
 body {
 	background: #EEE;
 }
-	div{
-	text-align:center;
-	}
+
+div {
+	text-align: center;
+}
 
 .certificate {
-    width : 80%;
+	width: 80%;
 	height: 100px;
-	border: 1px solid black;
 	vertical-align: middle;
 	padding: 5px;
 	font-family: corbel, sans-serif;
 	font-size: 14px;
-    margin: auto;
-    text-align:center;
+	margin: auto;
+	text-align: center;
 }
 
-table {
+.article {
 	width: 80%;
 	height: 600px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
 	margin: auto;
+	border-collapse: collapse;
 }
 
 td {
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 	color: #495057;
 	background-color: #e9ecef;
 	border-color: #dee2e6;
+	padding: 15px; /* 테두리와 내용사이 간격 */
 }
 
 th {
 	height: 20px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
 	border-top: 1px solid black;
-	border-bottom: 1px solid black;
 	color: #fff;
 	background-color: #343a40;
 	border-color: #454d55;
+	padding: 15px; /* 테두리와 내용사이 간격 */
 }
