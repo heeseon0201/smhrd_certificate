@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="table.css">
 </head>
-<body>
+<body class="background">
     <h1><b>Study</b></h1>
     <table class="certificate" style="margin-top: 10px; margin-bottom: 30px;">
         <tr>

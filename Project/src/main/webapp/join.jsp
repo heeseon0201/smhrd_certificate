@@ -6,22 +6,16 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
+    <link rel="stylesheet" href="join.css">
 </head>
-<style>
-	div{
-	text-align:center;
-	}
-	table{
-	margin:auto;
-	}
-</style>
+
 <body>
     <div id= "total">
         
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
-                    <span> 사이트 이름 </span>
+                    <span> Studynet </span>
                 </a>
             </h1>
 

@@ -9,7 +9,7 @@
     <title>Document</title>
 	<link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="title">
 	<form action="LoginService" method="post">
 		<div class="loginDiv" style="margin-top: 50px;margin-bottom: 50px">
 			<h1 class="loginlogo">login</h1>

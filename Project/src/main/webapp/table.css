@@ -5,7 +5,11 @@
 /*lecture, course의 폰트 변동*/
 @import
 	url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
+.background{
+	background: url("https://images.unsplash.com/photo-1512580770426-cbed71c40e94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1507&q=80");
+	background-size: 100% ;
+	height: 100vh;
+}
 .h_logo {
 	font-family: Sansita Swashed;
 	font-size: 100px;
