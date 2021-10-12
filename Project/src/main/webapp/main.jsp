@@ -33,7 +33,7 @@
 
         <div class="info">
             <div>
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
                 <table  style="margin: auto;">
                     <tr>
                         <th colspan="4"><a href="lecture.jsp" class="tableLink">Lecture</a>
