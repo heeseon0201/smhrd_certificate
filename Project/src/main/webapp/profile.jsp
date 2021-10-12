@@ -1,16 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<% request.setCharacterEncoding("EUC-KR"); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="eud-kr">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원정보</title>
+    <link rel="stylesheet" href="join.css">
 </head>
-<style>
 
-</style>
 <body>
     <div id= "total">
-        <center>
+        
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.html" class = "h_logo">
@@ -140,7 +142,7 @@
                     </div>
                 </div>
             </form>    
-        </center>
+       
         </div>
     </div>
 </body>

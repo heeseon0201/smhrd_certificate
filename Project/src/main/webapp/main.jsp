@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+	<link rel="stylesheet" href="assets/css/modules.css">
 </head>
 <body>
     <!--페이지 사진-->
@@ -31,6 +33,7 @@
 
         <div class="info">
             <div>
+<<<<<<< HEAD
                 <table  style="margin: auto;">
                     <tr>
                         <th colspan="4"><a href="lecture.jsp" class="tableLink">Lecture</a>
@@ -59,11 +62,101 @@
                         </td>
                     </tr>
                 </table>
+=======
+                    <section>
+                        <div class="linkTitle">
+                            <a class="link" href="lecture.jsp">Lecture</a>
+                        </div>
+                    </section>
+
+                <section class="MOD_LIGHTBOXIMGX4">
+                    <div data-layout="_r">
+                      <div data-layout="al8 de4">
+                        <a href="https://unsplash.it/300/300?image=55" class="AP_lightbox">
+                          <figure>
+                            <img src="https://unsplash.it/300/300?image=55" alt="">
+                            <figcaption>Fig1. Image Caption</figcaption>
+                          </figure>
+                        </a>
+                      </div>
+                      <div data-layout="al8 de4">
+                        <a href="https://unsplash.it/800/600?image=56" class="AP_lightbox" aria-haspopup="true">
+                          <figure>
+                            <img src="https://unsplash.it/300/300?image=56" alt="">
+                            <figcaption>Fig2. Image Caption</figcaption>
+                          </figure>
+                        </a>
+                      </div>
+                      <div data-layout="al8 de4">
+                        <a href="https://unsplash.it/800/600?image=57" class="AP_lightbox" aria-haspopup="true">
+                          <figure>
+                            <img src="https://unsplash.it/300/300?image=57" alt="">
+                            <figcaption>Fig3. Image Caption</figcaption>
+                          </figure>
+                        </a>
+                      </div>
+                      <div data-layout="al8 de4">
+                        <a href="https://unsplash.it/800/600?image=58" class="AP_lightbox" aria-haspopup="true">
+                          <figure>
+                            <img src="https://unsplash.it/300/300?image=58" alt="">
+                            <figcaption>Fig4. Image Caption</figcaption>
+                          </figure>
+                        </a>
+                      </div>
+                    </div>
+                  </section> 
+            </div>
+            <div><!-- 탑4 불러오고 싶으면 jsp로 for문 작성하기-->
+                <section class="MOD_FEATURE">
+                    <div data-layout="_r">
+                      <div data-layout="ch8 ec4">
+                        <a href="#" class="MOD_FEATURE_Container">
+                          <img class="MOD_FEATURE_Picture" src="https://unsplash.it/400/300/?random" alt="">
+                          <div class="MOD_FEATURE_TextContainer">
+                            <p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
+                            <p class="MOD_FEATURE_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div data-layout="ch8 ec4">
+                        <a href="#" class="MOD_FEATURE_Container">
+                          <img class="MOD_FEATURE_Picture" src="https://unsplash.it/400/300/?random" alt="">
+                          <div class="MOD_FEATURE_TextContainer">
+                            <p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
+                            <p class="MOD_FEATURE_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div data-layout="ch8 ec4">
+                        <a href="#" class="MOD_FEATURE_Container">
+                          <img class="MOD_FEATURE_Picture" src="https://unsplash.it/400/300/?random" alt="">
+                          <div class="MOD_FEATURE_TextContainer">
+                            <p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
+                            <p class="MOD_FEATURE_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div data-layout="ch8 ec4">
+                        <a href="#" class="MOD_FEATURE_Container">
+                          <img class="MOD_FEATURE_Picture" src="https://unsplash.it/400/300/?random" alt="">
+                          <div class="MOD_FEATURE_TextContainer">
+                            <p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
+                            <p class="MOD_FEATURE_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
             </div>
             <div>
                 <table style="margin: auto;">
                     <tr>
+<<<<<<< HEAD
                         <th colspan="4"><a href="study.jsp" class="tableLink">GroupStudy</a>
+=======
+                        <th colspan="4"><a href="study.jsp">GroupStudy</a>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
                         </th>
                     </tr>
                     <tr>
@@ -91,6 +184,13 @@
                 </table>
             </div>
         </div>
-    </main>   
+        <div><!-- 4개 선택지 만드는거 복사해옴.-->
+
+        </div>
+    </main>  
+    <!-- 
+    <script src="assets/js/index.js"></script>
+    자바스크립트때문에 섹션 누르면 팝업이 뜨는데 지웠다. 바로 링크 연결이 된다.
+    -->
 </body>
 </html>
