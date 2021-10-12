@@ -17,20 +17,19 @@
     <div style="text-align : left; margin:0%" class="title">
     <!--로고, 회원가입, 로그인-->
     <header>
-        <h3 class="aHead">Studynet</h3>
+        <h3>Studynet</h3>
         <nav>
-          <span><a class="aHead" href="#">회원가입</a></span>
-          <span><a class="aHead" href="#">로그인</a></span>
+          <span><a href="#">회원가입</a></span>
+          <span><a href="#">로그인</a></span>
         </nav>
     </header>
-        </div>
     <main>
         <!--로고, 회원가입, 로그인-->
         <div id="main">
-            <h1 class="mainTitle">언택트 시대, 최고의 선택</h1><br>
+            <h1>언택트 시대, 최고의 선택</h1><br>
             <p>블라블라</p>
         </div>
-
+    </div>
         <div class="info">
             <div>
                     <section>
@@ -117,14 +116,11 @@
                       </div>
                     </div>
                   </section>
-
             </div>
             <div>
                 <table style="margin: auto;">
                     <tr>
-
-                        <th colspan="4"><a href="study.jsp" class="tableLink">GroupStudy</a>
-
+                        <th colspan="4"><a href="study.jsp">GroupStudy</a>
                         </th>
                     </tr>
                     <tr>
