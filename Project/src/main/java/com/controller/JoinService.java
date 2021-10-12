@@ -43,6 +43,7 @@ public class JoinService extends HttpServlet {
 				// 회원가입 성공페이지로 이동(회원가입 성공페이지에서 id와 함께 환영메시지 띄우는 식으로 사용가능)
 				response.sendRedirect("joinSuccess.jsp");
 			}
+			
 		} else if(!member_pw.equals(member_repw)) {
 			// 비밀번호와 재입력비밀번호 불일치시의 액션
 		} else {

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class MemberDAO {
 	Connection conn = null;
@@ -92,7 +93,7 @@ public class MemberDAO {
 			getConnection();
 			
 			// 로그인 sql문
-			String sql = "select * from Member where email=? and pw=?";
+			String sql = "select * from Member where member_id=? and member_pw=?";
 			
 			// SQL 실행 객체 생성
 			psmt = conn.prepareStatement(sql);
@@ -130,6 +131,44 @@ public class MemberDAO {
 	}
 	
 	// 회원정보관리 메소드
-	//public 
+	public ArrayList<MemberVO> Profile(String member_id) {
+		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		try {
+			getConnection();
+			
+			// 로그인 sql문
+			String sql = "select * from Member where member_id=?";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			psmt.setString(1, member_id);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {		
+				int get_no = rs.getInt("member_no");
+				String get_id = rs.getString("member_id");
+				String get_NM = rs.getString("member_NM");
+				String get_tel = rs.getString("member_tel");
+				String get_address = rs.getString("member_address");
+				String get_interest = rs.getString("member_interest");
+				String get_job = rs.getString("member_job");
+				String get_pw = rs.getString("member_pw");
+				
+				MemberVO vo = new MemberVO(get_no, get_id, get_NM, get_tel, get_address, get_interest, get_job, get_pw);
+				list.add(vo);
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return list;
+	}
 	
 }
