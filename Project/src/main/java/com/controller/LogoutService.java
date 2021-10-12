@@ -17,7 +17,7 @@ public class LogoutService extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		// 로그인사용자의 정보를 저장하는 세션 삭제
-		session.removeAttribute("MemberLogin");
+		session.removeAttribute("Member");
 		
 		// 메인페이지 이동
 		response.sendRedirect("main.jsp");

@@ -25,6 +25,18 @@ public class MemberVO {
 		this.member_job = member_job;
 		this.member_pw = member_pw;
 	}
+	
+	public MemberVO(String member_id, String member_NM, String member_tel, String member_address,
+			String member_interest, String member_job, String member_pw) {
+		super();
+		this.member_id = member_id;
+		this.member_NM = member_NM;
+		this.member_tel = member_tel;
+		this.member_address = member_address;
+		this.member_interest = member_interest;
+		this.member_job = member_job;
+		this.member_pw = member_pw;
+	}
 
 	// ¸Þ¼Òµå(get,set)
 	public int getMember_no() {

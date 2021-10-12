@@ -130,7 +130,7 @@ public class MemberDAO {
 		return vo;
 	}
 	
-	// 회원정보관리 메소드
+	// 회원정보를 출력하는 메소드
 	public ArrayList<MemberVO> Profile(String member_id) {
 		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
 		try {
@@ -169,6 +169,43 @@ public class MemberDAO {
 			close();
 		}
 		return list;
+	}
+	
+	// 회원정보 수정 메소드
+	public int Update(String id, String pw, String NM, String tel, String address, String interest, String job) {
+		int cnt = 0;
+		try {
+			getConnection();
+			
+			// 로그인 sql문
+			String sql = "update Member set member_pw=?, member_NM=?, member_tel=?, member_address=?, member_interest=?, member_job=? where member_id=?";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			psmt.setString(1, pw);
+			psmt.setString(2, NM);
+			psmt.setString(3, tel);
+			psmt.setString(4, address);
+			psmt.setString(5, interest);
+			psmt.setString(6, job);
+			psmt.setString(7, id);
+			
+			// sql문 실행 후 결과처리
+			cnt = psmt.executeUpdate();
+			
+			if(cnt > 0) {
+				System.out.println("회원정보 수정 성공");
+			}
+			
+		} catch(Exception e) {
+			System.out.println("회원정보 수정 실패");
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
 	}
 	
 }

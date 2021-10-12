@@ -32,7 +32,7 @@ public class LoginService extends HttpServlet {
 			HttpSession session = request.getSession();
 			
 			// 로그인사용자의 정보를 세션에 저장
-			session.setAttribute("MemberLogin", vo);
+			session.setAttribute("Member", vo);
 			
 			// 메인페이지로 이동
 			response.sendRedirect("main.jsp");
