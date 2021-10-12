@@ -33,36 +33,7 @@
 
         <div class="info">
             <div>
-<<<<<<< HEAD
-                <table  style="margin: auto;">
-                    <tr>
-                        <th colspan="4"><a href="lecture.jsp" class="tableLink">Lecture</a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#" class="info">
-                                인강정보1
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="info">
-                                인강정보2
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="info">
-                                인강정보3
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="info">
-                                인강정보4
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-=======
+
                     <section>
                         <div class="linkTitle">
                             <a class="link" href="lecture.jsp">Lecture</a>
@@ -147,16 +118,14 @@
                       </div>
                     </div>
                   </section>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
+
             </div>
             <div>
                 <table style="margin: auto;">
                     <tr>
-<<<<<<< HEAD
+
                         <th colspan="4"><a href="study.jsp" class="tableLink">GroupStudy</a>
-=======
-                        <th colspan="4"><a href="study.jsp">GroupStudy</a>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
+
                         </th>
                     </tr>
                     <tr>
