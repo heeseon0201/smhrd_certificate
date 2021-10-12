@@ -44,15 +44,9 @@ main {
 	padding: 1rem;
 	height: 100%;
 }
-.aHead {
+a {
 	text-decoration: none;
 	color: white;
-}
-.mainTitle{
-	color:linear-gradient(to right top, #861657, #ffa69e);
-	font-size:50px;
-	font-family:Sansita Swashed;
-	text-align:center;
 }
 body, html {
 	height: 200%;
@@ -96,30 +90,8 @@ a.info{
 	width:50%;
 	padding:5px;
 }
-<<<<<<< HEAD
-/*Lecture, course의 폰트 조정*/
-th{
-    font-size: 50px;
-    background: linear-gradient(to right top, #861657, #ffa69e);
-    color: transparent;
-    /*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
-    -webkit-background-clip: text;
-    font-family: Courgette;
-    height: 80px;
-}
-td{
-    text-align: center;
-}
-a.tableLink{
-	text-decoration: none;
-	font-size: 50px;
-    color: linear-gradient(to right top, #861657, #ffa69e);
-    color: transparent;
-}
-=======
 
 
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
 /*로그인페이지*/
 
 
