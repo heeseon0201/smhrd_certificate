@@ -30,7 +30,6 @@ public class Lecture_FilterService extends HttpServlet {
 		filter.add(필터요소1);
 		
 		
-		
 		LectureDAO dao = new LectureDAO();
 		// 필터를 아무것도 선택을 안하면 전체출력, 선택시 검색수행
 		if (filter.size()==0) {

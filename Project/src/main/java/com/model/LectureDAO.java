@@ -192,7 +192,6 @@ public class LectureDAO {
 		} finally {
 			close();
 		}
-		
 		return list;
 	}
 	
