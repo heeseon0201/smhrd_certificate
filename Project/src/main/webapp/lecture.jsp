@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
             
             	<td>
             		<%for(int j = 0; j<3; j++){ %>
-            			<input type="radio" value="" name="certificate">ÀÚ°ÝÁõ<%=k+1 %><br>
+            			<input type="radio" value="" name="certificate">ìžê²©ì¦<%=k+1 %><br>
             			<%k++; %>
             		<%} %>
             	</td>
@@ -26,29 +26,29 @@
         </tr>
     </table>
     <div class="articleBoard">
-                <table class="article" ><!-- ¹Ýº¹¹®À» ÀÌ¿ëÇÏ¿© Å×ÀÌºíÀ» Á¤ÀÇ ÇÏ¿´½À´Ï´Ù. ³ªÁß¿¡ µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ ÄÃ·³¸íÀ» º¯¼ö·Î °¡Á®¿Í¼­ ºÙ¿©³ÖÀ» °Í. -->
+                <table class="article" ><!-- ë°˜ë³µë¬¸ì„ ì´ìš©í•˜ì—¬ í…Œì´ë¸”ì„ ì •ì˜ í•˜ì˜€ìŠµë‹ˆë‹¤. ë‚˜ì¤‘ì— ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ì»¬ëŸ¼ëª…ì„ ë³€ìˆ˜ë¡œ ê°€ì ¸ì™€ì„œ ë¶™ì—¬ë„£ì„ ê²ƒ. -->
                 <tr>
-                    <th>°­ÀÇ¸í</th>
-                    <th>°­»ç¸í</th>
-                    <th>ÄÁÅÙÃ÷Á¦°ø»çÀÌÆ®</th>
-                    <th>ÃÑ °­ÀÇ¼ö</th>
-                    <th>°¡°Ý</th>
-                    <th>ÆòÁ¡</th>
-                    <th>ÈÄ±â</th>
+                    <th>ê°•ì˜ëª…</th>
+                    <th>ê°•ì‚¬ëª…</th>
+                    <th>ì»¨í…ì¸ ì œê³µì‚¬ì´íŠ¸</th>
+                    <th>ì´ ê°•ì˜ìˆ˜</th>
+                    <th>ê°€ê²©</th>
+                    <th>í‰ì </th>
+                    <th>í›„ê¸°</th>
                     <th>URL</th>
-                    <th>Ä«Å×°í¸®</th>
+                    <th>ì¹´í…Œê³ ë¦¬</th>
                 </tr>
         <%for(int i = 0; i<12;i++){ %>
             <tr class="boardList">
-                   <td>°­ÀÇ¸í<%=i+1 %></td>
-                   <td>°­»ç¸í</td>
-                   <td>ÄÁÅÙÃ÷Á¦°ø»çÀÌÆ®</td>
-                   <td>ÃÑ °­ÀÇ¼ö</td>
-                   <td>°¡°Ý</td>
-                   <td>ÆòÁ¡</td>
-                   <td>ÈÄ±â</td>
+                   <td>ê°•ì˜ëª…<%=i+1 %></td>
+                   <td>ê°•ì‚¬ëª…</td>
+                   <td>ì»¨í…ì¸ ì œê³µì‚¬ì´íŠ¸</td>
+                   <td>ì´ ê°•ì˜ìˆ˜</td>
+                   <td>ê°€ê²©</td>
+                   <td>í‰ì </td>
+                   <td>í›„ê¸°</td>
                    <td>URL</td>
-                   <td>Ä«Å×°í¸®</td>
+                   <td>ì¹´í…Œê³ ë¦¬</td>
             </tr>
             <%} %>
            

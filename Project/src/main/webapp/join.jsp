@@ -14,7 +14,7 @@
         
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
-                <a href = "main.html" class = "h_logo">
+                <a href = "main.jsp" class = "h_logo">
                     <span> Studynet </span>
                 </a>
             </h1>

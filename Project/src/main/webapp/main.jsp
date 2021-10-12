@@ -1,6 +1,6 @@
 <%@page import="com.model.memberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,21 +13,21 @@
 	<link rel="stylesheet" href="assets/css/modules.css">
 </head>
 <body>
-    <!--ÆäÀÌÁö »çÁø-->
+    <!--íŽ˜ì´ì§€ ì‚¬ì§„-->
     <div style="text-align : left; margin:0%" class="title">
-    <!--·Î°í, È¸¿ø°¡ÀÔ, ·Î±×ÀÎ-->
+    <!--ë¡œê³ , íšŒì›ê°€ìž…, ë¡œê·¸ì¸-->
     <header>
         <h3>Studynet</h3>
         <nav>
-          <span><a href="#">È¸¿ø°¡ÀÔ</a></span>
-          <span><a href="#">·Î±×ÀÎ</a></span>
+          <span><a href="join.jsp">íšŒì›ê°€ìž…</a></span>
+          <span><a href="login.jsp">ë¡œê·¸ì¸</a></span>
         </nav>
     </header>
     <main>
-        <!--·Î°í, È¸¿ø°¡ÀÔ, ·Î±×ÀÎ-->
+        <!--ë¡œê³ , íšŒì›ê°€ìž…, ë¡œê·¸ì¸-->
         <div id="main">
-            <h1>¾ðÅÃÆ® ½Ã´ë, ÃÖ°íÀÇ ¼±ÅÃ</h1><br>
-            <p>ºí¶óºí¶ó</p>
+            <h1>ì–¸íƒíŠ¸ ì‹œëŒ€, ìµœê³ ì˜ ì„ íƒ</h1><br>
+            <p>ë¸”ë¼ë¸”ë¼</p>
         </div>
     </div>
         <div class="info">
@@ -75,7 +75,7 @@
                     </div>
                   </section> 
             </div>
-            <div><!-- Å¾4 ºÒ·¯¿À°í ½ÍÀ¸¸é jsp·Î for¹® ÀÛ¼ºÇÏ±â-->
+            <div><!-- íƒ‘4 ë¶ˆëŸ¬ì˜¤ê³  ì‹¶ìœ¼ë©´ jspë¡œ forë¬¸ ìž‘ì„±í•˜ê¸°-->
                 <section class="MOD_FEATURE">
                     <div data-layout="_r">
                       <div data-layout="ch8 ec4">
@@ -126,35 +126,32 @@
                     <tr>
                         <td>
                             <a href="#" class="info">
-                                ½ºÅÍµðÁ¤º¸1
+                                ìŠ¤í„°ë””ì •ë³´1
                             </a>
                         </td>
                         <td>
                             <a href="#" class="info">
-                                ½ºÅÍµðÁ¤º¸2
+                                ìŠ¤í„°ë””ì •ë³´2
                             </a>
                         </td>
                         <td>
                             <a href="#" class="info">
-                                ½ºÅÍµðÁ¤º¸3
+                                ìŠ¤í„°ë””ì •ë³´3
                             </a>
                         </td>
                         <td>
                             <a href="#" class="info">
-                                ½ºÅÍµðÁ¤º¸4
+                                ìŠ¤í„°ë””ì •ë³´4
                             </a>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
-        <div><!-- 4°³ ¼±ÅÃÁö ¸¸µå´Â°Å º¹»çÇØ¿È.-->
+        <div><!-- 4ê°œ ì„ íƒì§€ ë§Œë“œëŠ”ê±° ë³µì‚¬í•´ì˜´.-->
 
         </div>
     </main>  
-    <!-- 
-    <script src="assets/js/index.js"></script>
-    ÀÚ¹Ù½ºÅ©¸³Æ®¶§¹®¿¡ ¼½¼Ç ´©¸£¸é ÆË¾÷ÀÌ ¶ß´Âµ¥ Áö¿ü´Ù. ¹Ù·Î ¸µÅ© ¿¬°áÀÌ µÈ´Ù.
-    -->
+
 </body>
 </html>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +9,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="table.css">
 </head>
-<<<<<<< HEAD
-<body>
-	<div class="background">
+<body class="background">
+	<div>
 	    <h1><b>Study</b></h1>
 	    <table class="certificate" style="margin-top: 10px; margin-bottom: 30px;">
 	        <tr>
 	            <%for(int i =0, k = 0 ; i<4;i++){ %>
 	            	<td>
 	            		<%for(int j = 0; j<3; j++){ %>
-	            			<input type="radio" value="" name="certificate">ÀÚ°ÝÁõ<%=k+1 %><br>
+	            			<input type="radio" value="" name="certificate">ìžê²©ì¦<%=k+1 %><br>
 	            			<%k++; %>
 	            		<%} %>
 	            	</td>
@@ -28,70 +27,30 @@
 	    <div class="articleBoard">
 	        <table class="article">
 	            <tr>
-	                <th>¼ø¹ø</th>
-	                <th>½ºÅÍµð¸í</th>
-	                <th>½ÃÀÛÀÏÀÚ</th>
-	                <th>Á¾·áÀÏÀÚ</th>
-	                <th>½ºÅÍµð °ú¸ñ</th>
-	                <th>Àå¼Ò</th>
-	                <th>¿äÀÏ(¿ùÈ­¼ö¸ñ±Ý)</th>
-	                <th>½Ã°£(°øºÎ½Ã°£ ½Ã°£´ÜÀ§)</th>
+	                <th>ìˆœë²ˆ</th>
+	                <th>ìŠ¤í„°ë””ëª…</th>
+	                <th>ì‹œìž‘ì¼ìž</th>
+	                <th>ì¢…ë£Œì¼ìž</th>
+	                <th>ìŠ¤í„°ë”” ê³¼ëª©</th>
+	                <th>ìž¥ì†Œ</th>
+	                <th>ìš”ì¼(ì›”í™”ìˆ˜ëª©ê¸ˆ)</th>
+	                <th>ì‹œê°„(ê³µë¶€ì‹œê°„ ì‹œê°„ë‹¨ìœ„)</th>
 	            </tr>
-	        <%for(int i = 0; i<12;i++){ %><!-- ¹Ýº¹¹®À» ÀÌ¿ëÇÏ¿© Å×ÀÌºíÀ» Á¤ÀÇ ÇÏ¿´½À´Ï´Ù. ³ªÁß¿¡ µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ ÄÃ·³¸íÀ» º¯¼ö·Î °¡Á®¿Í¼­ ºÙ¿©³ÖÀ» °Í. -->
+	        <%for(int i = 0; i<12;i++){ %><!-- ë°˜ë³µë¬¸ì„ ì´ìš©í•˜ì—¬ í…Œì´ë¸”ì„ ì •ì˜ í•˜ì˜€ìŠµë‹ˆë‹¤. ë‚˜ì¤‘ì— ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ì»¬ëŸ¼ëª…ì„ ë³€ìˆ˜ë¡œ ê°€ì ¸ì™€ì„œ ë¶™ì—¬ë„£ì„ ê²ƒ. -->
 	            <tr class="boardList">
-	                <td>¼ø¹ø<%=i+1 %></td>
-	                <td>½ºÅÍµð¸í</td>
-	                <td>½ÃÀÛÀÏÀÚ</td>
-	                <td>Á¾·áÀÏÀÚ</td>
-	                <td>½ºÅÍµð °ú¸ñ</td>
-	                <td>Àå¼Ò</td>
-	                <td>¿äÀÏ(¿ùÈ­¼ö¸ñ±Ý)</td>
-	                <td>½Ã°£(°øºÎ½Ã°£ ½Ã°£´ÜÀ§)</td>
+	                <td>ìˆœë²ˆ<%=i+1 %></td>
+	                <td>ìŠ¤í„°ë””ëª…</td>
+	                <td>ì‹œìž‘ì¼ìž</td>
+	                <td>ì¢…ë£Œì¼ìž</td>
+	                <td>ìŠ¤í„°ë”” ê³¼ëª©</td>
+	                <td>ìž¥ì†Œ</td>
+	                <td>ìš”ì¼(ì›”í™”ìˆ˜ëª©ê¸ˆ)</td>
+	                <td>ì‹œê°„(ê³µë¶€ì‹œê°„ ì‹œê°„ë‹¨ìœ„)</td>
 	            </tr>
 	            <%} %>
 	        </table>
 	    </div>
-=======
-<body class="background">
-    <h1><b>Study</b></h1>
-    <table class="certificate" style="margin-top: 10px; margin-bottom: 30px;">
-        <tr>
-            <%for(int i =0, k = 0 ; i<4;i++){ %>
-            	<td>
-            		<%for(int j = 0; j<3; j++){ %>
-            			<input type="radio" value="" name="certificate">ÀÚ°ÝÁõ<%=k+1 %><br>
-            			<%k++; %>
-            		<%} %>
-            	</td>
-            <%} %>
-        </tr>
-    </table>
-    <div class="articleBoard">
-        <table class="article">
-            <tr>
-                <th>¼ø¹ø</th>
-                <th>½ºÅÍµð¸í</th>
-                <th>½ÃÀÛÀÏÀÚ</th>
-                <th>Á¾·áÀÏÀÚ</th>
-                <th>½ºÅÍµð °ú¸ñ</th>
-                <th>Àå¼Ò</th>
-                <th>¿äÀÏ(¿ùÈ­¼ö¸ñ±Ý)</th>
-                <th>½Ã°£(°øºÎ½Ã°£ ½Ã°£´ÜÀ§)</th>
-            </tr>
-        <%for(int i = 0; i<12;i++){ %><!-- ¹Ýº¹¹®À» ÀÌ¿ëÇÏ¿© Å×ÀÌºíÀ» Á¤ÀÇ ÇÏ¿´½À´Ï´Ù. ³ªÁß¿¡ µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ ÄÃ·³¸íÀ» º¯¼ö·Î °¡Á®¿Í¼­ ºÙ¿©³ÖÀ» °Í. -->
-            <tr class="boardList">
-                <td>¼ø¹ø<%=i+1 %></td>
-                <td>½ºÅÍµð¸í</td>
-                <td>½ÃÀÛÀÏÀÚ</td>
-                <td>Á¾·áÀÏÀÚ</td>
-                <td>½ºÅÍµð °ú¸ñ</td>
-                <td>Àå¼Ò</td>
-                <td>¿äÀÏ(¿ùÈ­¼ö¸ñ±Ý)</td>
-                <td>½Ã°£(°øºÎ½Ã°£ ½Ã°£´ÜÀ§)</td>
-            </tr>
-            <%} %>
-        </table>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
+
     </div>
 </body>
 </html>
