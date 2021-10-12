@@ -188,7 +188,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_interest">
-                                                        <select id="interest" class="sel" aria-label="관심분야" style="height:30px; width:200px; font-size: 16px;">
+                                                        <select id="interest" name="interest" class="sel" aria-label="관심분야" style="height:30px; width:200px; font-size: 16px;">
                                                             <option value="">관심분야를 선택하세요</option>
                                                             <option value="01">관심분야1</option>
                                                             <option value="02">관심분야2</option>
@@ -213,7 +213,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_job">
-                                                        <select id="job" class="sel" aria-label="직업" style="height:30px; width:200px; font-size: 16px;">
+                                                        <select id="job" name="job" class="sel" aria-label="직업" style="height:30px; width:200px; font-size: 16px;">
                                                             <option value="">직업를 선택하세요</option>
                                                             <option value="01">직업1</option>
                                                             <option value="02">직업2</option>

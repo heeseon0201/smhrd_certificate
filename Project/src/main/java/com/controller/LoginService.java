@@ -28,10 +28,13 @@ public class LoginService extends HttpServlet {
 		
 		// 세션생성
 		if (vo != null) {
+			// 세션 객체 생성
 			HttpSession session = request.getSession();
 			
+			// 로그인사용자의 정보를 세션에 저장
 			session.setAttribute("MemberLogin", vo);
 			
+			// 메인페이지로 이동
 			response.sendRedirect("main.jsp");
 		}
 	}
