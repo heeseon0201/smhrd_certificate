@@ -11,6 +11,7 @@ public class MemberDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	
+	// DB 연결 메소드
 	public void getConnection() {
 		try {
 			// JDBC 드라이버 동적 로딩
@@ -107,7 +108,7 @@ public class MemberDAO {
 			
 			// 결과처리
 			if(rs.next()) {		
-				System.out.println("로그인성공!");
+				System.out.println("로그인성공");
 				
 				int get_no = rs.getInt("member_no");
 				String get_id = rs.getString("member_id");
@@ -133,10 +134,11 @@ public class MemberDAO {
 	// 회원정보를 출력하는 메소드
 	public ArrayList<MemberVO> Profile(String member_id) {
 		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		
 		try {
 			getConnection();
 			
-			// 로그인 sql문
+			// 회원정보 출력 sql문
 			String sql = "select * from Member where member_id=?";
 			
 			// SQL 실행 객체 생성
@@ -177,7 +179,7 @@ public class MemberDAO {
 		try {
 			getConnection();
 			
-			// 로그인 sql문
+			// 회원정보 수정 sql문
 			String sql = "update Member set member_pw=?, member_NM=?, member_tel=?, member_address=?, member_interest=?, member_job=? where member_id=?";
 			
 			// SQL 실행 객체 생성

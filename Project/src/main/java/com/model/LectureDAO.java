@@ -1,0 +1,157 @@
+package com.model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+public class LectureDAO {
+	Connection conn = null;
+	PreparedStatement psmt = null;
+	ResultSet rs = null;
+	
+	// DB 연결 메소드
+	public void getConnection() {
+		try {
+			// JDBC 드라이버 동적 로딩
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "hr";
+			String password = "hr";
+			
+			// 데이터 베이스 연결객체 생성
+			conn = DriverManager.getConnection(url, user, password);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	// DB close 메소드
+	public void close() {
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+			if (psmt != null) {
+				psmt.close();
+			}
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	// 강의정보 전체 데이터를 보여주는 메소드
+	public ArrayList<LectureVO> Lecture_ViewAll() {
+		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
+		
+		try {
+			getConnection();
+			
+			// 강의정보 전체출력 sql문
+			String sql = "select * from Lecture";
+			
+			// SQL 실행 객체생성
+			psmt = conn.prepareStatement(sql);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {		
+				System.out.println("강의정보 출력 성공");
+				
+				int get_no = rs.getInt("lecture_no");
+				String get_NM = rs.getString("lecture_NM");
+				String get_teach = rs.getString("lecture_teach");
+				String get_site = rs.getString("lecture_site");
+				String get_count = rs.getString("lecture_count");
+				int get_price = rs.getInt("lecture_price");
+				double get_point = rs.getDouble("lecture_point");
+				String get_review = rs.getString("lecture_review");
+				String get_url = rs.getString("lecture_url");
+				String get_cat = rs.getString("lecture_cat");
+				
+				LectureVO vo = new LectureVO(get_no, get_NM, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+				list.add(vo);
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("강의정보 출력 실패");
+		} finally {
+			close();
+		}
+		return list;
+	}
+
+	// 검색 메소드
+	public ArrayList<LectureVO> Lecture_Search(String words){
+		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
+		String sql = "";
+		
+		try {
+			getConnection();
+			
+			// 검색 sql문
+			// 공백으로 검색어를 구분(공백 2개까지 허용)
+			String[] hitwords = words.split(" ");
+			if (hitwords.length == 1) {
+				// 한단어 검색
+				sql = "select * from Lecture where lecture_NM like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
+			} else if (hitwords.length == 2) {
+				// 두단어 검색
+				sql = "select * from Lecture where REGEXP_LIKE(lecture_NM, '%?%'|'%?%') OR  REGEXP_LIKE(lecture_teach, '%?%'|'%?%') OR REGEXP_LIKE(lecture_site, '%?%'|'%?%') OR REGEXP_LIKE(lecture_count, '%?%'|'%?%') OR REGEXP_LIKE(lecture_price, '%?%'|'%?%') OR REGEXP_LIKE(lecture_point, '%?%'|'%?%') OR REGEXP_LIKE(lecture_review, '%?%'|'%?%') OR REGEXP_LIKE(lecture_url, '%?%'|'%?%') OR REGEXP_LIKE(lecture_cat, '%?%'|'%?%')";
+			} else if (hitwords.length == 3) {
+				// 세단어 검색
+				sql = "select * from Lecture where REGEXP_LIKE(lecture_NM, '%?%'|'%?%'|'%?%') OR  REGEXP_LIKE(lecture_teach, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_site, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_count, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_price, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_point, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_review, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_url, '%?%'|'%?%'|'%?%') OR REGEXP_LIKE(lecture_cat, '%?%'|'%?%'|'%?%')";
+			} else {
+				System.out.println("검색어가 너무 많습니다.");
+			}
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			for(int i=0; i<hitwords.length; i++) {
+				psmt.setString(i+1, hitwords[i]);
+			}
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {		
+				System.out.println("검색 성공");
+				
+				int get_no = rs.getInt("lecture_no");
+				String get_NM = rs.getString("lecture_NM");
+				String get_teach = rs.getString("lecture_teach");
+				String get_site = rs.getString("lecture_site");
+				String get_count = rs.getString("lecture_count");
+				int get_price = rs.getInt("lecture_price");
+				double get_point = rs.getDouble("lecture_point");
+				String get_review = rs.getString("lecture_review");
+				String get_url = rs.getString("lecture_url");
+				String get_cat = rs.getString("lecture_cat");
+				
+				LectureVO vo = new LectureVO(get_no, get_NM, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+				list.add(vo);
+			}
+			
+					
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("검색 실패");
+		} finally {
+			close();
+		}
+		
+		return list;
+	}
+}
