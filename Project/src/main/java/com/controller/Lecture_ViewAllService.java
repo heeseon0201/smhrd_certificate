@@ -33,8 +33,7 @@ public class Lecture_ViewAllService extends HttpServlet {
 			
 			// 강의정보페이지로 이동
 			response.sendRedirect("lecture.jsp");
-		}
-		
+		}	
 	}
 
 }
