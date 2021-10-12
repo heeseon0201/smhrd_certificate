@@ -5,7 +5,12 @@
 /*lecture, course의 폰트 변동*/
 @import
 	url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
+	@import url('https://images.unsplash.com/photo-1512580770426-cbed71c40e94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1507&q=80');
+.background{
+	background: url("https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/4PYj/image/9kZEQ5jYef7BxRXLCPvgzsp9DNU.jpg");
+	background-size: 100% ;
+	height: 100vh;
+}
 .h_logo {
 	font-family: Sansita Swashed;
 	font-size: 100px;
@@ -13,7 +18,7 @@
 	color: transparent;
 	/*-webkit-의 경우 브라우저가 크롬일 때를 고려*/
 	-webkit-background-clip: text;
-	text-decoration-line: none; /* 밑줄지우는 코드인데 작동이 안됨 */
+	text-decoration: none; /* 밑줄지우는 코드인데 작동이 안됨 */
 	text-align: center;
 }
 
@@ -43,7 +48,7 @@ h1 {
 }
 
 body {
-	background: #EEE;
+
 }
 
 div {

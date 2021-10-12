@@ -42,9 +42,15 @@ main {
 	padding: 1rem;
 	height: 100%;
 }
-a {
+.aHead {
 	text-decoration: none;
 	color: white;
+}
+.mainTitle{
+	color:linear-gradient(to right top, #861657, #ffa69e);
+	font-size:50px;
+	font-family:Sansita Swashed;
+	text-align:center;
 }
 body, html {
 	height: 200%;
@@ -95,7 +101,12 @@ th{
 td{
     text-align: center;
 }
-
+a.tableLink{
+	text-decoration: none;
+	font-size: 50px;
+    color: linear-gradient(to right top, #861657, #ffa69e);
+    color: transparent;
+}
 /*로그인페이지*/
 
 
