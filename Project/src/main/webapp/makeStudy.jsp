@@ -20,7 +20,7 @@
                 </a>
             </h1>
 
-            <form id = "Study_form" method="post" action="">
+            <form id = "Profile_form" method="post" action="">
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
@@ -113,7 +113,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_mm">
-                                                        <input type="radio" name="radio" id="r1" value="0"><label for="r1" checked>오프라인</label>
+                                                        <input type="radio" name="radio" id="r1" value="0" checked><label for="r1">오프라인</label>
                                                         <input type="radio" name="radio" id="r2" value="1"><label for="r2" >온라인</label>
                                                     </span>
                                                 </td>
