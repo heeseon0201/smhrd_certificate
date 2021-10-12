@@ -1,4 +1,4 @@
-<%@page import="com.model.memberVO"%>
+<%@page import="com.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
