@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.model.MemberDAO;
 
+// 회원가입 버튼을 누르면 실행될 servlet 코드
 @WebServlet("/JoinService")
 public class JoinService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

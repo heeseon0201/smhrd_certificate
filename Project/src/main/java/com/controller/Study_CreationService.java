@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.model.StudyDAO;
 
+// 스터디조직 생성 버튼을 누르면 스터디조직을 생성하고 정보를 저장하는 servlet 코드
 @WebServlet("/Study_CreationService")
 public class Study_CreationService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

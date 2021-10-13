@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.model.LectureDAO;
 import com.model.LectureVO;
 
+// 강의정보페이지 방문시 전체 강의정보를 보여줄 servlet 코드
 @WebServlet("/Lecture_ViewAllService")
 public class Lecture_ViewAllService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

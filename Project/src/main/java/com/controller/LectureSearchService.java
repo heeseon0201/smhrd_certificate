@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.model.LectureDAO;
 import com.model.LectureVO;
 
+// 강의정보페이지에서 검색버튼 클릭시 강의정보를 검색해줄 servlet 코드
 @WebServlet("/LectureSearchService")
 public class LectureSearchService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

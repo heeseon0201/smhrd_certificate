@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.model.MemberDAO;
 import com.model.MemberVO;
 
+// 회원정보수정 버튼을 누르면 로그인한 회원의 정보를 수정해서 새로 저장하는 servlet 코드
 @WebServlet("/MemberUpdateService")
 public class MemberUpdateService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

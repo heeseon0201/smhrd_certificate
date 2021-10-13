@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.model.MemberDAO;
 import com.model.MemberVO;
 
+// 회원정보보기 버튼을 누르면 로그인한 회원의 정보를 보여주는 servlet 코드
 @WebServlet("/ProfileService")
 public class ProfileService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

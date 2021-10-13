@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+//로그아웃 버튼을 누르면 로그아웃하고 메인페이지로 돌아가는 servlet 코드
 @WebServlet("/LogoutService")
 public class LogoutService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

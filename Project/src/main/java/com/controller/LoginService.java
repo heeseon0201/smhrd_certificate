@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.model.MemberDAO;
 import com.model.MemberVO;
 
+// 로그인 버튼을 누르면 로그인한 회원의 정보를 세션에 저장해주는 servlet 코드
 @WebServlet("/LoginService")
 public class LoginService extends HttpServlet {
 	private static final long serialVersionUID = 1L;

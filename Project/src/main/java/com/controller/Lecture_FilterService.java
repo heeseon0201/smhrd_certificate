@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import com.model.LectureDAO;
 import com.model.LectureVO;
 
+//강의 필터를 선택하면 실행될 servlet 코드
 @WebServlet("/Lecture_FilterService")
 public class Lecture_FilterService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
