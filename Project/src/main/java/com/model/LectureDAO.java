@@ -220,6 +220,7 @@ public class LectureDAO {
 				int lecture_point = rs.getInt("lecture_point");
 				String lecture_cat = rs.getString("lecture_cat");
 
+				
 				LectureVO vo = new LectureVO(lecture_NM, lecture_teach, lecture_point, lecture_cat);
 				list.add(vo);
 			}
