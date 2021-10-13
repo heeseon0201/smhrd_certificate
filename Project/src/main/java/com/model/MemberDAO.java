@@ -73,7 +73,7 @@ public class MemberDAO {
 			cnt = psmt.executeUpdate();
 			
 			if(cnt > 0) {
-				System.out.println("회원가입성공!");
+				System.out.println("회원가입성공");
 			}
 			
 		} catch(Exception e) {

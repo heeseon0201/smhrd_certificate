@@ -195,4 +195,6 @@ public class LectureDAO {
 		return list;
 	}
 	
+	// 메인페이지에 4개정도의 강의정보를 띄우는 메소드
+	
 }
