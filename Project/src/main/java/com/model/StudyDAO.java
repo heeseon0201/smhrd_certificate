@@ -194,7 +194,7 @@ public class StudyDAO {
 	}
 	
 	// 스터디 조직 종료여부를 표시하는 메소드(delete)
-	public void Study_End(int study_no) {
+	public int Study_End(int study_no) {
 		//cnt변수 초기화
 		int cnt = 0;
 		
@@ -223,10 +223,12 @@ public class StudyDAO {
 		}finally {
 			close();
 		}
+		return cnt;
 	}
+	
 	// 메인페이지에 4개정도의 스터디정보를 띄우는 메소드
 	//리턴 타입은 ArrayList<StudyVO>->스터디 정보들 보관
-	public ArrayList<StudyVO> Study_View() {
+	public ArrayList<StudyVO> Study_MainView() {
 		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
 		try {
 			getConnection();
