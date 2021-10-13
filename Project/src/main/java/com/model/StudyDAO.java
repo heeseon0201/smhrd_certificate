@@ -17,7 +17,7 @@ public class StudyDAO {
 			// JDBC 드라이버 동적 로딩
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1521:xe";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 			String user = "campus_k2_1006";
 			String password = "smhrd2";
 			
