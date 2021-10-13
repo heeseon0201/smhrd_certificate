@@ -196,7 +196,40 @@ public class LectureDAO {
 	}
 	
 	// 메인페이지에 4개정도의 강의정보를 띄우는 메소드(강의명, 강사명, 평점, 카테고리)
-	public void Lecture_MainView() {
+	public ArrayList<LectureVO> Lecture_MainView() {
+		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
 		
+		try {
+			getConnection();
+			
+			// 강의정보의 일부칼럼만 출력하는 sql문(상위 4개를 뽑아내는 작업은 controller의 Lecture_MainViewService에서 수행)
+			String sql = "select lecture_NM, lecture_teach, lecture_point, lecture_cat from Lecture order by lecture_point desc";
+			
+			// SQL 실행 객체생성
+			psmt = conn.prepareStatement(sql);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {		
+				System.out.println("강의정보 메인창 띄우기 성공");
+				
+				String lecture_NM = rs.getString("lecture_NM");
+				String lecture_teach = rs.getString("lecture_teach");
+				int lecture_point = rs.getInt("lecture_point");
+				String lecture_cat = rs.getString("lecture_cat");
+
+				LectureVO vo = new LectureVO(lecture_NM, lecture_teach, lecture_point, lecture_cat);
+				list.add(vo);
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("강의정보 메인창 띄우기 실패");
+		} finally {
+			close();
+		}
+		return list;
 	}
 }

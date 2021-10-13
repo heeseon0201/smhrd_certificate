@@ -22,8 +22,6 @@ public class Lecture_FilterService extends HttpServlet {
 		ArrayList<LectureVO> list = null;
 		ArrayList<String> filter = new ArrayList<String>();
 		
-		
-		
 		// 선택한 필터를 가져오는 부분(jsp파일에 맞춰서 수정필요한 부분, for문 입히기?)
 		String 필터요소1 = request.getParameter("필터 태그의 name");
 		// 선택한 필터를 문자열에 추가

@@ -29,6 +29,14 @@ public class LectureVO {
 		this.lecture_cat = lecture_cat;
 	}
 	
+	public LectureVO(String lecture_NM, String lecture_teach, double lecture_point, String lecture_cat) {
+		super();
+		this.lecture_NM = lecture_NM;
+		this.lecture_teach = lecture_teach;
+		this.lecture_point = lecture_point;
+		this.lecture_cat = lecture_cat;
+	}
+
 	// ¸Þ¼Òµå(get,set)
 	public int getLecture_no() {
 		return lecture_no;
