@@ -18,19 +18,13 @@
 	</div>
 <body class="background">
 	<div>
-	    <h1><b>Study</b></h1>
-	    <table class="certificate" style="margin-top: 10px; margin-bottom: 30px;">
-	        <tr>
-	            <%for(int i =0, k = 0 ; i<4;i++){ %>
-	            	<td>
-	            		<%for(int j = 0; j<3; j++){ %>
-	            			<input type="radio" value="" name="certificate">자격증<%=k+1 %><br>
-	            			<%k++; %>
-	            		<%} %>
-	            	</td>
-	            <%} %>
-	        </tr>
-	    </table>
+	    <h1 class="link"><b>Study</b></h1>
+    <div class="searchOut">
+        <div class="search">
+            <input type="text" placeholder="스터디 검색" class="searchInput">
+            <button class="searchBtn">검색</button>
+        </div>
+    </div>
 	    <div class="articleBoard">
 	        <table class="article">
 	            <tr>
@@ -59,5 +53,6 @@
 	    </div>
 
     </div>
+    <div class="foot"></div>
 </body>
 </html>

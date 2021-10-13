@@ -1,11 +1,13 @@
 /*==============================================메인페이지========================================================*/
 @charset "utf-8";
 
-/*타이틀의 폰트 변동*/
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');/* font-family: 'Hahmlet', serif; */
-/*lecture, course의 폰트 변동*/
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/*폰트 임포트*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Hahmlet&display=swap');
+/* 
+font-family: 'Courgette', cursive;
+font-family: 'Hahmlet', serif;
+ */
+
 /*메인페이지 상단의 로고, 회원가입, 로그인*/
 header {
 	height: 30px;
@@ -16,6 +18,9 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	margin: 0;
+}
+.whiteColor{
+	color:white;
 }
 /*lecture, study 설명 테이블*/
 table {
@@ -55,7 +60,7 @@ body, html {
 	font-weight: bold;
 }
 
-/*Lecture, course의 폰트 조정*/
+/*Lecture, groupstudy의 폰트 조정*/
 
 .linkTitle>a{
 	color:black;
@@ -66,6 +71,9 @@ body, html {
 }
 .linkTitle{
 	text-align: center;
+}
+.link{
+	font-family:'courgette', cursive;
 }
 th>a{
 	color:black;

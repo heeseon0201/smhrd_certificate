@@ -12,26 +12,20 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고-->
 		<header>
-			<h3><a href = "main.jsp">Studynet</a></h3>
+			<h3><ahref = "main.jsp">Studynet</a></h3>
 		</header>
 	</div>
 <body class="background">
-    <h1><b>Lecture</b></h1>
-    <table class="certificate" style="margin-top: 10px; margin-bottom: 30px;">
-        <tr>
-            <%for(int i =0, k = 0 ; i<4;i++){ %>
-            
-            	<td>
-            		<%for(int j = 0; j<3; j++){ %>
-            			<input type="radio" value="" name="certificate">자격증<%=k+1 %><br>
-            			<%k++; %>
-            		<%} %>
-            	</td>
-            <%} %>
-           
-        </tr>
-    </table>
-    <div class="articleBoard">
+    <h1 class="link"><b>Lecture</b></h1>
+    <form class="searchForm" action="SearchResult">
+        <div class="searchOut">
+            <div class="search">
+                <input type="text" placeholder="자격증 검색" name="search" class="searchInput" autocomplete="off">
+                <button class="searchBtn" type="submit" name="click">검색</button>
+            </div>
+        </div>
+    </form>
+	<div class="articleBoard">
                 <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
                 <tr>
                     <th>강의명</th>
@@ -60,5 +54,6 @@
            
         </table>
     </div>
+    <div class="foot"></div>
 </body>
 </html>

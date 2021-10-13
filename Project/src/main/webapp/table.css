@@ -45,18 +45,51 @@ body {
 div {
 	text-align: center;
 }
+/* 검색창 시작 */
+input:-ms-input-placeholder {	color: #a8a8a8;}
+input::-webkit-input-placeholder {	color: #a8a8a8;}
+input::-moz-placeholder {	color: #a8a8a8}
 
-.certificate {
-	width: 80%;
-	height: 100px;
-	vertical-align: middle;
-	padding: 5px;
-	font-family: corbel, sans-serif;
-	font-size: 14px;
-	margin: auto;
+.searchOut {
 	text-align: center;
 }
 
+.search {
+	height: 40px;
+	width: 400px;
+	border: 1px solid #495057;
+	background: #e9ecef;
+	display: inline-block;
+}
+
+.searchInput {
+	font-size: 16px;
+	width: 325px;
+	padding: 10px;
+	border: 0px;
+	outline: none;
+	float: left;
+	background: #e9ecef;
+}
+
+.searchBtn {
+	width: 50px;
+	height: 100%;
+	border: 0px;
+	background: #495057;
+	outline: none;
+	float: right;
+	color: #e9ecef;
+}
+
+/* 검색창 끝 */
+
+/* 제목부분 */
+.link{
+	font-family:"courgette", cursive;
+}
+
+/* 본문 표 */
 .article {
 	width: 80%;
 	height: 600px;
@@ -79,4 +112,7 @@ th {
 	background-color: #343a40;
 	border-color: #454d55;
 	padding: 15px; /* 테두리와 내용사이 간격 */
+}
+.foot{
+	height:100px;
 }

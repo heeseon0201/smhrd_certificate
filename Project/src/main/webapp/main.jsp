@@ -19,8 +19,8 @@
 		<header>
 			<h3>Studynet</h3>
 			<nav>
-				<span><a href="join.jsp">회원가입</a></span> <span><a
-					href="login.jsp">로그인</a></span>
+				<span><a href="join.jsp" class="whiteColor">회원가입</a></span> 
+				<span><a href="login.jsp" class="whiteColor">로그인</a></span>
 			</nav>
 		</header>
 		
@@ -137,7 +137,7 @@
 		<div>
 			<table style="margin: auto;">
 				<tr>
-					<th colspan="4"><a href="study.jsp">GroupStudy</a></th>
+					<th colspan="4"><a class="link" href="study.jsp">GroupStudy</a></th>
 				</tr>
 				<tr>
 					<td><a href="#" class="info"> 스터디정보1 </a></td>
