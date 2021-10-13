@@ -10,10 +10,11 @@ public class StudyVO {
 	private String study_place; // 장소
 	private String study_week;	// 요일
 	private String study_time; // 시간
-
+	private String study_onoff; // 온오프라인 구분
+	
 	// 생성자
 	public StudyVO(int study_no, String study_name, String study_begin, String study_end, String study_sub,
-			String study_place, String study_week, String study_time) {
+			String study_place, String study_week, String study_time, String study_onoff) {
 		super();
 		this.study_no = study_no;
 		this.study_name = study_name;
@@ -23,6 +24,7 @@ public class StudyVO {
 		this.study_place = study_place;
 		this.study_week = study_week;
 		this.study_time = study_time;
+		this.study_onoff = study_onoff;
 	}
 	
 	// 메소드(get,set)
@@ -89,4 +91,13 @@ public class StudyVO {
 	public void setStudy_time(String study_time) {
 		this.study_time = study_time;
 	}
+
+	public String getStudy_onoff() {
+		return study_onoff;
+	}
+
+	public void setStudy_onoff(String study_onoff) {
+		this.study_onoff = study_onoff;
+	}
+	
 }
