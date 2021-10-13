@@ -112,44 +112,42 @@
                                                     </h3>
                                                 </td>
                                                 <td>
-                                                    <span class="ps_box int_mm">
+                                                    <span class="place">
                                                         <input type="radio" name="radio" id="r1" value="0" checked><label for="r1">오프라인</label>
                                                         <input type="radio" name="radio" id="r2" value="1"><label for="r2" >온라인</label>
                                                     </span>
                                                 </td>
                                             </tr>
-                                            <div id="offplace">
-                                                <tr>
-                                                    <td width="100px">
-                                                        <h3 id="mmm" class = "Join_YMD">
-                                                            <label for="YMD">장소</label>
-                                                        </h3>
-                                                    </td>
-                                                    <td>
-                                                        <span class="ps_box int_mm">
-                                                            <select id="mm" class="sel" aria-label="월" style="height:25px; width:50px; font-size: 16px;">
-                                                                <option value="">장소</option>
-                                                                <option value="01">서울</option>
-                                                                <option value="02">경기</option>
-                                                                <option value="03">강원</option>
-                                                                <option value="04">충청</option>
-                                                                <option value="05">전라</option>
-                                                                <option value="06">경상</option>
-                                                                <option value="07">제주</option>
-                                                            </select>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </div>
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "Join_sex">
-                                                        <label for="sex">요일</label>
+                                                    <h3 id="mmm" class = "place">
+                                                        <label for="YMD">장소</label>
+                                                    </h3>
+                                                </td>
+                                                <td>
+                                                    <span class="place">
+                                                        <select id="mm" class="place" aria-label="장소" style="height:25px; width:200px; font-size: 16px;">
+                                                            <option value="">장소</option>
+                                                            <option value="01">서울</option>
+                                                            <option value="02">경기</option>
+                                                            <option value="03">강원</option>
+                                                            <option value="04">충청</option>
+                                                            <option value="05">전라</option>
+                                                            <option value="06">경상</option>
+                                                            <option value="07">제주</option>
+                                                        </select>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="100px">
+                                                    <h3 class = "day">
+                                                        <label for="day">요일</label>
                                                     </h3>
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_sex">
-                                                        <select id="sex" class="sel" aria-label="성별" style="height:30px; width:200px; font-size: 16px;">
+                                                        <select id="day" class="day" aria-label="요일" style="height:30px; width:200px; font-size: 16px;">
                                                             <option value="">요일</option>
                                                             <option value="월">월</option>
                                                             <option value="화">화</option>
@@ -164,21 +162,17 @@
                                             </tr>
                                             <tr>
                                                 <td width="100px">
-                                                    <h3 class = "Join_sex">
-                                                        <label for="sex">시간</label>
+                                                    <h3 class = "time">
+                                                        <label for="time">시간</label>
                                                     </h3>
                                                 </td>
                                                 <td>
-                                                    <span class="ps_box int_sex">
-                                                        <select id="sex" class="sel" aria-label="성별" style="height:30px; width:200px; font-size: 16px;">
-                                                            <option value="">요일</option>
-                                                            <option value="월">월</option>
-                                                            <option value="화">화</option>
-                                                            <option value="수">수</option>
-                                                            <option value="목">목</option>
-                                                            <option value="금">금</option>
-                                                            <option value="토">토</option>
-                                                            <option value="일">일</option>
+                                                    <span class="time">
+                                                        <select id="time" class="time" aria-label="시간" style="height:30px; width:200px; font-size: 16px;">
+                                                            <option value="">시간</option>
+                                                            <option value="아침">아침</option>
+                                                            <option value="점심">점심</option>
+                                                            <option value="저녁">저녁</option>
                                                         </select>
                                                     </span>
                                                 </td>

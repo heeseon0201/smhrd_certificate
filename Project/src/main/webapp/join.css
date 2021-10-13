@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');/* font-family: 'Hahmlet', serif; */
+body{
+	font-family: 'Hahmlet', serif;
+	font-weight: bold;
+    }
 div{
 	text-align:center;
 	}
@@ -21,7 +26,7 @@ div{
     }
     #Profile_form::after{
         width:100%;
-        height:100%;
+        height:130%;
         content: "";
         position: absolute;
         top:0;

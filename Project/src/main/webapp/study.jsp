@@ -6,9 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>스터디 모집</title>
     <link rel="stylesheet" href="table.css">
 </head>
+</head>
+	<div style="text-align: left; margin: 0%" class="title">
+		<!--로고-->
+		<header>
+			<h3><a href = "main.jsp">Studynet</a></h3>
+		</header>
+	</div>
 <body class="background">
 	<div>
 	    <h1><b>Study</b></h1>

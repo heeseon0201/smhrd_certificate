@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>로그인</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body class="title">
@@ -18,8 +18,8 @@
             </h1>
 	</div>
 	<form action="LoginService" method="post">
-		<div class="loginDiv" style="margin-top: 50px;margin-bottom: 50px">
-			<h1 class="loginlogo">login</h1>
+		<div class="loginDiv">
+			<h2 class="loginlogo">로그인</h2>
 		</div>
         <table id="logintable">
             <tr>
@@ -32,9 +32,10 @@
             </tr>
             <tr>
                 <td colspan="2" class="findid">
-                    <div style="float:left; text-align:center; margin-left:40px;"><a href="#">아이디찾기</a></div>
-                    <div style="float:left; text-align:center; margin-left:40px;"><a href="#">비밀번호찾기</a></div>
+                    <div ><a href="#">아이디찾기</a></div>
+                    <div ><a href="#">비밀번호찾기</a></div>
                 </td>
+                
             </tr>
         </table>
 		<div ></div>

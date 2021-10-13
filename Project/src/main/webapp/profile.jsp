@@ -14,8 +14,8 @@
         
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
-                <a href = "main.html" class = "h_logo">
-                    <span> 사이트 이름 </span>
+                <a href = "main.jsp" class = "h_logo">
+                    <span> Studynet </span>
                 </a>
             </h1>
 
