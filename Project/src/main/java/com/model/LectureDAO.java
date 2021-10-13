@@ -17,9 +17,9 @@ public class LectureDAO {
 			// JDBC 드라이버 동적 로딩
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user = "hr";
-			String password = "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1521:xe";
+			String user = "campus_k2_1006";
+			String password = "smhrd2";
 			
 			// 데이터 베이스 연결객체 생성
 			conn = DriverManager.getConnection(url, user, password);
@@ -195,6 +195,8 @@ public class LectureDAO {
 		return list;
 	}
 	
-	// 메인페이지에 4개정도의 강의정보를 띄우는 메소드
-	
+	// 메인페이지에 4개정도의 강의정보를 띄우는 메소드(강의명, 강사명, 평점, 카테고리)
+	public void Lecture_MainView() {
+		
+	}
 }
