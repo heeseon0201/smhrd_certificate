@@ -89,6 +89,7 @@ public class StudyDAO {
 		return list;
 	}
 
+	
 	// 스터디 조직 하나를 선택해서 보여주는 메소드
 	public ArrayList<StudyVO> Study_SelectOne(int study_no) {
 		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
@@ -192,8 +193,79 @@ public class StudyDAO {
 		}
 	}
 	
-	// 스터디 조직 종료여부를 표시하는 메소드
-	
+	// 스터디 조직 종료여부를 표시하는 메소드(delete)
+	public void Study_End(int study_no) {
+		//cnt변수 초기화
+		int cnt = 0;
+		
+		try {
+			getConnection();
+			//스터디 없애는 sql문(delete)
+			//Study테이블에서는 삭제, studyMember테이블에서는 삭제하지 않아도 될 듯함
+			String sql = "delete from Study where study_no=?";
+			
+			//sql문 실행 객체 생성
+			psmt= conn.prepareStatement(sql);
+			
+			//바인드변수-스터디순번
+			psmt.setInt(1, study_no);
+			
+			//sql 실행 후 결과값
+			cnt = psmt.executeUpdate();
+			//삭제 성공 여부 출력
+			if(cnt > 0) {
+				System.out.println("스터디 조직 삭제 성공");
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디 조직 삭제 실패");
+		}finally {
+			close();
+		}
+	}
 	// 메인페이지에 4개정도의 스터디정보를 띄우는 메소드
-	
+	//리턴 타입은 ArrayList<StudyVO>->스터디 정보들 보관
+	public ArrayList<StudyVO> Study_View() {
+		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+		try {
+			getConnection();
+			
+			//스터디 시작일이 빠른 순서대로 4개를 출력하는 sql문
+			//서브쿼리로 스터디시작일이 빠른 순서를 가져와서 4개만 출력
+			String sql = "selete * from (selete * from Study order by study_begin asc) where rownum = 4";
+			
+			//sql문 실행 객체 생성
+			psmt= conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+			
+			//메인페이지에 띄울 스터디 정보 가져오기
+			if(rs.next()) {
+				System.out.println("메인페이지 스터디 조직 출력 성공");
+				
+				//스터디에 대한 모든 정보 가져옴
+				//study_no은 안가져와도 될 것 같은데 의논필요
+				int study_no = rs.getInt("study_no");
+				String study_name = rs.getString("study_name");
+				String study_begin = rs.getString("study_begin");
+				String study_end = rs.getString("study_end");
+				String study_sub = rs.getString("study_sub");
+				String study_place = rs.getString("study_place");
+				String study_week = rs.getString("study_week");
+				String study_time = rs.getString("study_time");
+				String study_onoff = rs.getString("study_onoff");
+				
+				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+				list.add(vo);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("메인페이지에 스터디 보이기 실패");
+		}finally {
+			close();
+		}
+		return list;
+	}
 }
