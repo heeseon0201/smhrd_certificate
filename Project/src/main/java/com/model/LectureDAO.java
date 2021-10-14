@@ -67,7 +67,7 @@ public class LectureDAO {
 				System.out.println("강의정보 출력 성공");
 				
 				int get_no = rs.getInt("lecture_no");
-				String get_NM = rs.getString("lecture_NM");
+				String get_name = rs.getString("lecture_name");
 				String get_teach = rs.getString("lecture_teach");
 				String get_site = rs.getString("lecture_site");
 				String get_count = rs.getString("lecture_count");
@@ -77,7 +77,7 @@ public class LectureDAO {
 				String get_url = rs.getString("lecture_url");
 				String get_cat = rs.getString("lecture_cat");
 				
-				LectureVO vo = new LectureVO(get_no, get_NM, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+				LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
 				list.add(vo);
 			}
 			
@@ -233,4 +233,45 @@ public class LectureDAO {
 		}
 		return list;
 	}
+
+	// 선택한 강의의 리뷰를 보여주는 기능
+	public String[] Lecture_SelectReview(int lecture_no){
+		String get_review = null;
+		String[] reviewlist = null;
+		
+		try {
+			getConnection();
+			
+			// 선택한 강의의 리뷰를 출력하는 sql문
+			String sql = "select lecture_review from Lecture where lecture_no = ?";
+			
+			// SQL 실행 객체생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			psmt.setInt(1, lecture_no);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {		
+				// 전처리된 리뷰 통째로 들고오기
+				get_review = rs.getString("lecture_review");
+				
+				// 구분자에 따라 리뷰를 쪼개서 저장
+				reviewlist = get_review.split("commaNNN");
+			}
+			
+			System.out.println("리뷰표시 성공");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("리뷰표시 실패");
+		} finally {
+			close();
+		}
+		return reviewlist;
+	}
+
 }

@@ -25,7 +25,7 @@ public class LectureSearchService extends HttpServlet {
 		
 		LectureDAO dao = new LectureDAO();
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
-		if (words.equals(null)) {
+		if (words.equals("")) {
 			// 전체출력
 			list = dao.Lecture_ViewAll();
 		} else {
