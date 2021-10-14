@@ -35,7 +35,7 @@
 		<div>
 			<section>
 				<div class="linkTitle">
-					<a class="link" href="lecture.jsp">Lecture</a>
+					<a class="link" href="LectureSearchService?search_words=">Lecture</a>
 				</div>
 			</section>
 
