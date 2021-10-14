@@ -3,7 +3,7 @@ package com.model;
 public class LectureVO {
 	// 필드생성
 	private int lecture_no;	// 순번
-	private String lecture_NM;	// 강의명
+	private String lecture_name;	// 강의명
 	private String lecture_teach; // 강사명
 	private String lecture_site;	// 컨텐츠제공사이트
 	private String lecture_count;	// 총 강의수
@@ -14,11 +14,11 @@ public class LectureVO {
 	private String lecture_cat;		// 카테고리
 	
 	// 생성자
-	public LectureVO(int lecture_no, String lecture_NM, String lecture_teach, String lecture_site, String lecture_count,
+	public LectureVO(int lecture_no, String lecture_name, String lecture_teach, String lecture_site, String lecture_count,
 			int lecture_price, double lecture_point, String lecture_review, String lecture_url, String lecture_cat) {
 		super();
 		this.lecture_no = lecture_no;
-		this.lecture_NM = lecture_NM;
+		this.lecture_name = lecture_name;
 		this.lecture_teach = lecture_teach;
 		this.lecture_site = lecture_site;
 		this.lecture_count = lecture_count;
@@ -29,9 +29,9 @@ public class LectureVO {
 		this.lecture_cat = lecture_cat;
 	}
 	
-	public LectureVO(String lecture_NM, String lecture_teach, double lecture_point, String lecture_cat) {
+	public LectureVO(String lecture_name, String lecture_teach, double lecture_point, String lecture_cat) {
 		super();
-		this.lecture_NM = lecture_NM;
+		this.lecture_name = lecture_name;
 		this.lecture_teach = lecture_teach;
 		this.lecture_point = lecture_point;
 		this.lecture_cat = lecture_cat;
@@ -46,12 +46,12 @@ public class LectureVO {
 		this.lecture_no = lecture_no;
 	}
 
-	public String getLecture_NM() {
-		return lecture_NM;
+	public String getLecture_name() {
+		return lecture_name;
 	}
 
-	public void setLecture_NM(String lecture_NM) {
-		this.lecture_NM = lecture_NM;
+	public void setLecture_NM(String lecture_name) {
+		this.lecture_name = lecture_name;
 	}
 
 	public String getLecture_teach() {

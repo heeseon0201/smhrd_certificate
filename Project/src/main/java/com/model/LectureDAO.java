@@ -273,5 +273,12 @@ public class LectureDAO {
 		}
 		return reviewlist;
 	}
+	
+	// 강의정보를 테이블에 추가하는 메소드
+	public void Lecture_Add(String lecture_name, String lecture_teach, String lecture_site, String lecture_count,
+			int lecture_price, double lecture_point, String lecture_review, String lecture_url, String lecture_cat) {
+		// csv 불러오는 기능 조사할 것
+		// csv파일을 넣으면 그걸로 db에 넣어주기?
+	}
 
 }
