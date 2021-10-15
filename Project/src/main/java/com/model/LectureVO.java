@@ -12,6 +12,7 @@ public class LectureVO {
 	private String lecture_url;		// URL
 	private String lecture_cat;		// 카테고리
 	
+	
 	// 생성자
 	public LectureVO(int lecture_no, String lecture_name, String lecture_teach, String lecture_count,
 			int lecture_price, double lecture_point, String lecture_review, String lecture_url, String lecture_cat) {
