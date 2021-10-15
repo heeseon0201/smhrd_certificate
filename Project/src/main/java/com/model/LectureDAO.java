@@ -1,10 +1,16 @@
 package com.model;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 public class LectureDAO {
 	Connection conn = null;
@@ -281,7 +287,36 @@ public class LectureDAO {
 	}
 	
 	// 강의정보를 csv에서 가져오는 메소드
-	
+	public void Lecture_ImportCsv(String dir) {
+		List<List<String>> csvList = new ArrayList<List<String>>();
+        BufferedReader br = null;
+        String line = "";
+        
+		// csv의 경로를 넣기
+		File csv = new File(dir);
+		
+		try {
+			br = new BufferedReader(new FileReader(csv));
+            while ((line = br.readLine()) != null) { // readLine()은 파일에서 개행된 한 줄의 데이터를 읽어온다.
+                List<String> aLine = new ArrayList<String>();
+                String[] lineArr = line.split(","); // 파일의 한 줄을 ,로 나누어 배열에 저장 후 리스트로 변환한다.
+               // aLine = Arrays.asList(lineArr);
+               // csvList.add(aLine);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null) { 
+                    br.close(); 
+                }
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+	}
 	
 	// 강의정보를 테이블에 추가하는 메소드
 	public void Lecture_Add(String lecture_name, String lecture_teach, String lecture_site, String lecture_count,
