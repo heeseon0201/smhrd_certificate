@@ -116,7 +116,7 @@ public class LectureDAO {
 
 			for (int i=0; i<hitwords.length; i++) {
 				// 검색 sql문
-				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%'";
+				sql = "select lecture_name from Lecture where lecture_name like '%" + hitwords[i] + "%'";//푸시
 //				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
 				System.out.println("1");
 				// SQL 실행 객체 생성
