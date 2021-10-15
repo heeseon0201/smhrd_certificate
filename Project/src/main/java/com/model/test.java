@@ -11,15 +11,14 @@ public class test {
 		LectureDAO dao = new LectureDAO();
 		ArrayList<LectureVO> list = dao.Lecture_ViewAll();
 		
-		if(list.size()>0) {
-			LectureVO vo = list.get(1);
+		for(int i=0; i<list.size();i++) {
+			LectureVO vo = list.get(i);	
 			
 			String a = vo.getLecture_name();
 			
 			System.out.println(a);
-		} else {
-			System.out.println("list¿¡·¯");
 		}
+
 	}
 
 }
