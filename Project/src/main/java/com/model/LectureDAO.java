@@ -113,24 +113,25 @@ public class LectureDAO {
 			// 공백으로 검색어를 구분
 			String[] hitwords = words.split(" ");
 
-			System.out.println("어디");
+
 			for (int i=0; i<hitwords.length; i++) {
 				// 검색 sql문
-				sql = "select * from Lecture where lecture_name like '%?%'";
+				sql = "select lecture_name from Lecture where lecture_name like '%?%'";
 //				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
-				
+				System.out.println("1");
 				// SQL 실행 객체 생성
 				psmt = conn.prepareStatement(sql);
-				
+				System.out.println("2");
+				System.out.println(hitwords[i]);
 				// 바인드 변수 채우기
 				psmt.setString(1, hitwords[i]);
 //				for (int j=0; j<9; j++) {
 //					psmt.setString(j+1, hitwords[i]);
 //				}
-				
+				System.out.println("3");
 				// sql문 실행
 				rs = psmt.executeQuery();
-				
+				System.out.println("4");
 				// 결과처리
 				while(true) {
 					if(rs.next()) {		
@@ -161,9 +162,7 @@ public class LectureDAO {
 			e.printStackTrace();
 			System.out.println("검색 실패");
 			String[] hitwords = words.split(" ");
-			for(int i =0;i<9;i++) {
-			System.out.println(hitwords[i]);
-			}
+
 		} finally {
 			close();
 		}
