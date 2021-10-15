@@ -112,37 +112,44 @@ public class LectureDAO {
 			
 			// 공백으로 검색어를 구분
 			String[] hitwords = words.split(" ");
-			
+
+			System.out.println("어디");
 			for (int i=0; i<hitwords.length; i++) {
 				// 검색 sql문
-				sql = "select * from Lecture where lecture_NM like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
+				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
 				
 				// SQL 실행 객체 생성
 				psmt = conn.prepareStatement(sql);
-				
 				// 바인드 변수 채우기
 				for (int j=0; j<9; j++) {
 					psmt.setString(j+1, hitwords[i]);
 				}
 				
+				
 				// sql문 실행
 				rs = psmt.executeQuery();
 				
 				// 결과처리
-				if(rs.next()) {		
-					int get_no = rs.getInt("lecture_no");
-					String get_NM = rs.getString("lecture_NM");
-					String get_teach = rs.getString("lecture_teach");
-					String get_site = rs.getString("lecture_site");
-					String get_count = rs.getString("lecture_count");
-					int get_price = rs.getInt("lecture_price");
-					double get_point = rs.getDouble("lecture_point");
-					String get_review = rs.getString("lecture_review");
-					String get_url = rs.getString("lecture_url");
-					String get_cat = rs.getString("lecture_cat");
+				while(true) {
+					if(rs.next()) {		
+						int get_no = rs.getInt("lecture_no");
+						String get_name = rs.getString("lecture_name");
+						String get_teach = rs.getString("lecture_teach");
+						String get_site = rs.getString("lecture_site");
+						String get_count = rs.getString("lecture_count");
+						int get_price = rs.getInt("lecture_price");
+						double get_point = rs.getDouble("lecture_point");
+						String get_review = rs.getString("lecture_review");
+						String get_url = rs.getString("lecture_url");
+						String get_cat = rs.getString("lecture_cat");
+						
+						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+						list.add(vo);
+					}
 					
-					LectureVO vo = new LectureVO(get_no, get_NM, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
-					list.add(vo);
+					if(rs.isLast()) {
+						break;
+					}
 				}
 				
 			}	
@@ -151,6 +158,10 @@ public class LectureDAO {
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("검색 실패");
+			String[] hitwords = words.split(" ");
+			for(int i =0;i<9;i++) {
+			System.out.println(hitwords[i]);
+			}
 		} finally {
 			close();
 		}
@@ -182,7 +193,7 @@ public class LectureDAO {
 				// 결과처리
 				if(rs.next()) {		
 					int get_no = rs.getInt("lecture_no");
-					String get_NM = rs.getString("lecture_NM");
+					String get_name = rs.getString("lecture_name");
 					String get_teach = rs.getString("lecture_teach");
 					String get_site = rs.getString("lecture_site");
 					String get_count = rs.getString("lecture_count");
@@ -192,7 +203,7 @@ public class LectureDAO {
 					String get_url = rs.getString("lecture_url");
 					String get_cat = rs.getString("lecture_cat");
 					
-					LectureVO vo = new LectureVO(get_no, get_NM, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 				}
 			}
@@ -215,7 +226,7 @@ public class LectureDAO {
 			getConnection();
 			
 			// 강의정보의 일부칼럼만 출력하는 sql문(상위 4개를 뽑아내는 작업은 controller의 Lecture_MainViewService에서 수행)
-			String sql = "select lecture_NM, lecture_teach, lecture_point, lecture_cat from Lecture order by lecture_point desc";
+			String sql = "select lecture_name, lecture_teach, lecture_point, lecture_cat from Lecture order by lecture_point desc";
 			
 			// SQL 실행 객체생성
 			psmt = conn.prepareStatement(sql);
@@ -227,13 +238,13 @@ public class LectureDAO {
 			if(rs.next()) {		
 				System.out.println("강의정보 메인창 띄우기 성공");
 				
-				String lecture_NM = rs.getString("lecture_NM");
+				String lecture_name = rs.getString("lecture_name");
 				String lecture_teach = rs.getString("lecture_teach");
 				int lecture_point = rs.getInt("lecture_point");
 				String lecture_cat = rs.getString("lecture_cat");
 
 				
-				LectureVO vo = new LectureVO(lecture_NM, lecture_teach, lecture_point, lecture_cat);
+				LectureVO vo = new LectureVO(lecture_name, lecture_teach, lecture_point, lecture_cat);
 				list.add(vo);
 			}
 			
