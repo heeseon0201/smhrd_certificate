@@ -23,7 +23,7 @@ public class LoginService extends HttpServlet {
 		// 로그인 form에 작성한 값 받아오기
 		String id = request.getParameter("member_id");
 		String pw = request.getParameter("member_pw");
-		
+
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = dao.Login(id, pw);
 		
