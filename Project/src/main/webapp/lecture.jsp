@@ -1,3 +1,5 @@
+<%@page import="com.model.LectureVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,6 +28,9 @@
         </div>
     </form>
 	<div class="articleBoard">
+	<% ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("Lecture"); %>
+	<% LectureVO vo = list.get(0); 
+	   vo.getLecture_name();%>
                 <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
                 <tr>
                     <th>강의명</th>
