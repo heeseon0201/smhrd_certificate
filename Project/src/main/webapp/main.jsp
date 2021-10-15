@@ -17,7 +17,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고, 회원가입, 로그인-->
 		<header>
-			<h3>Studynet</h3>
+			<h3>I.study</h3>
 			<nav>
 				<span><a href="join.jsp" class="whiteColor">회원가입</a></span> 
 				<span><a href="login.jsp" class="whiteColor">로그인</a></span>
