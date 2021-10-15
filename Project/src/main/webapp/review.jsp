@@ -33,16 +33,14 @@
 
                 <table class="reviewtable" >
                 <tr>
-                    <th class="review">후기</th>
-                    <!-- <th>URL</th> -->
+                    <th class="reviewtable">후기</th>
                 </tr>
 		        <tr>
 		                   <% for(int i=0; i < reviewlist.length; i++){%>
 								 <td><%=reviewlist[i] %></td>
 								
 								<% }%>
-		                   <%--후기더보기 <td class="review"><%=lecture_review%></td>--%>
-		                  <%--  <td><%=lecture_url%></td> --%>
+		                   
 		                   
 		          </tr>
         </table>
