@@ -35,8 +35,6 @@
                     <th class="cat">카테고리</th>
                     <th class="name">강의명</th>
                     <th class="teach">강사명</th>
-                    <!-- <th>컨텐츠제공사이트</th> -->
-                    <!-- <th>총 강의수</th> -->
                     <th class="price">가격</th>
                     <th class="point">평점</th>
                     <th class="review">후기</th>
@@ -47,7 +45,6 @@
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
-			/* String lecture_site = vo.getLecture_site(); */
 			String lecture_count = vo.getLecture_count();
 			int lecture_price = vo.getLecture_price();
 			double lecture_point = vo.getLecture_point();
@@ -59,12 +56,12 @@
             		<td class="cat"><%=lecture_cat%></td>
                    <td class="name"><a href="<%=lecture_url%>"><%=lecture_name%></a></td>
                    <td class="teach"><%=lecture_teach %></td>
-<%--                    <td><%=lecture_site %></td>
-                   <td><%=lecture_count %></td> --%>
+
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
-                   <td class="review"><%=lecture_review%></td>
-                  <%--  <td><%=lecture_url%></td> --%>
+                   <td class="review"><div class="help-tip">
+    <p>마우스 오버시 알림메시지창이 뜹니다.<br>CSS로만 만들어졌습니다.</p>
+</div><%=lecture_review%></td>
                    
             </tr>
             <%} %>
