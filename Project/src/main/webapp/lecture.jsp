@@ -19,40 +19,53 @@
 	</div>
 <body class="background">
     <h1 class="link"><b>Lecture</b></h1>
-    <form class="searchForm" action="SearchResult">
+    <form class="searchForm" action="LectureSearchService">
         <div class="searchOut">
             <div class="search">
-                <input type="text" placeholder="자격증 검색" name="search" class="searchInput" autocomplete="off">
+                <input type="text" placeholder="강의 검색" name="search_words" class="searchInput" autocomplete="off">
                 <button class="searchBtn" type="submit" name="click">검색</button>
             </div>
         </div>
     </form>
 	<div class="articleBoard">
 	<% ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("Lecture"); %>
-	<% LectureVO vo = list.get(0); vo.getLecture_name();%>
+
                 <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
                 <tr>
-                    <th>강의명</th>
-                    <th>강사명</th>
-                    <th>컨텐츠제공사이트</th>
-                    <th>총 강의수</th>
-                    <th>가격</th>
-                    <th>평점</th>
-                    <th>후기</th>
-                    <th>URL</th>
-                    <th>카테고리</th>
+                    <th class="cat">카테고리</th>
+                    <th class="name">강의명</th>
+                    <th class="teach">강사명</th>
+                    <!-- <th>컨텐츠제공사이트</th> -->
+                    <!-- <th>총 강의수</th> -->
+                    <th class="price">가격</th>
+                    <th class="point">평점</th>
+                    <th class="review">후기</th>
+                    <!-- <th>URL</th> -->
+
                 </tr>
-        <%for(int i = 0; i<12;i++){ %>
+        <%for(int i = 0; i<list.size() ;i++){ %>
+        <% 	LectureVO vo = list.get(i); 
+			String lecture_name = vo.getLecture_name();
+			String lecture_teach = vo.getLecture_teach();
+			String lecture_site = vo.getLecture_site();
+			String lecture_count = vo.getLecture_count();
+			int lecture_price = vo.getLecture_price();
+			double lecture_point = vo.getLecture_point();
+			String lecture_review = vo.getLecture_review();
+			String lecture_url = vo.getLecture_url();
+			String lecture_cat = vo.getLecture_cat();
+			%>
             <tr class="boardList">
-                   <td>강의명<%=i+1 %></td>
-                   <td>강사명</td>
-                   <td>컨텐츠제공사이트</td>
-                   <td>총 강의수</td>
-                   <td>가격</td>
-                   <td>평점</td>
-                   <td>후기</td>
-                   <td>URL</td>
-                   <td>카테고리</td>
+            		<td class="cat"><%=lecture_cat%></td>
+                   <td class="name"><a href="<%=lecture_url%>"><%=lecture_name%></a></td>
+                   <td class="teach"><%=lecture_teach %></td>
+<%--                    <td><%=lecture_site %></td>
+                   <td><%=lecture_count %></td> --%>
+                   <td class="price"><%=lecture_price%></td>
+                   <td class="point"><%=lecture_point%></td>
+                   <td class="review"><%=lecture_review%></td>
+                  <%--  <td><%=lecture_url%></td> --%>
+                   
             </tr>
             <%} %>
            

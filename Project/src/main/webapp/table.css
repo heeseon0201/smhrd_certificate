@@ -92,17 +92,50 @@ input::-moz-placeholder {	color: #a8a8a8}
 /* 본문 표 */
 .article {
 	width: 80%;
-	height: 600px;
+	height: auto;
 	margin: auto;
 	border-collapse: collapse;
+	table-layout:fixed;
 }
 
-td {
+.article tr td {
+
 	border-bottom: 1px solid black;
 	color: #495057;
 	background-color: #e9ecef;
 	border-color: #dee2e6;
 	padding: 15px; /* 테두리와 내용사이 간격 */
+	font-size:1rem;
+	
+	text-overflow:ellipsis; /* 글자가 넘어갈 경우 생략부호, 적용안되면 display 속성이 block 또는 inline-block에서만 동작하니 확인 */
+	overflow:hidden; /* 글자 넘어가는것 숨김처리 */
+	white-space:nowrap; /* 공백문자 줄바꿈 하지 않고 한줄로 */
+
+}
+.cat{
+	width:5%;
+}
+.name{
+	width:20%;
+}
+td.name>a{
+	text-decoration-line:none;
+	color:#495057;	
+}
+.teach{
+	width:5%;
+}
+.price{
+	width:5%;
+}
+.point{
+	width:5%;
+}
+.review{
+	width:60%;
+	white-space:normal;
+	line-height:1.2;
+	height:r3.6rem;
 }
 
 th {
