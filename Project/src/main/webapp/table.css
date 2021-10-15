@@ -92,7 +92,6 @@ input::-moz-placeholder {	color: #a8a8a8}
 /* 본문 표 */
 .article {
 	width: 80%;
-	height: auto;
 	margin: auto;
 	border-collapse: collapse;
 	table-layout:fixed;
@@ -109,33 +108,44 @@ input::-moz-placeholder {	color: #a8a8a8}
 	
 	text-overflow:ellipsis; /* 글자가 넘어갈 경우 생략부호, 적용안되면 display 속성이 block 또는 inline-block에서만 동작하니 확인 */
 	overflow:hidden; /* 글자 넘어가는것 숨김처리 */
-	white-space:nowrap; /* 공백문자 줄바꿈 하지 않고 한줄로 */
+	/* white-space:nowrap; */ /* 공백문자 줄바꿈 하지 않고 한줄로 */
 
 }
 .cat{
 	width:5%;
+	line-height:1.2;
+	height:3.6rem;
 }
 .name{
 	width:20%;
+	line-height:1.2;
+	height:3.6rem;
 }
 td.name>a{
 	text-decoration-line:none;
-	color:#495057;	
+	color:#495057;
+	
 }
 .teach{
 	width:5%;
+	line-height:1.2;
+	height:3.6rem;
 }
 .price{
 	width:5%;
+	line-height:1.2;
+	height:3.6rem;
 }
 .point{
 	width:5%;
+	line-height:1.2;
+	height:3.6rem;
 }
 .review{
 	width:60%;
 	white-space:normal;
 	line-height:1.2;
-	height:r3.6rem;
+	height:3.6rem;
 }
 
 th {
