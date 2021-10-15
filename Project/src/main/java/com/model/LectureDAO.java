@@ -69,7 +69,6 @@ public class LectureDAO {
 					int get_no = rs.getInt("lecture_no");
 					String get_name = rs.getString("lecture_name");
 					String get_teach = rs.getString("lecture_teach");
-					String get_site = rs.getString("lecture_site");
 					String get_count = rs.getString("lecture_count");
 					int get_price = rs.getInt("lecture_price");
 					double get_point = rs.getDouble("lecture_point");
@@ -77,7 +76,7 @@ public class LectureDAO {
 					String get_url = rs.getString("lecture_url");
 					String get_cat = rs.getString("lecture_cat");
 					
-					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 				}
 				
@@ -134,7 +133,6 @@ public class LectureDAO {
 						int get_no = rs.getInt("lecture_no");
 						String get_name = rs.getString("lecture_name");
 						String get_teach = rs.getString("lecture_teach");
-						String get_site = rs.getString("lecture_site");
 						String get_count = rs.getString("lecture_count");
 						int get_price = rs.getInt("lecture_price");
 						double get_point = rs.getDouble("lecture_point");
@@ -142,7 +140,7 @@ public class LectureDAO {
 						String get_url = rs.getString("lecture_url");
 						String get_cat = rs.getString("lecture_cat");
 						
-						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 						list.add(vo);
 					}
 					
@@ -198,7 +196,7 @@ public class LectureDAO {
 					String get_url = rs.getString("lecture_url");
 					String get_cat = rs.getString("lecture_cat");
 					
-					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 				}
 			}
