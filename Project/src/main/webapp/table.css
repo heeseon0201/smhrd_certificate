@@ -108,7 +108,7 @@ input::-moz-placeholder {	color: #a8a8a8}
 	
 	text-overflow:ellipsis; /* 글자가 넘어갈 경우 생략부호, 적용안되면 display 속성이 block 또는 inline-block에서만 동작하니 확인 */
 	overflow:hidden; /* 글자 넘어가는것 숨김처리 */
-	white-space:nowrap; /* 공백문자 줄바꿈 하지 않고 한줄로 */
+	/*white-space:nowrap;*/ /* 공백문자 줄바꿈 하지 않고 한줄로 */
 
 }
 .cat{

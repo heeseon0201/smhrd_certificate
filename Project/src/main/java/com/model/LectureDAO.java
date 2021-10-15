@@ -125,7 +125,7 @@ public class LectureDAO {
 				// sql문 실행
 				rs = psmt.executeQuery();
 				
-				// 검색어가 안걸리는 경우 속도가 너무느려서 검색어가 잡히지 않을 경우 컨티뉴로 다음 iteration으로 넘기는 부분추가
+				// 검색어가 안걸리는 경우 속도가 너무느려서 검색어가 잡히지 않을 경우 컨티뉴로 다음 iteration으로 넘기는 부분 추가
 				if(!rs.next()) {
 					continue;
 				}
