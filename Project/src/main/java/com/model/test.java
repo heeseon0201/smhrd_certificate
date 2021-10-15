@@ -20,7 +20,6 @@ public class test {
 		} else {
 			System.out.println("list¿¡·¯");
 		}
-
 	}
 
 }
