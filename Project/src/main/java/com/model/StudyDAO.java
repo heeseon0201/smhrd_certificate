@@ -63,22 +63,27 @@ public class StudyDAO {
 			rs = psmt.executeQuery();
 			
 			// 결과처리
-			if(rs.next()) {		
-				System.out.println("스터디조직 출력 성공");
+			while(true) {
+				if(rs.next()) {		
+					int study_no = rs.getInt("study_no");
+					String study_name = rs.getString("study_name");
+					String study_begin = rs.getString("study_begin");
+					String study_end = rs.getString("study_end");
+					String study_sub = rs.getString("study_sub");
+					String study_place = rs.getString("study_place");
+					String study_week = rs.getString("study_week");
+					String study_time = rs.getString("study_time");
+					String study_onoff = rs.getString("study_onoff");
+					
+					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+					list.add(vo);
+				}
 				
-				int study_no = rs.getInt("study_no");
-				String study_name = rs.getString("study_name");
-				String study_begin = rs.getString("study_begin");
-				String study_end = rs.getString("study_end");
-				String study_sub = rs.getString("study_sub");
-				String study_place = rs.getString("study_place");
-				String study_week = rs.getString("study_week");
-				String study_time = rs.getString("study_time");
-				String study_onoff = rs.getString("study_onoff");
-				
-				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
-				list.add(vo);
+				if(rs.isLast()) {
+					break;
+				}
 			}
+			System.out.println("스터디조직 출력 성공");
 			
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -91,8 +96,8 @@ public class StudyDAO {
 
 	
 	// 스터디 조직 하나를 선택해서 보여주는 메소드
-	public ArrayList<StudyVO> Study_SelectOne(int study_no) {
-		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+	public StudyVO Study_SelectOne(int study_no) {
+		StudyVO vo = null;
 		
 		try {
 			getConnection();
@@ -122,8 +127,7 @@ public class StudyDAO {
 				String study_time = rs.getString("study_time");
 				String study_onoff = rs.getString("study_onoff");
 				
-				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
-				list.add(vo);
+				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
 			}
 			
 		} catch(Exception e) {
@@ -133,7 +137,7 @@ public class StudyDAO {
 			close();
 		}
 		
-		return list;
+		return vo;
 	}
 	
 	// 스터디 조직을 개설할 때 데이터를 저장하는 메소드
