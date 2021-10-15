@@ -123,20 +123,26 @@ public class LectureDAO {
 				rs = psmt.executeQuery();
 				
 				// 결과처리
-				if(rs.next()) {		
-					int get_no = rs.getInt("lecture_no");
-					String get_NM = rs.getString("lecture_NM");
-					String get_teach = rs.getString("lecture_teach");
-					String get_site = rs.getString("lecture_site");
-					String get_count = rs.getString("lecture_count");
-					int get_price = rs.getInt("lecture_price");
-					double get_point = rs.getDouble("lecture_point");
-					String get_review = rs.getString("lecture_review");
-					String get_url = rs.getString("lecture_url");
-					String get_cat = rs.getString("lecture_cat");
+				while(true) {
+					if(rs.next()) {		
+						int get_no = rs.getInt("lecture_no");
+						String get_name = rs.getString("lecture_name");
+						String get_teach = rs.getString("lecture_teach");
+						String get_site = rs.getString("lecture_site");
+						String get_count = rs.getString("lecture_count");
+						int get_price = rs.getInt("lecture_price");
+						double get_point = rs.getDouble("lecture_point");
+						String get_review = rs.getString("lecture_review");
+						String get_url = rs.getString("lecture_url");
+						String get_cat = rs.getString("lecture_cat");
+						
+						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+						list.add(vo);
+					}
 					
-					LectureVO vo = new LectureVO(get_no, get_NM, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
-					list.add(vo);
+					if(rs.isLast()) {
+						break;
+					}
 				}
 				
 			}	
