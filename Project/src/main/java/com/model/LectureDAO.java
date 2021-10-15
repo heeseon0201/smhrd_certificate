@@ -69,7 +69,6 @@ public class LectureDAO {
 					int get_no = rs.getInt("lecture_no");
 					String get_name = rs.getString("lecture_name");
 					String get_teach = rs.getString("lecture_teach");
-					String get_site = rs.getString("lecture_site");
 					String get_count = rs.getString("lecture_count");
 					int get_price = rs.getInt("lecture_price");
 					double get_point = rs.getDouble("lecture_point");
@@ -77,7 +76,7 @@ public class LectureDAO {
 					String get_url = rs.getString("lecture_url");
 					String get_cat = rs.getString("lecture_cat");
 					
-					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 				}
 				
@@ -111,10 +110,9 @@ public class LectureDAO {
 			for (int i=0; i<hitwords.length; i++) {
 				
 				// 검색 sql문
-
 				sql = "select lecture_name from Lecture where lecture_name like '%" + hitwords[i] + "%'";//푸시
 
-//				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
+//				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
 				System.out.println("1");
 				// SQL 실행 객체 생성
 				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -134,7 +132,6 @@ public class LectureDAO {
 						int get_no = rs.getInt("lecture_no");
 						String get_name = rs.getString("lecture_name");
 						String get_teach = rs.getString("lecture_teach");
-						String get_site = rs.getString("lecture_site");
 						String get_count = rs.getString("lecture_count");
 						int get_price = rs.getInt("lecture_price");
 						double get_point = rs.getDouble("lecture_point");
@@ -142,7 +139,7 @@ public class LectureDAO {
 						String get_url = rs.getString("lecture_url");
 						String get_cat = rs.getString("lecture_cat");
 						
-						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 						list.add(vo);
 					}
 					
@@ -190,7 +187,6 @@ public class LectureDAO {
 					int get_no = rs.getInt("lecture_no");
 					String get_name = rs.getString("lecture_name");
 					String get_teach = rs.getString("lecture_teach");
-					String get_site = rs.getString("lecture_site");
 					String get_count = rs.getString("lecture_count");
 					int get_price = rs.getInt("lecture_price");
 					double get_point = rs.getDouble("lecture_point");
@@ -198,7 +194,7 @@ public class LectureDAO {
 					String get_url = rs.getString("lecture_url");
 					String get_cat = rs.getString("lecture_cat");
 					
-					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_site, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 				}
 			}
@@ -278,7 +274,7 @@ public class LectureDAO {
 				get_review = rs.getString("lecture_review");
 				
 				// 구분자에 따라 리뷰를 쪼개서 저장
-				reviewlist = get_review.split("commaNNN");
+				reviewlist = get_review.split("DELIMITER111 ");
 			}
 			
 			System.out.println("리뷰표시 성공");
@@ -293,7 +289,7 @@ public class LectureDAO {
 	}
 	
 	// 강의정보를 테이블에 추가하는 메소드
-	public void Lecture_Add(String lecture_name, String lecture_teach, String lecture_site, String lecture_count,
+	public void Lecture_Add(String lecture_name, String lecture_teach, String lecture_count,
 			int lecture_price, double lecture_point, String lecture_review, String lecture_url, String lecture_cat) {
 		// csv 불러오는 기능 조사할 것
 		// csv파일을 넣으면 그걸로 db에 넣어주기?
