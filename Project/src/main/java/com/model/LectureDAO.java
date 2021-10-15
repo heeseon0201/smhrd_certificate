@@ -1,16 +1,11 @@
 package com.model;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class LectureDAO {
 	Connection conn = null;
@@ -113,14 +108,15 @@ public class LectureDAO {
 			// 공백으로 검색어를 구분
 			String[] hitwords = words.split(" ");
 
-
 			for (int i=0; i<hitwords.length; i++) {
+				
 				// 검색 sql문
-				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%'";
+				sql = "select * from Lecture where lecture_name = ?";
+//				sql = "select * from Lecture where lecture_name like '%?%'";
 //				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_site like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
 				System.out.println("1");
 				// SQL 실행 객체 생성
-				psmt = conn.prepareStatement(sql);
+				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 				System.out.println("2");
 				System.out.println(hitwords[i]);
 				// 바인드 변수 채우기
@@ -160,8 +156,6 @@ public class LectureDAO {
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("검색 실패");
-			String[] hitwords = words.split(" ");
-
 		} finally {
 			close();
 		}
@@ -295,38 +289,6 @@ public class LectureDAO {
 			close();
 		}
 		return reviewlist;
-	}
-	
-	// 강의정보를 csv에서 가져오는 메소드
-	public void Lecture_ImportCsv(String dir) {
-		List<List<String>> csvList = new ArrayList<List<String>>();
-        BufferedReader br = null;
-        String line = "";
-        
-		// csv의 경로를 넣기
-		File csv = new File(dir);
-		
-		try {
-			br = new BufferedReader(new FileReader(csv));
-            while ((line = br.readLine()) != null) { // readLine()은 파일에서 개행된 한 줄의 데이터를 읽어온다.
-                List<String> aLine = new ArrayList<String>();
-                String[] lineArr = line.split(","); // 파일의 한 줄을 ,로 나누어 배열에 저장 후 리스트로 변환한다.
-               // aLine = Arrays.asList(lineArr);
-               // csvList.add(aLine);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (br != null) { 
-                    br.close(); 
-                }
-            } catch(IOException e) {
-                e.printStackTrace();
-            }
-        }
 	}
 	
 	// 강의정보를 테이블에 추가하는 메소드
