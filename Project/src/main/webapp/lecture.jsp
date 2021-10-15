@@ -47,7 +47,7 @@
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
-			String lecture_site = vo.getLecture_site();
+			/* String lecture_site = vo.getLecture_site(); */
 			String lecture_count = vo.getLecture_count();
 			int lecture_price = vo.getLecture_price();
 			double lecture_point = vo.getLecture_point();
