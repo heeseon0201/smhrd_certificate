@@ -110,34 +110,39 @@ public class LectureDAO {
 			for (int i=0; i<hitwords.length; i++) {
 				
 				// 검색 sql문
-				sql = "select lecture_name from Lecture where lecture_name like '%" + hitwords[i] + "%'";//푸시
-//				sql = "select * from Lecture where lecture_name like '%?%' OR lecture_teach like '%?%' OR lecture_count like '%?%' OR lecture_price like '%?%' OR lecture_point like '%?%' OR lecture_review like '%?%' OR lecture_url like '%?%' OR lecture_cat like '%?%'";
-				System.out.println("1");
+//				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%'";//푸시
+				// 리뷰데이터가 너무길어서 검색이 작동안함
+//				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_count like '%" + hitwords[i] + "%' OR lecture_review like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
+				// 리뷰검색을 뺀 코드사용
+				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
+
+				// 현재 강의명에 걸린 하이퍼링크까지 검색되어버림 
+				// 만약 lecture_name에 "https://"가 있으면 그 뒤 내용을 지워서 저장한다.(X 이 방법은 틀린듯)
+				
 				// SQL 실행 객체 생성
 				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-				System.out.println("2");
-				System.out.println(hitwords[i]);
-				// 바인드 변수 채우기
-//				for (int j=0; j<9; j++) {
-//					psmt.setString(j+1, hitwords[i]);
-//				}
-				System.out.println("3");
+
 				// sql문 실행
 				rs = psmt.executeQuery();
-				System.out.println("4");
+				
+				// 검색어가 안걸리는 경우 속도가 너무느려서 검색어가 잡히지 않을 경우 컨티뉴로 다음 iteration으로 넘기는 부분추가
+				if(!rs.next()) {
+					continue;
+				}
+				
 				// 결과처리
 				while(true) {
 					if(rs.next()) {		
 						int get_no = rs.getInt("lecture_no");
-						String get_name = rs.getString("lecture_name");
+						String get_cat = rs.getString("lecture_cat");
+						String get_name = rs.getString("lecture_name");		
 						String get_teach = rs.getString("lecture_teach");
 						String get_count = rs.getString("lecture_count");
 						int get_price = rs.getInt("lecture_price");
 						double get_point = rs.getDouble("lecture_point");
 						String get_review = rs.getString("lecture_review");
 						String get_url = rs.getString("lecture_url");
-						String get_cat = rs.getString("lecture_cat");
-						
+
 						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 						list.add(vo);
 					}
