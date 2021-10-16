@@ -14,7 +14,7 @@ import com.model.LectureDAO;
 import com.model.LectureVO;
 
 // 마이페이지에서 강의정보를 보여줄 기능
-@WebServlet("/Lecture_MainViewService")
+@WebServlet("/Lecture_MainpageService")
 public class Lecture_MypageView extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
