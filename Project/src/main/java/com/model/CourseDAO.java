@@ -73,6 +73,7 @@ public class CourseDAO {
 			//개인적 생각으로는 회원번호와 인강순번만 기록하는게 베스트
 			//테이블 수정필요
 			//마지막에 SEQUENCE넣어야
+			//수료여부: NO
 			//String sql2 = "insert into course values(?, ?, sysdate, ?, )";
 			
 			psmt.setString(1, member_no); //회원번호 삽입

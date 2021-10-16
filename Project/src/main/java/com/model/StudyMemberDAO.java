@@ -50,6 +50,7 @@ public class StudyMemberDAO {
 	
 	// 스터디 조직에 가입하는 메소드(작성중...Study와 StudyMember테이블의 중복된 부분 정리필요)
 		//STUDY테이블과 STUDYMEMBER테이블에 모두 쌓기에 기록해야 함
+	//매개변수로 공지사항 필요
 		public int study_Join(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, String study_onoff) {
 			int cnt = 0;
 			
@@ -77,5 +78,8 @@ public class StudyMemberDAO {
 				close();
 			}
 			return cnt;
+			
 		}
+		// 마이페이지에서 COURSE와 자신이 가입한 스터디를 볼 수 있어야 함
+		//public 
 }

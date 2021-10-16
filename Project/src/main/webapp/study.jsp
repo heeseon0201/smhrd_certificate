@@ -53,6 +53,9 @@
 	        String study_week = vo.getStudy_week(); //요일
 	        String study_time =vo.getStudy_time(); //시간
 	        String study_onoff = vo.getStudy_onoff(); //온오프라인구분
+			
+	        //테스트용 문자
+	        String name = "안녕안녕";
 			%><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
 	            <tr class="boardList">
 	                <td><%=i+1 %></td>
@@ -64,7 +67,8 @@
 	                <td><%=study_week %></td>
 	                <td><%=study_time %></td>
 	                <td><%=study_onoff %></td>
-	              <!-- <td><a href="studyJoinSuccess.jsp?"<%=//study_no %>>선택</a></td> -->  
+	                <!-- 어케든 Study_Join.java로 STUDY_NO을 보내야 함-->
+	              <td><a href="Study_Join?"<%=name %>>선택</a></td> 
 	            </tr>
 	            <%} %>
 	        </table>

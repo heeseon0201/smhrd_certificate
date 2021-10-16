@@ -13,7 +13,10 @@ public class Study_Join extends HttpServlet {
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		request.setCharacterEncoding("euc-kr");
+		
+		String name = request.getParameter("name");
+	System.out.println(name);
 	}
 
 }

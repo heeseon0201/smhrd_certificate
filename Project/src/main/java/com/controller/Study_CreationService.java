@@ -28,7 +28,7 @@ public class Study_CreationService extends HttpServlet {
 		String study_week = request.getParameter("week");	// 요일
 		String study_time = request.getParameter("time");	// 시간
 		String study_onoff = request.getParameter("onoff");	// 온/오프라인 구분
-		
+		//받아와야 함 String SM_notice
 		StudyMemberDAO dao = new StudyMemberDAO();
 		int cnt = dao.study_Join(study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
 		
