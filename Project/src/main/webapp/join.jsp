@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=euc-kr"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@
                 </a>
             </h1>
 
-            <form id = "Profile_form" method="post" action="JoinService">
+            <form id = "Profile_form" method="post" action="JoinService" accept-charset="euc-kr">
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 

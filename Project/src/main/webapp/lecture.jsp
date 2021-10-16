@@ -40,9 +40,13 @@
                     <th class="price">가격</th>
                     <th class="point">평점</th>
                     <th class="review">후기</th>
+                    <th class="review">강의수강</th>
                     <!-- <th>URL</th> -->
 
                 </tr>
+                <!-- 
+              강의 출력 시 페이지를 나누어 출력할 수 있게
+             -->
         <%for(int i = 0; i<list.size() ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
@@ -64,7 +68,8 @@
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
                    <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">더보기</a></td>
-                   <%--후기더보기 <td class="review"><%=lecture_review%></td>--%>
+                    <!--  강의 정보 선택하는 버튼 필요 -->
+                   <td class="review"><a href="lectureJoinSuccess.jsp?lecture_no=<%=vo.getLecture_no() %>">선택</a></td>
                   <%--  <td><%=lecture_url%></td> --%>
             </tr>
             <%} %>

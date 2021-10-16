@@ -92,9 +92,9 @@ public class MemberDAO {
 		
 		try {
 			getConnection();
-			
+			System.out.println("디비연결");
 			// 로그인 sql문
-			String sql = "select * from Member where member_id=? and member_pw=?";
+			String sql = "select * from member where member_id=? and member_pw=?";
 			System.out.println("1");
 			// SQL 실행 객체 생성
 			psmt = conn.prepareStatement(sql);

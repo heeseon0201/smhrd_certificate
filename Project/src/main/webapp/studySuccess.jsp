@@ -1,3 +1,4 @@
+<%@page import="com.model.LectureDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,20 +20,11 @@
 	</div>
 	<form action="LoginService" method="post">
 	
-        <table id="logintable">
-            <tr>
-                <td>
-			<h1>스터디조직에 성공했습니다.</h1>
-			</td>
-            </tr>
-           <tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
- 		 </table>
+        
 		<div ></div>
-		<div class="loginDiv" style="margin-top: 30px;">
-			<input type="submit" class="in" value="">
-		</div>
 		<div >
-		
+		<tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
+ 		 </table>
 		</div>
 	</form>
 </body>

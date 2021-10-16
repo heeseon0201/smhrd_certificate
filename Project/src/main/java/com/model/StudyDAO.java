@@ -181,7 +181,7 @@ public class StudyDAO {
 	
 	// 스터디 조직에 가입하는 메소드(작성중...Study와 StudyMember테이블의 중복된 부분 정리필요)
 	//STUDY테이블과 STUDYMEMBER테이블에 모두 쌓기에 기록해야 함
-	public void Study_Join(int study_no, int member_no) {
+	public void Study_Join(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, String study_onoff) {
 		int cnt = 0;
 		
 		try {
@@ -190,6 +190,14 @@ public class StudyDAO {
 			// 스터디조직 가입 sql문(작성중...)
 			String sql = "insert into StudyMember values(StudyMember_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
+			psmt.setString(1, study_name);
+			psmt.setString(2, study_begin);
+			psmt.setString(3, study_end);
+			psmt.setString(4, study_sub);
+			psmt.setString(5, study_place);
+			psmt.setString(6, study_week);
+			psmt.setString(7, study_time);
+			psmt.setString(8, study_onoff);
 			
 		} catch(Exception e) {
 			e.printStackTrace();

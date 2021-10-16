@@ -293,10 +293,14 @@ public class LectureDAO {
 	}
 	
 	//마이페이지에서 강의정보를 보여주는 메소드
-		//public void Lecture_SelectMy(i){
+	//내가 선택한 강의 정보 list를 출력
+	//	public ArrayList<LectureVO> Lecture_SelectMy(int lecture_no){
+			
+			//return list할 수 있게 sql문 실행
 		//}
 	//강의를 선택하면, COURSE테이블에 자동으로 쌓이게 하는 메소드
-		//public void Lecture_Select() {
+	//강의명을 String형태로 보여줌
+		//public String Lecture_Select() {
 			
 		//}
 }

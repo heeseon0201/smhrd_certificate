@@ -18,17 +18,17 @@
             </h1>
 	</div>
 	<form action="LoginService" method="post">
-		<div class="loginDiv">
-			<h2 class="loginlogo">스터디가입성공</h2>
-		</div>
         <table id="logintable">
             <tr>
+            <td><h1>강의가 선택되었습니다.</h1></td>
+            </tr>
+            <tr>
                 <td>
-			<h1></h1>
+				<h1><!-- 여기에 표현식으로 강의명을 출력 -->가 나의 강좌로 선택되었습니다.</h1>
 			</td>
             </tr>
             
-        <tr colspan="2" class="findid"><td><a href="main.jsp">메인페이지로</a></td></tr>
+        <tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
  		 </table>
 		<div ></div>
 		
