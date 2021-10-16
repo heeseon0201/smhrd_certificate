@@ -59,16 +59,9 @@
 
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
-<<<<<<< HEAD
-                   <td class="review"><div class="help-tip">
-    <p>마우스 오버시 알림메시지창이 뜹니다.<br>CSS로만 만들어졌습니다.</p>
-</div><%=lecture_review%></td>
-                   
-=======
                    <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">더보기</a></td>
                    <%--후기더보기 <td class="review"><%=lecture_review%></td>--%>
                   <%--  <td><%=lecture_url%></td> --%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
             </tr>
             <%} %>
            
