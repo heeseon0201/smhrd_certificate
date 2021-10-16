@@ -19,7 +19,7 @@
                 </a>
             </h1>
 
-            <form id = "Profile_form" method="post" action="">
+            <form id = "Profile_form" method="post" action="JoinService">
                 <div id= "container" role="main">
                     <div id = "content"> 
                         <div class="c_header"> 
@@ -175,7 +175,7 @@
                                                 </td>
                                                 <td>
                                                     <span class="ps_box int_address">
-                                                        <input type="text" id="address" name="address" class="int" title="ADDRESS" maxlength="20" style="height:20px; width:200px; font-size: 16px;">
+                                                        <input type="text" id="address" placeholder="주소" name="address" class="int" title="ADDRESS" maxlength="20" style="height:20px; width:200px; font-size: 16px;">
                                                     </span>
                                                 </td>
                                             </tr>
@@ -190,16 +190,17 @@
                                                     <span class="ps_box int_interest">
                                                         <select id="interest" name="interest" class="sel" aria-label="관심분야" style="height:30px; width:200px; font-size: 16px;">
                                                             <option value="">관심분야를 선택하세요</option>
-                                                            <option value="01">관심분야1</option>
-                                                            <option value="02">관심분야2</option>
-                                                            <option value="03">관심분야3</option>
-                                                            <option value="04">관심분야4</option>
-                                                            <option value="05">관심분야5</option>
-                                                            <option value="06">관심분야6</option>
-                                                            <option value="07">관심분야7</option>
-                                                            <option value="08">관심분야8</option>
-                                                            <option value="09">관심분야9</option>
-                                                            <option value="10">관심분야10</option>
+                                                            <option value="01">IT</option>
+                                                            <option value="02">경영, 경제</option>
+                                                            <option value="03">교육</option>
+                                                            <option value="04">환경/에너지</option>
+                                                            <option value="05">법률</option>
+                                                            <option value="06">복지</option>
+                                                            <option value="07">심리</option>
+                                                            <option value="08">사회안전/범죄</option>
+                                                            <option value="09">의료</option>
+                                                            <option value="10">공학</option>
+                                                            <option value="11">기타</option>
                                                         </select>
                                                     </span>
                                                 </td>
@@ -215,16 +216,15 @@
                                                     <span class="ps_box int_job">
                                                         <select id="job" name="job" class="sel" aria-label="직업" style="height:30px; width:200px; font-size: 16px;">
                                                             <option value="">직업를 선택하세요</option>
-                                                            <option value="01">직업1</option>
-                                                            <option value="02">직업2</option>
-                                                            <option value="03">직업3</option>
-                                                            <option value="04">직업4</option>
-                                                            <option value="05">직업5</option>
-                                                            <option value="06">직업6</option>
-                                                            <option value="07">직업7</option>
-                                                            <option value="08">직업8</option>
-                                                            <option value="09">직업9</option>
-                                                            <option value="10">직업10</option>
+                                                            <option value="01">고등학생</option>
+                                                            <option value="02">대학생</option>
+                                                            <option value="03">취업준비생</option>
+                                                            <option value="04">회사원</option>
+                                                            <option value="05">전문직</option>
+                                                            <option value="06">주부</option>
+                                                            <option value="07">사업가</option>
+                                                            <option value="08">기타</option>
+                                                            <option value="09">무직</option>
                                                         </select>
                                                     </span>
                                                 </td>
@@ -235,7 +235,7 @@
 
                                 <div>&nbsp;</div>
 
-                                <!-- 현재 기능 미구현 -->
+                               
                                 <button style="height:50px; width:300px; font-size: 24px;">가입하기</button>
                             </div>
                         </div>

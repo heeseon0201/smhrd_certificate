@@ -24,29 +24,37 @@ public class MemberUpdateService extends HttpServlet {
 		
 		// 로그인으로 가져온 VO로부터 id 가져오기
 		String id = vo.getMember_id();
-		
+					vo.getMember_address();
+					vo.getMember_interest();
+					vo.getMember_job();
+					vo.getMember_NM();
+					vo.getMember_pw();
+					vo.getMember_tel();
+					vo.getMember_no();
 		// 입력받은 수정할 정보를 변수에 저장 
-		String new_NM = request.getParameter("name");	// 이름
-		String new_tel = request.getParameter("tel");	// 전화번호
-		String new_address = request.getParameter("address");	// 주소
-		String new_interest = request.getParameter("interest");	// 관심분야
-		String new_job = request.getParameter("job");	// 직업
-		String new_pw = request.getParameter("pw");	// 비밀번호
+		//String new_NM = request.getParameter("name");	// 이름
+		//String new_tel = request.getParameter("tel");	// 전화번호
+		//String new_address = request.getParameter("address");	// 주소
+		//String new_interest = request.getParameter("interest");	// 관심분야
+		//String new_job = request.getParameter("job");	// 직업
+		//String new_pw = request.getParameter("pw");	// 비밀번호
 		
+		
+		//마이페이지 확인으로 변동
 		// update 메소드실행
-		MemberDAO dao = new MemberDAO();
-		int cnt = dao.Update(id, new_pw, new_NM, new_tel, new_address, new_interest, new_job);
-		
-		if(cnt>0) {
-			// 수정된 정보에 대한 vo객체 생성
-			MemberVO new_vo = new MemberVO(id, new_NM, new_tel, new_address, new_interest, new_job, new_pw);
-			
-			// 세션 갱신
-			session.setAttribute("Member", new_vo);
-			
-			// 메인페이지로 이동
-			response.sendRedirect("main.jsp");
-		}
+//		MemberDAO dao = new MemberDAO();
+//		int cnt = dao.Update(id, new_pw, new_NM, new_tel, new_address, new_interest, new_job);
+//		
+//		if(cnt>0) {
+//			// 수정된 정보에 대한 vo객체 생성
+//			MemberVO new_vo = new MemberVO(id, new_NM, new_tel, new_address, new_interest, new_job, new_pw);
+//			
+//			// 세션 갱신
+//			session.setAttribute("Member", new_vo);
+//			
+//			// 메인페이지로 이동
+//			response.sendRedirect("main.jsp");
+//		}
 		
 	}
 

@@ -13,26 +13,27 @@
 	<div class="linkTitle">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> Studynet </span>
+                    <span> I.Study </span>
                 </a>
             </h1>
 	</div>
 	<form action="LoginService" method="post">
 		<div class="loginDiv">
-			<h2 class="loginlogo">로그아웃성공</h2>
+			<h2 class="loginlogo">스터디가입성공</h2>
 		</div>
         <table id="logintable">
             <tr>
-                <td>로그아웃하셨습니다.
+                <td>
+			<h1></h1>
+			</td>
             </tr>
-        </table>
+            
+        <tr colspan="2" class="findid"><td><a href="main.jsp">메인페이지로</a></td></tr>
+ 		 </table>
 		<div ></div>
-		<div class="loginDiv" style="margin-top: 30px;">
-			<a href="main.jsp">메인으로 돌아가기</a>
-		</div>
+		
 		<div >
-			
-			
+		
 		</div>
 	</form>
 </body>

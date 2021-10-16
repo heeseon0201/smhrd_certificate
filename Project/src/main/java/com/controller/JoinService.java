@@ -45,8 +45,10 @@ public class JoinService extends HttpServlet {
 				response.sendRedirect("joinSuccess.jsp");
 			}
 			
+			//==================================시간 부족 버릴지 생각해야함==================================== 
 		} else if(!member_pw.equals(member_repw)) {
 			// 비밀번호와 재입력비밀번호 불일치시의 액션
+			
 		} else {
 			// 필수사항 누락시의 액션
 		}
