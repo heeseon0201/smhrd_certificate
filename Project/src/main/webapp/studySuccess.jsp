@@ -19,11 +19,28 @@
             </h1>
 	</div>
 	<form action="LoginService" method="post">
-	
+	<%
+				// 세션 객체 생성
+				//HttpSession session = request.getSession();
+				
+				// 생성한 스터디 조직 이름을 세션에 저장
+				String study_name = (String)session.getAttribute("StudyCreation");
+				
+	%>
         
 		<div ></div>
 		<div >
-		<tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
+		<table id="logintable">
+            <tr>
+            <td><h1>스터디가 선택되었습니다.</h1></td>
+            </tr>
+            <tr>
+                <td>
+				<h1><%=study_name %></h1>
+			</td>
+            </tr>
+            
+        <tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
  		 </table>
 		</div>
 	</form>
