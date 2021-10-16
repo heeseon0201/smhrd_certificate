@@ -42,7 +42,7 @@
                     <!-- <th>URL</th> -->
 
                 </tr>
-        <%for(int i = 0; i<50 ;i++){ %>
+        <%for(int i = 0; i<list.size() ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
