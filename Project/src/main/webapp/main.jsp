@@ -17,10 +17,16 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고, 회원가입, 로그인-->
 		<header>
-			<h3>Studynet</h3>
+			<h3>I.study</h3>
 			<nav>
-				<span><a href="join.jsp" class="whiteColor">회원가입</a></span> 
-				<span><a href="login.jsp" class="whiteColor">로그인</a></span>
+				<%MemberVO vo = (MemberVO)session.getAttribute("Member"); %>
+				<%if(vo == null){ %>
+						<span><a href="join.jsp" class="whiteColor">회원가입</a></span> 
+						<span><a href="login.jsp" class="whiteColor">로그인</a></span>
+						<%}else{ %>
+								<span><a href="mypage.jsp" class="whiteColor">마이페이지</a></span>
+								<span><a href="logout.jsp" class="whiteColor">로그아웃</a></span>
+						<% }%>
 			</nav>
 		</header>
 		
@@ -38,23 +44,23 @@
 					<a class="link" href="LectureSearchService?search_words=">Lecture</a>
 				</div>
 			</section>
-
+		 <!-- 메인에 강의정보 띄워줘야, 아님 띄워주기 포기할지 생각해야 함 -->
 			<section class="MOD_LIGHTBOXIMGX4">
-				<div data-layout="_r">
+			<div data-layout="_r">
 					<div data-layout="al8 de4">
 						<a href="https://unsplash.it/300/300?image=55" class="AP_lightbox">
 							<figure>
 								<img src="https://unsplash.it/300/300?image=55" alt="">
-								<figcaption>Fig1. Image Caption</figcaption>
+								<figcaption></figcaption>
 							</figure>
 						</a>
-					</div>
+					</div> 
 					<div data-layout="al8 de4">
 						<a href="https://unsplash.it/800/600?image=56" class="AP_lightbox"
 							aria-haspopup="true">
 							<figure>
 								<img src="https://unsplash.it/300/300?image=56" alt="">
-								<figcaption>Fig2. Image Caption</figcaption>
+								<figcaption></figcaption>
 							</figure>
 						</a>
 					</div>
@@ -63,7 +69,7 @@
 							aria-haspopup="true">
 							<figure>
 								<img src="https://unsplash.it/300/300?image=57" alt="">
-								<figcaption>Fig3. Image Caption</figcaption>
+								<figcaption></figcaption>
 							</figure>
 						</a>
 					</div>
@@ -72,7 +78,7 @@
 							aria-haspopup="true">
 							<figure>
 								<img src="https://unsplash.it/300/300?image=58" alt="">
-								<figcaption>Fig4. Image Caption</figcaption>
+								<figcaption></figcaption>
 							</figure>
 						</a>
 					</div>
@@ -88,10 +94,8 @@
 							class="MOD_FEATURE_Picture"
 							src="https://unsplash.it/400/300/?random" alt="">
 							<div class="MOD_FEATURE_TextContainer">
-								<p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
-								<p class="MOD_FEATURE_Description">Lorem ipsum dolor sit
-									amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua</p>
+								<p class="MOD_FEATURE_Title" data-theme="_ts2">이펙티브 타입스크립트 스터디/정재남</p>
+								<p class="MOD_FEATURE_Description">무료/총 16개 수업/<br>"감사합니다""😍😍😍😍😍""감사합니다!"</p>
 							</div>
 						</a>
 					</div>
@@ -100,10 +104,8 @@
 							class="MOD_FEATURE_Picture"
 							src="https://unsplash.it/400/300/?random" alt="">
 							<div class="MOD_FEATURE_TextContainer">
-								<p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
-								<p class="MOD_FEATURE_Description">Lorem ipsum dolor sit
-									amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua</p>
+								<p class="MOD_FEATURE_Title" data-theme="_ts2">데이터 과학을 위한 파이썬 NumPy Basic/yjglab</p>
+								<p class="MOD_FEATURE_Description">5000/총 30개 수업 / 총 2시간 43분/"군더더기 없는 깔끔한 강의입니다.""차분하신 목소리로 좋은 강의 감사드립니다. 많이 배웠습니다!""numpy 연습가능""좋은 강의 감사합니다."
 							</div>
 						</a>
 					</div>
@@ -112,10 +114,8 @@
 							class="MOD_FEATURE_Picture"
 							src="https://unsplash.it/400/300/?random" alt="">
 							<div class="MOD_FEATURE_TextContainer">
-								<p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
-								<p class="MOD_FEATURE_Description">Lorem ipsum dolor sit
-									amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua</p>
+								<p class="MOD_FEATURE_Title" data-theme="_ts2">컴알못이 보는 컴퓨터 하드웨어 기초상식/제주코딩베이스캠프</p>
+								<p class="MOD_FEATURE_Description">무료/총 14개 39분 / 39분"주변에서 컴퓨터 전공자라고 자꾸 견적 맞춰달라는데, 막상 제 자신이 컴퓨터를 잘 몰라 많이 답답했습니다. 이런 강의도 있는지 몰랐네요."""제주도에서 하드웨어 공부라 ..정말 부럽네요 좋은강의 잘듣고 갑니다"</p>
 							</div>
 						</a>
 					</div>
@@ -124,10 +124,8 @@
 							class="MOD_FEATURE_Picture"
 							src="https://unsplash.it/400/300/?random" alt="">
 							<div class="MOD_FEATURE_TextContainer">
-								<p class="MOD_FEATURE_Title" data-theme="_ts2">Feature title</p>
-								<p class="MOD_FEATURE_Description">Lorem ipsum dolor sit
-									amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua</p>
+								<p class="MOD_FEATURE_Title" data-theme="_ts2">예제로 공부하는 Python 100 문제풀이 Part.3/유용한IT학습</p>
+								<p class="MOD_FEATURE_Description">49500/총 41개 수업 / 총 12시간 25분"파이썬을 다시 공부하는 데에 도움이 많이 되는 강의입니다 추천해요!""감사합니다!""좋은 강의 감사합니다""입문자로서 기초를 다지기에 너무 좋았습니다. 감사합니다""강의 재밌네요"</p>
 							</div>
 						</a>
 					</div>

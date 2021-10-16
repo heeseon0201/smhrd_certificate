@@ -92,10 +92,10 @@ public class MemberDAO {
 		
 		try {
 			getConnection();
-			
+			System.out.println("디비연결");
 			// 로그인 sql문
-			String sql = "select * from Member where member_id=? and member_pw=?";
-			
+			String sql = "select * from member where member_id=? and member_pw=?";
+			System.out.println("1");
 			// SQL 실행 객체 생성
 			psmt = conn.prepareStatement(sql);
 			
@@ -105,8 +105,10 @@ public class MemberDAO {
 			
 			// sql문 실행
 			rs = psmt.executeQuery();
-			
+			System.out.println("2");
 			// 결과처리
+			
+			//==========로그인 성공도 로그인 실패도 뜨지 않음=======================
 			if(rs.next()) {		
 				System.out.println("로그인성공");
 				

@@ -1,3 +1,4 @@
+<%@page import="com.model.LectureDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,36 +14,18 @@
 	<div class="linkTitle">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> Studynet </span>
+                    <span> I.Study </span>
                 </a>
             </h1>
 	</div>
-	<%
-	//세션삭제
-	session.removeAttribute("Member");
+	<form action="LoginService" method="post">
 	
-	//다시보내기
-	response.sendRedirect("main.jsp");
-	%>
-
-	<!--  <form action="LoginService" method="post">
-		<div class="loginDiv">
-			<h2 class="loginlogo">로그아웃성공</h2>
-		</div>
-        <table id="logintable">
-            <tr>
-                <td>로그아웃하셨습니다.
-            </tr>
-        </table>
+        
 		<div ></div>
-		<div class="loginDiv" style="margin-top: 30px;">
-			<a href="main.jsp">메인으로 돌아가기</a>
-		</div>
 		<div >
-			
-			
+		<tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
+ 		 </table>
 		</div>
-		-->
 	</form>
 </body>
 </html>
