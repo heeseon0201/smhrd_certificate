@@ -7,7 +7,7 @@ public class LectureVO {
 	private String lecture_teach; // 강사명
 	private String lecture_count;	// 총 강의수
 	private int lecture_price;		// 가격
-	private double lecture_point;		// 평점
+	private double lecture_point;		// 평점 
 	private String lecture_review;	// 후기
 	private String lecture_url;		// URL
 	private String lecture_cat;		// 카테고리
