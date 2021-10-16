@@ -40,7 +40,7 @@ public class Study_CreationService extends HttpServlet {
 			session.setAttribute("StudyCreation", study_name);
 			
 			// 스터디 조직 생성 성공하면 스터디 조직 게시판으로 이동(회원가입 성공페이지에서 id와 함께 환영메시지 띄우는 식으로 사용가능)
-			response.sendRedirect("스터디조직게시판.jsp");
+			response.sendRedirect("studySuccess.jsp");
 		}
 		
 	}

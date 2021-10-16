@@ -1,17 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
-	<%
-		session.removeAttribute("member");
-		//세션삭제
-		//set-get-remove
-		response.sendRedirect("main2.jsp");
-	%>
+
+<body class="title">
+	<div class="linkTitle">
+            <h1>
+                <a href = "main.jsp" class = "h_logo">
+                    <span> Studynet </span>
+                </a>
+            </h1>
+	</div>
+	<form action="LoginService" method="post">
+		<div class="loginDiv">
+			<h2 class="loginlogo">로그아웃성공</h2>
+		</div>
+        <table id="logintable">
+            <tr>
+                <td>로그아웃하셨습니다.
+            </tr>
+        </table>
+		<div ></div>
+		<div class="loginDiv" style="margin-top: 30px;">
+			<a href="main.jsp">메인으로 돌아가기</a>
+		</div>
+		<div >
+			
+			
+		</div>
+	</form>
 </body>
 </html>

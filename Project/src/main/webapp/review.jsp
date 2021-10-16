@@ -31,7 +31,7 @@
 	<div class="articleBoard">
 	
 
-                <table class="reviewtable" >
+                <table class="article" >
                 <tr>
                     <th class="reviewtable">후기</th>
                 </tr>
