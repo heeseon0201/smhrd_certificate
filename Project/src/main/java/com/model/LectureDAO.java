@@ -298,6 +298,7 @@ public class LectureDAO {
 			
 			//return list할 수 있게 sql문 실행
 		//}
+	
 	//강의를 선택하면, COURSE테이블에 자동으로 쌓이게 하는 메소드
 	//강의명을 String형태로 보여줌
 		//public String Lecture_Select() {

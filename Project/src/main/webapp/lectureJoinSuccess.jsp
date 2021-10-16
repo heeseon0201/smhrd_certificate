@@ -27,7 +27,9 @@
     	//받아온 lecture_no를 int타입으로 변경하여 저장
     	int lecture_no = Integer.parseInt(request.getParameter("lecture_no"));
     	LectureDAO dao = new LectureDAO();
-    	//ArrayList<LectureVO>로 강의 정보를 출력해야 함
+    	
+    	
+    	//여기서부터 작업 시작
     	//강의명 가져옴
     	//String lecture_name = dao.Lecture_SelectMy(lecture_no);
 		%>

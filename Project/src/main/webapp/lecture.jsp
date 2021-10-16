@@ -38,10 +38,11 @@
                     <th class="price">가격</th>
                     <th class="point">평점</th>
                     <th class="review">후기</th>
+                    <th class="review">강의선택</th>
                     <!-- <th>URL</th> -->
 
                 </tr>
-        <%for(int i = 0; i<list.size() ;i++){ %>
+        <%for(int i = 0; i<50 ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
@@ -60,6 +61,8 @@
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
                    <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">더보기</a></td>
+                   <td class="review"><a href="lectureJoinSuccess.jsp?lecture_no=<%=vo.getLecture_no() %>">선택</a></td>
+
                    <%--후기더보기 <td class="review"><%=lecture_review%></td>--%>
                   <%--  <td><%=lecture_url%></td> --%>
             </tr>
