@@ -56,7 +56,7 @@
             		<td class="cat"><%=lecture_cat%></td>
                    <td class="name"><a href="<%=lecture_url%>"><%=lecture_name%></a></td>
                    <td class="teach"><%=lecture_teach %></td>
-
+					<td class="teach"><%=lecture_count %></td>
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
                    <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">더보기</a></td>

@@ -20,12 +20,12 @@
 			<h3>I.study</h3>
 			<nav>
 				<%MemberVO vo = (MemberVO)session.getAttribute("Member"); %>
-				<span><a href="login.jsp" class="whiteColor">로그인</a></span>
 				<%if(vo == null){ %>
 						<span><a href="join.jsp" class="whiteColor">회원가입</a></span> 
+						<span><a href="login.jsp" class="whiteColor">로그인</a></span>
 						<%}else{ %>
-								<span><a href="mypage.jsp">마이페이지</a></span>
-								<span><a href="login.jsp">로그아웃</a></span>
+								<span><a href="mypage.jsp" class="whiteColor">마이페이지</a></span>
+								<span><a href="logout.jsp" class="whiteColor">로그아웃</a></span>
 						<% }%>
 			</nav>
 		</header>

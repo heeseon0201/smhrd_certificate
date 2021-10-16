@@ -17,7 +17,15 @@
                 </a>
             </h1>
 	</div>
-	<form action="LoginService" method="post">
+	<%
+	//세션삭제
+	session.removeAttribute("Member");
+	
+	//다시보내기
+	response.sendRedirect("main.jsp");
+	%>
+
+	<!--  <form action="LoginService" method="post">
 		<div class="loginDiv">
 			<h2 class="loginlogo">로그아웃성공</h2>
 		</div>
@@ -34,6 +42,7 @@
 			
 			
 		</div>
+		-->
 	</form>
 </body>
 </html>
