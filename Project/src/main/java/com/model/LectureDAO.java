@@ -293,9 +293,11 @@ public class LectureDAO {
 	}
 	
 	//마이페이지에서 강의정보를 보여주는 메소드
-	//public void Lecture_SelectMy(i){
-//}
+		//public void Lecture_SelectMy(i){
+		//}
 	//강의를 선택하면, COURSE테이블에 자동으로 쌓이게 하는 메소드
-		//public void Lecture
+		//public void Lecture_Select() {
+			
+		//}
 }
 
