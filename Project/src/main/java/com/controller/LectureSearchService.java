@@ -19,10 +19,10 @@ public class LectureSearchService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("euc-kr");
 		ArrayList<LectureVO> list = null;
 		String words = request.getParameter("search_words");
-		
+		System.out.println("결과" + words);
 		LectureDAO dao = new LectureDAO();
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {

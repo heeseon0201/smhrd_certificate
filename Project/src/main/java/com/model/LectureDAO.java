@@ -107,6 +107,7 @@ public class LectureDAO {
 			// 공백으로 검색어를 구분
 			String[] hitwords = words.split(" ");
 			
+			//===================여기부터 문제 출력 안됨============
 			for (int i= 0; i< hitwords.length ; i++){
 				System.out.println(hitwords[i]);
 			}
