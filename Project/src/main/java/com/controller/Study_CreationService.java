@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.model.StudyDAO;
+import com.model.StudyMemberDAO;
 
 // 스터디조직 생성 버튼을 누르면 스터디조직을 생성하고 정보를 저장하는 servlet 코드
 @WebServlet("/Study_CreationService")
@@ -28,8 +29,8 @@ public class Study_CreationService extends HttpServlet {
 		String study_time = request.getParameter("time");	// 시간
 		String study_onoff = request.getParameter("onoff");	// 온/오프라인 구분
 		
-		StudyDAO dao = new StudyDAO();
-		int cnt = dao.Study_Creation(study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+		StudyMemberDAO dao = new StudyMemberDAO();
+		int cnt = dao.study_Join(study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
 		
 		// 스터디 조직 생성 후 수행할 활동
 		if (cnt>0) {

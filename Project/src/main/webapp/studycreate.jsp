@@ -20,7 +20,7 @@
 	String study_time = request.getParameter("time");	// 시간
 	String study_onoff = request.getParameter("onoff");	// 온/오프라인 구분이 
 	
-	Study_CreatService으로 보낼 정보 이것을 입력할 테이블 필요
+	Study_CreationService으로 보낼 정보 이것을 입력할 테이블 필요
 		
 	-->
 		<table>
