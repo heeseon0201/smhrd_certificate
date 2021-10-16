@@ -91,13 +91,14 @@ input::-moz-placeholder {	color: #a8a8a8}
 
 /* 본문 표 */
 table{
-	z-index:0;
+	
 }
 .article {
 	width: 80%;
 	margin: auto;
 	border-collapse: collapse;
 	table-layout:fixed;
+	z-index:0;
 }
 
 .article tr td {
@@ -232,6 +233,12 @@ th {
     0% {opacity: 0;}
     100% {opacity: 100%;}
 }
+
+/* 위치 지정하기 */
+.boardlist{
+	z-index:-1;
+}
+
 
 .foot{
 	height:100px;
