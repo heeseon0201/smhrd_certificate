@@ -5,6 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>StudyCreation</title>
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
 <!-- 스터디조직창 조직한 후, 정보는 'Study_CreatService'로 보내고, 메인페이지로 이동-->

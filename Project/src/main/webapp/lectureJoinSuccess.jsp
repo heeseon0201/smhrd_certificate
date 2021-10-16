@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Sucess.css">
 </head>
 
 <body class="title">

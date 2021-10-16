@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');/* font-family: 'Hahmlet', serif; */
+body{
+	font-family: 'Hahmlet', serif;
+	font-weight: bold;
+    }
+div{
+	text-align:center;
+	}
+	table{
+	margin:auto;
+	}
+    body{
+        background: url("https://images.unsplash.com/photo-1512580770426-cbed71c40e94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1507&q=80");
+	    background-size: 100% ;
+	    height: 100vh;
+    }
+    a{
+        color:black;
+        text-decoration: none;
+    }
+    /*투명한 배경*/
+    #Profile_form{
+        margin:auto;
+        z-index: 1;
+    }
+    #Profile_form::after{
+        width:100%;
+        height:130%;
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        background-color: white;
+        z-index: -1;
+        opacity:0.5;
+    }

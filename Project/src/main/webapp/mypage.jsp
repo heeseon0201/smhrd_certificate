@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>마이페이지</title>
-    <link rel="stylesheet" href="join.css">
+    <link rel="stylesheet" href="mypage.css">
 </head>
 
 <body>
