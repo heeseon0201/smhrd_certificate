@@ -136,7 +136,7 @@
 		<div>
 			<table style="margin: auto;">
 				<tr>
-					<th colspan="4"><a class="link" href="study.jsp">GroupStudy</a></th>
+					<th colspan="4"><a class="link" href="StudySearchService?search_words=">GroupStudy</a></th>
 				</tr>
 				<tr>
 					<td><a href="#" class="info"> 스터디정보1 </a></td>
