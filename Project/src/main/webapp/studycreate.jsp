@@ -43,7 +43,7 @@
                 <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
                 <tr>
                     <th class="no">스터디 번호</th>
-                    <th class="name">강의명</th>
+                    <th class="name">스터디명</th>
                     <th class="begin">시작일</th>
                     <th class="end">종료일</th>
                     <th class="sub">스터디 과목</th>
@@ -66,6 +66,8 @@
 			String study_time = vo.getStudy_time();
 			String study_onoff = vo.getStudy_onoff();
 			%>
+
+			
             <tr class="boardList">
             	   <td class="no"><%=study_no%></td>
                    <td class="name"><%=study_name%></td>

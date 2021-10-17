@@ -42,9 +42,11 @@ body {
 	font-family: 'Hahmlet', serif;
 }
 
+/*
 div {
 	text-align: center;
 }
+*/
 /* 검색창 시작 */
 input:-ms-input-placeholder {	color: #a8a8a8;}
 input::-webkit-input-placeholder {	color: #a8a8a8;}
@@ -52,6 +54,7 @@ input::-moz-placeholder {	color: #a8a8a8}
 
 .searchOut {
 	text-align: center;
+	margin: 15px;
 }
 
 .search {
@@ -83,6 +86,22 @@ input::-moz-placeholder {	color: #a8a8a8}
 }
 
 /* 검색창 끝 */
+
+/* 스터디만들기 */
+
+
+.createBtn {
+	margin:10px;
+	width: 100px;
+	height: 100%;
+	border: 0px;
+	background: #495057;
+	outline: none;
+	float: right;
+	color: #e9ecef;
+	display: inline-block;
+}
+/* 스터디만들기 끝 */
 
 /* 제목부분 */
 .link{

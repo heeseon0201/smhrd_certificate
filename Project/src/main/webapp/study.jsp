@@ -24,9 +24,17 @@
     <div class="searchOut">
         <div class="search">
             <input type="text" placeholder="스터디 검색" class="searchInput">
-            <button class="searchBtn">검색</button>
+            <button class="searchBtn" type="submit" name="searchClick">검색</button>
+        </div>
+        <div class="create">
+        	<button class="createBtn" type="submit" name="createClick">스터디만들기</button>
         </div>
     </div>
+<!--     <div class="createStudy">
+    	<div class="create">
+    		<button class="createBtn">스터디만들기</button>
+    	</div>
+    </div> -->
 	    <div class="articleBoard">
 	    <% ArrayList<StudyVO> list = (ArrayList<StudyVO>)session.getAttribute("Study"); %>
 	        <table class="article">
@@ -68,6 +76,7 @@
 	                <td><%=study_week %></td>
 	                <td><%=study_time %></td>
 	                <td><%=study_onoff %></td>
+	                
 	                <!-- 어케든 Study_Join.java로 STUDY_NO을 보내야 함-->
 	              <td><a href="Study_Join?"<%=name %>>선택</a></td> 
 	            </tr>
