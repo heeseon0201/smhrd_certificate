@@ -14,7 +14,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고-->
 		<header>
-			<h3><a href = "main.jsp">Studynet</a></h3>
+			<h3><a href = "main.jsp">I-Study</a></h3>
 		</header>
 	</div>
 <body class="background">
@@ -25,6 +25,10 @@
                 <input type="text" placeholder="강의 검색" name="search_words" class="searchInput" autocomplete="off">
                 <button class="searchBtn" type="submit" name="click">검색</button>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
     </form>
 	<div class="articleBoard">
@@ -35,6 +39,7 @@
                     <th class="cat">카테고리</th>
                     <th class="name">강의명</th>
                     <th class="teach">강사명</th>
+                    <th class="count">강좌수</th>
                     <th class="price">가격</th>
                     <th class="point">평점</th>
                     <th class="review">후기</th>
@@ -42,7 +47,9 @@
                     <!-- <th>URL</th> -->
 
                 </tr>
-        <%for(int i = 0; i<list.size() ;i++){ %>
+        <%-- <%for(int i = 0; i<list.size() ;i++){ %> --%>
+        <!-- 50개만 뽑겠음 -->
+        <%for(int i = 0; i<50 ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
@@ -54,10 +61,10 @@
 			String lecture_cat = vo.getLecture_cat();
 			%>
             <tr class="boardList">
-            		<td class="cat"><%=lecture_cat%></td>
+            	   <td class="cat"><%=lecture_cat%></td>
                    <td class="name"><a href="<%=lecture_url%>"><%=lecture_name%></a></td>
                    <td class="teach"><%=lecture_teach %></td>
-					<td class="teach"><%=lecture_count %></td>
+				   <td class="count"><%=lecture_count %></td>
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
                    <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">더보기</a></td>

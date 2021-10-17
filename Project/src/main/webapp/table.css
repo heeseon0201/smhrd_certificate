@@ -121,7 +121,7 @@ table{
 	height:3.6rem;
 }
 .name{
-	width:20%;
+	width:30%;
 	line-height:1.2;
 	height:3.6rem;
 }
@@ -130,13 +130,21 @@ td.name>a{
 	color:#495057;
 	
 }
+
+.count{
+	width:10%;
+	line-height:1.2;
+	height:3.6rem;
+	
+}
+
 .teach{
-	width:5%;
+	width:10%;
 	line-height:1.2;
 	height:3.6rem;
 }
 .price{
-	width:5%;
+	width:10%;
 	line-height:1.2;
 	height:3.6rem;
 }
