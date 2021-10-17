@@ -5,6 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>StudyCreation</title>
+<link rel="stylesheet" href="table.css">
 </head>
 <body>
 <!-- 스터디조직창 조직한 후, 정보는 'Study_CreatService'로 보내고, 메인페이지로 이동-->
@@ -19,7 +20,7 @@
 	String study_week = request.getParameter("week");	// 요일
 	String study_time = request.getParameter("time");	// 시간
 	String study_onoff = request.getParameter("onoff");	// 온/오프라인 구분이 
-	
+	private String SM_notice;	// 공지내용을 여기에다가 작성해야 함
 	Study_CreationService으로 보낼 정보 이것을 입력할 테이블 필요
 		
 	-->

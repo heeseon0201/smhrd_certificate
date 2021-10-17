@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Sucess.css">
 </head>
 
 <body class="title">
@@ -23,15 +23,7 @@
 			<h2 class="loginlogo">강의선택성공</h2>
 		</div>
 		<%
-		request.setCharacterEncoding("euc-kr");
-    	//받아온 lecture_no를 int타입으로 변경하여 저장
-    	int lecture_no = Integer.parseInt(request.getParameter("lecture_no"));
-    	LectureDAO dao = new LectureDAO();
-    	
-    	
-    	//여기서부터 작업 시작
-    	//강의명 가져옴
-    	//String lecture_name = dao.Lecture_SelectMy(lecture_no);
+
 		%>
          <table id="logintable">
             <tr>
