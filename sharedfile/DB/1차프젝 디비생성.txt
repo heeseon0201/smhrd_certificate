@@ -1,0 +1,157 @@
+/* 회원관리 테이블 */
+DROP table Member;
+DROP SEQUENCE Member_seq;
+
+CREATE SEQUENCE Member_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
+
+CREATE table Member (
+ member_no NUMBER PRIMARY key,
+ member_id VARCHAR2(30) not null,
+ member_NM VARCHAR2(30) not null,
+ member_tel VARCHAR2(20),
+ member_address VARCHAR2(40),
+ member_interest VARCHAR2(20),
+ member_job VARCHAR2(20),
+ member_pw VARCHAR2(30) not null
+);
+
+
+/* ## 테스트 */
+	INSERT into Member
+	values (Member_seq.nextval, 'test1', 'testname1', '000-0000-0000', 'void', 'IT', null);
+	INSERT into Member
+	values (Member_seq.nextval, 'test2', 'testname2', '000-0000-0000', '안드로메다', 'IT', '요리사');
+		INSERT into Member
+	values (Member_seq.nextval, 'test3', 'testname3', '000-0000-0000', '아오지탄광', 'IT', '기능사');
+
+	SELECT * from Member;
+	
+	
+/* 인강정보 테이블 */
+DROP table Lecture;
+DROP SEQUENCE Lecture_seq;
+
+CREATE SEQUENCE Lecture_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
+
+CREATE table Lecture (
+ lecture_no NUMBER PRIMARY key,
+ lecture_cat VARCHAR2(50),
+ lecture_name VARCHAR2(100) not null,
+ lecture_teach VARCHAR2(20),
+ lecture_site VARCHAR2(100),
+ lecture_count VARCHAR2(20),
+ lecture_price NUMBER,
+ lecture_point NUMBER(2,1),
+ lecture_review VARCHAR2(4000),
+ lecture_url LONG
+);
+
+
+
+/* ## 테스트 */
+	INSERT into Lecture
+	values (Lecture_seq.nextval, '가나쌤과 함께 배우는 정처기 실습', 40, 'www.lec.com', 2, 7000, '1987-01-17', '방송통신 위원회');
+	INSERT into Lecture
+	values (Lecture_seq.nextval, 'leccoditmsdnsadi를 이용한 sdadsasedwqewqedasd 구현', 20, 'www.lecdsadsadadasda$%%!@#!@#@!#!@sadad.com', 3, 4000, '1990-01-17', 'IT');
+	
+	SELECT * from Lecture;
+	
+/* 스터디조직 테이블 */
+DROP table Study;
+DROP SEQUENCE Study_seq;
+
+CREATE SEQUENCE Study_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
+
+CREATE table Study (
+ study_no NUMBER PRIMARY key,
+ study_name VARCHAR2(50),
+ study_begin DATE,
+ study_end DATE,
+ study_sub VARCHAR2(30),
+ study_place VARCHAR2(50),
+ study_week CHAR(1) CONSTRAINT study_const1 check (study_week in ('월', '화', '수', '목', '금', '토', '일')),
+ study_time NUMBER,
+ study_onoff VARCHAR2(5) CONSTRAINT StudyMember_const1 check (study_onoff in ('ON', 'OFF'))
+);
+
+/* ## 테스트 */
+insert into Study values(Study_seq.nextval, '파이썬', '2021-09-11', '2021-10-10', '1', '광주', '월', 12);
+	SELECT * from Study;
+
+/* 수강내역 테이블 */
+DROP table Course;
+DROP SEQUENCE Course_seq;
+
+CREATE SEQUENCE Course_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
+	
+CREATE table Course (
+ course_no NUMBER PRIMARY key,
+ member_no_co NUMBER,
+ lecture_no_co NUMBER,
+ course_sd DATE,
+ course_comp CHAR(1) CONSTRAINT course_const1 check (course_comp in ('Y', 'N')),
+ CONSTRAINT course_fk1 foreign key(member_no_co) REFERENCES Member(member_no),
+ CONSTRAINT course_fk2 foreign key(lecture_no_co) REFERENCES Lecture(lecture_no)
+);
+/* 외래키의 값을 넣을때는 참조한 테이블에 있는 값만 사용해야함. 
+
+/* ## 테스트 */
+	INSERT into Course
+	values (1, 1, '2021-08-19', '2021-09-19', 'Y', 'N', 100, 88.88);
+	INSERT into Course
+	values (2, 2, '2021-08-19', '2021-09-19', 'N', 'Y', 10, 100.00);
+	
+	SELECT * from Course;	
+	
+/* 스터디회원 테이블 */
+DROP table StudyMember;
+DROP SEQUENCE StudyMember_seq;
+
+CREATE SEQUENCE StudyMember_seq
+	INCREMENT by 1
+	start with 1
+	MAXVALUE 99999
+	NOCYCLE 
+	NOCACHE;
+
+CREATE table StudyMember (
+ SM_id  NUMBER,
+ study_no_sm NUMBER,
+ member_no_sm NUMBER,
+ CONSTRAINT StudyMember_pk primary key(SM_id),
+ CONSTRAINT StudyMember_fk1 foreign key(study_no_sm) REFERENCES Study(study_no),
+ CONSTRAINT StudyMember_fk2 foreign key(member_no_sm) REFERENCES Member(member_no)
+);
+
+
+	
+/* ## 테스트 */
+insert into studymember values(StudyMember_seq.nextval, 1, 1);
+	
+SELECT * from StudyMember;
+	
+
+
+	
+
+commit;
