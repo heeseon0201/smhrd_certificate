@@ -20,13 +20,13 @@
 	<form action="LoginService" method="post">
         <table id="logintable">
             <tr>
-            <td><h1>강의가 선택되었습니다.</h1></td>
+            <td><h1>스터디가 선택되었습니다.</h1></td>
             </tr>
-            <tr>
+          <!--  <tr>
                 <td>
-				<h1><!-- 여기에 표현식으로 강의명을 출력 -->가 나의 강좌로 선택되었습니다.</h1>
+				<h1>가 나의 강좌로 선택되었습니다.</h1>
 			</td>
-            </tr>
+            </tr> -->  
             
         <tr colspan="2" class="findid"><td><a href="main.jsp">메인으로 돌아가기</a></td></tr>
  		 </table>

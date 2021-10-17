@@ -4,38 +4,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>회원가입</title>
-    <link rel="stylesheet" href="Success.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입성공</title>
+	<link rel="stylesheet" href="Success.css">
 </head>
-
 <body class="title">
 	<div class="linkTitle">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> I.Study </span>
+                    <span> Studynet </span>
                 </a>
             </h1>
 	</div>
+	<%String nick = (String)session.getAttribute("MemberJoinID");%>
+	
 	<form action="LoginService" method="post">
 		<div class="loginDiv">
 			<h2 class="loginlogo">회원가입성공</h2>
 		</div>
         <table id="logintable">
             <tr>
-                <td><%
-					String nick = (String)session.getAttribute("MemberJoinID");
-					%>
-			<h1><%= nick %>를 환영합니다.</h1>
-			</td>
+                <td class="loginDiv"><%= nick %>를 환영합니다.</td>
             </tr>
             
-        <tr colspan="2" class="findid"><td><a href="Logout.jsp">로그아웃</a></td></tr>
- 		 </table>
+            <tr>
+                <td colspan="2" class="findid">
+                  <a href="main.jsp">메인으로 돌아가기</a>
+                </td>
+            </tr>
+        </table>
 		<div ></div>
-		
+		<div class="loginDiv" style="margin-top: 30px;">
+			
+		</div>
 		<div >
-		
+			
+			
 		</div>
 	</form>
 </body>
