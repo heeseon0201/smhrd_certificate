@@ -32,11 +32,11 @@
 		<div >
 		<table id="logintable">
             <tr>
-            <td><h1>스터디가 선택되었습니다.</h1></td>
+            <td><h1>스터디가 조직되었습니다.</h1></td>
             </tr>
             <tr>
                 <td>
-				<h1><%=study_name %></h1>
+				<h3>스터디페이지에 게시되었습니다</h3>
 			</td>
             </tr>
             
