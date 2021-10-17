@@ -24,7 +24,7 @@
 						<span><a href="join.jsp" class="whiteColor">회원가입</a></span> 
 						<span><a href="login.jsp" class="whiteColor">로그인</a></span>
 						<%}else{ %>
-								<span><a href="mycourse.jsp" class="whiteColor">나의강의</a></span>
+								<span><a href="Lecture_MainpageService" class="whiteColor">나의강의</a></span>
 								<span><a href="mystudy.jsp" class="whiteColor">나의스터디</a></span>
 								<span><a href="logout.jsp" class="whiteColor">로그아웃</a></span>
 						<% }%>

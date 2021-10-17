@@ -225,5 +225,57 @@ public class CourseDAO {
 		}
 		return cnt;
 	}
-	
+	public ArrayList<LectureVO> Course_mypage(int member_no) {
+		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
+		try {
+			getConnection();
+			
+			// 수강정보 가져오는 sql문
+			String sql = "select * from COURSE join lecture on lecture_no = lecture_no_co where member_no_co = ?";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			psmt.setInt(1, member_no);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {		
+				System.out.println("마이페이지 강의데이터 가져오기 성공");
+				
+				// 결과처리
+				while(true) {
+					if(rs.next()) {		
+						int get_no = rs.getInt("lecture_no");
+						String get_cat = rs.getString("lecture_cat");
+						String get_name = rs.getString("lecture_name");		
+						String get_teach = rs.getString("lecture_teach");
+						String get_count = rs.getString("lecture_count");
+						int get_price = rs.getInt("lecture_price");
+						double get_point = rs.getDouble("lecture_point");
+						String get_review = rs.getString("lecture_review");
+						String get_url = rs.getString("lecture_url");
+
+						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+						list.add(vo);
+					}
+					
+					if(rs.isLast()) {
+						break;
+					}
+				}
+				
+				
+			}
+			}catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("마이페이지 강의데이터 가져오기 실패");
+		}finally {
+			close();
+		}
+		return list;
+	}
 }

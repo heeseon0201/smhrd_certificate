@@ -27,14 +27,8 @@
     </div>
     <div class="articleBoard">
 	<% 
-	 //=====이걸 아마 Lecture_MypageView.java에서 해야 할 것.
-    //HttpSession session = request.getSession();
-    //MemberVO vo = (memberVO)session.getAttribute("member");
-    //CourseDAO course_dao = new CourseDAO();
-    //===CourseDAO에서 Course_Select()메소드의 매개변수 중 하나인 int lecture를 없애야 함.
-    //CourseVO vo_course= course_dao.Course_Select(vo.getMember_no());
-
-ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("Lecture"); %>
+	
+ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("LectureMy"); %>
 
                 <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
                 <tr>
@@ -46,25 +40,26 @@ ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("Lecture"
 
 
                 </tr>
-        <%/*for(int i = 0; i<list.size() ;i++){*/ %>
-        <% 	/*Course course_vo = list.get(i); 
-			String lecture_name = course_vo.getLecture_name();
-			String lecture_teach = course_vo.getLecture_teach();
-			String lecture_count = course_vo.getLecture_count();
-			int lecture_price = course_vo.getLecture_price();
-			double lecture_point = course_vo.getLecture_point();
-			String lecture_review = course_vo.getLecture_review();
-			String lecture_url = course_vo.getLecture_url();
-			String lecture_cat = course_vo.getLecture_cat();*/
+        <%for(int i = 0; i<list.size() ;i++){ %>
+        <% 	LectureVO vo = list.get(i); 
+        System.out.println(list.size());
+			String lecture_name = vo.getLecture_name();
+			String lecture_teach = vo.getLecture_teach();
+			String lecture_count = vo.getLecture_count();
+			int lecture_price = vo.getLecture_price();
+			double lecture_point = vo.getLecture_point();
+			String lecture_review = vo.getLecture_review();
+			String lecture_url = vo.getLecture_url();
+			String lecture_cat = vo.getLecture_cat();
 			%>
             <tr class="boardList">
-            		<td class="cat">lecture_cat</td>
-                   <td class="name"><a href="#">lecture_name</a></td>
-                   <td class="teach">lecture_teach </td>
-                   <td class="price">lecture_price</td>
-                   <td class="point">lecture_point</td>
+            		<td class="cat"><%=lecture_cat %></td>
+                   <td class="name"><a href="<%= lecture_url%>"><%=lecture_name %></a></td>
+                   <td class="teach"><%=lecture_teach %></td>
+                   <td class="price"><%= lecture_price%></td>
+                   <td class="point"><%=lecture_point %></td>
             </tr>
-      <!-- 여기에 반복문 끝내는 }쳐줘야 -->
+      <%} %>
            
         </table>
     </div>
