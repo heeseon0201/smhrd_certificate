@@ -141,14 +141,14 @@ public class StudyDAO {
 	}
 	
 	// 스터디 조직을 개설할 때 데이터를 저장하는 메소드
-	public int Study_Creation(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, String study_onoff) {
+	public int Study_Creation(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time) {
 		int cnt = 0;
 		
 		try {
 			getConnection();
 			
 			// 스터디조직 개설 sql문
-			String sql = "insert into Study values(Study_seq.nextval, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into Study values(Study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			// SQL 실행 객체 생성
 			psmt = conn.prepareStatement(sql);
@@ -161,7 +161,6 @@ public class StudyDAO {
 			psmt.setString(5, study_place);
 			psmt.setString(6, study_week);
 			psmt.setString(7, study_time);
-			psmt.setString(8, study_onoff);
 			
 			// sql문 실행 후 결과처리
 			cnt = psmt.executeUpdate();
@@ -178,7 +177,35 @@ public class StudyDAO {
 		}
 		return cnt;
 	}
-	
+	//방금 만든 스터디의 넘버를 받아오는 메서드
+		public int newStudyNo() {
+			int study_no = 0;
+			
+			try {
+				getConnection();
+				
+				// 스터디정보 선택출력 sql문
+				String sql = "select last_value(study_no) over(order by study_no) from study";
+				//study 컬럼을 스터디 넘버기준으로 오름차순 정렬한 다음 가장 마지막 번호를 가져오는 sql문입니다.
+				
+				// sql문 실행
+				rs = psmt.executeQuery();
+				
+				// 결과처리
+				if(rs.next()) {		
+					System.out.println("스터디조직 일부출력 성공");
+					study_no = Integer.parseInt(rs.getString("study_no"));
+				}
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+				System.out.println("스터디조직 일부출력 실패");
+			} finally {
+				close();
+			}
+			
+			return study_no;
+		}
 
 	
 	// 스터디 조직 종료여부를 표시하는 메소드(delete)
