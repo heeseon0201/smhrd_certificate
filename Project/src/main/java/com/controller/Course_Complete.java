@@ -7,11 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import com.model.CourseDAO;
 import com.model.CourseVO;
-import com.model.MemberVO;
 
 // 수료여부 변경 버튼을 누르면 실행
 @WebServlet("/Course_Complete")
