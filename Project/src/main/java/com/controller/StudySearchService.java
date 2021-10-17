@@ -14,7 +14,7 @@ import com.model.StudyDAO;
 import com.model.StudyVO;
 
 // 스터디페이지에서 스터디를 검색할 수 있게 해 줄 servlet 코드
-@WebServlet("/LectureSearchService")
+@WebServlet("/StudySearchService")
 public class StudySearchService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
