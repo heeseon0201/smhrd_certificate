@@ -43,7 +43,7 @@ public class StudySearchService extends HttpServlet {
 			session.setAttribute("Study", list);
 			
 			// 강의정보페이지로 이동
-			response.sendRedirect("Study.jsp");
+			response.sendRedirect("study.jsp");
 		}
 	}
 
