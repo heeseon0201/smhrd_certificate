@@ -23,65 +23,44 @@
 	
 <body>
 <!-- 스터디조직창 조직한 후, 정보는 'Study_CreatService'로 보내고, 메인페이지로 이동-->
-<h1 class="link"><b>StudyGroup</b></h1>
-    <form class="studyCreate" action="Study_CreationService">
-        <div class="searchOut">
-            <div class="search">
-                <input type="text" placeholder="스터디 검색" name="search_words" class="searchInput" autocomplete="off">
-                <button class="createBtn" type="submit" name="click">만들기</button>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-    </form>
-    
-   		<div class="articleBoard">
-	<% ArrayList<StudyVO> list = (ArrayList<StudyVO>)session.getAttribute("Study"); %>
+<h1 class="link"><b>MakeStudyGroup</b></h1>
 
-                <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
+    <div>
+        <form action="Study_CreationService">
+            <table class="tableBasic">
                 <tr>
-                    <th class="no">스터디 번호</th>
-                    <th class="name">스터디명</th>
-                    <th class="begin">시작일</th>
-                    <th class="end">종료일</th>
-                    <th class="sub">스터디 과목</th>
-                    <th class="place">장소</th>
-                    <th class="week">요일</th>
-                    <th class="time">시간</th>
-                    <th class="onoff">온/오프라인</th>
-                    <!-- <th>URL</th> -->
-
+                    <td class="tableTh">스터디명</td>
+                    <td class="tableTd"><input type="text" name="name"></td>
                 </tr>
-        <%for(int i = 0; i<list.size() ;i++){ %>
-        <% 	StudyVO vo = list.get(i); 
-			int study_no = vo.getStudy_no();
-			String study_name = vo.getStudy_name();
-			String study_begin = vo.getStudy_begin();
-			String study_end = vo.getStudy_end();
-			String study_sub = vo.getStudy_sub();
-			String study_place = vo.getStudy_place();
-			String study_week = vo.getStudy_week();
-			String study_time = vo.getStudy_time();
-			String study_onoff = vo.getStudy_onoff();
-			%>
-
-			
-            <tr class="boardList">
-            	   <td class="no"><%=study_no%></td>
-                   <td class="name"><%=study_name%></td>
-                   <td class="begin"><%=study_begin %></td>
-				   <td class="end"><%=study_end %></td>
-                   <td class="sub"><%=study_sub%></td>
-                   <td class="place"><%=study_place%></td>
-                   <td class="week"><%=study_week%></td>
-                   <td class="time"><%=study_time%>"></td>
-                   <td class="onoff"><%=study_onoff%></td>
-            </tr>
-            <%} %>
-           
-        </table>
+                <tr>
+                    <td class="tableTh">시작일자</td>
+                    <td class="tableTd"><input type="date" name="begin"></td>
+                </tr>
+                <tr>
+                    <td class="tableTh">종료일자</td>
+                    <td class="tableTd"><input type="date" name="end"></td>
+                </tr>
+                <tr>
+                    <td class="tableTh">스터디과목</td>
+                    <td class="tableTd"><input type="text" name="sub"></td>
+                </tr>
+                <tr>
+                    <td class="tableTh">장소</td>
+                    <td class="tableTd"><input type="text" name="place"></td>
+                </tr>
+                <tr>
+                    <td class="tableTh">요일</td>
+                    <td class="tableTd"><input type="text" name="week"></td>
+                </tr>
+                <tr>
+                    <td class="tableTh">시간</td>
+                    <td class="tableTd"><input type="text" name="time"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit" class="mkBtn">만들기</button></td>
+                </tr>
+            </table>
+        </form>
     </div>
 <!-- <form class="" action="Study_CreationService">
 스터디조직 생성 form에 작성한 값 받아오기

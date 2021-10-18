@@ -290,3 +290,40 @@ th {
 	color:#454d55;
 	font-weight:bold;
 }
+
+/*studycreat.jsp 폼 양식 시작*/
+        .tableBasic{
+            margin: auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        .tableTd, .tableTh{
+            border-top: 1px solid #495057;
+            border-bottom: 1px solid #495057;
+        }
+        .tableTh{
+            background: #495057;
+            color: #e9ecef;
+            padding: 10px;
+        }
+        .ta
+        .tableTd{
+            background-color: #495057;
+            color:black;
+        }
+        .tableTd input{
+            border:0px;
+            padding: 10px;
+            outline: none;
+            background: #EEE;
+        }
+        .mkBtn{
+            margin-top:10px;
+            width:75px;
+            height:30px;
+            border:0px;
+            background:#495057;
+            outline:none;
+            color:#e9ecef;
+        }
+/*studycreat.jsp 폼 양식 끝*/
