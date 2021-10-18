@@ -64,40 +64,29 @@ public class StudyDAO {
 			
 			// 결과처리
 			// while문에서 첫번째 데이터가 출력이 안되는 것을 확인해서 임시조치
-			if(rs.next()) {	
-				System.out.println("스터디조직 출력 성공");
-				int study_no = rs.getInt("study_no");
-				String study_name = rs.getString("study_name");
-				String study_begin = rs.getString("study_begin");
-				String study_end = rs.getString("study_end");
-				String study_sub = rs.getString("study_sub");
-				String study_place = rs.getString("study_place");
-				String study_week = rs.getString("study_week");
-				String study_time = rs.getString("study_time");
+
 				
-				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
-				list.add(vo);
+			while(true) {
+				if(rs.next()) {		
+					int study_no = rs.getInt("study_no");
+					System.out.println(study_no);
+					String study_name = rs.getString("study_name");
+					String study_begin = rs.getString("study_begin");
+					String study_end = rs.getString("study_end");
+					String study_sub = rs.getString("study_sub");
+					String study_place = rs.getString("study_place");
+					String study_week = rs.getString("study_week");
+					String study_time = rs.getString("study_time");
+					 
+					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
+					list.add(vo);
+				}
 				
-				while(true) {
-					if(rs.next()) {		
-						study_no = rs.getInt("study_no");
-						study_name = rs.getString("study_name");
-						study_begin = rs.getString("study_begin");
-						study_end = rs.getString("study_end");
-						study_sub = rs.getString("study_sub");
-						study_place = rs.getString("study_place");
-						study_week = rs.getString("study_week");
-						study_time = rs.getString("study_time");
-						
-						vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
-						list.add(vo);
-					}
-					
-					if(rs.isLast()) {
-						break;
-					}
+				if(rs.isLast()) {
+					break;
 				}
 			}
+
 			
 			
 		} catch(Exception e) {
@@ -350,26 +339,42 @@ public class StudyDAO {
 				// 검색어가 안걸리는 경우 속도가 너무느려서 검색어가 잡히지 않을 경우 컨티뉴로 다음 iteration으로 넘기는 부분 추가
 				if(!rs.next()) {
 					continue;
-				}
-				
-				// 결과처리
-				while(true) {
-					if(rs.next()) {
-						int get_no = rs.getInt("study_no");
-						String get_name = rs.getString("study_name");
-						String get_begin = rs.getString("study_begin");
-						String get_end = rs.getString("study_end");
-						String get_sub = rs.getString("study_sub");
-						String get_place = rs.getString("study_place");
-						String get_week = rs.getString("study_week");
-						String get_time = rs.getString("study_time");
-						
-						StudyVO vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
-						list.add(vo);
-					}
+				} else {
+					int get_no = rs.getInt("study_no");
+					String get_name = rs.getString("study_name");
+					String get_begin = rs.getString("study_begin");
+					String get_end = rs.getString("study_end");
+					String get_sub = rs.getString("study_sub");
+					String get_place = rs.getString("study_place");
+					String get_week = rs.getString("study_week");
+					String get_time = rs.getString("study_time");
 					
-					if(rs.isLast()) {
-						break;
+					StudyVO vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+					list.add(vo);
+				
+					// 결과처리
+					while(true) {
+						if(rs.next()) {
+							get_no = rs.getInt("study_no");
+							get_name = rs.getString("study_name");
+							get_begin = rs.getString("study_begin");
+							get_end = rs.getString("study_end");
+							get_sub = rs.getString("study_sub");
+							get_place = rs.getString("study_place");
+							get_week = rs.getString("study_week");
+							get_time = rs.getString("study_time");
+							
+							vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+							list.add(vo);
+						}
+						
+						if(rs.isLast()) {
+							break;
+						}
+						
+						if(!rs.next()) {
+							break;
+						}
 					}
 				}
 			}
