@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +14,7 @@ import javax.websocket.Session;
 import com.model.MemberDAO;
 import com.model.MemberVO;
 import com.model.StudyMemberDAO;
+import com.model.StudyVO;
 //스터디에 가입할 수 있어야함
 @WebServlet("/Study_Join")
 public class Study_Join extends HttpServlet {
@@ -44,15 +47,11 @@ public class Study_Join extends HttpServlet {
 		request.setCharacterEncoding("euc-kr");
 		//스터디 선택시 받아오는 매개변수
 		HttpSession session = request.getSession();//세션 생성
-		String studyNo = "";
-		if(request.getParameter("studyNo") !=null){
-			studyNo = request.getParameter("studyNo");//study.jsp에서 매개변수 스터디넘버 받아오기
-		}else {
-			studyNo= (String)session.getAttribute(studyNo);
-		}
+
+		int studyNo = Integer.parseInt(request.getParameter("studyNo"));//study.jsp에서 매개변수 스터디넘버 받아오기
+		
 		MemberVO vo = (MemberVO)session.getAttribute("Member");//세션에서 회원넘버 받아오기
 		int memberNo = vo.getMember_no();//스트링으로 형변환하기
-		
 		
 		//studyMemberDAO로 보내기
 			StudyMemberDAO dao = new StudyMemberDAO();
@@ -62,9 +61,6 @@ public class Study_Join extends HttpServlet {
 			
 			// 추후에 회원가입 후 수행할 활동 입력해야함
 			if (cnt>0) {
-				// 세션 객체 생성
-
-				
 				// 스터디에 가입한 멤버의 이름과 스터디 이름을 세션에 저장
 				//수정할 것
 				session.setAttribute("Study_no", studyNo);
