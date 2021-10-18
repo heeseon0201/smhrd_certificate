@@ -39,7 +39,6 @@
 	                <th>장소</th>
 	                <th>요일(월화수목금)</th>
 	                <th>시간(공부시간 시간단위)</th>
-	                <th>온오프라인</th>
 	            </tr>
 	            
 	        <%for(int i = 0; i<study_list.size() ;i++){ %>
