@@ -120,8 +120,8 @@ public class LectureDAO {
 				// 리뷰데이터가 너무길어서 검색이 작동안함
 //				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_count like '%" + hitwords[i] + "%' OR lecture_review like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
 				// 리뷰검색을 뺀 코드사용
-				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
-
+				sql = "select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
+//				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
 				// 현재 강의명에 걸린 하이퍼링크까지 검색되어버림 
 				// 만약 lecture_name에 "https://"가 있으면 그 뒤 내용을 지워서 저장한다.(X 이 방법은 틀린듯)
 				
@@ -142,10 +142,11 @@ public class LectureDAO {
 					String get_count = rs.getString("lecture_count");
 					int get_price = rs.getInt("lecture_price");
 					double get_point = rs.getDouble("lecture_point");
-					String get_review = rs.getString("lecture_review");
+//					String get_review = rs.getString("lecture_review");
 					String get_url = rs.getString("lecture_url");
 
-					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_url, get_cat);
+//					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 					
 					// 결과처리
@@ -158,10 +159,11 @@ public class LectureDAO {
 							get_count = rs.getString("lecture_count");
 							get_price = rs.getInt("lecture_price");
 							get_point = rs.getDouble("lecture_point");
-							get_review = rs.getString("lecture_review");
+//							get_review = rs.getString("lecture_review");
 							get_url = rs.getString("lecture_url");
 
-							vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+							vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_url, get_cat);
+//							vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 							list.add(vo);
 						}
 						
@@ -198,7 +200,7 @@ public class LectureDAO {
 			
 			for(int i=0; i<filter.size();i++) {
 				// 필터 sql문(반복문을 돌려 선택한 필터에 대한 내용들만 가져오기)
-				sql = "select * from Lecture where lecture_cat = ?";
+				sql = "select * from LECTURE where LECTURE_CAT = ?";
 				
 				// SQL 실행 객체 생성
 				psmt = conn.prepareStatement(sql);
@@ -217,11 +219,12 @@ public class LectureDAO {
 					String get_count = rs.getString("lecture_count");
 					int get_price = rs.getInt("lecture_price");
 					double get_point = rs.getDouble("lecture_point");
-					String get_review = rs.getString("lecture_review");
+//					String get_review = rs.getString("lecture_review");
 					String get_url = rs.getString("lecture_url");
 					String get_cat = rs.getString("lecture_cat");
 					
-					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_url, get_cat);
+//					LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
 					list.add(vo);
 				}
 			}
