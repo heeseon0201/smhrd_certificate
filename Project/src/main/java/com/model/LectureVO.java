@@ -28,6 +28,19 @@ public class LectureVO {
 		this.lecture_cat = lecture_cat;
 	}
 	
+	public LectureVO(int lecture_no, String lecture_name, String lecture_teach, String lecture_count,
+			int lecture_price, double lecture_point, String lecture_url, String lecture_cat) {
+		super();
+		this.lecture_no = lecture_no;
+		this.lecture_name = lecture_name;
+		this.lecture_teach = lecture_teach;
+		this.lecture_count = lecture_count;
+		this.lecture_price = lecture_price;
+		this.lecture_point = lecture_point;
+		this.lecture_url = lecture_url;
+		this.lecture_cat = lecture_cat;
+	}
+	
 	public LectureVO(String lecture_name, String lecture_teach, double lecture_point, String lecture_cat) {
 		super();
 		this.lecture_name = lecture_name;
@@ -37,12 +50,13 @@ public class LectureVO {
 	}
 	
 	public LectureVO(String lecture_name, String lecture_teach,
-			int lecture_price, double lecture_point, String lecture_cat) {
+			int lecture_price, double lecture_point, String lecture_url, String lecture_cat) {
 		super();
 		this.lecture_name = lecture_name;
 		this.lecture_teach = lecture_teach;
 		this.lecture_price = lecture_price;
 		this.lecture_point = lecture_point;
+		this.lecture_url = lecture_url;
 		this.lecture_cat = lecture_cat;
 	}
 

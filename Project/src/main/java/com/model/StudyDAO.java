@@ -57,7 +57,7 @@ public class StudyDAO {
 			String sql = "select * from Study";
 			
 			// SQL 실행 객체생성
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			
 			// sql문 실행
 			rs = psmt.executeQuery();
@@ -167,6 +167,7 @@ public class StudyDAO {
 			if(cnt > 0) {
 				System.out.println("스터디테이블 개설 성공");
 			}
+			
 			//스터디번호꺼내오기 메서드
 			int study_no= newStudyNo();
 							
@@ -186,6 +187,7 @@ public class StudyDAO {
 			if(cnt > 0) {
 			System.out.println("스터디멤버 개설 성공");
 			}
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("스터디조직 개설 실패");
@@ -288,7 +290,7 @@ public class StudyDAO {
 				String study_place = rs.getString("study_place");
 				String study_week = rs.getString("study_week");
 				String study_time = rs.getString("study_time");
-				String study_onoff = rs.getString("study_onoff");
+//				String study_onoff = rs.getString("study_onoff");
 				
 				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 				list.add(vo);
@@ -302,5 +304,67 @@ public class StudyDAO {
 		}
 		return list;
 	}
-	//
+	
+	// 스터디를 검색해주는 메소드 
+	public ArrayList<StudyVO> Study_Search(String words) {
+		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+		String sql = "";
+		
+		try {
+			getConnection();
+			
+			// 공백으로 검색어를 구분
+			String[] hitwords = words.split(" ");
+			
+			System.out.println(hitwords);
+			for (int i= 0; i< hitwords.length ; i++){
+				System.out.println(hitwords[i]);
+			}
+			
+			for (int i=0; i<hitwords.length; i++) {
+				// 검색 sql문
+				sql = "select * from Study where study_name like '%" + hitwords[i] + "%' OR study_sub like '%" + hitwords[i] + "%' OR study_place like '%" + hitwords[i] + "%'";
+				
+				// SQL 실행 객체 생성
+				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				
+				// sql문 실행
+				rs = psmt.executeQuery();
+				
+				// 검색어가 안걸리는 경우 속도가 너무느려서 검색어가 잡히지 않을 경우 컨티뉴로 다음 iteration으로 넘기는 부분 추가
+				if(!rs.next()) {
+					continue;
+				}
+				
+				// 결과처리
+				while(true) {
+					if(rs.next()) {
+						int get_no = rs.getInt("study_no");
+						String get_name = rs.getString("study_name");
+						String get_begin = rs.getString("study_begin");
+						String get_end = rs.getString("study_end");
+						String get_sub = rs.getString("study_sub");
+						String get_place = rs.getString("study_place");
+						String get_week = rs.getString("study_week");
+						String get_time = rs.getString("study_time");
+						
+						StudyVO vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+						list.add(vo);
+					}
+					
+					if(rs.isLast()) {
+						break;
+					}
+				}
+			}
+			System.out.println("스터디 검색 성공");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디 검색 실패");
+		} finally {
+			close();
+		}
+		return list;
+	}
 }

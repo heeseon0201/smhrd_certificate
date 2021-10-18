@@ -50,7 +50,15 @@
                 </tr>
                 <tr>
                     <td class="tableTh">요일</td>
-                    <td class="tableTd"><input type="text" name="week"></td>
+                    <td class="tableTd"><select name="week" id="mm" class="sel" aria-label="월" style="height:25px; width:50px; font-size: 16px;">
+                                        <option value="월">월</option>
+                                        <option value="화">화</option>
+                                        <option value="수">수</option>
+                                        <option value="목">목</option>
+                                        <option value="금">금</option>
+                                        <option value="토">토</option>
+                                        <option value="일">일</option>
+                                        </select></td>
                 </tr>
                 <tr>
                     <td class="tableTh">시간</td>

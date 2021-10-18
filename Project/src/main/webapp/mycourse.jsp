@@ -28,7 +28,7 @@
     <div class="articleBoard">
 	<% 
 	
-ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("LectureMy"); %>
+	ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("LectureMy"); %>
 
                 <table class="article" ><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
                 <tr>
@@ -43,14 +43,12 @@ ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("LectureM
         <%for(int i = 0; i<list.size() ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
         System.out.println(list.size());
-			String lecture_name = vo.getLecture_name();
-			String lecture_teach = vo.getLecture_teach();
-			String lecture_count = vo.getLecture_count();
-			int lecture_price = vo.getLecture_price();
-			double lecture_point = vo.getLecture_point();
-			String lecture_review = vo.getLecture_review();
-			String lecture_url = vo.getLecture_url();
-			String lecture_cat = vo.getLecture_cat();
+        String lecture_cat = vo.getLecture_cat();
+		String lecture_name = vo.getLecture_name();
+		String lecture_teach = vo.getLecture_teach();
+		int lecture_price = vo.getLecture_price();
+		double lecture_point = vo.getLecture_point();
+		String lecture_url = vo.getLecture_url();
 			%>
             <tr class="boardList">
             		<td class="cat"><%=lecture_cat %></td>

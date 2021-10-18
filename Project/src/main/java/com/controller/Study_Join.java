@@ -51,7 +51,7 @@ public class Study_Join extends HttpServlet {
 			studyNo= (String)session.getAttribute(studyNo);
 		}
 		MemberVO vo = (MemberVO)session.getAttribute("Member");//세션에서 회원넘버 받아오기
-		String memberNo = Integer.toString(vo.getMember_no());//스트링으로 형변환하기
+		int memberNo = vo.getMember_no();//스트링으로 형변환하기
 		
 		
 		//studyMemberDAO로 보내기

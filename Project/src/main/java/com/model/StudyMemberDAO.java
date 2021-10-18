@@ -50,14 +50,21 @@ public class StudyMemberDAO {
 		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
 		try {
 			getConnection();
-			String sql = "select study_name, study_begin, study_end, study_sub, study_place, study_week, study_time from studymember join study on study_no_sm = study_no where member_no_sm = ?";
+			String sql = "select * from Study S join StudyMember SM on S.study_no = SM.study_no_sm where SM.member_no_sm = ?";
 			
 			// SQL 실행 객체 생성
 			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			
+			// 바인드 변수 채우기
 			psmt.setInt(1, member_no);
+			
+			// sql문 실행
 			rs = psmt.executeQuery();
 			
 			// 결과처리
+			// 스터디 테이블에 null값으로 이루어진 행이있어 렉걸림.
+			
+			
 			while(true) {
 				if(rs.next()) {	
 					System.out.println("스터디 출력 성공");
@@ -90,13 +97,13 @@ public class StudyMemberDAO {
 
 	
 		//스터디에 가입하는 메소드
-		public int study_Join(String studyNo, String memberNo) {
+		public int study_Join(String studyNo, int memberNo) {
 			int cnt=0;
 			try {
 				getConnection();
 				String sql = "insert into sutdymember values(StudyMember_seq.nextval, ?, ?);";
 				psmt.setString(1, studyNo);
-				psmt.setString(2, memberNo);
+				psmt.setInt(2, memberNo);
 				cnt = psmt.executeUpdate();
 			}catch(Exception e) {
 				e.printStackTrace();
