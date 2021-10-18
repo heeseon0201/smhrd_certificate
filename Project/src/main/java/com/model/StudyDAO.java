@@ -63,26 +63,42 @@ public class StudyDAO {
 			rs = psmt.executeQuery();
 			
 			// 결과처리
-			while(true) {
-				if(rs.next()) {		
-					int study_no = rs.getInt("study_no");
-					String study_name = rs.getString("study_name");
-					String study_begin = rs.getString("study_begin");
-					String study_end = rs.getString("study_end");
-					String study_sub = rs.getString("study_sub");
-					String study_place = rs.getString("study_place");
-					String study_week = rs.getString("study_week");
-					String study_time = rs.getString("study_time");
-					
-					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
-					list.add(vo);
-				}
+			// while문에서 첫번째 데이터가 출력이 안되는 것을 확인해서 임시조치
+			if(rs.next()) {	
+				System.out.println("스터디조직 출력 성공");
+				int study_no = rs.getInt("study_no");
+				String study_name = rs.getString("study_name");
+				String study_begin = rs.getString("study_begin");
+				String study_end = rs.getString("study_end");
+				String study_sub = rs.getString("study_sub");
+				String study_place = rs.getString("study_place");
+				String study_week = rs.getString("study_week");
+				String study_time = rs.getString("study_time");
 				
-				if(rs.isLast()) {
-					break;
+				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
+				list.add(vo);
+				
+				while(true) {
+					if(rs.next()) {		
+						study_no = rs.getInt("study_no");
+						study_name = rs.getString("study_name");
+						study_begin = rs.getString("study_begin");
+						study_end = rs.getString("study_end");
+						study_sub = rs.getString("study_sub");
+						study_place = rs.getString("study_place");
+						study_week = rs.getString("study_week");
+						study_time = rs.getString("study_time");
+						
+						vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
+						list.add(vo);
+					}
+					
+					if(rs.isLast()) {
+						break;
+					}
 				}
 			}
-			System.out.println("스터디조직 출력 성공");
+			
 			
 		} catch(Exception e) {
 			e.printStackTrace();
