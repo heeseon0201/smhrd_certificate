@@ -27,7 +27,7 @@
     </div>
 	    <div class="articleBoard">
 	    <% 
-	    ArrayList<StudyVO> study_list = (ArrayList<StudyVO>)session.getAttribute("LectureMy"); 
+	    ArrayList<StudyVO> study_list = (ArrayList<StudyVO>)session.getAttribute("StudyMy"); 
 	    %>
 	        <table class="article">
 	            <tr>
