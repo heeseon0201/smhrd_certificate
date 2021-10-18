@@ -150,7 +150,7 @@ public class StudyDAO {
 			String sql1 = "insert into study values(study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql1);
+			psmt = conn.prepareStatement(sql1, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			
 			// 바인드 변수 채우기
 			psmt.setString(1, study_name);
@@ -167,6 +167,7 @@ public class StudyDAO {
 			if(cnt > 0) {
 				System.out.println("스터디테이블 개설 성공");
 			}
+			
 			//스터디번호꺼내오기 메서드
 			int study_no= newStudyNo();
 							
@@ -174,7 +175,7 @@ public class StudyDAO {
 			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
 						
 			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 						
 			// 바인드 변수 채우기
 			psmt.setInt(1, study_no);

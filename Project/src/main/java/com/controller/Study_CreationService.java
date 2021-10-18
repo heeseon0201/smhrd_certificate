@@ -20,7 +20,6 @@ public class Study_CreationService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
-		request.setCharacterEncoding("euc-kr");
 		
 		//마이페이지에서 자신이 만든 스터디를 볼 수 있는 창
 		//세션객체생성->아이디를 이용해 회원번호를 꺼내오기 위함
