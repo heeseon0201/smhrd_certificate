@@ -73,9 +73,8 @@ public class StudyDAO {
 					String study_place = rs.getString("study_place");
 					String study_week = rs.getString("study_week");
 					String study_time = rs.getString("study_time");
-					String study_onoff = rs.getString("study_onoff");
 					
-					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 					list.add(vo);
 				}
 				
@@ -127,7 +126,7 @@ public class StudyDAO {
 				String study_time = rs.getString("study_time");
 				String study_onoff = rs.getString("study_onoff");
 				
-				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 			}
 			
 		} catch(Exception e) {
@@ -141,17 +140,17 @@ public class StudyDAO {
 	}
 	
 	// 스터디 조직을 개설할 때 데이터를 저장하는 메소드
-	public int Study_Creation(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time) {
+	public int Study_Creation(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, int member_no) {
 		int cnt = 0;
 		
 		try {
 			getConnection();
 			
 			// 스터디조직 개설 sql문
-			String sql = "insert into Study values(Study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			String sql1 = "insert into study values(study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql1);
 			
 			// 바인드 변수 채우기
 			psmt.setString(1, study_name);
@@ -166,9 +165,27 @@ public class StudyDAO {
 			cnt = psmt.executeUpdate();
 			
 			if(cnt > 0) {
-				System.out.println("스터디조직 개설 성공");
+				System.out.println("스터디테이블 개설 성공");
 			}
-			
+			//스터디번호꺼내오기 메서드
+			int study_no= newStudyNo();
+							
+			// 스터디조직 개설 sql문
+			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
+						
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+						
+			// 바인드 변수 채우기
+			psmt.setInt(1, study_no);
+			psmt.setInt(2, member_no);
+					
+			// sql문 실행 후 결과처리
+			cnt = psmt.executeUpdate();
+						
+			if(cnt > 0) {
+			System.out.println("스터디멤버 개설 성공");
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("스터디조직 개설 실패");
@@ -185,7 +202,7 @@ public class StudyDAO {
 				getConnection();
 				
 				// 스터디정보 선택출력 sql문
-				String sql = "select last_value(study_no) over(order by study_no) from study";
+				String sql = "select study_no from (select study_no from study order by study_no desc) where rownum =1";
 				//study 컬럼을 스터디 넘버기준으로 오름차순 정렬한 다음 가장 마지막 번호를 가져오는 sql문입니다.
 				
 				// sql문 실행
@@ -193,13 +210,13 @@ public class StudyDAO {
 				
 				// 결과처리
 				if(rs.next()) {		
-					System.out.println("스터디조직 일부출력 성공");
+					System.out.println("스터디번호 출력 성공");
 					study_no = Integer.parseInt(rs.getString("study_no"));
 				}
 				
 			} catch(Exception e) {
 				e.printStackTrace();
-				System.out.println("스터디조직 일부출력 실패");
+				System.out.println("스터디번호 출력 실패");
 			} finally {
 				close();
 			}
@@ -273,7 +290,7 @@ public class StudyDAO {
 				String study_time = rs.getString("study_time");
 				String study_onoff = rs.getString("study_onoff");
 				
-				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 				list.add(vo);
 			}
 			

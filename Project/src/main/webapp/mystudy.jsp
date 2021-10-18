@@ -27,7 +27,7 @@
     </div>
 	    <div class="articleBoard">
 	    <% 
-	   
+	    ArrayList<StudyVO> study_list = (ArrayList<StudyVO>)session.getAttribute("LectureMy"); 
 	    %>
 	        <table class="article">
 	            <tr>
@@ -42,8 +42,8 @@
 	                <th>온오프라인</th>
 	            </tr>
 	            
-	        <%/*for(int i = 0; i<study_list.size() ;i++){ */%>
-        <% 	/*StudyVO vo = study_list.get(i); 
+	        <%for(int i = 0; i<study_list.size() ;i++){ %>
+        <% 	StudyVO vo = study_list.get(i); 
 	        String study_name = vo.getStudy_name(); //스터디명
 	        String study_begin = vo.getStudy_begin(); //시작일자
 	        String study_end = vo.getStudy_end(); //종료일자
@@ -51,22 +51,19 @@
 	        String study_place = vo.getStudy_place(); //장소
 	        String study_week = vo.getStudy_week(); //요일
 	        String study_time =vo.getStudy_time(); //시간
-	        String study_onoff = vo.getStudy_onoff(); //온오프라인구분
-			
-	        */
+
 			%><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
 	            <tr class="boardList">
 	                <td>i+1 </td>
-	                <td>study_name </td>
-	                <td>study_begin </td>
-	                <td>study_end </td>
-	                <td>study_sub </td>
-	                <td>study_place </td>
-	                <td>study_week </td>
-	                <td>study_time </td>
-	                <td>study_onoff </td>
+	                <td><%=study_name %> </td>
+	                <td><%=study_begin %> </td>
+	                <td><%=study_end %> </td>
+	                <td><%=study_sub%> </td>
+	                <td><%=study_place %> </td>
+	                <td><%=study_week %> </td>
+	                <td><%=study_time %> </td>
 	            </tr>
-	        <!-- 여기에 반복문 끝내는 }쳐줘야 -->
+	       <% }%>
 	        </table>
 	    </div>
     </div>
