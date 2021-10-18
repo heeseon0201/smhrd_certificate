@@ -225,16 +225,18 @@ public class CourseDAO {
 		}
 		return cnt;
 	}
+	
+	
 	public ArrayList<LectureVO> Course_mypage(int member_no) {
 		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
 		try {
 			getConnection();
 			
 			// 수강정보 가져오는 sql문
-			String sql = "select * from COURSE join lecture on lecture_no = lecture_no_co where member_no_co = ?";
+			String sql = "select * from lecture L join COURSE C on L.lecture_no = C.lecture_no_co where C.member_no_co = ?";
 			
 			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			
 			// 바인드 변수 채우기
 			psmt.setInt(1, member_no);
