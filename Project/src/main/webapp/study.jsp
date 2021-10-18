@@ -22,19 +22,18 @@
 	<div>
 	    <h1 class="link"><b>Study</b></h1>
     <div class="searchOut">
+    	<form>
         <div class="search">
             <input type="text" placeholder="스터디 검색" class="searchInput">
             <button class="searchBtn" type="submit" name="searchClick">검색</button>
         </div>
         <div class="create">
-        	<button class="createBtn" type="submit" name="createClick">스터디만들기</button>
+        	<button class="createBtn" name="createClick" type="button" onclick="location.href='studycreate.jsp' ">스터디만들기</button>
         </div>
+        </form>
+        
     </div>
-<!--     <div class="createStudy">
-    	<div class="create">
-    		<button class="createBtn">스터디만들기</button>
-    	</div>
-    </div> -->
+
 	    <div class="articleBoard">
 	    <% ArrayList<StudyVO> list = (ArrayList<StudyVO>)session.getAttribute("Study"); %>
 	        <table class="article">

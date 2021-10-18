@@ -89,18 +89,22 @@ input::-moz-placeholder {	color: #a8a8a8}
 
 /* 스터디만들기 */
 
-
-.createBtn {
-	margin:10px;
-	width: 100px;
-	height: 100%;
-	border: 0px;
-	background: #495057;
-	outline: none;
-	float: right;
-	color: #e9ecef;
-	display: inline-block;
-}
+        .create{
+            margin-left:10px;
+            height:40px;
+            width:100px;
+            border: 1px solid;
+            display:inline-block;
+        }
+        .createBtn{
+            width:100px;
+            height:100%;
+            border:0px;
+            background:#495057;
+            outline:none;
+            float:right;
+            color:#e9ecef;
+        }
 /* 스터디만들기 끝 */
 
 /* 제목부분 */

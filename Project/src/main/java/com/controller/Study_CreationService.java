@@ -51,6 +51,9 @@ public class Study_CreationService extends HttpServlet {
 			
 			// 스터디 조직 생성 성공하면 스터디 조직 게시판으로 이동(회원가입 성공페이지에서 id와 함께 환영메시지 띄우는 식으로 사용가능)
 			response.sendRedirect("studySuccess.jsp");
+		}else {
+			System.out.println("스터디 개설 실패하여 개설창으로 이동");
+			response.sendRedirect("studycreate.jsp");
 		}
 		
 	}
