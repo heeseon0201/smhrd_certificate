@@ -22,9 +22,7 @@
 		<div class="loginDiv">
 			<h2 class="loginlogo">강의선택성공</h2>
 		</div>
-		<%
-
-		%>
+		
          <table id="logintable">
             <tr>
             <td><h1>강의가 선택되었습니다.</h1></td>
