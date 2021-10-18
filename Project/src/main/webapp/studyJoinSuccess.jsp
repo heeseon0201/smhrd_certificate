@@ -17,13 +17,11 @@
                 </a>
             </h1>
 	</div>
-	<%
-	HttpSession session2 = request.getSession();
-	String studyNo =  (String)session2.getAttribute("Study_no"); %>
+	
 	<form action="" method="post">
         <table id="logintable">
             <tr>
-            <td><h1><%=studyNo %>스터디가 선택되었습니다.</h1></td>
+            <td><h1>스터디가 선택되었습니다.</h1></td>
             </tr>
  <!-- 스터디 번호로 스터디 이름을 데이터에서 받아오기 -->
             
