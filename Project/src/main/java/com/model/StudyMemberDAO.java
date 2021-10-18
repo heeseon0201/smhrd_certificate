@@ -97,13 +97,13 @@ public class StudyMemberDAO {
 
 	
 		//스터디에 가입하는 메소드
-		public int study_Join(String studyNo, String memberNo) {
+		public int study_Join(String studyNo, int memberNo) {
 			int cnt=0;
 			try {
 				getConnection();
 				String sql = "insert into sutdymember values(StudyMember_seq.nextval, ?, ?);";
 				psmt.setString(1, studyNo);
-				psmt.setString(2, memberNo);
+				psmt.setInt(2, memberNo);
 				cnt = psmt.executeUpdate();
 			}catch(Exception e) {
 				e.printStackTrace();
