@@ -256,8 +256,9 @@ public class CourseDAO {
 				String get_teach = rs.getString("lecture_teach");
 				int get_price = rs.getInt("lecture_price");
 				double get_point = rs.getDouble("lecture_point");
+				String get_url = rs.getString("lecture_url");
 
-				LectureVO vo = new LectureVO(get_name, get_teach, get_price, get_point, get_cat);
+				LectureVO vo = new LectureVO(get_name, get_teach, get_price, get_point, get_url, get_cat);
 				list.add(vo);
 				
 				while(true) {
@@ -267,8 +268,9 @@ public class CourseDAO {
 						get_teach = rs.getString("lecture_teach");
 						get_price = rs.getInt("lecture_price");
 						get_point = rs.getDouble("lecture_point");
+						get_url = rs.getString("lecture_url");
 
-						vo = new LectureVO(get_name, get_teach, get_price, get_point, get_cat);
+						vo = new LectureVO(get_name, get_teach, get_price, get_point, get_url, get_cat);
 						list.add(vo);
 					}
 					
