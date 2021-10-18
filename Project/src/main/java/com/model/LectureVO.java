@@ -35,6 +35,16 @@ public class LectureVO {
 		this.lecture_point = lecture_point;
 		this.lecture_cat = lecture_cat;
 	}
+	
+	public LectureVO(String lecture_name, String lecture_teach,
+			int lecture_price, double lecture_point, String lecture_cat) {
+		super();
+		this.lecture_name = lecture_name;
+		this.lecture_teach = lecture_teach;
+		this.lecture_price = lecture_price;
+		this.lecture_point = lecture_point;
+		this.lecture_cat = lecture_cat;
+	}
 
 	// ¸Þ¼Òµå(get,set)
 	public int getLecture_no() {

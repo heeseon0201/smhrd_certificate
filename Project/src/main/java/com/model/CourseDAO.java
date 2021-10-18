@@ -249,19 +249,26 @@ public class CourseDAO {
 				System.out.println("마이페이지 강의데이터 가져오기 성공");
 				
 				// 결과처리
+				// 응답시간이 너무 길어서 필요한 데이터만 가져올수있도록 생성자를 별도로 하나 더 만듬
+				// while문에서 첫번째 데이터가 출력이 안되는 것을 확인해서 임시조치
+				String get_cat = rs.getString("lecture_cat");
+				String get_name = rs.getString("lecture_name");		
+				String get_teach = rs.getString("lecture_teach");
+				int get_price = rs.getInt("lecture_price");
+				double get_point = rs.getDouble("lecture_point");
+
+				LectureVO vo = new LectureVO(get_name, get_teach, get_price, get_point, get_cat);
+				list.add(vo);
+				
 				while(true) {
 					if(rs.next()) {		
-						int get_no = rs.getInt("lecture_no");
-						String get_cat = rs.getString("lecture_cat");
-						String get_name = rs.getString("lecture_name");		
-						String get_teach = rs.getString("lecture_teach");
-						String get_count = rs.getString("lecture_count");
-						int get_price = rs.getInt("lecture_price");
-						double get_point = rs.getDouble("lecture_point");
-						String get_review = rs.getString("lecture_review");
-						String get_url = rs.getString("lecture_url");
+						get_cat = rs.getString("lecture_cat");
+						get_name = rs.getString("lecture_name");		
+						get_teach = rs.getString("lecture_teach");
+						get_price = rs.getInt("lecture_price");
+						get_point = rs.getDouble("lecture_point");
 
-						LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+						vo = new LectureVO(get_name, get_teach, get_price, get_point, get_cat);
 						list.add(vo);
 					}
 					

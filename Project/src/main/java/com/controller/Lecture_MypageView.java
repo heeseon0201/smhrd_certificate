@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.model.CourseDAO;
-import com.model.CourseVO;
-import com.model.LectureDAO;
 import com.model.LectureVO;
-import com.model.MemberDAO;
 import com.model.MemberVO;
 
 // 마이페이지에서 강의정보를 보여줄 기능
