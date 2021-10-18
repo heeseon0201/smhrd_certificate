@@ -30,9 +30,7 @@ public class StudySearchService extends HttpServlet {
 			list = dao.Study_SeclectAll();
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
-			//list = dao.Lecture_Search(words);
-			list = dao.Study_SeclectAll();
-			//일단 스터디 검색하는 코드는 작성하지 않음
+			list = dao.Study_Search(words);
 		}
 		
 		if (list != null) {
