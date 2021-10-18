@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class StudyMemberDAO {
 	Connection conn = null;
@@ -44,8 +45,48 @@ public class StudyMemberDAO {
 			e.printStackTrace();
 		}
 	}
-	//가입한 스터디조직을 보여주는 메소드
-	//public void StudyMember_Select()
+	//가입한 스터디조직을 보여주는 메소드(마이페이지)
+	public ArrayList<StudyVO> StudyMember_Select(int member_no) {
+		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+		try {
+			getConnection();
+			String sql = "select study_name, study_begin, study_end, study_sub, study_place, study_week, study_time from studymember join study on study_no_sm = study_no where member_no_sm = ?";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			psmt.setInt(1, member_no);
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			while(true) {
+				if(rs.next()) {	
+					System.out.println("스터디 출력 성공");
+					int study_no = rs.getInt("study_no");
+					String study_name = rs.getString("study_name");
+					String study_begin =  rs.getString("study_begin");
+					String study_end =  rs.getString("study_end");
+					String study_sub =  rs.getString("study_sub");
+					String study_place =  rs.getString("study_place");
+					String study_week =  rs.getString("study_week");
+					String study_time =  rs.getString("study_time");
+					
+					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
+					list.add(vo);
+				}
+				
+				if(rs.isLast()) {
+					break;
+				}
+				}
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디 출력 실패");
+		}finally {
+			close();
+		}
+		return list;
+	
+	}
 
 	
 		//스터디에 가입하는 메소드
@@ -65,26 +106,14 @@ public class StudyMemberDAO {
 			}
 			return cnt;
 		}
-		// 마이페이지에서 COURSE와 자신이 가입한 스터디를 볼 수 있어야 함
-		//임한성 수정중
-/*		public int study_Create(String study_name, int study_begin, int study_end, String study_sub, String study_place, String study_week, String study_time) {
+
+		public int Study_MypageView(int member_no) {
 			int cnt = 0;
 			
 			try {
 				getConnection();
 				
-				// 스터디조직 만들기 sql문(작성중...)
-				String sql = "insert into StudyMember values(StudyMember_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 				
-				psmt.setString(1, study_name);
-				psmt.setInt(2, study_begin);
-				psmt.setInt(3, study_end);
-				psmt.setString(4, study_sub);
-				psmt.setString(5, study_place);
-				psmt.setString(6, study_week);
-				psmt.setString(7, study_time);
-				
-				cnt = psmt.executeUpdate();
 				
 			} catch(Exception e) {
 				e.printStackTrace();
@@ -94,5 +123,5 @@ public class StudyMemberDAO {
 			}
 			return cnt;
 		}
-*/
+
 }
