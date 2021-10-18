@@ -283,7 +283,7 @@ public class LectureDAO {
 				get_review = rs.getString("lecture_review");
 				
 				// 구분자에 따라 리뷰를 쪼개서 저장
-				reviewlist = get_review.split("DELIMITER111 ");
+				reviewlist = get_review.split("\\$");
 			}
 			
 			System.out.println("리뷰표시 성공");

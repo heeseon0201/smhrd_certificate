@@ -35,7 +35,7 @@ public class Lecture_SelectReview extends HttpServlet {
 			session.setAttribute("LectureReview", reviewlist);
 			
 			// 리뷰보는 페이지로 이동
-			response.sendRedirect("리뷰보는페이지.jsp");
+			response.sendRedirect("review.jsp");
 		} else {
 			// 리뷰가 없을 경우 여는 페이지로 이동
 			response.sendRedirect("리뷰가 없습니다페이지.jsp");
