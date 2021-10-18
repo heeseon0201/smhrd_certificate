@@ -22,7 +22,7 @@ public class LectureSearchService extends HttpServlet {
 		request.setCharacterEncoding("euc-kr");
 		ArrayList<LectureVO> list = null;
 		String words = request.getParameter("search_words");
-		System.out.println("결과" + words);
+		System.out.println("결과: " + words);
 		LectureDAO dao = new LectureDAO();
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
