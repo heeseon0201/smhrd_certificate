@@ -1,19 +1,19 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.StudyVO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+    pageEncoding="euc-kr"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="euc-kr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ìŠ¤í„°ë”” ëª¨ì§‘</title>
+    <title>½ºÅÍµð ¸ðÁý</title>
     <link rel="stylesheet" href="table.css">
 </head>
 </head>
 	<div style="text-align: left; margin: 0%" class="title">
-		<!--ë¡œê³ -->
+		<!--·Î°í-->
 		<header>
 			<h3><a href = "main.jsp">I-Study</a></h3>
 		</header>
@@ -25,12 +25,12 @@
     	<form class="searchForm" action="StudySearchService">
         <div class="searchOut">
             <div class="search">
-                <input type="text" placeholder="ìŠ¤í„°ë”” ê²€ìƒ‰" name="search_words" class="searchInput" autocomplete="off">
-                <button class="searchBtn" type="submit" name="click">ê²€ìƒ‰</button>
+                <input type="text" placeholder="½ºÅÍµð °Ë»ö" name="search_words" class="searchInput" autocomplete="off">
+                <button class="searchBtn" type="submit" name="click">°Ë»ö</button>
             </div>
         </div>
         <div class="create">
-        	<button class="createBtn" name="createClick" type="button" onclick="location.href='studycreate.jsp' ">ìŠ¤í„°ë””ë§Œë“¤ê¸°</button>
+        	<button class="createBtn" name="createClick" type="button" onclick="location.href='studycreate.jsp' ">½ºÅÍµð¸¸µé±â</button>
         </div>
         </form>
         
@@ -40,31 +40,31 @@
 	    <% ArrayList<StudyVO> list = (ArrayList<StudyVO>)session.getAttribute("Study"); %>
 	        <table class="article">
 	            <tr>
-	                <th>ìˆœë²ˆ</th>
-	                <th>ìŠ¤í„°ë””ëª…</th>
-	                <th>ì‹œìž‘ì¼ìž</th>
-	                <th>ì¢…ë£Œì¼ìž</th>
-	                <th>ìŠ¤í„°ë”” ê³¼ëª©</th>
-	                <th>ìž¥ì†Œ</th>
-	                <th>ìš”ì¼(ì›”í™”ìˆ˜ëª©ê¸ˆ)</th>
-	                <th>ì‹œê°„(ê³µë¶€ì‹œê°„ ì‹œê°„ë‹¨ìœ„)</th>
-	                <th>ìŠ¤í„°ë””ì„ íƒ</th>
+	                <th>¼ø¹ø</th>
+	                <th>½ºÅÍµð¸í</th>
+	                <th>½ÃÀÛÀÏÀÚ</th>
+	                <th>Á¾·áÀÏÀÚ</th>
+	                <th>½ºÅÍµð °ú¸ñ</th>
+	                <th>Àå¼Ò</th>
+	                <th>¿äÀÏ(¿ùÈ­¼ö¸ñ±Ý)</th>
+	                <th>½Ã°£(°øºÎ½Ã°£ ½Ã°£´ÜÀ§)</th>
+	                <th>½ºÅÍµð¼±ÅÃ</th>
 	            </tr>
 	            
 	        <%for(int i = 0; i<list.size() ;i++){ %>
 	        
         <% 	StudyVO vo = list.get(i); 
-	        String study_name = vo.getStudy_name(); //ìŠ¤í„°ë””ëª…
-	        String study_begin = vo.getStudy_begin(); //ì‹œìž‘ì¼ìž
-	        String study_end = vo.getStudy_end(); //ì¢…ë£Œì¼ìž
-	        String study_sub = vo.getStudy_sub(); //ìŠ¤í„°ë””ê³¼ëª©
-	        String study_place = vo.getStudy_place(); //ìž¥ì†Œ
-	        String study_week = vo.getStudy_week(); //ìš”ì¼
-	        String study_time =vo.getStudy_time(); //ì‹œê°„
+	        String study_name = vo.getStudy_name(); //½ºÅÍµð¸í
+	        String study_begin = vo.getStudy_begin(); //½ÃÀÛÀÏÀÚ
+	        String study_end = vo.getStudy_end(); //Á¾·áÀÏÀÚ
+	        String study_sub = vo.getStudy_sub(); //½ºÅÍµð°ú¸ñ
+	        String study_place = vo.getStudy_place(); //Àå¼Ò
+	        String study_week = vo.getStudy_week(); //¿äÀÏ
+	        String study_time =vo.getStudy_time(); //½Ã°£
 			
-	        //í…ŒìŠ¤íŠ¸ìš© ë¬¸ìž
+	        //Å×½ºÆ®¿ë ¹®ÀÚ
 	        int study_no = vo.getStudy_no();
-			%><!-- ë°˜ë³µë¬¸ì„ ì´ìš©í•˜ì—¬ í…Œì´ë¸”ì„ ì •ì˜ í•˜ì˜€ìŠµë‹ˆë‹¤. ë‚˜ì¤‘ì— ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ì»¬ëŸ¼ëª…ì„ ë³€ìˆ˜ë¡œ ê°€ì ¸ì™€ì„œ ë¶™ì—¬ë„£ì„ ê²ƒ. -->
+			%><!-- ¹Ýº¹¹®À» ÀÌ¿ëÇÏ¿© Å×ÀÌºíÀ» Á¤ÀÇ ÇÏ¿´½À´Ï´Ù. ³ªÁß¿¡ µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ ÄÃ·³¸íÀ» º¯¼ö·Î °¡Á®¿Í¼­ ºÙ¿©³ÖÀ» °Í. -->
 	            <tr class="boardList">
 	                <td><%=i+1 %></td>
 	                <td><%=study_name %></td>
@@ -75,8 +75,8 @@
 	                <td><%=study_week %></td>
 	                <td><%=study_time %></td>
 	                
-	                <!-- ì–´ì¼€ë“  Study_Join.javaë¡œ STUDY_NOì„ ë³´ë‚´ì•¼ í•¨-->
-	              <td><a href="Study_Join?<%=study_no %>">ì„ íƒ</a></td> 
+	                <!-- ¾îÄÉµç Study_Join.java·Î STUDY_NOÀ» º¸³»¾ß ÇÔ-->
+	              <td><a href="Study_Join?<%=study_no %>">¼±ÅÃ</a></td> 
 	            </tr>
 	            <%} %>
 	        </table>
