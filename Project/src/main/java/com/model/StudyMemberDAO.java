@@ -101,10 +101,15 @@ public class StudyMemberDAO {
 			int cnt=0;
 			try {
 				getConnection();
-				String sql = "insert into sutdymember values(StudyMember_seq.nextval, ?, ?);";
+				String sql = "insert into studymember values(StudyMember_seq.nextval, ?, ?)";
+				
+				psmt = conn.prepareStatement(sql);
+				
 				psmt.setInt(1, studyNo);
 				psmt.setInt(2, memberNo);
+				
 				cnt = psmt.executeUpdate();
+				
 			}catch(Exception e) {
 				e.printStackTrace();
 				System.out.println("스터디 조직 가입 실패");

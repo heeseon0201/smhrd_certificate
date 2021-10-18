@@ -48,7 +48,7 @@ public class Study_Join extends HttpServlet {
 		//스터디 선택시 받아오는 매개변수
 		HttpSession session = request.getSession();//세션 생성
 
-		int studyNo = Integer.parseInt(request.getParameter("studyNo"));//study.jsp에서 매개변수 스터디넘버 받아오기
+		int studyNo = Integer.parseInt(request.getParameter("study_no"));//study.jsp에서 매개변수 스터디넘버 받아오기
 		
 		MemberVO vo = (MemberVO)session.getAttribute("Member");//세션에서 회원넘버 받아오기
 		int memberNo = vo.getMember_no();//스트링으로 형변환하기
@@ -61,12 +61,13 @@ public class Study_Join extends HttpServlet {
 			
 			// 추후에 회원가입 후 수행할 활동 입력해야함
 			if (cnt>0) {
+				System.out.println("스터디가입성공");
 				// 스터디에 가입한 멤버의 이름과 스터디 이름을 세션에 저장
 				//수정할 것
 				session.setAttribute("Study_no", studyNo);
 				
 				// 성공시 스터디 가입성공으로 보내기
-				response.sendRedirect("StudyJoinSuccess.jsp");
+				response.sendRedirect("studyJoinSuccess.jsp");
 			}
 			
 	

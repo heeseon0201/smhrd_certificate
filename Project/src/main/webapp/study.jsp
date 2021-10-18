@@ -76,7 +76,7 @@
 	                <td><%=study_time %></td>
 	                
 	                <!-- 어케든 Study_Join.java로 STUDY_NO을 보내야 함-->
-	              <td><a href="Study_Join?<%=study_no %>">선택</a></td> 
+	              <td><a href="Study_Join?study_no=<%=study_no %>">선택</a></td> 
 	            </tr>
 	            <%} %>
 	        </table>
