@@ -47,7 +47,6 @@
 	                <th>장소</th>
 	                <th>요일(월화수목금)</th>
 	                <th>시간(공부시간 시간단위)</th>
-	                <th>온오프라인</th>
 	                <th>스터디선택</th>
 	            </tr>
 	            
@@ -61,7 +60,6 @@
 	        String study_place = vo.getStudy_place(); //장소
 	        String study_week = vo.getStudy_week(); //요일
 	        String study_time =vo.getStudy_time(); //시간
-	        String study_onoff = vo.getStudy_onoff(); //온오프라인구분
 			
 	        //테스트용 문자
 	        String name = "안녕안녕";
@@ -75,7 +73,6 @@
 	                <td><%=study_place %></td>
 	                <td><%=study_week %></td>
 	                <td><%=study_time %></td>
-	                <td><%=study_onoff %></td>
 	                
 	                <!-- 어케든 Study_Join.java로 STUDY_NO을 보내야 함-->
 	              <td><a href="Study_Join?"<%=name %>>선택</a></td> 
