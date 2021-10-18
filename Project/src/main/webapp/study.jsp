@@ -22,10 +22,12 @@
 	<div>
 	    <h1 class="link"><b>Study</b></h1>
     <div class="searchOut">
-    	<form>
-        <div class="search">
-            <input type="text" placeholder="스터디 검색" class="searchInput">
-            <button class="searchBtn" type="submit" name="searchClick">검색</button>
+    	<form class="searchForm" action="StudySearchService">
+        <div class="searchOut">
+            <div class="search">
+                <input type="text" placeholder="스터디 검색" name="search_words" class="searchInput" autocomplete="off">
+                <button class="searchBtn" type="submit" name="click">검색</button>
+            </div>
         </div>
         <div class="create">
         	<button class="createBtn" name="createClick" type="button" onclick="location.href='studycreate.jsp' ">스터디만들기</button>
