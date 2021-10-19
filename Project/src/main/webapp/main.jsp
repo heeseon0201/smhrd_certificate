@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I.study</title>
+<title>I.Study</title>
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="assets/css/style.min.css">
 <link rel="stylesheet" href="assets/css/modules.css">
@@ -22,7 +22,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고, 회원가입, 로그인-->
 		<header>
-			<h3>I.study</h3>
+			<h3>I.Study</h3>
 			<nav>
 				<%MemberVO vo = (MemberVO)session.getAttribute("Member"); %>
 				<%if(vo == null){ %>
