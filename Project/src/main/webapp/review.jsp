@@ -1,17 +1,18 @@
+<%@page import="java.io.PrintWriter"%>
 <%@page import="com.model.LectureDAO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+    pageEncoding="euc-kr"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="euc-kr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Í∞ïÏùòÎ™®ÏïÑÎ≥¥Í∏∞</title>
+    <title>∞≠¿«∏æ∆∫∏±‚</title>
     <link rel="stylesheet" href="table.css">
 </head>
 	<div style="text-align: left; margin: 0%" class="title">
-		<!--Î°úÍ≥†-->
+		<!--∑Œ∞Ì-->
 		<header>
 			<h3><a href = "main.jsp">I.study</a></h3>
 		</header>
@@ -21,7 +22,7 @@
     <form class="searchForm" action="LectureSearchService">
     <%
     request.setCharacterEncoding("euc-kr");
-    //Î∞õÏïÑÏò® lecture_noÎ•º intÌÉÄÏûÖÏúºÎ°ú Î≥ÄÍ≤ΩÌïòÏó¨ Ï†ÄÏû•
+    //πﬁæ∆ø¬ lecture_no∏¶ int≈∏¿‘¿∏∑Œ ∫Ø∞Ê«œø© ¿˙¿Â
     int lecture_no = Integer.parseInt(request.getParameter("lecture_no"));
     LectureDAO dao = new LectureDAO();
     String[] reviewlist = dao.Lecture_SelectReview(lecture_no);
@@ -33,14 +34,22 @@
 
                 <table class="article" >
                 <tr>
-                    <th class="reviewtable">ÌõÑÍ∏∞</th>
+                    <th class="reviewtable">»ƒ±‚</th>
                 </tr>
-                <% for(int i=0; i < reviewlist.length; i++){%>
-		        <tr>   
-								 <td><%=reviewlist[i] %></td>
-  
-		          </tr>
-		          <% }%>
+                <!-- ∏Æ∫‰æ¯¿ª∂ß ±∏«ˆ«œ±‚ -->
+					<%if(reviewlist!=null){ %>
+	                <% for(int i=0; i < reviewlist.length; i++){%>
+			        <tr>   
+						<td><%=reviewlist[i] %></td>
+			        </tr>
+		         	<%}%>
+		         	<%}else{ 
+			  			//∏Æ∫‰∞° ∫Òæ˙¿ª∂ß æÀ∂˜ ∂ÁøÏ±‚ 
+			  			response.setContentType("text/html; charset=UTF-8");
+			  			//PrintWriter out = response.getWriter();
+			  			out.println("<script>alert('∏Æ∫‰∞° æ¯Ω¿¥œ¥Ÿ.'); location.href='lecture.jsp';</script>");
+			  			out.flush();
+		         	} %>
         </table>
     </div>
     <div class="foot"></div>
