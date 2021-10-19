@@ -180,6 +180,7 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 				// []포함시 검색이 안되는것 같음
 				// 검색결과 10개만 출력하는 sql문
 //				sql = "select * from (select ROWNUM rnum, L.* from (select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%') L)";
+		
 				sql = "select * from (select ROWNUM rnum, L.* from (select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%' order by Lecture_no asc) L) where rnum between ? and ?";
 				// 현재 강의명에 걸린 하이퍼링크까지 검색되어버림 
 				// 만약 lecture_name에 "https://"가 있으면 그 뒤 내용을 지워서 저장한다.(X 이 방법은 틀린듯)
@@ -380,17 +381,5 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 		return reviewlist;
 	}
 	
-	//마이페이지에서 강의정보를 보여주는 메소드
-	//내가 선택한 강의 정보 list를 출력
-	//	public ArrayList<LectureVO> Lecture_SelectMy(int lecture_no){
-			
-			//return list할 수 있게 sql문 실행
-		//}
-	
-	//강의를 선택하면, COURSE테이블에 자동으로 쌓이게 하는 메소드
-	//강의명을 String형태로 보여줌
-		//public String Lecture_Select() {
-			
-		//}
 }
 
