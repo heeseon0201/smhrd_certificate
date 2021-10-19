@@ -7,7 +7,7 @@ public class LectureVO {
 	private String lecture_teach; // 강사명
 	private String lecture_count;	// 총 강의수
 	private int lecture_price;		// 가격
-	private double lecture_point;		// 평점 
+	private double lecture_point;		// 평점
 	private String lecture_review;	// 후기
 	private String lecture_url;		// URL
 	private String lecture_cat;		// 카테고리
@@ -28,11 +28,35 @@ public class LectureVO {
 		this.lecture_cat = lecture_cat;
 	}
 	
+	public LectureVO(int lecture_no, String lecture_name, String lecture_teach, String lecture_count,
+			int lecture_price, double lecture_point, String lecture_url, String lecture_cat) {
+		super();
+		this.lecture_no = lecture_no;
+		this.lecture_name = lecture_name;
+		this.lecture_teach = lecture_teach;
+		this.lecture_count = lecture_count;
+		this.lecture_price = lecture_price;
+		this.lecture_point = lecture_point;
+		this.lecture_url = lecture_url;
+		this.lecture_cat = lecture_cat;
+	}
+	
 	public LectureVO(String lecture_name, String lecture_teach, double lecture_point, String lecture_cat) {
 		super();
 		this.lecture_name = lecture_name;
 		this.lecture_teach = lecture_teach;
 		this.lecture_point = lecture_point;
+		this.lecture_cat = lecture_cat;
+	}
+	
+	public LectureVO(String lecture_name, String lecture_teach,
+			int lecture_price, double lecture_point, String lecture_url, String lecture_cat) {
+		super();
+		this.lecture_name = lecture_name;
+		this.lecture_teach = lecture_teach;
+		this.lecture_price = lecture_price;
+		this.lecture_point = lecture_point;
+		this.lecture_url = lecture_url;
 		this.lecture_cat = lecture_cat;
 	}
 
