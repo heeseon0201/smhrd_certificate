@@ -78,11 +78,11 @@
         </table>
         <div class="pages">
         <%
-        
+        String words = (String)session.getAttribute("words");
         for(int a =1; a<11;a++){ 
         	
         %>
-        <a href="LectureSearchService?pages=<%=a%>&search_words="><%=a %></a>
+        <a href="LectureSearchService?pages=<%=a%>&search_words=<%=words%>"><%=a %></a>
         <%} %>
         </div>
     </div>

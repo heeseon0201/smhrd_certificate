@@ -20,9 +20,13 @@ public class LectureSearchService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
+		// 技记 按眉 积己
+		HttpSession session = request.getSession();
+		
 		ArrayList<LectureVO> list = null;
 		String words = request.getParameter("search_words");
 		String pages =  request.getParameter("pages");
+		session.setAttribute("words", words);
 		System.out.println("搬苞: " + words);
 		LectureDAO dao = new LectureDAO();
 		
@@ -53,7 +57,7 @@ public class LectureSearchService extends HttpServlet {
 			
 			// 技记 按眉 积己
 			HttpSession session = request.getSession();
-			
+	
 			// 碍狼沥焊 单捞磐甫 技记俊 历厘
 			session.setAttribute("Lecture", list);
 			
