@@ -64,7 +64,6 @@ public class StudyMemberDAO {
 			// 결과처리
 			// 스터디 테이블에 null값으로 이루어진 행이있어 렉걸림.
 			
-			
 			while(true) {
 				if(rs.next()) {	
 					System.out.println("스터디 출력 성공");
@@ -81,10 +80,14 @@ public class StudyMemberDAO {
 					list.add(vo);
 				}
 				
+				if(!rs.next()) {
+					break;
+				}
+				
 				if(rs.isLast()) {
 					break;
 				}
-				}
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("스터디 출력 실패");
