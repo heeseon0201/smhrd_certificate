@@ -212,4 +212,75 @@ public class MemberDAO {
 		return cnt;
 	}
 	
+	// 아이디 찾기 메소드
+	public String ID_Find(String member_NM) {
+		String get_member_id = null;
+		
+		try {
+			getConnection();
+			
+			// 아이디 찾기 sql문
+			String sql = "select MEMBER_ID from MEMBER where MEMBER_NM = ?";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			psmt.setString(1, member_NM);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {	
+				get_member_id = rs.getString("member_id");
+			}
+			System.out.println("아이디 찾기 성공");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("아이디 찾기 실패");
+		} finally {
+			close();
+		}
+		return get_member_id;
+	}
+	
+	// 비밀번호 찾기 메소드	
+	public String PW_Find(String member_id, String member_NM) {
+		String get_member_pw = null;
+		
+		try {
+			getConnection();
+			
+			// 비밀번호 찾기 sql문
+			String sql = "select member_pw from MEMBER where member_id=? and member_NM=?";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+			
+			// 바인드 변수 채우기
+			psmt.setString(1, member_id);
+			psmt.setString(2, member_NM);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			if(rs.next()) {	
+				get_member_pw = rs.getString("member_pw");
+			}
+			System.out.println("비밀번호 찾기 성공");
+				
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("비밀번호 찾기 실패");
+		} finally {
+			close();
+		}
+		
+		return get_member_pw;
+	}
+	
+	
 }
