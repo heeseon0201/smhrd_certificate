@@ -221,27 +221,41 @@ public class StudyDAO {
 				getConnection();
 				
 				// 방금 생성된 스터디정보 선택출력 sql문
-				String sql = "select * from (select * from study order by ROWNUM desc) where ROWNUM = 1";
+				String sql = "select * from (select S.* from study S order by ROWNUM desc) where ROWNUM = 1";
 				//study 컬럼을 스터디 넘버기준으로 오름차순 정렬한 다음 가장 마지막 번호를 가져오는 sql문입니다.
+			
+				// SQL 실행 객체 생성
+				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 				
 				// sql문 실행
 				rs = psmt.executeQuery();
 				
-				// 결과처리
-				if(rs.next()) {		
-					System.out.println("스터디번호 출력 성공");
-					int get_no = rs.getInt("study_no");
-					String get_name = rs.getString("study_name");
-					String get_begin = rs.getString("study_begin");
-					String get_end = rs.getString("study_end");
-					String get_sub = rs.getString("study_sub");
-					String get_place = rs.getString("study_place");
-					String get_week = rs.getString("study_week");
-					String get_time = rs.getString("study_time");
+				System.out.println(1);
+				while(true) {
+					if(rs.next()) {		
+						System.out.println("스터디번호 출력 성공");
+						int get_no = rs.getInt("study_no");
+						String get_name = rs.getString("study_name");
+						String get_begin = rs.getString("study_begin");
+						String get_end = rs.getString("study_end");
+						String get_sub = rs.getString("study_sub");
+						String get_place = rs.getString("study_place");
+						String get_week = rs.getString("study_week");
+						String get_time = rs.getString("study_time");
+						
+						vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+					}
 					
-					vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+					if(rs.isLast()) {
+						break;
+					}
+					
+					if(!rs.next()) {
+						break;
+					}
 				}
 				
+				System.out.println(1);
 			} catch(Exception e) {
 				e.printStackTrace();
 				System.out.println("스터디번호 출력 실패");
