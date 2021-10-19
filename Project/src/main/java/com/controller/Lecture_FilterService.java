@@ -22,6 +22,7 @@ public class Lecture_FilterService extends HttpServlet {
 		request.setCharacterEncoding("euc-kr");
 		ArrayList<LectureVO> list = null;
 		ArrayList<String> filter = new ArrayList<String>();
+		int i = 1;
 		
 		// 선택한 필터를 가져오는 부분(jsp파일에 맞춰서 수정필요한 부분, for문 입히기?)
 		String 필터요소1 = request.getParameter("필터 태그의 name");
