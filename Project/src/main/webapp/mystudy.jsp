@@ -53,7 +53,7 @@
 
 			%><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
 	            <tr class="boardList">
-	                <td>i+1 </td>
+	                <td><%=i+1%> </td>
 	                <td><%=study_name %> </td>
 	                <td><%=study_begin %> </td>
 	                <td><%=study_end %> </td>
