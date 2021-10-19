@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-
 public class LectureDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
@@ -113,8 +112,8 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 		psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 		
 		// 바인드 변수 채우기
-		psmt.setInt(1, i);
-		psmt.setInt(2, i+9);
+		psmt.setInt(1, 1+(i-1)*10);
+		psmt.setInt(2, 10+(i-1)*10);
 		
 		// sql문 실행
 		rs = psmt.executeQuery();
@@ -189,8 +188,8 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
 				// 바인드 변수 채우기
-				psmt.setInt(1, j);
-				psmt.setInt(2, j+9);
+				psmt.setInt(1, 1+(j-1)*10);
+				psmt.setInt(2, 10+(j-1)*10);
 				
 				// sql문 실행
 				rs = psmt.executeQuery();

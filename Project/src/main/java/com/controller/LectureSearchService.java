@@ -32,6 +32,7 @@ public class LectureSearchService extends HttpServlet {
 			pages="1";
 		}
 		int i = Integer.parseInt(pages);
+		System.out.println(i);
 
 		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
@@ -45,6 +46,11 @@ public class LectureSearchService extends HttpServlet {
 		}
 		
 		if (list != null) {
+			for(int j = 0; j<list.size(); j++) {
+				LectureVO vo111 = list.get(j);
+				System.out.println(vo111.getLecture_no());
+			}
+			
 			// 세션 객체 생성
 			HttpSession session = request.getSession();
 			
