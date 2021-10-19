@@ -45,6 +45,7 @@ public class StudyMemberDAO {
 			e.printStackTrace();
 		}
 	}
+
 	//가입한 스터디조직을 보여주는 메소드(마이페이지)
 	public ArrayList<StudyVO> StudyMember_Select(int member_no) {
 		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
@@ -117,23 +118,6 @@ public class StudyMemberDAO {
 				e.printStackTrace();
 				System.out.println("스터디 조직 가입 실패");
 			}finally {
-				close();
-			}
-			return cnt;
-		}
-
-		public int Study_MypageView(int member_no) {
-			int cnt = 0;
-			
-			try {
-				getConnection();
-				
-				
-				
-			} catch(Exception e) {
-				e.printStackTrace();
-				System.out.println("스터디 조직 가입 실패");
-			} finally {
 				close();
 			}
 			return cnt;
