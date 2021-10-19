@@ -34,6 +34,7 @@ public class LectureSearchService extends HttpServlet {
 			list = dao.Lecture_ViewAll(i);
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
+//			list = dao.Lecture_Search(words, i);
 			list = dao.Lecture_Search(words);
 		}
 		
