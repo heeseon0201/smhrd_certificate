@@ -295,6 +295,17 @@ th {
 	font-weight:bold;
 }
 
+/* 강의 목록 밑 페이지 */
+.pages{
+	text-align:center;
+
+}
+.pages a{
+	text-decoration-line:none;
+	color: white;
+	font-weight:bold;
+}
+
 /*studycreat.jsp 폼 양식 시작*/
         .tableBasic{
             margin: auto;

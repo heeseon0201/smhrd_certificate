@@ -55,7 +55,7 @@
 		<div>
 			<section>
 				<div class="linkTitle">
-					<a class="link" href="LectureSearchService?search_words=">Lecture</a>
+					<a class="link" href="LectureSearchService?search_words=&pages=1">Lecture</a>
 				</div>
 			</section>
 		</div>

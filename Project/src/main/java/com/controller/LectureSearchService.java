@@ -22,11 +22,12 @@ public class LectureSearchService extends HttpServlet {
 		request.setCharacterEncoding("euc-kr");
 		ArrayList<LectureVO> list = null;
 		String words = request.getParameter("search_words");
+		int pages =  Integer.parseInt(request.getParameter("pages"));
 		System.out.println("결과: " + words);
 		LectureDAO dao = new LectureDAO();
 		
 		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
-		int i = 1;
+		int i = pages;
 		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
