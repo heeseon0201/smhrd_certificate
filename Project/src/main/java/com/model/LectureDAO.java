@@ -114,7 +114,7 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 		
 		// 바인드 변수 채우기
 		psmt.setInt(1, i);
-		psmt.setInt(1, i+9);
+		psmt.setInt(2, i+9);
 		
 		// sql문 실행
 		rs = psmt.executeQuery();

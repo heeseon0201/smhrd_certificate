@@ -46,10 +46,10 @@
 	<%
 	//main에 렉쳐 보여주는 리스트 생성하기 	
 	LectureDAO dao = new LectureDAO();
-	ArrayList<LectureVO> list = dao.Lecture_View10();
+	ArrayList<LectureVO> list = dao.Lecture_ViewAll(1);
 	//main에 스터디 보여주는 리스트 생성
 	StudyDAO dao2 = new StudyDAO();
-	ArrayList<StudyVO> list2 = dao2.Study_View10();
+	ArrayList<StudyVO> list2 = dao2.Study_SeclectAll();
 	%>
 	<div class="info">
 		<div>
