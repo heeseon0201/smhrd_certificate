@@ -20,6 +20,8 @@ public class Lecture_ViewAllService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
+		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
+		int i = 1;
 		
 		// DAO의 Lecture_viewAll 실행해서 전체 테이블 데이터 가져오기
 		LectureDAO dao = new LectureDAO();

@@ -97,7 +97,7 @@ public class StudyDAO {
 		}
 		return list;
 	}
-
+	
 	
 	// 스터디 조직 하나를 선택해서 보여주는 메소드
 	public StudyVO Study_SelectOne(int study_no) {

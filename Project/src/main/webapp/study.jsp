@@ -15,7 +15,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--·Î°í-->
 		<header>
-			<h3><a href = "main.jsp">I-Study</a></h3>
+			<h3><a href = "main.jsp">I.study</a></h3>
 		</header>
 	</div>
 <body class="background">

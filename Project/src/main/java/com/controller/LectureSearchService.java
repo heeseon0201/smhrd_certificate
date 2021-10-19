@@ -24,6 +24,10 @@ public class LectureSearchService extends HttpServlet {
 		String words = request.getParameter("search_words");
 		System.out.println("결과: " + words);
 		LectureDAO dao = new LectureDAO();
+		
+		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
+		int i = 1;
+		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
 			// 전체출력

@@ -14,7 +14,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고-->
 		<header>
-			<h3><a href = "main.jsp">I-Study</a></h3>
+			<h3><a href = "main.jsp">I.study</a></h3>
 		</header>
 	</div>
 <body class="background">
@@ -25,10 +25,6 @@
                 <input type="text" placeholder="강의 검색" name="search_words" class="searchInput" autocomplete="off">
                 <button class="searchBtn" type="submit" name="click">검색</button>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
         </div>
     </form>
 	<div class="articleBoard">
