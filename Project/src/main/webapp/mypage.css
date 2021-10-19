@@ -11,20 +11,118 @@
 	background-size: 100% ;
 	height: 100vh;
 }
-header {
-	height: 30px;
-	padding: 1rem;
-	color: white;
-	font-weight: bold;
-	display: flex;
+
+header{position:fixed; width: 100%; height: 60px;}
+
+:root{
+	--text-color: #f0f4f5;
+	--background-color: burlywood;
+	--accent-color: black;
+}
+
+*{margin: 0; padding: 0;}
+
+.nav > a {
+	color: #f0f4f5;
+}
+
+a {
+text-decoration: none;
+color: var(--text-color);
+ }
+
+.navbar{
+	font-family: 'Noto Sans KR', sans-serif;
+	display:flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0;
+	padding: 5px 12px;
+	width: 100%;
+	height: 50px;
+    background-color: rgba( 255, 255, 255, 0.5 );
 }
-header>h3>a{
-	text-decoration-line:none;
-	color:white;
-	font-weight:bold;
+
+.navbar_logo {
+	font-size: 25px;
+	color: var(--text-color);
+	padding-left: 30px;
+}
+
+.navbar_logo i {
+	color: var(--accent-color);
+}
+
+.navbar_menu {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar_menu li {
+	padding: 8px 45px;
+	font-size: 25px;
+	color: var(--text-color);
+}
+
+.navbar_menu li:hover{
+	background-color:#6E6E6E;
+	border-radius: 4px;
+}
+
+.navbar_account{
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar_account li{
+	padding: 8px 20px;
+	color: var(--text-color);
+	font-size: 25px;
+}
+
+.navbar_toggleBtn{
+	display: none;
+	position: absolute;
+	right: 32px;
+	font-size: 24px;
+	color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 8px 24px;
+		height: 60%;
+	}
+
+	.navbar_menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width:100%;
+	}
+
+	.navbar_menu li{
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar_account{
+		display: none;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.navbar_toggleBtn{
+		display: block;
+	}
+
+	.navbar_menu.active,
+	.navbar_account.active {
+		display: flex;
+	}
 }
 
 h1 {
@@ -36,6 +134,7 @@ h1 {
 	
 	font-weight: bold;
 }
+
 
 body {
 	background: #EEE;
@@ -87,6 +186,7 @@ input::-moz-placeholder {	color: #a8a8a8}
 /* 제목부분 */
 .link{
 	font-family:"courgette", cursive;
+	padding-top: 100px;
 }
 
 /* 본문 표 */

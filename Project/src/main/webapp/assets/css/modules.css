@@ -1,9 +1,9 @@
 /* 메인 4개 띄워주는것. 건들지 말것*/
 .MOD_FEATURE_Container {
-  border-bottom: 1px solid #b9b9b9;
   background: white;
   display: block;
   text-decoration: none;
+  border: 1px solid #6E6E6E;
 }
 .MOD_FEATURE_Container:hover img {
   filter: brightness(1.2);
@@ -22,7 +22,8 @@
 
 .MOD_FEATURE_TextContainer {
   padding: 1rem;
-  height: 200px;/*박스 높이 고정*/
+  height: 350px;/*박스 높이 고정*/
+
 }
 
 .MOD_FEATURE_Description {
@@ -31,7 +32,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-line-clamp: 8; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
 
@@ -47,7 +48,7 @@ body {
 
 
 [data-layout=_r] {
-  max-width: 1200px;
+  max-width: 1650px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -64,7 +65,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 0;
   padding: 0.5rem 0;
 }
@@ -79,5 +80,15 @@ h3 {
 
 p {
   line-height: 1.4;
+  font-size: 20px;
+}
+
+div#main > p {
+  line-height: 8;
+  font-size: 30px;
+}
+
+p.MOD_FEATURE_Title {
+  color: black;
 }
 /*메인4개 띄워주는것 끝.*/
