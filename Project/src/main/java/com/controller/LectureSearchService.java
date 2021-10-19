@@ -20,27 +20,44 @@ public class LectureSearchService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
+		// 세션 객체 생성
+		HttpSession session = request.getSession();
+		
 		ArrayList<LectureVO> list = null;
 		String words = request.getParameter("search_words");
+		String pages =  request.getParameter("pages");
+		session.setAttribute("words", words);
 		System.out.println("결과: " + words);
 		LectureDAO dao = new LectureDAO();
 		
 		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
-		int i = 1;
+
+		if(pages==null) {
+			pages="1";
+		}
+		int i = Integer.parseInt(pages);
+		System.out.println("페이지번호 : "+i);
 		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
 			// 전체출력
-			list = dao.Lecture_ViewAll();
+			list = dao.Lecture_ViewAll(i);
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
-			list = dao.Lecture_Search(words);
+			list = dao.Lecture_Search(words, i);
+			System.out.println(list.size());
+//			list = dao.Lecture_Search(words);
 		}
 		
 		if (list != null) {
-			// 세션 객체 생성
-			HttpSession session = request.getSession();
+			for(int j = 0; j<list.size(); j++) {
+				LectureVO vo111 = list.get(j);
+				System.out.println(vo111.getLecture_no());
+			}
 			
+			// 세션 객체 생성
+//			HttpSession session = request.getSession();
+	
 			// 강의정보 데이터를 세션에 저장
 			session.setAttribute("Lecture", list);
 			

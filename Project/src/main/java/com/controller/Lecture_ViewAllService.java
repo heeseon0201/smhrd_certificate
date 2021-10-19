@@ -23,9 +23,14 @@ public class Lecture_ViewAllService extends HttpServlet {
 		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
 		int i = 1;
 		
+		// 페이지 번호 가져오기
+//		String num = request.getParameter("page_no");
+//		int page_no = Integer.parseInt(num);
+//		int i = 1+(page_no-1)*10;
+		
 		// DAO의 Lecture_viewAll 실행해서 전체 테이블 데이터 가져오기
 		LectureDAO dao = new LectureDAO();
-		ArrayList<LectureVO> list = dao.Lecture_ViewAll();
+		ArrayList<LectureVO> list = dao.Lecture_ViewAll(i);
 		
 		if (list != null) {
 			// 세션 객체 생성

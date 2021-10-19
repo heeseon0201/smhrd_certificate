@@ -34,7 +34,7 @@ public class Lecture_FilterService extends HttpServlet {
 		// 필터를 아무것도 선택을 안하면 전체출력, 선택시 검색수행
 		if (filter.size()==0) {
 			// 전체출력
-			list = dao.Lecture_ViewAll();
+			list = dao.Lecture_ViewAll(i);
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
 			list = dao.Lecture_filter(filter);

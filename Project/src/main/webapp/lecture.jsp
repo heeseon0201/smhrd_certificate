@@ -14,7 +14,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--·Î°í-->
 		<header>
-			<h3><a href = "main.jsp">I.study</a></h3>
+			<h3><a href = "main.jsp">I.Study</a></h3>
 		</header>
 	</div>
 <body class="background">
@@ -76,6 +76,15 @@
             <%} %>
            
         </table>
+        <div class="pages">
+        <%
+        String words = (String)session.getAttribute("words");
+        for(int a =1; a<11;a++){ 
+        	
+        %>
+        <a href="LectureSearchService?pages=<%=a%>&search_words=<%=words%>"><%=a %></a>
+        <%} %>
+        </div>
     </div>
     <div class="foot"></div>
 </body>

@@ -18,7 +18,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고-->
 		<header>
-			<h3><a href = "main.jsp">I.study</a></h3>
+			<h3><a href = "main.jsp">I.Study</a></h3>
 		</header>
 	</div>
 <body class="background">
@@ -53,7 +53,7 @@
 
 			%><!-- 반복문을 이용하여 테이블을 정의 하였습니다. 나중에 데이터베이스에서 컬럼명을 변수로 가져와서 붙여넣을 것. -->
 	            <tr class="boardList">
-	                <td>i+1 </td>
+	                <td><%=i+1%> </td>
 	                <td><%=study_name %> </td>
 	                <td><%=study_begin %> </td>
 	                <td><%=study_end %> </td>

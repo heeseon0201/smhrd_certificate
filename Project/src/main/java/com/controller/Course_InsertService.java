@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -43,7 +44,7 @@ public class Course_InsertService extends HttpServlet {
 			vo = dao2.Course_Select(member_no, lecture_no);
 			
 			if (cnt>0) {	
-//			// 세션 객체 생성
+			// 세션 객체 생성
 			HttpSession session1 = request.getSession();
 			
 			// 선택한 강의 정보를 세션에 저장
@@ -54,9 +55,11 @@ public class Course_InsertService extends HttpServlet {
 			}
 		} else {
 			System.out.println("이 강의는 이미 선택되었습니다.");
-			
-			// 강의선택 실패 페이지로 이동
-			response.sendRedirect("lectureJoinFailure.jsp");
+			//강의 이미 선택되었을 때 알림창 띄우기 
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('이 강의는 이미 선택되었습니다.'); location.href='lecture.jsp';</script>");
+			out.flush();
 		}
 	}
 
