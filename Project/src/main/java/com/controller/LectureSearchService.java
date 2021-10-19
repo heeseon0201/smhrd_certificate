@@ -36,8 +36,7 @@ public class LectureSearchService extends HttpServlet {
 			pages="1";
 		}
 		int i = Integer.parseInt(pages);
-		System.out.println(i);
-
+		System.out.println("페이지번호 : "+i);
 		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
@@ -46,6 +45,7 @@ public class LectureSearchService extends HttpServlet {
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
 			list = dao.Lecture_Search(words, i);
+			System.out.println(list.size());
 //			list = dao.Lecture_Search(words);
 		}
 		

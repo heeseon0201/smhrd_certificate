@@ -274,6 +274,10 @@ public class CourseDAO {
 						list.add(vo);
 					}
 					
+					if(!rs.next()) {
+						break;
+					}
+					
 					if(rs.isLast()) {
 						break;
 					}
