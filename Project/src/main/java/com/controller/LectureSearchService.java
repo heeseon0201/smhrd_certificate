@@ -27,16 +27,18 @@ public class LectureSearchService extends HttpServlet {
 		LectureDAO dao = new LectureDAO();
 		
 		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
-		int i = pages;
+		int i = 1+(pages-1)*10;
+		
 		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
 			// 전체출력
+			i=1;
 			list = dao.Lecture_ViewAll(i);
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
-//			list = dao.Lecture_Search(words, i);
-			list = dao.Lecture_Search(words);
+			list = dao.Lecture_Search(words, i);
+//			list = dao.Lecture_Search(words);
 		}
 		
 		if (list != null) {

@@ -83,7 +83,7 @@
         	
         %>
         <a href="LectureSearchService?pages=<%=a%>&search_words="><%=a %></a>
-        <%} %>
+        <%}%>
         </div>
     </div>
     <div class="foot"></div>

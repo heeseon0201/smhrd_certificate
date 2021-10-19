@@ -129,7 +129,6 @@ public class StudyDAO {
 				String study_place = rs.getString("study_place");
 				String study_week = rs.getString("study_week");
 				String study_time = rs.getString("study_time");
-				String study_onoff = rs.getString("study_onoff");
 				
 				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 			}
@@ -173,26 +172,6 @@ public class StudyDAO {
 				System.out.println("스터디테이블 개설 성공");
 			}
 			
-			//스터디번호꺼내오기 메서드
-			int study_no= newStudyNo();
-							
-			// 스터디조직 개설 sql문
-			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
-						
-			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql);
-						
-			// 바인드 변수 채우기
-			psmt.setInt(1, study_no);
-			psmt.setInt(2, member_no);
-					
-			// sql문 실행 후 결과처리
-			cnt = psmt.executeUpdate();
-						
-			if(cnt > 0) {
-			System.out.println("스터디멤버 개설 성공");
-			}
-			
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("스터디조직 개설 실패");
@@ -201,6 +180,41 @@ public class StudyDAO {
 		}
 		return cnt;
 	}
+
+	public int StudyMember_Creation(int study_no, int member_no) {
+		int cnt = 0;
+		
+		try {
+			getConnection();
+			
+			// 스터디조직 개설 sql문
+			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+						
+			// 바인드 변수 채우기
+			psmt.setInt(1, study_no);
+			psmt.setInt(2, member_no);
+			
+			// sql문 실행 후 결과처리
+			cnt = psmt.executeUpdate();
+						
+			if(cnt > 0) {
+				System.out.println("스터디멤버 개설 성공");
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디멤버 개설 실패");
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+//	//스터디번호꺼내오기 메서드
+//	int study_no= newStudyNo();			
+	
 	//방금 만든 스터디의 넘버를 받아오는 메서드
 		public int newStudyNo() {
 			int study_no = 0;
