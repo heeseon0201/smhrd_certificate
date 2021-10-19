@@ -27,10 +27,15 @@ public class LectureSearchService extends HttpServlet {
 		LectureDAO dao = new LectureDAO();
 		
 		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
+<<<<<<< HEAD
 		if(pages==null) {
 			pages="1";
 		}
 		int i = Integer.parseInt(pages);
+=======
+		int i = 1+(pages-1)*10;
+		
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
 		
 		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
 		if (words.equals("")) {
@@ -38,8 +43,8 @@ public class LectureSearchService extends HttpServlet {
 			list = dao.Lecture_ViewAll(i);
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
-//			list = dao.Lecture_Search(words, i);
-			list = dao.Lecture_Search(words);
+			list = dao.Lecture_Search(words, i);
+//			list = dao.Lecture_Search(words);
 		}
 		
 		if (list != null) {
