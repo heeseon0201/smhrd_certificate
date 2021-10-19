@@ -13,7 +13,7 @@
 	<div class="linkTitle">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> Studynet </span>
+                    <span> I.study </span>
                 </a>
             </h1>
 	</div>
