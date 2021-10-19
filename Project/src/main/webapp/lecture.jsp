@@ -1,20 +1,20 @@
 <%@page import="com.model.LectureVO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+    pageEncoding="euc-kr"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="euc-kr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Í∞ïÏùòÎ™®ÏïÑÎ≥¥Í∏∞</title>
+    <title>∞≠¿«∏æ∆∫∏±‚</title>
     <link rel="stylesheet" href="table.css">
 </head>
 	<div style="text-align: left; margin: 0%" class="title">
-		<!--Î°úÍ≥†-->
+		<!--∑Œ∞Ì-->
 		<header>
-			<h3><a href = "main.jsp">Studynet</a></h3>
+			<h3><a href = "main.jsp">I.study</a></h3>
 		</header>
 	</div>
 <body class="background">
@@ -22,26 +22,33 @@
     <form class="searchForm" action="LectureSearchService">
         <div class="searchOut">
             <div class="search">
-                <input type="text" placeholder="Í∞ïÏùò Í≤ÄÏÉâ" name="search_words" class="searchInput" autocomplete="off">
-                <button class="searchBtn" type="submit" name="click">Í≤ÄÏÉâ</button>
+                <input type="text" placeholder="∞≠¿« ∞Àªˆ" name="search_words" class="searchInput" autocomplete="off">
+                <button class="searchBtn" type="submit" name="click">∞Àªˆ</button>
             </div>
         </div>
     </form>
 	<div class="articleBoard">
 	<% ArrayList<LectureVO> list = (ArrayList<LectureVO>)session.getAttribute("Lecture"); %>
 
-                <table class="article" ><!-- Î∞òÎ≥µÎ¨∏ÏùÑ Ïù¥Ïö©ÌïòÏó¨ ÌÖåÏù¥Î∏îÏùÑ Ï†ïÏùò ÌïòÏòÄÏäµÎãàÎã§. ÎÇòÏ§ëÏóê Îç∞Ïù¥ÌÑ∞Î≤†Ïù¥Ïä§ÏóêÏÑú Ïª¨ÎüºÎ™ÖÏùÑ Î≥ÄÏàòÎ°ú Í∞ÄÏ†∏ÏôÄÏÑú Î∂ôÏó¨ÎÑ£ÏùÑ Í≤É. -->
+                <table class="article" ><!-- π›∫ππÆ¿ª ¿ÃøÎ«œø© ≈◊¿Ã∫Ì¿ª ¡§¿« «œø¥Ω¿¥œ¥Ÿ. ≥™¡ﬂø° µ•¿Ã≈Õ∫£¿ÃΩ∫ø°º≠ ƒ√∑≥∏Ì¿ª ∫Øºˆ∑Œ ∞°¡ÆøÕº≠ ∫Ÿø©≥÷¿ª ∞Õ. -->
                 <tr>
-                    <th class="cat">Ïπ¥ÌÖåÍ≥†Î¶¨</th>
-                    <th class="name">Í∞ïÏùòÎ™Ö</th>
-                    <th class="teach">Í∞ïÏÇ¨Î™Ö</th>
-                    <th class="price">Í∞ÄÍ≤©</th>
-                    <th class="point">ÌèâÏ†ê</th>
-                    <th class="review">ÌõÑÍ∏∞</th>
+                    <th class="cat">ƒ´≈◊∞Ì∏Æ</th>
+                    <th class="name">∞≠¿«∏Ì</th>
+                    <th class="teach">∞≠ªÁ∏Ì</th>
+                    <th class="count">∞≠¡¬ºˆ</th>
+                    <th class="price">∞°∞›</th>
+                    <th class="point">∆Ú¡°</th>
+                    <th class="review">»ƒ±‚</th>
+                    <th class="review">∞≠¿«º±≈√</th>
                     <!-- <th>URL</th> -->
 
                 </tr>
-        <%for(int i = 0; i<list.size() ;i++){ %>
+        <%-- <%for(int i = 0; i<list.size() ;i++){ %> --%>
+        <!-- 50∞≥∏∏ ªÃ∞⁄¿Ω -->
+        <%int num = 0; %>
+        <% // µ•¿Ã≈Õ∞° 50∞≥∞° ≥—¡ˆæ ¿ª∞ÊøÏ ø°∑Øπﬂª˝ -> 50∞≥∞° æ»≥—¿∏∏È ªÁ¿Ã¡Ó∑Œ ¥Î√º«œ∞‘ πŸ≤ﬁ %>
+        <%if (list.size()>=50){ num = 50; } else {num = list.size();} %>
+        <%for(int i = 0; i<num ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
@@ -53,14 +60,17 @@
 			String lecture_cat = vo.getLecture_cat();
 			%>
             <tr class="boardList">
-            		<td class="cat"><%=lecture_cat%></td>
+            	   <td class="cat"><%=lecture_cat%></td>
                    <td class="name"><a href="<%=lecture_url%>"><%=lecture_name%></a></td>
                    <td class="teach"><%=lecture_teach %></td>
-					<td class="teach"><%=lecture_count %></td>
+				   <td class="count"><%=lecture_count %></td>
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
-                   <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">ÎçîÎ≥¥Í∏∞</a></td>
-                   <%--ÌõÑÍ∏∞ÎçîÎ≥¥Í∏∞ <td class="review"><%=lecture_review%></td>--%>
+                   <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">¥ı∫∏±‚</a></td>
+                   <td class="review"><a href="Course_Insert?lecture_no=<%=vo.getLecture_no() %>">º±≈√</a></td>
+                   <%-- <td class="review"><a href="lectureJoinSuccess.jsp?lecture_no=<%=vo.getLecture_no() %>">º±≈√</a></td> --%>
+
+                   <%--»ƒ±‚¥ı∫∏±‚ <td class="review"><%=lecture_review%></td>--%>
                   <%--  <td><%=lecture_url%></td> --%>
             </tr>
             <%} %>

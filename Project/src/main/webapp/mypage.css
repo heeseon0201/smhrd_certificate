@@ -42,11 +42,9 @@ body {
 	font-family: 'Hahmlet', serif;
 }
 
-/*
 div {
 	text-align: center;
 }
-*/
 /* 검색창 시작 */
 input:-ms-input-placeholder {	color: #a8a8a8;}
 input::-webkit-input-placeholder {	color: #a8a8a8;}
@@ -54,7 +52,6 @@ input::-moz-placeholder {	color: #a8a8a8}
 
 .searchOut {
 	text-align: center;
-	margin: 15px;
 }
 
 .search {
@@ -86,26 +83,6 @@ input::-moz-placeholder {	color: #a8a8a8}
 }
 
 /* 검색창 끝 */
-
-/* 스터디만들기 */
-
-        .create{
-            margin-left:10px;
-            height:40px;
-            width:100px;
-            border: 1px solid;
-            display:inline-block;
-        }
-        .createBtn{
-            width:100px;
-            height:100%;
-            border:0px;
-            background:#495057;
-            outline:none;
-            float:right;
-            color:#e9ecef;
-        }
-/* 스터디만들기 끝 */
 
 /* 제목부분 */
 .link{
@@ -144,7 +121,7 @@ table{
 	height:3.6rem;
 }
 .name{
-	width:30%;
+	width:20%;
 	line-height:1.2;
 	height:3.6rem;
 }
@@ -153,21 +130,13 @@ td.name>a{
 	color:#495057;
 	
 }
-
-.count{
-	width:10%;
-	line-height:1.2;
-	height:3.6rem;
-	
-}
-
 .teach{
-	width:10%;
+	width:5%;
 	line-height:1.2;
 	height:3.6rem;
 }
 .price{
-	width:10%;
+	width:5%;
 	line-height:1.2;
 	height:3.6rem;
 }
@@ -276,7 +245,7 @@ th {
 }
 /*리뷰테이블의 th*/
 .reviewtable{
-   matgin:auto;
+   margin:auto;
    border-bottom: 1px solid black;
    color: #fff;
    background-color: #343a40;
@@ -294,40 +263,6 @@ th {
 	color:#454d55;
 	font-weight:bold;
 }
-
-/*studycreat.jsp 폼 양식 시작*/
-        .tableBasic{
-            margin: auto;
-            text-align: center;
-            border-collapse: collapse;
-        }
-        .tableTd, .tableTh{
-            border-top: 1px solid #495057;
-            border-bottom: 1px solid #495057;
-        }
-        .tableTh{
-            background: #495057;
-            color: #e9ecef;
-            padding: 10px;
-        }
-        .ta
-        .tableTd{
-            background-color: #495057;
-            color:black;
-        }
-        .tableTd input{
-            border:0px;
-            padding: 10px;
-            outline: none;
-            background: #EEE;
-        }
-        .mkBtn{
-            margin-top:10px;
-            width:75px;
-            height:30px;
-            border:0px;
-            background:#495057;
-            outline:none;
-            color:#e9ecef;
-        }
-/*studycreat.jsp 폼 양식 끝*/
+#space{
+	margin-top: 15px;
+}

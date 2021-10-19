@@ -57,15 +57,19 @@ public class StudyDAO {
 			String sql = "select * from Study";
 			
 			// SQL 실행 객체생성
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			
 			// sql문 실행
 			rs = psmt.executeQuery();
 			
 			// 결과처리
+			// while문에서 첫번째 데이터가 출력이 안되는 것을 확인해서 임시조치
+
+				
 			while(true) {
 				if(rs.next()) {		
 					int study_no = rs.getInt("study_no");
+					System.out.println(study_no);
 					String study_name = rs.getString("study_name");
 					String study_begin = rs.getString("study_begin");
 					String study_end = rs.getString("study_end");
@@ -73,9 +77,8 @@ public class StudyDAO {
 					String study_place = rs.getString("study_place");
 					String study_week = rs.getString("study_week");
 					String study_time = rs.getString("study_time");
-					String study_onoff = rs.getString("study_onoff");
-					
-					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+					 
+					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 					list.add(vo);
 				}
 				
@@ -83,7 +86,8 @@ public class StudyDAO {
 					break;
 				}
 			}
-			System.out.println("스터디조직 출력 성공");
+
+			
 			
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -93,7 +97,7 @@ public class StudyDAO {
 		}
 		return list;
 	}
-
+	
 	
 	// 스터디 조직 하나를 선택해서 보여주는 메소드
 	public StudyVO Study_SelectOne(int study_no) {
@@ -127,7 +131,7 @@ public class StudyDAO {
 				String study_time = rs.getString("study_time");
 				String study_onoff = rs.getString("study_onoff");
 				
-				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 			}
 			
 		} catch(Exception e) {
@@ -141,17 +145,17 @@ public class StudyDAO {
 	}
 	
 	// 스터디 조직을 개설할 때 데이터를 저장하는 메소드
-	public int Study_Creation(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, String study_onoff) {
+	public int Study_Creation(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, int member_no) {
 		int cnt = 0;
 		
 		try {
 			getConnection();
 			
 			// 스터디조직 개설 sql문
-			String sql = "insert into Study values(Study_seq.nextval, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql1 = "insert into study values(study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql);
+			psmt = conn.prepareStatement(sql1);
 			
 			// 바인드 변수 채우기
 			psmt.setString(1, study_name);
@@ -161,13 +165,32 @@ public class StudyDAO {
 			psmt.setString(5, study_place);
 			psmt.setString(6, study_week);
 			psmt.setString(7, study_time);
-			psmt.setString(8, study_onoff);
 			
 			// sql문 실행 후 결과처리
 			cnt = psmt.executeUpdate();
 			
 			if(cnt > 0) {
-				System.out.println("스터디조직 개설 성공");
+				System.out.println("스터디테이블 개설 성공");
+			}
+			
+			//스터디번호꺼내오기 메서드
+			int study_no= newStudyNo();
+							
+			// 스터디조직 개설 sql문
+			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
+						
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+						
+			// 바인드 변수 채우기
+			psmt.setInt(1, study_no);
+			psmt.setInt(2, member_no);
+					
+			// sql문 실행 후 결과처리
+			cnt = psmt.executeUpdate();
+						
+			if(cnt > 0) {
+			System.out.println("스터디멤버 개설 성공");
 			}
 			
 		} catch(Exception e) {
@@ -178,34 +201,36 @@ public class StudyDAO {
 		}
 		return cnt;
 	}
-	
-	// 스터디 조직에 가입하는 메소드(작성중...Study와 StudyMember테이블의 중복된 부분 정리필요)
-	//STUDY테이블과 STUDYMEMBER테이블에 모두 쌓기에 기록해야 함
-	public void Study_Join(String study_name, String study_begin, String study_end, String study_sub, String study_place, String study_week, String study_time, String study_onoff) {
-		int cnt = 0;
-		
-		try {
-			getConnection();
+	//방금 만든 스터디의 넘버를 받아오는 메서드
+		public int newStudyNo() {
+			int study_no = 0;
 			
-			// 스터디조직 가입 sql문(작성중...)
-			String sql = "insert into StudyMember values(StudyMember_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			try {
+				getConnection();
+				
+				// 스터디정보 선택출력 sql문
+				String sql = "select study_no from (select study_no from study order by study_no desc) where rownum =1";
+				//study 컬럼을 스터디 넘버기준으로 오름차순 정렬한 다음 가장 마지막 번호를 가져오는 sql문입니다.
+				
+				// sql문 실행
+				rs = psmt.executeQuery();
+				
+				// 결과처리
+				if(rs.next()) {		
+					System.out.println("스터디번호 출력 성공");
+					study_no = Integer.parseInt(rs.getString("study_no"));
+				}
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+				System.out.println("스터디번호 출력 실패");
+			} finally {
+				close();
+			}
 			
-			psmt.setString(1, study_name);
-			psmt.setString(2, study_begin);
-			psmt.setString(3, study_end);
-			psmt.setString(4, study_sub);
-			psmt.setString(5, study_place);
-			psmt.setString(6, study_week);
-			psmt.setString(7, study_time);
-			psmt.setString(8, study_onoff);
-			
-		} catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("스터디 조직 가입 실패");
-		} finally {
-			close();
+			return study_no;
 		}
-	}
+
 	
 	// 스터디 조직 종료여부를 표시하는 메소드(delete)
 	public int Study_End(int study_no) {
@@ -270,9 +295,9 @@ public class StudyDAO {
 				String study_place = rs.getString("study_place");
 				String study_week = rs.getString("study_week");
 				String study_time = rs.getString("study_time");
-				String study_onoff = rs.getString("study_onoff");
+//				String study_onoff = rs.getString("study_onoff");
 				
-				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, study_onoff);
+				StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 				list.add(vo);
 			}
 			
@@ -284,5 +309,83 @@ public class StudyDAO {
 		}
 		return list;
 	}
-	//
+	
+	// 스터디를 검색해주는 메소드 
+	public ArrayList<StudyVO> Study_Search(String words) {
+		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+		String sql = "";
+		
+		try {
+			getConnection();
+			
+			// 공백으로 검색어를 구분
+			String[] hitwords = words.split(" ");
+			
+			System.out.println(hitwords);
+			for (int i= 0; i< hitwords.length ; i++){
+				System.out.println(hitwords[i]);
+			}
+			
+			for (int i=0; i<hitwords.length; i++) {
+				// 검색 sql문
+				sql = "select * from Study where study_name like '%" + hitwords[i] + "%' OR study_sub like '%" + hitwords[i] + "%' OR study_place like '%" + hitwords[i] + "%'";
+				
+				// SQL 실행 객체 생성
+				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				
+				// sql문 실행
+				rs = psmt.executeQuery();
+				
+				// 검색어가 안걸리는 경우 속도가 너무느려서 검색어가 잡히지 않을 경우 컨티뉴로 다음 iteration으로 넘기는 부분 추가
+				if(!rs.next()) {
+					continue;
+				} else {
+					int get_no = rs.getInt("study_no");
+					String get_name = rs.getString("study_name");
+					String get_begin = rs.getString("study_begin");
+					String get_end = rs.getString("study_end");
+					String get_sub = rs.getString("study_sub");
+					String get_place = rs.getString("study_place");
+					String get_week = rs.getString("study_week");
+					String get_time = rs.getString("study_time");
+					
+					StudyVO vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+					list.add(vo);
+				
+					// 결과처리
+					while(true) {
+						if(rs.next()) {
+							get_no = rs.getInt("study_no");
+							get_name = rs.getString("study_name");
+							get_begin = rs.getString("study_begin");
+							get_end = rs.getString("study_end");
+							get_sub = rs.getString("study_sub");
+							get_place = rs.getString("study_place");
+							get_week = rs.getString("study_week");
+							get_time = rs.getString("study_time");
+							
+							vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+							list.add(vo);
+						}
+						
+						if(rs.isLast()) {
+							break;
+						}
+						
+						if(!rs.next()) {
+							break;
+						}
+					}
+				}
+			}
+			System.out.println("스터디 검색 성공");
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디 검색 실패");
+		} finally {
+			close();
+		}
+		return list;
+	}
 }

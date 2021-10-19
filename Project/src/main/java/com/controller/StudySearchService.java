@@ -10,34 +10,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.model.LectureDAO;
-import com.model.LectureVO;
+import com.model.StudyDAO;
+import com.model.StudyVO;
 
-//강의 필터를 선택하면 실행될 servlet 코드
-@WebServlet("/Lecture_FilterService")
-public class Lecture_FilterService extends HttpServlet {
+// 스터디페이지에서 스터디를 검색할 수 있게 해 줄 servlet 코드
+@WebServlet("/StudySearchService")
+public class StudySearchService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
-		ArrayList<LectureVO> list = null;
-		ArrayList<String> filter = new ArrayList<String>();
-		int i = 1;
-		
-		// 선택한 필터를 가져오는 부분(jsp파일에 맞춰서 수정필요한 부분, for문 입히기?)
-		String 필터요소1 = request.getParameter("필터 태그의 name");
-		// 선택한 필터를 문자열에 추가
-		filter.add(필터요소1);
-		
-		
-		LectureDAO dao = new LectureDAO();
-		// 필터를 아무것도 선택을 안하면 전체출력, 선택시 검색수행
-		if (filter.size()==0) {
+		ArrayList<StudyVO> list = null;
+		String words = request.getParameter("search_words");
+		System.out.println("결과" + words);
+		StudyDAO dao = new StudyDAO();
+		// 검색창에 아무것도 입력을 안하면 전체출력, 입력시 검색수행
+		if (words.equals("")) {
 			// 전체출력
-			list = dao.Lecture_ViewAll(i);
+			list = dao.Study_SeclectAll();
 		} else {
 			// DAO의 Lecture_Search 실행 후 해당하는 테이블 데이터 가져오기
-			list = dao.Lecture_filter(filter);
+			list = dao.Study_Search(words);
 		}
 		
 		if (list != null) {
@@ -45,10 +38,10 @@ public class Lecture_FilterService extends HttpServlet {
 			HttpSession session = request.getSession();
 			
 			// 강의정보 데이터를 세션에 저장
-			session.setAttribute("Lecture", list);
+			session.setAttribute("Study", list);
 			
 			// 강의정보페이지로 이동
-			response.sendRedirect("lecture.jsp");
+			response.sendRedirect("study.jsp");
 		}
 	}
 

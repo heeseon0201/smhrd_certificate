@@ -13,7 +13,7 @@
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고-->
 		<header>
-			<h3><a href = "main.jsp">Studynet</a></h3>
+			<h3><a href = "main.jsp">I.study</a></h3>
 		</header>
 	</div>
 <body class="background">
@@ -35,14 +35,12 @@
                 <tr>
                     <th class="reviewtable">후기</th>
                 </tr>
-		        <tr>
-		                   <% for(int i=0; i < reviewlist.length; i++){%>
+                <% for(int i=0; i < reviewlist.length; i++){%>
+		        <tr>   
 								 <td><%=reviewlist[i] %></td>
-								
-								<% }%>
-		                   
-		                   
+  
 		          </tr>
+		          <% }%>
         </table>
     </div>
     <div class="foot"></div>

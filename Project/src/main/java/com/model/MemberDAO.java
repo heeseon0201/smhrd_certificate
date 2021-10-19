@@ -55,7 +55,7 @@ public class MemberDAO {
 			getConnection();
 			
 			// 회원가입 sql문
-			String sql = "insert into Member values(Member_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into member values(member_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			// SQL 실행 객체 생성
 			psmt = conn.prepareStatement(sql);

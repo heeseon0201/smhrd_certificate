@@ -12,32 +12,31 @@ import javax.servlet.http.HttpSession;
 
 import com.model.LectureDAO;
 import com.model.LectureVO;
+import com.model.StudyDAO;
+import com.model.StudyVO;
 
-// 강의정보페이지 방문시 전체 강의정보를 보여줄 servlet 코드
-@WebServlet("/Lecture_ViewAllService")
-public class Lecture_ViewAllService extends HttpServlet {
+
+@WebServlet("/Study_ViewAllService")
+public class Study_ViewAllService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
-		// 강의정보 현재페이지 번호(페이지 번호가 1오를때 마다 +10 필요)
-		int i = 1;
 		
 		// DAO의 Lecture_viewAll 실행해서 전체 테이블 데이터 가져오기
-		LectureDAO dao = new LectureDAO();
-		ArrayList<LectureVO> list = dao.Lecture_ViewAll(i);
+		StudyDAO dao = new StudyDAO();
+		ArrayList<StudyVO> list = dao.Study_SeclectAll();
 		
 		if (list != null) {
 			// 세션 객체 생성
 			HttpSession session = request.getSession();
 			
 			// 강의정보 전체 데이터를 세션에 저장
-			session.setAttribute("Lecture", list);
+			session.setAttribute("Study", list);
 			
 			// 강의정보페이지로 이동
-			response.sendRedirect("lecture.jsp");
+			response.sendRedirect("Study.jsp");
 		}	
-		
 	}
 
 }
