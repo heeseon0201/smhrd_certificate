@@ -97,6 +97,59 @@ public class StudyDAO {
 		}
 		return list;
 	}
+	
+
+	// 스터디 조직 10개 데이터를 보여주는 메소드
+	public ArrayList<StudyVO> Study_View10() {
+		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+		
+		try {
+			getConnection();
+			
+			// 스터디정보 전체출력 sql문
+			String sql = "select * from Study where rownum<=10";
+			
+			// SQL 실행 객체생성
+			psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			
+			// sql문 실행
+			rs = psmt.executeQuery();
+			
+			// 결과처리
+			// while문에서 첫번째 데이터가 출력이 안되는 것을 확인해서 임시조치
+
+				
+			while(true) {
+				if(rs.next()) {		
+					int study_no = rs.getInt("study_no");
+					System.out.println(study_no);
+					String study_name = rs.getString("study_name");
+					String study_begin = rs.getString("study_begin");
+					String study_end = rs.getString("study_end");
+					String study_sub = rs.getString("study_sub");
+					String study_place = rs.getString("study_place");
+					String study_week = rs.getString("study_week");
+					String study_time = rs.getString("study_time");
+					 
+					StudyVO vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
+					list.add(vo);
+				}
+				
+				if(rs.isLast()) {
+					break;
+				}
+			}
+
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디조직 출력 실패");
+		} finally {
+			close();
+		}
+		return list;
+	}
 
 	
 	// 스터디 조직 하나를 선택해서 보여주는 메소드
