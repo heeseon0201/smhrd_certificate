@@ -45,6 +45,7 @@ public class StudyMemberDAO {
 			e.printStackTrace();
 		}
 	}
+
 	//가입한 스터디조직을 보여주는 메소드(마이페이지)
 	public ArrayList<StudyVO> StudyMember_Select(int member_no) {
 		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
@@ -64,7 +65,6 @@ public class StudyMemberDAO {
 			// 결과처리
 			// 스터디 테이블에 null값으로 이루어진 행이있어 렉걸림.
 			
-			
 			while(true) {
 				if(rs.next()) {	
 					System.out.println("스터디 출력 성공");
@@ -81,10 +81,14 @@ public class StudyMemberDAO {
 					list.add(vo);
 				}
 				
+				if(!rs.next()) {
+					break;
+				}
+				
 				if(rs.isLast()) {
 					break;
 				}
-				}
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("스터디 출력 실패");
@@ -114,23 +118,6 @@ public class StudyMemberDAO {
 				e.printStackTrace();
 				System.out.println("스터디 조직 가입 실패");
 			}finally {
-				close();
-			}
-			return cnt;
-		}
-
-		public int Study_MypageView(int member_no) {
-			int cnt = 0;
-			
-			try {
-				getConnection();
-				
-				
-				
-			} catch(Exception e) {
-				e.printStackTrace();
-				System.out.println("스터디 조직 가입 실패");
-			} finally {
 				close();
 			}
 			return cnt;

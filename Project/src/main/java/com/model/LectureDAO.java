@@ -249,7 +249,6 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 		} finally {
 			close();
 		}
-		
 		return list;
 	}
 
