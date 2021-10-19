@@ -25,7 +25,7 @@ public class Lecture_ViewAllService extends HttpServlet {
 		
 		// DAO의 Lecture_viewAll 실행해서 전체 테이블 데이터 가져오기
 		LectureDAO dao = new LectureDAO();
-		ArrayList<LectureVO> list = dao.Lecture_ViewAll();
+		ArrayList<LectureVO> list = dao.Lecture_ViewAll(i);
 		
 		if (list != null) {
 			// 세션 객체 생성

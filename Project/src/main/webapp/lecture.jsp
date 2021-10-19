@@ -45,7 +45,10 @@
                 </tr>
         <%-- <%for(int i = 0; i<list.size() ;i++){ %> --%>
         <!-- 50개만 뽑겠음 -->
-        <%for(int i = 0; i<50 ;i++){ %>
+        <%int num = 0; %>
+        <% // 데이터가 50개가 넘지않을경우 에러발생 -> 50개가 안넘으면 사이즈로 대체하게 바꿈 %>
+        <%if (list.size()>=50){ num = 50; } else {num = list.size();} %>
+        <%for(int i = 0; i<num ;i++){ %>
         <% 	LectureVO vo = list.get(i); 
 			String lecture_name = vo.getLecture_name();
 			String lecture_teach = vo.getLecture_teach();
