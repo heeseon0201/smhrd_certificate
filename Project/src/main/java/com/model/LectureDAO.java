@@ -109,15 +109,9 @@ public class LectureDAO {
 
 			for (int i=0; i<hitwords.length; i++) {
 				
-<<<<<<< HEAD
 				// 검색 sql문
 //				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%'";//푸시
 				// 리뷰데이터가 너무길어서 검색이 작동안함
-=======
-				// 검색 sql문
-//				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%'";//푸시
-				// 리뷰데이터가 너무길어서 검색이 작동안함
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/certificate.git
 //				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_count like '%" + hitwords[i] + "%' OR lecture_review like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
 				// 리뷰검색을 뺀 코드사용
 				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
