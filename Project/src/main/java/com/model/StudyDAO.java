@@ -129,7 +129,6 @@ public class StudyDAO {
 				String study_place = rs.getString("study_place");
 				String study_week = rs.getString("study_week");
 				String study_time = rs.getString("study_time");
-				String study_onoff = rs.getString("study_onoff");
 				
 				vo = new StudyVO(study_no, study_name, study_begin, study_end, study_sub, study_place, study_week, study_time);
 			}
@@ -152,10 +151,10 @@ public class StudyDAO {
 			getConnection();
 			
 			// 스터디조직 개설 sql문
-			String sql1 = "insert into study values(study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into study values(study_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
 			
 			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql1);
+			psmt = conn.prepareStatement(sql);
 			
 			// 바인드 변수 채우기
 			psmt.setString(1, study_name);
@@ -173,26 +172,6 @@ public class StudyDAO {
 				System.out.println("스터디테이블 개설 성공");
 			}
 			
-			//스터디번호꺼내오기 메서드
-			int study_no= newStudyNo();
-							
-			// 스터디조직 개설 sql문
-			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
-						
-			// SQL 실행 객체 생성
-			psmt = conn.prepareStatement(sql);
-						
-			// 바인드 변수 채우기
-			psmt.setInt(1, study_no);
-			psmt.setInt(2, member_no);
-					
-			// sql문 실행 후 결과처리
-			cnt = psmt.executeUpdate();
-						
-			if(cnt > 0) {
-			System.out.println("스터디멤버 개설 성공");
-			}
-			
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("스터디조직 개설 실패");
@@ -201,26 +180,82 @@ public class StudyDAO {
 		}
 		return cnt;
 	}
-	//방금 만든 스터디의 넘버를 받아오는 메서드
-		public int newStudyNo() {
-			int study_no = 0;
+
+	public int StudyMember_Creation(int study_no, int member_no) {
+		int cnt = 0;
+		
+		try {
+			getConnection();
+			
+			// 스터디조직 개설 sql문
+			String sql = "insert into studymember values(studyMember_seq.nextval, ?, ?)";
+			
+			// SQL 실행 객체 생성
+			psmt = conn.prepareStatement(sql);
+						
+			// 바인드 변수 채우기
+			psmt.setInt(1, study_no);
+			psmt.setInt(2, member_no);
+			
+			// sql문 실행 후 결과처리
+			cnt = psmt.executeUpdate();
+						
+			if(cnt > 0) {
+				System.out.println("스터디멤버 개설 성공");
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디멤버 개설 실패");
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+	
+	//방금 만든 스터디의 정보를 받아오는 메서드
+		public StudyVO newStudy() {
+			StudyVO vo = null;
 			
 			try {
 				getConnection();
 				
-				// 스터디정보 선택출력 sql문
-				String sql = "select study_no from (select study_no from study order by study_no desc) where rownum =1";
+				// 방금 생성된 스터디정보 선택출력 sql문
+				String sql = "select * from (select S.* from study S order by ROWNUM desc) where ROWNUM = 1";
 				//study 컬럼을 스터디 넘버기준으로 오름차순 정렬한 다음 가장 마지막 번호를 가져오는 sql문입니다.
+			
+				// SQL 실행 객체 생성
+				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 				
 				// sql문 실행
 				rs = psmt.executeQuery();
 				
-				// 결과처리
-				if(rs.next()) {		
-					System.out.println("스터디번호 출력 성공");
-					study_no = Integer.parseInt(rs.getString("study_no"));
+				System.out.println(1);
+				while(true) {
+					if(rs.next()) {		
+						System.out.println("스터디번호 출력 성공");
+						int get_no = rs.getInt("study_no");
+						String get_name = rs.getString("study_name");
+						String get_begin = rs.getString("study_begin");
+						String get_end = rs.getString("study_end");
+						String get_sub = rs.getString("study_sub");
+						String get_place = rs.getString("study_place");
+						String get_week = rs.getString("study_week");
+						String get_time = rs.getString("study_time");
+						
+						vo = new StudyVO(get_no, get_name, get_begin, get_end, get_sub, get_place, get_week, get_time);
+					}
+					
+					if(rs.isLast()) {
+						break;
+					}
+					
+					if(!rs.next()) {
+						break;
+					}
 				}
 				
+				System.out.println(1);
 			} catch(Exception e) {
 				e.printStackTrace();
 				System.out.println("스터디번호 출력 실패");
@@ -228,7 +263,7 @@ public class StudyDAO {
 				close();
 			}
 			
-			return study_no;
+			return vo;
 		}
 
 	

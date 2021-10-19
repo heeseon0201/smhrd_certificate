@@ -12,6 +12,7 @@ import com.model.CourseDAO;
 import com.model.MemberVO;
 import com.model.StudyDAO;
 import com.model.StudyMemberDAO;
+import com.model.StudyVO;
 
 // 스터디조직 생성 버튼을 누르면 스터디조직을 생성하고 정보를 저장하는 servlet 코드
 @WebServlet("/Study_CreationService")
@@ -38,15 +39,20 @@ public class Study_CreationService extends HttpServlet {
 		StudyDAO dao = new StudyDAO();
 		int cnt = dao.Study_Creation(study_name, study_begin, study_end, study_sub, study_place, study_week, study_time, member_no);
 		
+		StudyVO vo = dao.newStudy();
+		
+		int study_no = vo.getStudy_no();
+		
+		int cnt_SM = dao.StudyMember_Creation(study_no, member_no);
+		
 		// 스터디 조직 생성 후 수행할 활동
-		if (cnt>0) {
-			
+		if (cnt>0 && cnt_SM >0) {		
 			// 생성한 스터디 조직 이름을 세션에 저장
 			session.setAttribute("StudyCreation", study_name);
-			int studyNo = dao.newStudyNo();
+			session.setAttribute("newStudyNo", study_no);
 			
 			//생성한 스터디의 번호를 세션에 저장
-			session.setAttribute("newStudyNo", studyNo);
+//			session.setAttribute("newStudyNo", studyNo);
 			
 			// 스터디 조직 생성 성공하면 스터디 조직 게시판으로 이동(회원가입 성공페이지에서 id와 함께 환영메시지 띄우는 식으로 사용가능)
 			response.sendRedirect("studySuccess.jsp");

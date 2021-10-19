@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-
 public class LectureDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
@@ -113,8 +112,8 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 		psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 		
 		// 바인드 변수 채우기
-		psmt.setInt(1, i);
-		psmt.setInt(2, i+9);
+		psmt.setInt(1, 1+(i-1)*10);
+		psmt.setInt(2, 10+(i-1)*10);
 		
 		// sql문 실행
 		rs = psmt.executeQuery();
@@ -153,7 +152,7 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 }
 	
 	// 검색 메소드
-	public ArrayList<LectureVO> Lecture_Search(String words){
+	public ArrayList<LectureVO> Lecture_Search(String words, int j){
 		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
 //		list = null;
 		String sql = "";
@@ -176,12 +175,12 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 				// 리뷰데이터가 너무길어서 검색이 작동안함
 //				sql = "select * from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_count like '%" + hitwords[i] + "%' OR lecture_review like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
 				// 리뷰검색을 뺀 코드사용
-				sql = "select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
+//				sql = "select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%'";
 				
 				// []포함시 검색이 안되는것 같음
 				// 검색결과 10개만 출력하는 sql문
 //				sql = "select * from (select ROWNUM rnum, L.* from (select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%') L)";
-				//sql = "select * from (select ROWNUM rnum, L.* from (select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%' order by Lecture_no asc) L) where rnum between ? and ?";
+				sql = "select * from (select ROWNUM rnum, L.* from (select lecture_no, lecture_cat, lecture_name, lecture_teach, lecture_count, lecture_price, lecture_point, lecture_url from Lecture where lecture_name like '%" + hitwords[i] + "%' OR lecture_teach like '%" + hitwords[i] + "%' OR lecture_cat like '%" + hitwords[i] + "%' order by Lecture_no asc) L) where rnum between ? and ?";
 				// 현재 강의명에 걸린 하이퍼링크까지 검색되어버림 
 				// 만약 lecture_name에 "https://"가 있으면 그 뒤 내용을 지워서 저장한다.(X 이 방법은 틀린듯)
 				
@@ -189,8 +188,8 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 				psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
 				// 바인드 변수 채우기
-//				psmt.setInt(1, j);
-//				psmt.setInt(2, j+9);
+				psmt.setInt(1, 1+(j-1)*10);
+				psmt.setInt(2, 10+(j-1)*10);
 				
 				// sql문 실행
 				rs = psmt.executeQuery();

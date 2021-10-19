@@ -29,7 +29,7 @@ public class JoinService extends HttpServlet {
 		String member_repw = request.getParameter("repwd"); // 비밀번호 재확인
 		
 		// 비밀번호 일치여부 확인 & 필수사항 입력여부 확인
-		if(member_pw.equals(member_repw) && member_id != null && member_pw != null && member_repw != null) {
+		if(member_pw.equals(member_repw) && member_id != null && member_pw != null && member_repw != null && member_NM != null) {
 			MemberDAO dao = new MemberDAO();
 			int cnt = dao.Join(member_id, member_NM, member_tel, member_address, member_interest, member_job, member_pw);
 			
@@ -48,9 +48,12 @@ public class JoinService extends HttpServlet {
 			//==================================시간 부족 버릴지 생각해야함==================================== 
 		} else if(!member_pw.equals(member_repw)) {
 			// 비밀번호와 재입력비밀번호 불일치시의 액션
-			
+			// '비밀번호불일치'alert와 함께 회원가입페이지유지
+			response.sendRedirect("join.jsp");
 		} else {
 			// 필수사항 누락시의 액션
+			// '필수사항 누락'alert와 함께 회원가입페이지유지
+			response.sendRedirect("join.jsp");
 		}
 		
 	}
