@@ -96,6 +96,62 @@ public class LectureDAO {
 		return list;
 	}
 
+// 강의정보 전체 데이터를 보여주는 메소드(현재페이지에 맟춰 10개만 출력)
+public ArrayList<LectureVO> Lecture_ViewAll(int i) {
+	ArrayList<LectureVO> list = new ArrayList<LectureVO>();
+	
+	try {
+		getConnection();
+		
+		// 강의정보 전체출력 sql문
+//		String sql = "select * from Lecture";
+		
+		// 강의정보 전체출력(10개) sql문(현재는 강의번호 기준 오름차순 정렬로 되어있음)
+		String sql = "select * from (select ROWNUM rnum, L.* from (select * from Lecture order by Lecture_no asc) L) where rnum between ? and ?";
+		
+		// SQL 실행 객체생성
+		psmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+		
+		// 바인드 변수 채우기
+		psmt.setInt(1, i);
+		psmt.setInt(1, i+9);
+		
+		// sql문 실행
+		rs = psmt.executeQuery();
+		
+		// 결과처리
+		while(true) {
+			if(rs.next()) {		
+				int get_no = rs.getInt("lecture_no");
+				String get_name = rs.getString("lecture_name");
+				String get_teach = rs.getString("lecture_teach");
+				String get_count = rs.getString("lecture_count");
+				int get_price = rs.getInt("lecture_price");
+				double get_point = rs.getDouble("lecture_point");
+				String get_review = rs.getString("lecture_review");
+				String get_url = rs.getString("lecture_url");
+				String get_cat = rs.getString("lecture_cat");
+				
+				LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+				list.add(vo);
+			}
+			
+			if(rs.isLast()) {
+				break;
+			}
+		}
+		System.out.println("강의정보 출력 성공");
+
+		
+	} catch(Exception e) {
+		e.printStackTrace();
+		System.out.println("강의정보 출력 실패");
+	} finally {
+		close();
+	}
+	return list;
+}
+
 	// 강의정보 10개 데이터를 보여주는 메소드
 	public ArrayList<LectureVO> Lecture_View10() {
 	    ArrayList<LectureVO> list = new ArrayList<LectureVO>();
