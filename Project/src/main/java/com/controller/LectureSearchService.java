@@ -56,7 +56,7 @@ public class LectureSearchService extends HttpServlet {
 			}
 			
 			// 技记 按眉 积己
-			HttpSession session = request.getSession();
+//			HttpSession session = request.getSession();
 	
 			// 碍狼沥焊 单捞磐甫 技记俊 历厘
 			session.setAttribute("Lecture", list);
