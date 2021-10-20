@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberVO"%>
 <%@page import="com.model.LectureVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=euc-kr"
@@ -8,15 +9,43 @@
     <meta charset="euc-kr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>강의모아보기</title>
+    <script src="https://kit.fontawesome.com/88d879a5c8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="table.css">
 </head>
-	<div style="text-align: left; margin: 0%" class="title">
-		<!--로고-->
-		<header>
-			<h3><a href = "main.jsp">I.Study</a></h3>
-		</header>
-	</div>
+	<!--로고-->
+	<header>
+		<nav class="navbar">
+               <div class="navbar_logo">
+                   <i class="fas fa-graduation-cap"></i>
+                   <a href="main.jsp">I-Study</a>
+               </div>
+               <ul class="navbar_menu">
+                   <a href="main.jsp"><li>홈</li></a>
+                   <a href="LectureSearchService?search_words="><li>강의</li></a>
+                   <a href="StudySearchService?search_words="><li>스터디</li></a>
+               </ul>
+               <ul class="navbar_account">
+                   <%MemberVO vo = (MemberVO)session.getAttribute("Member"); %>
+                   <%if(vo == null){ %>
+                       <a href="login.jsp"><li>로그인</li></a>
+                       <a href="join.jsp"><li>회원가입</li></a>
+                   <%}else{ %>
+                       <a href="Lecture_MainpageService"><li>나의 강의</li></a>
+                       <a href="Study_MypageView"><li>나의 스터디</li></a>
+                       <a href="logout.jsp"><li>로그아웃</li></a>
+                   <%}%>
+               </ul>
+               <a href="#" class="navbar_toggleBtn">
+                   <i class="fas fa-bars"></i>
+               </a>
+           </nav>
+	</header>
+	<div style="text-align: left; margin: 0%" class="title"></div>
 <body class="background">
     <h1 class="link"><b>Lecture</b></h1>
     <form class="searchForm" action="LectureSearchService">
@@ -49,15 +78,15 @@
         <% // 데이터가 50개가 넘지않을경우 에러발생 -> 50개가 안넘으면 사이즈로 대체하게 바꿈 %>
         <%if (list.size()>=50){ num = 50; } else {num = list.size();} %>
         <%for(int i = 0; i<num ;i++){ %>
-        <% 	LectureVO vo = list.get(i); 
-			String lecture_name = vo.getLecture_name();
-			String lecture_teach = vo.getLecture_teach();
-			String lecture_count = vo.getLecture_count();
-			int lecture_price = vo.getLecture_price();
-			double lecture_point = vo.getLecture_point();
-			String lecture_review = vo.getLecture_review();
-			String lecture_url = vo.getLecture_url();
-			String lecture_cat = vo.getLecture_cat();
+        <% 	LectureVO vo2 = list.get(i); 
+			String lecture_name = vo2.getLecture_name();
+			String lecture_teach = vo2.getLecture_teach();
+			String lecture_count = vo2.getLecture_count();
+			int lecture_price = vo2.getLecture_price();
+			double lecture_point = vo2.getLecture_point();
+			String lecture_review = vo2.getLecture_review();
+			String lecture_url = vo2.getLecture_url();
+			String lecture_cat = vo2.getLecture_cat();
 			%>
             <tr class="boardList">
             	   <td class="cat"><%=lecture_cat%></td>
@@ -66,8 +95,8 @@
 				   <td class="count"><%=lecture_count %></td>
                    <td class="price"><%=lecture_price%></td>
                    <td class="point"><%=lecture_point%></td>
-                   <td class="review"><a href="review.jsp?lecture_no=<%=vo.getLecture_no() %>">더보기</a></td>
-                   <td class="review"><a href="Course_Insert?lecture_no=<%=vo.getLecture_no() %>">선택</a></td>
+                   <td class="review"><a href="review.jsp?lecture_no=<%=vo2.getLecture_no() %>">더보기</a></td>
+                   <td class="review"><a href="Course_Insert?lecture_no=<%=vo2.getLecture_no() %>">선택</a></td>
                    <%-- <td class="review"><a href="lectureJoinSuccess.jsp?lecture_no=<%=vo.getLecture_no() %>">선택</a></td> --%>
 
                    <%--후기더보기 <td class="review"><%=lecture_review%></td>--%>
@@ -86,6 +115,8 @@
         <%} %>
         </div>
     </div>
+    <button class="gobackBtn" onclick="document.location.href='main.jsp'"
+    style="width: 80px; height: 25px; font-size: 15px; display: block; margin: 30px auto;">홈으로</button>
     <div class="foot"></div>
 </body>
 </html>

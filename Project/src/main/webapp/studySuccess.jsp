@@ -14,7 +14,7 @@
 	<div class="linkTitle">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> I.Study </span>
+                    <span> I-Study </span>
                 </a>
             </h1>
 	</div>

@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="Profileport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>회원가입</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main2.css">
 </head>
 
 <body class="title">
 	<div class="linkTitle">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> I.Study </span>
+                    <span> I-Study </span>
                 </a>
             </h1>
 	</div>

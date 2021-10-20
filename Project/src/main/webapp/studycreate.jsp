@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberVO"%>
 <%@page import="com.model.StudyVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -6,18 +7,44 @@
 <html>
 <head>
 	<meta charset="EUC-KR">
-	
-	
-	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 	<title>StudyCreation</title>
-	<link rel="stylesheet" href="table.css">
+    <script src="https://kit.fontawesome.com/88d879a5c8.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="studycreate.css">
 </head>
 
 	<div style="text-align: left; margin: 0%" class="title">
 		<!--로고-->
-		<header>
-			<h3><a href = "main.jsp">I.Study</a></h3>
-		</header>
+        <header>
+            <nav class="navbar">
+                   <div class="navbar_logo">
+                       <i class="fas fa-graduation-cap"></i>
+                       <a href="main.jsp">I-Study</a>
+                   </div>
+                   <ul class="navbar_menu">
+                       <a href="main.jsp"><li>홈</li></a>
+                       <a href="LectureSearchService?search_words="><li>강의</li></a>
+                       <a href="StudySearchService?search_words="><li>스터디</li></a>
+                   </ul>
+                   <ul class="navbar_account">
+                       <%MemberVO vo = (MemberVO)session.getAttribute("Member"); %>
+                       <%if(vo == null){ %>
+                           <a href="login.jsp"><li>로그인</li></a>
+                           <a href="join.jsp"><li>회원가입</li></a>
+                       <%}else{ %>
+                           <a href="Lecture_MainpageService"><li>나의 강의</li></a>
+                           <a href="Study_MypageView"><li>나의 스터디</li></a>
+                           <a href="logout.jsp"><li>로그아웃</li></a>
+                       <%}%>
+                   </ul>
+                   <a href="#" class="navbar_toggleBtn">
+                       <i class="fas fa-bars"></i>
+                   </a>
+               </nav>
+        </header>
 	</div>
 	
 	
@@ -69,6 +96,8 @@
                 </tr>
             </table>
         </form>
+        <button class="gobackBtn" onclick="history.back()"
+    style="width: 75px; height: 30px; display: block; margin: 10px auto; border: 0px; background: #495057; color: #e9ecef; outline: none;">뒤로가기</button>
     </div>
 <!-- <form class="" action="Study_CreationService">
 스터디조직 생성 form에 작성한 값 받아오기

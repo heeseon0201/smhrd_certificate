@@ -11,16 +11,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>스터디 모집</title>
+    <script src="https://kit.fontawesome.com/88d879a5c8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="mypage.css">
 </head>
 </head>
-	<div style="text-align: left; margin: 0%" class="title">
-		<!--로고-->
-		<header>
-			<h3><a href = "main.jsp">I.Study</a></h3>
-		</header>
-	</div>
+    <!--로고-->
+    <header>
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <i class="fas fa-graduation-cap"></i>
+                <a href="main.jsp">I-Study</a>
+            </div>
+            <ul class="navbar_menu">
+                <a href="main.jsp"><li>홈</li></a>
+                <a href="LectureSearchService?search_words="><li>강의</li></a>
+                <a href="StudySearchService?search_words="><li>스터디</li></a>
+            </ul>
+            <ul class="navbar_account">
+                <%MemberVO vo = (MemberVO)session.getAttribute("Member"); %>
+                <%if(vo == null){ %>
+                    <a href="login.jsp"><li>로그인</li></a>
+                    <a href="join.jsp"><li>회원가입</li></a>
+                <%}else{ %>
+                    <a href="Lecture_MainpageService"><li>나의 강의</li></a>
+                    <a href="Study_MypageView"><li>나의 스터디</li></a>
+                    <a href="logout.jsp"><li>로그아웃</li></a>
+                <%}%>
+            </ul>
+            <a href="#" class="navbar_toggleBtn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <div style="text-align: left; margin: 0%" class="title"></div>
 <body class="background">
 	<div>
 	    <h1 class="link"><b>MyCourse</b></h1>
@@ -41,14 +69,14 @@
 
                 </tr>
         <%for(int i = 0; i<list.size() ;i++){ %>
-        <% 	LectureVO vo = list.get(i); 
+        <% 	LectureVO vo2 = list.get(i); 
         System.out.println(list.size());
-        String lecture_cat = vo.getLecture_cat();
-		String lecture_name = vo.getLecture_name();
-		String lecture_teach = vo.getLecture_teach();
-		int lecture_price = vo.getLecture_price();
-		double lecture_point = vo.getLecture_point();
-		String lecture_url = vo.getLecture_url();
+        String lecture_cat = vo2.getLecture_cat();
+		String lecture_name = vo2.getLecture_name();
+		String lecture_teach = vo2.getLecture_teach();
+		int lecture_price = vo2.getLecture_price();
+		double lecture_point = vo2.getLecture_point();
+		String lecture_url = vo2.getLecture_url();
 			%>
             <tr class="boardList">
             		<td class="cat"><%=lecture_cat %></td>

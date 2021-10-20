@@ -11,11 +11,10 @@
 
 <body>
     <div id= "total">
-        
         <div id = "header" class="Profile_membership" role = "banner">
             <h1>
                 <a href = "main.jsp" class = "h_logo">
-                    <span> I.Study </span>
+                    <span> I-Study </span>
                 </a>
             </h1>
 
@@ -235,16 +234,15 @@
 
                                 <div>&nbsp;</div>
 
-                               
+                            
                                 <button style="height:50px; width:300px; font-size: 24px;">가입하기</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
-           
+            <button class="gobackBtn" onclick="document.location.href='main.jsp'" style="width: 300px; height: 50px; font-size: 24px; display: block; margin: 15px auto;">뒤로가기</button>
         </div>
-        </div>
-  
+    </div>
 </body>
 </html>
