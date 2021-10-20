@@ -40,7 +40,7 @@
             </tr>
         </table>
         <div class="loginDiv" style="margin-top: 30px;">
-            <input type="submit" class="in" value="로그인" >
+            <input type="submit" class="in2" value="로그인" >
             <button type="button" class="gobackBtn" onclick="document.location.href='main.jsp'" style="position:relative; display: inline-block; margin: auto;">뒤로 가기</button>
         </div>    
     </form>
