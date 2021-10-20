@@ -27,6 +27,7 @@ public class Study_CreationService extends HttpServlet {
 		HttpSession session = request.getSession();
 		MemberVO vo2 = (MemberVO)session.getAttribute("Member");
 		int member_no = vo2.getMember_no();
+		
 		// 스터디조직 생성 form에 작성한 값 받아오기
 		String study_name = request.getParameter("name");	// 스터디명
 		String study_begin = request.getParameter("begin");	// 시작일자
@@ -42,6 +43,7 @@ public class Study_CreationService extends HttpServlet {
 		StudyVO vo = dao.newStudy();
 		
 		int study_no = vo.getStudy_no();
+		System.out.println(study_no);
 		
 		int cnt_SM = dao.StudyMember_Creation(study_no, member_no);
 		

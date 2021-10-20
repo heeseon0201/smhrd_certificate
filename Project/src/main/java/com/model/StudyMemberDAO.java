@@ -49,6 +49,7 @@ public class StudyMemberDAO {
 	//가입한 스터디조직을 보여주는 메소드(마이페이지)
 	public ArrayList<StudyVO> StudyMember_Select(int member_no) {
 		ArrayList<StudyVO> list = new ArrayList<StudyVO>();
+		
 		try {
 			getConnection();
 			String sql = "select * from Study S join StudyMember SM on S.study_no = SM.study_no_sm where SM.member_no_sm = ?";
@@ -69,6 +70,7 @@ public class StudyMemberDAO {
 				if(rs.next()) {	
 					System.out.println("스터디 출력 성공");
 					int study_no = rs.getInt("study_no");
+					System.out.println(study_no);
 					String study_name = rs.getString("study_name");
 					String study_begin =  rs.getString("study_begin");
 					String study_end =  rs.getString("study_end");
@@ -100,27 +102,27 @@ public class StudyMemberDAO {
 	}
 
 	
-		//스터디에 가입하는 메소드
-		public int study_Join(int studyNo, int memberNo) {
-			int cnt=0;
-			try {
-				getConnection();
-				String sql = "insert into studymember values(StudyMember_seq.nextval, ?, ?)";
-				
-				psmt = conn.prepareStatement(sql);
-				
-				psmt.setInt(1, studyNo);
-				psmt.setInt(2, memberNo);
-				
-				cnt = psmt.executeUpdate();
-				
-			}catch(Exception e) {
-				e.printStackTrace();
-				System.out.println("스터디 조직 가입 실패");
-			}finally {
-				close();
-			}
-			return cnt;
+	//스터디에 가입하는 메소드
+	public int study_Join(int studyNo, int memberNo) {
+		int cnt=0;
+		try {
+			getConnection();
+			String sql = "insert into studymember values(StudyMember_seq.nextval, ?, ?)";
+			
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setInt(1, studyNo);
+			psmt.setInt(2, memberNo);
+			
+			cnt = psmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("스터디 조직 가입 실패");
+		}finally {
+			close();
 		}
+		return cnt;
+	}
 
 }
