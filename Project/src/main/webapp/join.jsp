@@ -235,13 +235,13 @@
                                 <div>&nbsp;</div>
 
                             
-                                <button style="height:50px; width:300px; font-size: 24px;">가입하기</button>
+                                <button style="font-size: 1rem;">가입하기</button>
+            <button type="button" class="gobackBtn" onclick="document.location.href='main.jsp'" style="font-size: 1rem; display: inline-block; margin: 15px auto;">뒤로가기</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
-            <button class="gobackBtn" onclick="document.location.href='main.jsp'" style="width: 300px; height: 50px; font-size: 24px; display: block; margin: 15px auto;">뒤로가기</button>
         </div>
     </div>
 </body>

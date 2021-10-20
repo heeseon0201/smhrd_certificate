@@ -8,12 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
 	<link rel="stylesheet" href="main2.css">
-	<style>
-	.in{
-	display:inline-block;
-	}
 
-	</style>
 </head>
 <body class="title">
 	<div class="linkTitle">

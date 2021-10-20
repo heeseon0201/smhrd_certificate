@@ -24,7 +24,7 @@ public class Lecture_MainViewService extends HttpServlet {
 		
 		// DAO의 Lecture_MainView를 실행해서 평점순으로 정렬된 강의정보 테이블 데이터 가져오기
 		LectureDAO dao = new LectureDAO();
-		ArrayList<LectureVO> list = dao.Lecture_MainView();
+		ArrayList<LectureVO> list = dao.Lecture_MainView(0);
 		
 		// 상위 평점 4개를 list_main에 저장
 		for(int i=0; i<4; i++) {

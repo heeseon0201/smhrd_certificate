@@ -92,12 +92,16 @@
                     <td class="tableTd"><input type="text" name="time"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button type="submit" class="mkBtn">만들기</button></td>
+                    <td colspan="2">
+                    <button type="submit" class="mkBtn">만들기</button>
+                            <button type="button" class="gobackBtn" onclick="history.back()"
+    style="width: 75px; height: 30px; display: inline-block; margin: 10px auto; border: 0px; background: #495057; color: #e9ecef; outline: none;">뒤로가기</button>
+                    </td>
+                    
                 </tr>
             </table>
         </form>
-        <button class="gobackBtn" onclick="history.back()"
-    style="width: 75px; height: 30px; display: block; margin: 10px auto; border: 0px; background: #495057; color: #e9ecef; outline: none;">뒤로가기</button>
+
     </div>
 <!-- <form class="" action="Study_CreationService">
 스터디조직 생성 form에 작성한 값 받아오기

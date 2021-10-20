@@ -49,6 +49,12 @@ public class LectureVO {
 		this.lecture_cat = lecture_cat;
 	}
 	
+	public LectureVO(int lecture_no, String lecture_url) {
+		super();
+		this.lecture_no = lecture_no;
+		this.lecture_url = lecture_url;
+	}
+	
 	public LectureVO(String lecture_name, String lecture_teach,
 			int lecture_price, double lecture_point, String lecture_url, String lecture_cat) {
 		super();
