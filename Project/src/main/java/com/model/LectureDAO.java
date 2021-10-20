@@ -303,14 +303,25 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 	}
 	
 	// 메인페이지에 4개정도의 강의정보를 띄우는 메소드(강의명, 강사명, 평점, 카테고리)
-	public ArrayList<LectureVO> Lecture_MainView() {
+	public ArrayList<LectureVO> Lecture_MainView(int i) {
 		ArrayList<LectureVO> list = new ArrayList<LectureVO>();
+		String site_url = null;
 		
+		switch (i) {
+			case 0: site_url = "taling.me"; break;
+			case 1: site_url = "edu.goorm.io"; break;
+			case 2: site_url = "www.inflearn.com"; break;
+			// 클래스101사이트는 현재 DB에 url이 null로 저장되어서 그에 맞춰 작성
+			case 3: site_url = null; break;
+		}
+			
 		try {
 			getConnection();
 			
-			// 강의정보의 일부칼럼만 출력하는 sql문(상위 4개를 뽑아내는 작업은 controller의 Lecture_MainViewService에서 수행)
-			String sql = "select lecture_name, lecture_teach, lecture_point, lecture_cat from Lecture order by lecture_point desc";
+//			// 강의정보의 일부칼럼만 출력하는 sql문(상위 4개를 뽑아내는 작업은 controller의 Lecture_MainViewService에서 수행)
+//			String sql = "select lecture_name, lecture_teach, lecture_point, lecture_cat from Lecture order by lecture_point desc";
+//			// 강의정보의 일부칼럼만 사이트별로 하나씩 출력하는 sql문, (상위 1개를 뽑아내는 작업은 controller의 Lecture_MainViewService에서 수행)
+			String sql = "select * from LECTURE where LECTURE_URL like '%"+ site_url +"' order by lecture_point desc";
 			
 			// SQL 실행 객체생성
 			psmt = conn.prepareStatement(sql);
@@ -322,13 +333,18 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 			if(rs.next()) {		
 				System.out.println("강의정보 메인창 띄우기 성공");
 				
-				String lecture_name = rs.getString("lecture_name");
-				String lecture_teach = rs.getString("lecture_teach");
-				int lecture_point = rs.getInt("lecture_point");
-				String lecture_cat = rs.getString("lecture_cat");
-
+				int get_no = rs.getInt("lecture_no");
+				String get_name = rs.getString("lecture_name");
+				String get_teach = rs.getString("lecture_teach");
+				String get_count = rs.getString("lecture_count");
+				int get_price = rs.getInt("lecture_price");
+				double get_point = rs.getDouble("lecture_point");
+				String get_review = rs.getString("lecture_review");
+				String get_url = rs.getString("lecture_url");
+				String get_cat = rs.getString("lecture_cat");
 				
-				LectureVO vo = new LectureVO(lecture_name, lecture_teach, lecture_point, lecture_cat);
+				LectureVO vo = new LectureVO(get_no, get_name, get_teach, get_count, get_price, get_point, get_review, get_url, get_cat);
+				
 				list.add(vo);
 			}
 			
@@ -380,6 +396,7 @@ public ArrayList<LectureVO> Lecture_ViewAll(int i) {
 		}
 		return reviewlist;
 	}
+	
 	
 }
 
