@@ -4,5 +4,6 @@
 <img width="236" alt="1차프젝" src="https://user-images.githubusercontent.com/78364397/148188961-0617bf98-fc4b-4819-94e7-44f223041a7a.png">
 
 2.강의페이지(스터디페이지도 같음)
+
 <img width="232" alt="1차프젝2" src="https://user-images.githubusercontent.com/78364397/148188967-410383ec-8881-495f-9d2d-da6f2b6469d9.png">
 
